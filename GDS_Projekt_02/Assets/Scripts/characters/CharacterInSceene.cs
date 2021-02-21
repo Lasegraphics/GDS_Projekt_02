@@ -7,43 +7,47 @@ public class CharacterInSceene : MonoBehaviour
     public Character player;
 
     int health;
-    int damage;
-    
+    int attack;
+    Color color;
+    //////////////////////////////////////////////////       MAIN
     private void Awake()
     {
-        string objectName = name;
-        player = FindObjectOfType<CharacterController>().GetCharacter(objectName);
+        player = FindObjectOfType<CharacterController>().GetCharacter(name);
+
+        GetCharacterParameters();
         transform.gameObject.tag = player.name.ToString();
-
-        health = player.health;
-        damage = player.attack;
+        GetComponent<SpriteRenderer>().color = color;
     }
-    private void Start()
+
+    private void GetCharacterParameters()
     {
-        GetComponent<SpriteRenderer>().color = player.color;
+        health = player.health;
+        attack = player.attack;
+        color = player.color;
+    }
+    public void Die()
+    {
+        gameObject.SetActive(false);
     }
 
-   public void UnderAttack(int dmg, string name)
+    /////////////////////////////////////        ATAKI
+    public void UnderAttack(int dmg, string name)
     {
         if (name == player.weaknessFirst.ToString() || name == player.weaknessSecond.ToString()) ///////// ATAKUJE KONTRA
         {
             Debug.Log("Atakuje kontra");
-;            dmg *= 2;
+            ; dmg *= 2;
         }
         health -= dmg;
-        Debug.Log("Obecne zdrowie: "+health+" Postaci: "+ gameObject.name);
+        Debug.Log("Obecne zdrowie: " + health + " Postaci: " + gameObject.name);
         if (health < 0)
         {
             Die();
         }
     }
-
-   public void Die()
+    public int OnAttack()
     {
-        gameObject.SetActive(false);
+        return attack;
     }
-  public int OnAttack()
-    {
-        return damage;
-    }
+    /////////////////////////////////////        SPELE
 }

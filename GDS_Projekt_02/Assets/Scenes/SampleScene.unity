@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 1480342942}
   - component: {fileID: 1480342943}
   m_Layer: 0
-  m_Name: Thief
+  m_Name: Paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +248,8 @@ MonoBehaviour:
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 0
+    weaknessFirst: 0
+    weaknessSecond: 0
 --- !u!212 &1480342940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -373,56 +374,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - name: Warrior
-    color: {r: 1, g: 0.026867347, b: 0, a: 1}
+  - name: Rock
+    color: {r: 1, g: 0, b: 0, a: 1}
     health: 100
     armor: 70
-    attack: 30
+    attack: 1
     rangeMovment: 3
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 0
-  - name: Tank
+    weaknessFirst: 2
+    weaknessSecond: 4
+  - name: Paper
     color: {r: 1, g: 0.941771, b: 0, a: 1}
     health: 200
     armor: 100
-    attack: 20
+    attack: 2
     rangeMovment: 1
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 1
-  - name: Mage
+    weaknessFirst: 3
+    weaknessSecond: 5
+  - name: Scissors
     color: {r: 1, g: 0, b: 0.8345995, a: 1}
-    health: 70
+    health: 100
     armor: 10
-    attack: 90
+    attack: 3
     rangeMovment: 0
     distanceAttack: 1
     minDistance: 1
     maxDistance: 4
-    tag: 2
-  - name: Thief
-    color: {r: 0, g: 0.16267395, b: 1, a: 1}
-    health: 0
-    armor: 0
-    attack: 0
+    weaknessFirst: 1
+    weaknessSecond: 4
+  - name: Quinto
+    color: {r: 0, g: 0.18759012, b: 1, a: 1}
+    health: 100
+    armor: 20
+    attack: 4
     rangeMovment: 0
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 3
-  - name: Archer
+    weaknessFirst: 2
+    weaknessSecond: 5
+  - name: Taaster
     color: {r: 0, g: 1, b: 0.085513115, a: 1}
-    health: 0
-    armor: 0
-    attack: 0
+    health: 100
+    armor: 20
+    attack: 5
     rangeMovment: 0
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 4
+    weaknessFirst: 1
+    weaknessSecond: 3
 --- !u!4 &1615010326
 Transform:
   m_ObjectHideFlags: 0
@@ -451,7 +457,7 @@ GameObject:
   - component: {fileID: 1721568925}
   - component: {fileID: 1721568926}
   m_Layer: 0
-  m_Name: Warrior
+  m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,7 +485,8 @@ MonoBehaviour:
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 0
+    weaknessFirst: 0
+    weaknessSecond: 0
 --- !u!212 &1721568923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -588,7 +595,7 @@ GameObject:
   - component: {fileID: 1738691997}
   - component: {fileID: 1738691996}
   m_Layer: 0
-  m_Name: Archer
+  m_Name: Taaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +652,8 @@ MonoBehaviour:
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 0
+    weaknessFirst: 0
+    weaknessSecond: 0
 --- !u!212 &1738691999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -725,7 +733,7 @@ GameObject:
   - component: {fileID: 1784754244}
   - component: {fileID: 1784754243}
   m_Layer: 0
-  m_Name: Mage
+  m_Name: Scissors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,7 +790,8 @@ MonoBehaviour:
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 0
+    weaknessFirst: 0
+    weaknessSecond: 0
 --- !u!212 &1784754246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -862,7 +871,7 @@ GameObject:
   - component: {fileID: 2017447699}
   - component: {fileID: 2017447698}
   m_Layer: 0
-  m_Name: Tank
+  m_Name: Quinto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -919,7 +928,8 @@ MonoBehaviour:
     distanceAttack: 0
     minDistance: 0
     maxDistance: 0
-    tag: 0
+    weaknessFirst: 0
+    weaknessSecond: 0
 --- !u!212 &2017447701
 SpriteRenderer:
   m_ObjectHideFlags: 0

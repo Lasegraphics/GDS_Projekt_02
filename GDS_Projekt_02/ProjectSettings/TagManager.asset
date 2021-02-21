@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Warrior
-  - Tank
-  - Mage
-  - Thief
-  - Archer
+  - Rock
+  - Paper
+  - Scissors
+  - Quinto
+  - Taaster
   layers:
   - Default
   - TransparentFX
