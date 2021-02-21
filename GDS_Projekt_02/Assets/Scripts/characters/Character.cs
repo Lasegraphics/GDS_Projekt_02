@@ -15,7 +15,10 @@ public class Character
     public bool distanceAttack;
     public int minDistance;
     public int maxDistance;
-    public enum Tag { Warrior,Tank,Mage,Thief,Archer };
-    public Tag tag;
+    public enum WeaknessFirst { None, Rock, Paper, Scissors, Quinto, Taaster };
+    public enum WeaknessSecond { None, Rock, Paper, Scissors, Quinto, Taaster };
 
+    
+    public WeaknessFirst weaknessFirst;
+    public WeaknessSecond weaknessSecond;
 }

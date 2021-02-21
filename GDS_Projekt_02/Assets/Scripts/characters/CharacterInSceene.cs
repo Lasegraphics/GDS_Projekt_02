@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class CharacterInSceene : MonoBehaviour
 {
-    CharacterController characterController;
-    [SerializeField] Character player;
-    GameObject enemy;
+    public Character player;
 
     int health;
     int damage;
@@ -14,9 +12,8 @@ public class CharacterInSceene : MonoBehaviour
     private void Awake()
     {
         string objectName = name;
-        characterController = FindObjectOfType<CharacterController>();
-        player = characterController.GetCharacter(objectName);
-        transform.gameObject.tag = player.tag.ToString();
+        player = FindObjectOfType<CharacterController>().GetCharacter(objectName);
+        transform.gameObject.tag = player.name.ToString();
 
         health = player.health;
         damage = player.attack;
@@ -26,31 +23,27 @@ public class CharacterInSceene : MonoBehaviour
         GetComponent<SpriteRenderer>().color = player.color;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+   public void UnderAttack(int dmg, string name)
     {
-        if (gameObject.tag =="Mage")
+        if (name == player.weaknessFirst.ToString() || name == player.weaknessSecond.ToString()) ///////// ATAKUJE KONTRA
         {
-            var dmg = collision.gameObject.GetComponent<CharacterInSceene>().OnAttack();
-            UnderAttack(dmg);
+            Debug.Log("Atakuje kontra");
+;            dmg *= 2;
         }
-        
-    }
-    void UnderAttack(int dmg)
-    {
         health -= dmg;
-        Debug.Log(health);
+        Debug.Log("Obecne zdrowie: "+health+" Postaci: "+ gameObject.name);
         if (health < 0)
         {
             Die();
         }
     }
 
-    void Die()
+   public void Die()
     {
-        Debug.Log("umarlem i nie wstane");
+        gameObject.SetActive(false);
     }
-   int OnAttack()
+  public int OnAttack()
     {
-        return player.attack;
+        return damage;
     }
 }

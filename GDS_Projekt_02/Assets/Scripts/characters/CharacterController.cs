@@ -6,13 +6,6 @@ using System;
 public class CharacterController : MonoBehaviour
 {
     public Character[] characters;
-    void Awake()
-    {
-        foreach (var item in characters)
-        {
-
-        }
-    }
 
    public Character GetCharacter(string name)
     {
