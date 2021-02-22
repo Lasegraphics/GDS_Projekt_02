@@ -5,24 +5,26 @@ using UnityEngine;
 public class CharacterInSceene : MonoBehaviour
 {
     public Character player;
-
     int health;
-    int attack;
+    int armor;
     Color color;
+    public bool ignoreArmor;
+
     //////////////////////////////////////////////////       MAIN
     private void Awake()
     {
+        gameObject.name = gameObject.tag;
         player = FindObjectOfType<CharacterController>().GetCharacter(name);
 
         GetCharacterParameters();
-        transform.gameObject.tag = player.name.ToString();
         GetComponent<SpriteRenderer>().color = color;
     }
 
     private void GetCharacterParameters()
     {
+        armor = player.armor;
+        ignoreArmor = player.ignoreArmor;
         health = player.health;
-        attack = player.attack;
         color = player.color;
     }
     public void Die()
@@ -31,23 +33,33 @@ public class CharacterInSceene : MonoBehaviour
     }
 
     /////////////////////////////////////        ATAKI
-    public void UnderAttack(int dmg, string name)
+    public void UnderAttack(int dmg, string name, bool ignoreArmor)
     {
-        if (name == player.weaknessFirst.ToString() || name == player.weaknessSecond.ToString()) ///////// ATAKUJE KONTRA
+        if (armor > 0)
         {
-            Debug.Log("Atakuje kontra");
-            ; dmg *= 2;
+            if (ignoreArmor)
+            {
+                health -= dmg;
+            }
+            else
+            {
+                armor -= dmg;
+            }
         }
-        health -= dmg;
-        Debug.Log("Obecne zdrowie: " + health + " Postaci: " + gameObject.name);
+        else
+        {
+            health -= dmg;
+        }
+
         if (health < 0)
         {
             Die();
         }
+        Debug.Log(name + " ATAKUJE " + player.name + " obecne zdrowie: " + health+ " obecny armor: " + armor);
     }
     public int OnAttack()
     {
-        return attack;
+        return player.attack();
     }
     /////////////////////////////////////        SPELE
 }

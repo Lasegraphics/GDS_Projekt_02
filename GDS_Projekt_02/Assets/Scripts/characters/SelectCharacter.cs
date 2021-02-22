@@ -28,9 +28,10 @@ public class SelectCharacter : MonoBehaviour
                     if (item.isSelected)
                     {
                         int dmg= item.GetComponent<CharacterInSceene>().OnAttack();
-                        string objectName = item.GetComponent<CharacterInSceene>().name;
+                        string objectName = item.GetComponent<CharacterInSceene>().tag;
+                        bool ignoreArmor = item.GetComponent<CharacterInSceene>().ignoreArmor;
                         //Debug.Log(item.name + " atakuje " + gameObject.name);
-                        gameObject.GetComponent<CharacterInSceene>().UnderAttack(dmg, objectName);
+                        gameObject.GetComponent<CharacterInSceene>().UnderAttack(dmg, objectName, ignoreArmor);
                     }
                 }
             }

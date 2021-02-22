@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Rock
-  - Paper
-  - Scissors
-  - Quinto
-  - Taaster
+  - Tank
+  - Warrior
+  - Magic
+  - Archer
+  - Rogue
   layers:
   - Default
   - TransparentFX
