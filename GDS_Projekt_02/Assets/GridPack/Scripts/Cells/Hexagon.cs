@@ -3,14 +3,21 @@ using UnityEngine;
 
 namespace GridPack.Cells
 {
+
+    //Implementacja Komórki heksagonalnej 
  
     public abstract class Hexagon : Cell
     {
         List<Cell> neighbours = null;
+
+        //Gridy heksagonalne występują w 4 typach 
+        //To rozróznienie jest wymagane do własciwego przekonwertowania koordynatów cuba na przesunięcie i odwrotnie
         [HideInInspector]
         public HexGridType HexGridType;
 
-        /// </summary>
+
+        //Konwertuje przesunięte wspołrzędne na współrzędne cuba 
+        // System ten uławtia obliczenia współrzędnych na siatkach heksadecymalnych 
         protected Vector3 CubeCoord
         {
             get
@@ -37,6 +44,7 @@ namespace GridPack.Cells
             }
         }
 
+        //Konwertuje spowrotem do 2D 
         protected Vector2 CubeToOffsetCoords(Vector3 cubeCoords)
         {
             Vector2 ret = new Vector2();
@@ -68,6 +76,7 @@ namespace GridPack.Cells
             var _other = other as Hexagon;
             int distance = (int)(Mathf.Abs(CubeCoord.x - _other.CubeCoord.x) + Mathf.Abs(CubeCoord.y - _other.CubeCoord.y) + Mathf.Abs(CubeCoord.z - _other.CubeCoord.z)) / 2;
             return distance;
+            //Dystans obliczony przy uzyciu normy manhattańskiej czyli jako suma wartości bezwględnych róznic współrzędnych punktów w cube. 
         }
 
         public override List<Cell> GetNeighbours(List<Cell> cells)
@@ -84,7 +93,7 @@ namespace GridPack.Cells
             }
             return neighbours;
 
-        }
+        }// Kazda komórka heksagonalna ma szesciu sąsiadów, których pozycje na siatce względem komórki są przechowywane w stałej _directions. 
 
         public override void CopyFields(Cell newCell)
         {

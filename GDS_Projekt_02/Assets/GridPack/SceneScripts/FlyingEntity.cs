@@ -15,9 +15,8 @@ namespace GridPack.SceneScripts
 
         public override bool IsCellTraversable(Cell cell)
         {
-            return !(cell as MyOtherHexagon).IsSkyTaken;//Allows unit to move through any cell that is not occupied by a flying unit.
+            return !(cell as MyOtherHexagon).IsSkyTaken; //Pozwala przejść jednosce przez dowolne pole nie zajęte przez inną jednostkę latającą
         }
-
         public override void Move(Cell destinationCell, List<Cell> path)
         {
             (Cell as MyOtherHexagon).IsSkyTaken = false;

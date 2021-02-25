@@ -6,7 +6,7 @@ namespace GridPack.SceneScripts
     public class MyOtherHexagon : Hexagon
     {
         public GroundType GroundType;
-        public bool IsSkyTaken;//Indicates if a flying unit is occupying the cell.
+        public bool IsSkyTaken;//Wskazuje czy jednostka latająca zajmuje hexagon 
 
         private Vector3 dimensions = new Vector3(5.3f, 4.6f, 0f);
 

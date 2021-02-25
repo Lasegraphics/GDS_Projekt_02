@@ -10,16 +10,25 @@ using GridPack.Units;
 
 namespace GridPack.Grid
 {
+    //Klasa CellGrid śledzi przebieg rozgrywki, przechowuje informacje o komórkach, jednostkach oraz obiektach graczy. Rozpoczyna rozgrywkę i wykonuje przejścia tur
+    //Reaguje na interakcje uzytkownika z jednostkami i komórkami oraz wywołuje zdarzenia związane z postępem w grze.  
     public class CellGrid : MonoBehaviour
     {
+        //LevelLoading jest wywoływane przed uruchomieniem metody initialize.
         public event EventHandler LevelLoading; 
+        //LevelLoadingDone zdarzenie jest wywoływane po zakończeniu metody initialize.  
         public event EventHandler LevelLoadingDone;
+        //GameStarted zdarzenie jest wywoływane w momencie wywołania metody StartGame
         public event EventHandler GameStarted; 
+        //GameEnded zdarzenie jest wywoływane kiedy w grze pozostaje jeden gracz. 
         public event EventHandler GameEnded; 
+        //TurnEnded zdarzenie jest wywoływane w momencie zakończenia tury. 
         public event EventHandler TurnEnded; 
+        //Zdarzenie jest wywoływane za kazdym razem kiedy metoda AddUnit jest wywoływana. 
 
         public event EventHandler<UnitCreatedEventArgs> UnitAdded; 
 
+        //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
 
         public CellGridState CellGridState
@@ -47,6 +56,7 @@ namespace GridPack.Grid
             }
         }
         public int CurrentPlayerNumber {get; private set;}
+        //Transform przechowuje informacje na temat graczy. 
 
         public Transform PlayersParent; 
 

@@ -18,16 +18,17 @@ namespace GridPack.SceneScripts
         public override bool IsCellMovableTo(Cell cell)
         {
             return base.IsCellMovableTo(cell) && (cell as MyOtherHexagon).GroundType != GroundType.Water;
-            
+            //Zabrania poruszania się do komórek typu woda 
         }
         public override bool IsCellTraversable(Cell cell)
         {
             return base.IsCellTraversable(cell) && (cell as MyOtherHexagon).GroundType != GroundType.Water;
-           
+           //Zabrania poruszania się przez komórki typu woda
         }
 
         public override void OnUnitDeselected()
         {
+            //Zatrzymuje pulsacje jednostki
             base.OnUnitDeselected();
             StopCoroutine(PulseCoroutine);
             transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);

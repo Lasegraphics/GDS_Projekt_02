@@ -12,6 +12,7 @@ namespace GridPack.Grid.UnitGenerators
         public Transform UnitsParent;
         public Transform CellsParent;
 
+        //Zwraca jednostki które są obecnie dziećmi obietku nadrzędnego. 
         public List<Unit> SpawnUnits(List<Cell> cells)
         {
             List<Unit> ret = new List<Unit>();
@@ -20,6 +21,7 @@ namespace GridPack.Grid.UnitGenerators
                 var unit = UnitsParent.GetChild(i).GetComponent<Unit>();
                 if (unit != null)
                 {
+                    
                     var cell = cells.OrderBy(h => Math.Abs((h.transform.position - unit.transform.position).magnitude)).First();
                     {
                         cell.IsTaken = true;
@@ -38,7 +40,7 @@ namespace GridPack.Grid.UnitGenerators
             }
             return ret;
         }
-
+        //Przyciąga jednostkę do najblizszego pola 
         public void SnapToGrid()
         {
             List<Transform> cells = new List<Transform>();

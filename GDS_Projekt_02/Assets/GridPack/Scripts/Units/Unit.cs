@@ -9,17 +9,27 @@ using GridPack.Units.UnitStates;
 
 namespace GridPack.Units
 {
+    //Bazowa Klasa reprezentująca jednostkę
    [ExecuteInEditMode]
     public abstract class Unit : MonoBehaviour
     {
         Dictionary<Cell, List<Cell>> catchedPaths = null;  
+
+        //UnitClicked jest wywoływane w momencie naciśnięcia na jednostkę. 
         public event EventHandler UnitClicked; 
+        //UnitSelected jest wywoływane w momencie kiedy gracz nacisnął na jednostkę nalezącą do niego. 
         public event EventHandler UnitSelected; 
+        //UnitDeselected jest wywoływane w momencie kiedy gracz nacisnął na pole inne niz te nalezące do jednostki 
         public event EventHandler UnitDeselected;
+        //UnitHighlighted jest wywoływane w momencie kiedy kursor najezdza na jednostkę 
         public event EventHandler UnitHighlighted; 
+        //UnitDehighlighted jest wywołwywane w momencie kiedy kursor opuszcza obszar jednostki. 
         public event EventHandler UnitDehighlighted;
+        //UnitAttacked jest wywoływane w momencie kiedy jednostka atakuje. 
         public event EventHandler<AttackEventArgs> UnitAttacked;   
+        //UnitDestroyed jest wywoływane w momencie kiedy jednostka jest niszczona 
         public event EventHandler<AttackEventArgs> UnitDestroyed;   
+        //UnitMoved jest wywoływane w momencie kiedy jednostka sie przemieszcza.
         public event EventHandler<MovementEventArgs> UnitMoved;   
 
         public UnitState UnitState {get; set;} 
@@ -28,6 +38,7 @@ namespace GridPack.Units
             UnitState.MakeTransition(state);
         }
 
+        //Lista Buffów które są zaaplikowane do jednostki 
         public List<Buff> Buffs {get; set;}
 
         public int TotalHitPoints {get; private set;}
@@ -37,6 +48,7 @@ namespace GridPack.Units
         [SerializeField]
         [HideInInspector]
 
+        //Reprezentacja pola zajmowanego przez jednostkę 
         private Cell cell; 
         public Cell Cell
         {
@@ -54,7 +66,8 @@ namespace GridPack.Units
         public int AttackRange;
         public int AttackFactor; 
         public int DefenceFactor; 
-
+        
+        //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
         [SerializeField]
         private float movementPoints; 
 
@@ -71,7 +84,10 @@ namespace GridPack.Units
             }
         }
 
+        //Determinuje szybkość przemieszczania jednostki. 
         public float MovementAnimationSpeed; 
+
+        //Determinuje Jak duzo ataków moze wykonać jednostka. 
         [SerializeField]
         public float actionPoints = 1;
         public float ActionPoints
@@ -87,13 +103,18 @@ namespace GridPack.Units
 
         }
 
+        //Wskazuje gracza do którego nalezy jednostka
+        //Powinien korespondować ze zmienna PlayerNumber w skrypcie gracza.  
         public int PlayerNumber; 
 
+        //Wskazuje jesli animacja ruchu jest odpalona. 
         public bool IsMoving{get; set;}
 
+        //Implementacja algorytmów
         private static DijkstraPathfinding _pathfinder = new DijkstraPathfinding(); 
         private static IPathfinding _fallbackPathfinder = new AStarPathfinding();
 
+        //Metoda wywoływana w momencie utworzenia obiektu w celu zainicjowania pól. 
         public virtual void Initialize()
         {
             Buffs = new List<Buff>();
@@ -130,6 +151,7 @@ namespace GridPack.Units
             }
         }
 
+        //Metoda jest wywoływana na początku kazdej tury. 
         public virtual void OnTurnStart()
         {
             MovementPoints = TotalMovementPoints;
@@ -138,6 +160,7 @@ namespace GridPack.Units
             SetState(new UnitStateMarkedAsFriendly(this)); 
         }
 
+        //Metoda jest wywoływana na końcu kazdej tury. 
         public virtual void OnTurnEnd()
         {
             catchedPaths = null; 
@@ -148,6 +171,7 @@ namespace GridPack.Units
             SetState(new UnitStateNormal(this)); 
         }
 
+        //Metoda jest wywoływana kiedy spadnie HP ponizej 1
         protected virtual void OnDestroyed()
         {
             Cell.IsTaken = false; 
@@ -155,6 +179,7 @@ namespace GridPack.Units
             Destroy(this.gameObject);
         }
 
+        //Metoda jest wywoływana w momencie zaznaczenia jednostki
         public virtual void OnUnitSelected()
         {
             SetState(new UnitStateMarkedAsSelected(this));
@@ -163,6 +188,8 @@ namespace GridPack.Units
                 UnitSelected.Invoke(this, new EventArgs());
             }
         }
+
+        //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
             SetState(new UnitStateMarkedAsFriendly(this));
@@ -172,6 +199,7 @@ namespace GridPack.Units
             }
         }
 
+        //Metoda wskazuje czy mozna zaatakowac jednostkę z danej komórki 
         public virtual bool IsUnitAttackable(Unit other, Cell sourceCell)
         {
            return sourceCell.GetDistance(other.Cell) <= AttackRange
@@ -179,6 +207,7 @@ namespace GridPack.Units
             && ActionPoints >= 1; 
         }
 
+        //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
             if(!IsUnitAttackable(unitToAttack, Cell))
@@ -197,6 +226,7 @@ namespace GridPack.Units
             return new AttackAction(AttackFactor, 1f); 
         }
 
+        //Matoda oblicza koszt punktów ataku i obrazeń podczas walki  
         protected virtual void AttackActionPerformed(float actionCost)
         {
             ActionPoints -= actionCost; 
@@ -207,6 +237,7 @@ namespace GridPack.Units
             }
         }
 
+        //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public void DefendHandler(Unit aggressor, int damage)
         {
             MarkAsDefending(aggressor); 
@@ -235,7 +266,8 @@ namespace GridPack.Units
         } 
 
         protected virtual void DefenceActionPerformed(){}
-        
+
+        //Metoda obsługi poruszania jednostki. 
         public virtual void Move(Cell destinationCell, List<Cell> path)
         {
             var totalMovementCost = path.Sum(h => h.MovementCost);
@@ -262,6 +294,7 @@ namespace GridPack.Units
 
         }
 
+        //Metoda obsługuje animacje poruszania jednostki. 
         protected virtual IEnumerator MovementAnimation(List<Cell> path)
         {
             IsMoving = true; 
@@ -280,18 +313,22 @@ namespace GridPack.Units
             OnMoveFinished();
         }
 
+        //Metoda wywoływana po zakończeniu animacji
         protected virtual void OnMoveFinished(){}
 
+        //Metoda wskazuje czy jednostka moze przejść do komórki podanej jako parametr 
         public virtual bool IsCellMovableTo(Cell cell)
         {
             return !cell.IsTaken; 
         }
 
+        //Metoda wskazuje czy jednostka moze przejść przez komórki podane jako parametr 
         public virtual bool IsCellTraversable(Cell cell)
         {
             return !cell.IsTaken; 
         }
 
+        //Metoda zwraca wszystkie komórki do których jednostka moze się udać 
         public HashSet<Cell> GetAvailableDestinations(List<Cell> cells)
         {
             catchedPaths = new Dictionary<Cell, List<Cell>>(); 
@@ -332,6 +369,7 @@ namespace GridPack.Units
             }
         }
 
+        //Metoda zwraca grafową reprezentacje komórki dla wyznaczenia trasy. 
         protected virtual Dictionary<Cell, Dictionary<Cell, float>> GetGraphEdges(List<Cell> cells)
         {
             Dictionary<Cell, Dictionary<Cell, float>> ret = new Dictionary<Cell, Dictionary<Cell, float>> ();

@@ -98,7 +98,7 @@ namespace GridPack.Grid.GridStates
 
             foreach (var unit in _unitsInRange)
             {
-            unit.UnMark();
+                unit.UnMark();
             }
 
             foreach (var currentUnit in _cellGrid.Units)

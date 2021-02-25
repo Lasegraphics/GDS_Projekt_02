@@ -2,6 +2,7 @@
 
 namespace GridPack.Pathfinding.DataStructs
 {
+    //Implementacja kolejki priorytetowej opartej na stercie. Słuzy to temu zeby za kazdym razem gdy do sterty dodawane jest nowe zadanie sterta nie była sortowana w całości. Powiązane z platformą .NET 
     class HeapPriorityQueue<T> : IPriorityQueue<T>
     {
      private List<PriorityQueueNode<T>> _queue; 
