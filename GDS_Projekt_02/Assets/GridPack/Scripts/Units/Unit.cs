@@ -6,6 +6,11 @@ using System.Collections;
 using GridPack.Cells;
 using GridPack.Pathfinding.Algorithms;
 using GridPack.Units.UnitStates;
+using GridPack.Grid; 
+using GridPack.Grid.GridStates; 
+using GridPack.SceneScripts;
+using Random = UnityEngine.Random;
+
 
 namespace GridPack.Units
 {
@@ -66,10 +71,39 @@ namespace GridPack.Units
         public int AttackRange;
         public int AttackFactor; 
         public int DefenceFactor; 
+        [SerializeField]private int attackMin;
+        [SerializeField]private int attackMax;
+        
+
+        public virtual int AttackMin
+        {
+            get
+            {
+                return attackMin; 
+            }
+            set
+            {
+
+                attackMin = value; 
+            }
+        }
+
+        public virtual int AttackMax
+        {
+            get
+            {
+                return attackMax; 
+            }
+            set
+            {
+                attackMax = value; 
+            }
+        }
         
         //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
         [SerializeField]
         private float movementPoints; 
+
 
         public virtual float MovementPoints
         {
@@ -106,10 +140,11 @@ namespace GridPack.Units
         //Wskazuje gracza do którego nalezy jednostka
         //Powinien korespondować ze zmienna PlayerNumber w skrypcie gracza.  
         public int PlayerNumber; 
+        public CellGrid EndTrn {get; set;}
 
         //Wskazuje jesli animacja ruchu jest odpalona. 
         public bool IsMoving{get; set;}
-
+    
         //Implementacja algorytmów
         private static DijkstraPathfinding _pathfinder = new DijkstraPathfinding(); 
         private static IPathfinding _fallbackPathfinder = new AStarPathfinding();
@@ -119,10 +154,12 @@ namespace GridPack.Units
         {
             Buffs = new List<Buff>();
             UnitState = new UnitStateNormal(this);
-
+            EndTrn = new CellGrid();
             TotalHitPoints = HitPoints; 
             TotalMovementPoints = MovementPoints;
             TotalActionPoints = ActionPoints; 
+           // Debug.Log("obecne zdrowie: " + HitPoints);
+
         }
 
         protected virtual void OnMouseDown()
@@ -234,14 +271,18 @@ namespace GridPack.Units
             {
                 MovementPoints = 0; 
                 SetState(new UnitStateMarkedAsFinished(this));
+                // EndTrn.EndTurn();
+               
             }
         }
 
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public void DefendHandler(Unit aggressor, int damage)
         {
+           
             MarkAsDefending(aggressor); 
             int damageTaken = Defend(aggressor, damage);
+            damageTaken = Random.Range(attackMin,attackMax);
             HitPoints -= damageTaken;  
             DefenceActionPerformed();
 
@@ -258,6 +299,7 @@ namespace GridPack.Units
                 }
                 OnDestroyed();
             }
+            Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
         }
 
         protected virtual int Defend(Unit aggresor, int damage)
@@ -404,6 +446,12 @@ namespace GridPack.Units
                 Cell.IsTaken = false; 
             }
         }
+
+        public void ChangeTurn()
+        {
+
+           
+        }
     }
     
     public class AttackAction 
@@ -455,4 +503,5 @@ namespace GridPack.Units
             this.unit =unit; 
         }
     }
+
 }

@@ -1,20 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
+using GridPack.Cells;
+using GridPack.Units;
 using UnityEngine;
-using System;
+using System; 
 
-public class CharacterController : MonoBehaviour
+namespace Scripts.characters
 {
-    public Character[] characters;
-
-   public Character GetCharacter(string name)
+    
+    public class CharacterController : MonoBehaviour
     {
-        Character thisCharacter = Array.Find(characters, character => character.name == name);
-        if (thisCharacter == null)
+        public Character [] characters;
+
+        public Character GetCharacter(string name)
         {
-            Debug.Log("Nie ma takiego obiektu jak: " + name);
-            return null;
+            Character thisCharacter = Array.Find(characters, character => character.name == name);
+            if (thisCharacter == null)
+            {
+                Debug.Log("Nie ma takiego obiektu jak: " + name);
+                return null;
+            }
+            return thisCharacter;
         }
-        return thisCharacter;
     }
 }

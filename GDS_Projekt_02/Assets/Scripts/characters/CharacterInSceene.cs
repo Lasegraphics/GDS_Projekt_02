@@ -1,65 +1,69 @@
 using System.Collections;
-using System.Collections.Generic;
+using GridPack.Cells;
+using GridPack.Units;
 using UnityEngine;
 
-public class CharacterInSceene : MonoBehaviour
+namespace Scripts.characters
 {
-    public Character player;
-    int health;
-    int armor;
-    Color color;
-    public bool ignoreArmor;
-
-    //////////////////////////////////////////////////       MAIN
-    private void Awake()
+    public class CharacterInSceene : MonoBehaviour
     {
-        gameObject.name = gameObject.tag;
-        player = FindObjectOfType<CharacterController>().GetCharacter(name);
+        public Character player;
+        int health;
+        int armor;
+        Color color;
+        public bool ignoreArmor;
 
-        GetCharacterParameters();
-        GetComponent<SpriteRenderer>().color = color;
-    }
-
-    private void GetCharacterParameters()
-    {
-        armor = player.armor;
-        ignoreArmor = player.ignoreArmor;
-        health = player.health;
-        color = player.color;
-    }
-    public void Die()
-    {
-        gameObject.SetActive(false);
-    }
-
-    /////////////////////////////////////        ATAKI
-    public void UnderAttack(int dmg, string name, bool ignoreArmor)
-    {
-        if (armor > 0)
+        //////////////////////////////////////////////////       MAIN
+        private void Awake()
         {
-            if (ignoreArmor)
+            gameObject.name = gameObject.tag;
+            player = FindObjectOfType<CharacterController>().GetCharacter(name);
+
+            GetCharacterParameters();
+            GetComponent<SpriteRenderer>().color = color;
+        }
+
+        private void GetCharacterParameters()
+        {
+            armor = player.armor;
+            ignoreArmor = player.ignoreArmor;
+            health = player.health;
+            color = player.color;
+        }
+        public void Die()
+        {
+            gameObject.SetActive(false);
+        }
+
+        /////////////////////////////////////        ATAKI
+        public void UnderAttack(int dmg, string name, bool ignoreArmor)
+        {
+            if (armor > 0)
             {
-                health -= dmg;
+                if (ignoreArmor)
+                {
+                    health -= dmg;
+                }
+                else
+                {
+                    armor -= dmg;
+                }
             }
             else
             {
-                armor -= dmg;
+                health -= dmg;
             }
-        }
-        else
-        {
-            health -= dmg;
-        }
 
-        if (health < 0)
-        {
-            Die();
+            if (health < 0)
+            {
+                Die();
+            }
+            Debug.Log(name + " ATAKUJE " + player.name + " obecne zdrowie: " + health+ " obecny armor: " + armor);
         }
-        Debug.Log(name + " ATAKUJE " + player.name + " obecne zdrowie: " + health+ " obecny armor: " + armor);
+        public int OnAttack()
+        {
+            return player.attack();
+        }
+        /////////////////////////////////////        SPELE
     }
-    public int OnAttack()
-    {
-        return player.attack();
-    }
-    /////////////////////////////////////        SPELE
 }

@@ -31,6 +31,7 @@ namespace GridPack.Grid
         //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
 
+
         public CellGridState CellGridState
         {
             get
@@ -176,8 +177,11 @@ namespace GridPack.Grid
         }
 
         public void EndTurn()
-        {
+        {   
+            //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
+            _cellGridState.OnStateEnter();
+            
             if(Units.Select(u => u.PlayerNumber).Distinct().Count() == 1)
             {
                 return; 

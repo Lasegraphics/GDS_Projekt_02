@@ -3,7 +3,7 @@
     public class UnitStateMarkedAsFinished : UnitState
     {
         public UnitStateMarkedAsFinished(Unit unit) : base(unit)
-        {
+        {           
         }
 
         public override void Apply()

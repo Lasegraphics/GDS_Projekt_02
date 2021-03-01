@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using GridPack.Cells;
 using GridPack.Units;
+using GridPack.Grid; 
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GridPack.SceneScripts
 {
@@ -9,10 +11,14 @@ namespace GridPack.SceneScripts
     {
         Coroutine PulseCoroutine;
 
+        private TurnChanger turnChanger; 
+
         public override void Initialize()
         {
             base.Initialize();
             transform.localPosition += new Vector3(0, 0, -1);
+            turnChanger =  GameObject.Find("GameController").GetComponent<TurnChanger>();
+            
         }
 
         public override bool IsCellMovableTo(Cell cell)
@@ -128,6 +134,9 @@ namespace GridPack.SceneScripts
         {
             SetColor(Color.gray);
             SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));
+            
+            turnChanger.ChangeTurn();
+
         }
         public override void UnMark()
         {

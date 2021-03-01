@@ -1,11 +1,14 @@
 ﻿using GridPack.Cells;
 using GridPack.Units;
+using GridPack.Grid; 
 
 namespace GridPack.Grid.GridStates
 {
-    public abstract class CellGridState
+    public class CellGridState
     {
         protected CellGrid _cellGrid; 
+        //public CellGrid CellGrid; 
+
 
         protected CellGridState(CellGrid cellGrid)
         {
@@ -42,13 +45,14 @@ namespace GridPack.Grid.GridStates
             foreach (var cell in _cellGrid.Cells)
             {
                 cell.UnMark();
+                
             }
         }
 
         //Metoda jest wywoływana w momencie wyjścia ze stanu 
         public virtual void OnStateExit()
         {
-
+    
         }
     }
 }
