@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScorePanelControll
+public class ScorePanelControll : MonoBehaviour
 {
     public Text name;
 
