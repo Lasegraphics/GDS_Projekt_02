@@ -8,6 +8,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] Button menuButton;
     [SerializeField] Button endRound;
     [SerializeField] Text roundToEnd;
+    [SerializeField] GameObject ScorePanel;
 
     public void EndButton()
     {
