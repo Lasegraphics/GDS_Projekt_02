@@ -7,10 +7,14 @@ using GridPack.Grid.GridStates;
 using GridPack.Grid.UnitGenerators;
 using GridPack.Players;
 using GridPack.Units;
+using GridPack.Grid;
+
+
 public class ScorePanelControll : MonoBehaviour
 {
     public Text name;
     public Scrollbar scrollbar;
+    public Text HP;
 
     public Button attackButton;
     public Button speelButton;
@@ -22,19 +26,22 @@ public class ScorePanelControll : MonoBehaviour
     public Button AcepptButton;
     public Button CancelButton;
 
-    
-    void Start()
+    private void Awake()
     {
-        
     }
-   public void TakeUnit(Transform unit)
+   
+    public void TakeUnit(GameObject unit)
     {
-      int cos =  unit.GetComponent<Unit>().AttackMax;
-        Debug.Log(cos);
+        var unitInfo = unit.GetComponent<Unit>();
+        name.text = unit.name;
+        maxDmg.text = unitInfo.AttackMax.ToString();
+        minDmg.text = unitInfo.AttackMin.ToString();
+        HP.text = unitInfo.HitPoints.ToString();
     }
-    // Update is called once per frame
+   
     void Update()
     {
-        
+
     }
 }
+

@@ -31,7 +31,6 @@ namespace GridPack.Grid
         //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
 
-        ScorePanelControll scorePanelControll;
 
         public CellGridState CellGridState
         {
@@ -69,7 +68,6 @@ namespace GridPack.Grid
 
         private void Start()
         {
-            scorePanelControll = FindObjectOfType<ScorePanelControll>();
             if (LevelLoading != null)
                LevelLoading.Invoke(this, new EventArgs());
 
@@ -138,7 +136,6 @@ namespace GridPack.Grid
         }
         private void OnCellClicked(object sender, EventArgs e)
         {
-
             CellGridState.OnCellClicked(sender as Cell);
         }
 
@@ -169,7 +166,6 @@ namespace GridPack.Grid
             if (UnitAdded != null)
             {
                 UnitAdded.Invoke(this, new UnitCreatedEventArgs(unit));
-                scorePanelControll.TakeUnit(unit);
             }
                
             

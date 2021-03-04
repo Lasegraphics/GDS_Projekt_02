@@ -12,11 +12,15 @@ public class UiManager : MonoBehaviour
 
     private void Start()
     {
-        ScorePanel.SetActive(false);
+        CloseScorePanel();
     }
     public void ActiveScorePanel()
     {
         ScorePanel.SetActive(true);
+    }
+    public void CloseScorePanel()
+    {
+        ScorePanel.SetActive(false);
     }
     public void EndButton()
     {
