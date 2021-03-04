@@ -10,6 +10,14 @@ public class UiManager : MonoBehaviour
     [SerializeField] Text roundToEnd;
     [SerializeField] GameObject ScorePanel;
 
+    private void Start()
+    {
+        ScorePanel.SetActive(false);
+    }
+    public void ActiveScorePanel()
+    {
+        ScorePanel.SetActive(true);
+    }
     public void EndButton()
     {
 

@@ -175,7 +175,6 @@ namespace GridPack.Units
             if(UnitHighlighted != null)
             {
                 UnitHighlighted.Invoke(this, new EventArgs());
-
             }
         }
 

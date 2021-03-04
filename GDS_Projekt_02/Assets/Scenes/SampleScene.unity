@@ -1963,7 +1963,7 @@ MonoBehaviour:
   AttackFactor: 2
   DefenceFactor: 2
   attackMin: 0
-  attackMax: 0
+  attackMax: 5
   movementPoints: 3
   MovementAnimationSpeed: 10
   actionPoints: 2
@@ -5656,6 +5656,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b49858b5ad83b47a582348361ea400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: {fileID: 1250084452}
+  scrollbar: {fileID: 1505796339}
+  attackButton: {fileID: 239356547}
+  speelButton: {fileID: 372695973}
+  moveButton: {fileID: 1687541500}
+  descriptions: {fileID: 1387020480}
+  maxDmg: {fileID: 240232852}
+  minDmg: {fileID: 1001469376}
+  AcepptButton: {fileID: 448732168}
+  CancelButton: {fileID: 957688821}
 --- !u!114 &1989705925
 MonoBehaviour:
   m_ObjectHideFlags: 0
