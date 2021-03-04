@@ -9,11 +9,12 @@ TagManager:
   - Magic
   - Archer
   - Rouge
+  - Unit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Unit
   - Water
   - UI
   - 

@@ -68,7 +68,7 @@ namespace GridPack.Grid
 
         private void Start()
         {
-            if(LevelLoading != null)
+            if (LevelLoading != null)
                LevelLoading.Invoke(this, new EventArgs());
 
             Initialize();
@@ -161,9 +161,13 @@ namespace GridPack.Grid
             Units.Add(unit.GetComponent<Unit>());
             unit.GetComponent<Unit>().UnitClicked += OnUnitClicked; 
             unit.GetComponent<Unit>().UnitDestroyed += OnUnitDestroyed;
+            
 
-            if(UnitAdded != null)
+            if (UnitAdded != null)
+            {
                 UnitAdded.Invoke(this, new UnitCreatedEventArgs(unit));
+            }
+               
             
         }
 
