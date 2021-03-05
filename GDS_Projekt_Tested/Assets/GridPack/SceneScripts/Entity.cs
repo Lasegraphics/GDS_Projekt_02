@@ -17,7 +17,7 @@ namespace GridPack.SceneScripts
         {
             base.Initialize();
             transform.localPosition += new Vector3(0, 0, -1);
-            turnChanger =  GameObject.Find("GameController").GetComponent<TurnChanger>();
+            turnChanger = GameObject.Find("GameController").GetComponent<TurnChanger>();
             
         }
 

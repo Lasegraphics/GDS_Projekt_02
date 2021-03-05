@@ -31,11 +31,12 @@ namespace GridPack.Units
         //UnitDehighlighted jest wywołwywane w momencie kiedy kursor opuszcza obszar jednostki. 
         public event EventHandler UnitDehighlighted;
         //UnitAttacked jest wywoływane w momencie kiedy jednostka atakuje. 
-        public event EventHandler<AttackEventArgs> UnitAttacked;   
+        public virtual event EventHandler<AttackEventArgs> UnitAttacked;
         //UnitDestroyed jest wywoływane w momencie kiedy jednostka jest niszczona 
-        public event EventHandler<AttackEventArgs> UnitDestroyed;   
+        public virtual event EventHandler<AttackEventArgs> UnitDestroyed;   
         //UnitMoved jest wywoływane w momencie kiedy jednostka sie przemieszcza.
         public event EventHandler<MovementEventArgs> UnitMoved;   
+
 
         public UnitState UnitState {get; set;} 
         public void SetState(UnitState state)
@@ -71,8 +72,8 @@ namespace GridPack.Units
         public int AttackRange;
         public int AttackFactor; 
         public int DefenceFactor; 
-        [SerializeField]private int attackMin;
-        [SerializeField]private int attackMax;
+        [SerializeField]protected int attackMin;
+        [SerializeField]protected int attackMax;
         
 
         public virtual int AttackMin
@@ -277,7 +278,7 @@ namespace GridPack.Units
         }
 
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
-        public void DefendHandler(Unit aggressor, int damage)
+        public virtual void DefendHandler(Unit aggressor, int damage)
         {
            
             MarkAsDefending(aggressor); 
@@ -445,12 +446,6 @@ namespace GridPack.Units
             {
                 Cell.IsTaken = false; 
             }
-        }
-
-        public void ChangeTurn()
-        {
-
-           
         }
     }
     
