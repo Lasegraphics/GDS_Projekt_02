@@ -3,6 +3,7 @@ using GridPack.Cells;
 using GridPack.Units;
 using UnityEngine;
 using System; 
+using System.Threading; 
 using Random = UnityEngine.Random;
 
 namespace GridPack.SceneScripts
@@ -24,12 +25,24 @@ namespace GridPack.SceneScripts
 
         public override void DefendHandler(Unit aggressor, int damage)
         {
+            Thread th = Thread.CurrentThread; 
             int armorDamageTaken = Defend(aggressor, damage);
             armorDamageTaken = Random.Range(attackMin,attackMax);
             if(ArmorPoints >= 0)
             {
-                ArmorPoints -= armorDamageTaken;
-                Debug.Log("Obecny Pancerz: " + ArmorPoints + " Zadane Obrazenia: " + armorDamageTaken);
+                try 
+                {
+                    ArmorPoints -= armorDamageTaken;
+                    Debug.Log("Obecny Pancerz: " + ArmorPoints + " Zadane Obrazenia: " + armorDamageTaken);
+                }
+                
+                catch(ThreadAbortException)
+                {
+                    if(ArmorPoints == 0)
+                    {
+                     th.Abort();
+                    }
+                }
             }
                 
            if(ArmorPoints <= 0 || IsIgnored == true)
