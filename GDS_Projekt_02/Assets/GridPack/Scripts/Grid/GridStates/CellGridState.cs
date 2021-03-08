@@ -6,8 +6,9 @@ namespace GridPack.Grid.GridStates
 {
     public class CellGridState
     {
-        protected CellGrid _cellGrid;
+        protected CellGrid _cellGrid; 
         //public CellGrid CellGrid; 
+
 
         protected CellGridState(CellGrid cellGrid)
         {

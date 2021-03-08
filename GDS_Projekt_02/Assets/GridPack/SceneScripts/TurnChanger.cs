@@ -11,12 +11,13 @@ namespace GridPack.SceneScripts
         public CellGrid EndTrn; 
         public Entity entity; 
         private bool isFinished;
+        private int unitDiscard;
         void Awake()
         {
            EndTrn.LevelLoading += onLevelLoading;
            EndTrn.LevelLoadingDone += onLevelLoadingDone;
-           //entity = GetComponent<Entity>();
            isFinished = false; 
+           unitDiscard = 0;
             
         }
 
@@ -32,8 +33,14 @@ namespace GridPack.SceneScripts
         }
 
         public void ChangeTurn()
-        {
-            isFinished = true; 
+        {   
+            ++unitDiscard;
+            if(unitDiscard == 5)
+            {
+                isFinished = true; 
+                unitDiscard = 0; 
+            }
+
         }
      
         void Update()
