@@ -659,13 +659,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 1873509333}
-  scrollbar: {fileID: 0}
+  scrollbar: {fileID: 1131972503}
   HP: {fileID: 2110945676}
   attackButton: {fileID: 1091152432}
   speelButton: {fileID: 28681726}
   moveButton: {fileID: 647086775}
   descriptions: {fileID: 1402706588}
-  damage: {fileID: 0}
+  damage: {fileID: 1102721454}
 --- !u!114 &335247610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4312,7 +4312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3252239501b27145a1a2cc297688b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpUnit: {fileID: 0}
+  hpUnit: {fileID: 6566974}
 --- !u!114 &1487081596
 MonoBehaviour:
   m_ObjectHideFlags: 0
