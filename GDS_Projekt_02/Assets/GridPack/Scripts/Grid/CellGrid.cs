@@ -31,6 +31,7 @@ namespace GridPack.Grid
         //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
 
+        UiManager uiManager;
 
         public CellGridState CellGridState
         {
@@ -177,7 +178,8 @@ namespace GridPack.Grid
         }
 
         public void EndTurn()
-        {   
+        {
+            uiManager.ActiveEndText(CurrentPlayerNumber);
             //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
