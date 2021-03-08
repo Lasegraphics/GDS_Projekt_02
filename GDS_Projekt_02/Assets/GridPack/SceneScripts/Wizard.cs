@@ -12,6 +12,7 @@ namespace GridPack.SceneScripts
             
             ActionPoints -= actionCost; 
             IsIgnored = true; 
+
             
             if(ActionPoints == 0)
             {
