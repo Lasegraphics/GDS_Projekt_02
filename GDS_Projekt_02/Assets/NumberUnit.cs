@@ -12,15 +12,14 @@ public class NumberUnit : MonoBehaviour
 {
     UiManager uiManager;
     ScorePanelControll scorePanelControll;
-    UnitScrollbar unitScrollbar;
     CellGrid cellGrid;
+    EnemyScorePanel enemyScorePanel;
     public bool isSelected = false;
     int playerNumber;
     private void Awake()
     {
         cellGrid = FindObjectOfType<CellGrid>();
-
-        unitScrollbar = FindObjectOfType<UnitScrollbar>();
+        enemyScorePanel = FindObjectOfType<EnemyScorePanel>();
         uiManager = FindObjectOfType<UiManager>();
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
         playerNumber = GetComponent<Unit>().PlayerNumber;
@@ -29,13 +28,13 @@ public class NumberUnit : MonoBehaviour
     {
         if (playerNumber != cellGrid.CurrentPlayerNumber)
         {
-            unitScrollbar.gameObject.SetActive(true);
-            unitScrollbar.UpgradeTextBar(gameObject.GetComponent<Unit>().TotalHitPoints, gameObject.GetComponent<Unit>().HitPoints);
+            uiManager.ActiveEnemyScorePanel();
+            enemyScorePanel.UpgradeParameters(gameObject);
         }
     }
     private void OnMouseExit()
     {
-        unitScrollbar.gameObject.SetActive(false);
+        uiManager.CloseEnemyScorePanel();
     }
     private void OnMouseDown()
     {

@@ -15,13 +15,15 @@ public class UiManager : MonoBehaviour
     [SerializeField] Button menuButton;
     [SerializeField] Button endRound;
     [SerializeField] Text roundToEnd;
-    [SerializeField] Animator ScorePanel;
+    [SerializeField] Animator scorePanel;
+    [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
 
 
     private void Start()
     {
         endRoundText.SetBool("Out", true);
+        CloseEnemyScorePanel();        
         CloseScorePanel();
     }
     public void ActiveEndText(int player)
@@ -36,21 +38,20 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
 
     }
+    public void ActiveEnemyScorePanel()
+    {
+        enemyScorePanel.SetBool("Out", false);
+    }
+    public void CloseEnemyScorePanel()
+    {
+        enemyScorePanel.SetBool("Out", true);
+    }
     public void ActiveScorePanel()
     {
-        ScorePanel.SetBool("Out", false);
+        scorePanel.SetBool("Out", false);
     }
     public void CloseScorePanel()
     {
-        ScorePanel.SetBool("Out", true);
+        scorePanel.SetBool("Out", true);
     }
-    public void EndButton()
-    {
-
-    }
-    public void OpenMenu()
-    {
-
-    }
-
 }
