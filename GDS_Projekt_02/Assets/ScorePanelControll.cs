@@ -13,7 +13,7 @@ using GridPack.Grid;
 public class ScorePanelControll : MonoBehaviour
 {
     public Text name;
-    public Scrollbar scrollbar;
+    public Slider scrollbar;
     public Text HP;
 
     public Button attackButton;
@@ -21,27 +21,27 @@ public class ScorePanelControll : MonoBehaviour
     public Button moveButton;
 
     public Text descriptions;
-    public Text maxDmg;
-    public Text minDmg;
-    public Button AcepptButton;
-    public Button CancelButton;
+    public Text damage;
+
 
     private void Awake()
     {
     }
-   
+
     public void TakeUnit(GameObject unit)
     {
         var unitInfo = unit.GetComponent<Unit>();
-        name.text = unit.name;
-        maxDmg.text = unitInfo.AttackMax.ToString();
-        minDmg.text = unitInfo.AttackMin.ToString();
+
+        scrollbar.maxValue = unitInfo.TotalHitPoints;
+        scrollbar.value = unitInfo.HitPoints;
         HP.text = unitInfo.HitPoints.ToString();
+
+        name.text = unit.name;
+        damage.text = unitInfo.AttackFactor.ToString();
     }
-   
+
     void Update()
     {
 
     }
 }
-

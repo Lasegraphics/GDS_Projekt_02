@@ -1,35 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GridPack.Units;
+using GridPack.Cells;
+using GridPack.Grid;
+using GridPack.Grid.UnitGenerators;
+using GridPack.Players;
+using UnityEngine.UI;
 
 public class NumberUnit : MonoBehaviour
 {
     UiManager uiManager;
     ScorePanelControll scorePanelControll;
-    UnitScrollbar unitScrollbar;
+    CellGrid cellGrid;
+    EnemyScorePanel enemyScorePanel;
     public bool isSelected = false;
+    int playerNumber;
     private void Awake()
     {
-        unitScrollbar = FindObjectOfType<UnitScrollbar>();
+        cellGrid = FindObjectOfType<CellGrid>();
+        enemyScorePanel = FindObjectOfType<EnemyScorePanel>();
         uiManager = FindObjectOfType<UiManager>();
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
+        playerNumber = GetComponent<Unit>().PlayerNumber;
     }
     private void OnMouseEnter()
     {
-        unitScrollbar.gameObject.SetActive(true);
+        if (playerNumber != cellGrid.CurrentPlayerNumber)
+        {
+            uiManager.ActiveEnemyScorePanel();
+            enemyScorePanel.UpgradeParameters(gameObject);
+        }
     }
     private void OnMouseExit()
     {
-        unitScrollbar.gameObject.SetActive(false);
+        uiManager.CloseEnemyScorePanel();
     }
     private void OnMouseDown()
     {
-        uiManager.ActiveScorePanel();
-        foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+        if (playerNumber == cellGrid.CurrentPlayerNumber)
         {
-            item.GetComponent<NumberUnit>().isSelected = false;
+            uiManager.ActiveScorePanel();
+            foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+            {
+                item.GetComponent<NumberUnit>().isSelected = false;
+            }
+            isSelected = true;
+            scorePanelControll.TakeUnit(gameObject);
         }
-        isSelected = true;
-        scorePanelControll.TakeUnit(gameObject);
+
     }
 }
+
