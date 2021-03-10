@@ -12,9 +12,8 @@ namespace GridPack.SceneScripts
     public class ArmoredEntity : Entity
     {
         public override event EventHandler<AttackEventArgs> UnitAttacked;
-        public override event EventHandler<AttackEventArgs> UnitDestroyed; 
-        public int TotalArmorPoints{get; private set;}
-        public int ArmorPoints; 
+        public override event EventHandler<AttackEventArgs> UnitDestroyed;
+
         protected static bool IsIgnored;
         public override void Initialize()
         {  
@@ -27,7 +26,7 @@ namespace GridPack.SceneScripts
         {
             Thread th = Thread.CurrentThread; 
             int armorDamageTaken = Defend(aggressor, damage);
-            armorDamageTaken = Random.Range(attackMin,attackMax);
+            //armorDamageTaken = Random.Range(attackMin,attackMax);
             if(ArmorPoints >= 0)
             {
                 try 
@@ -48,7 +47,7 @@ namespace GridPack.SceneScripts
            if(ArmorPoints <= 0 || IsIgnored == true)
             {
                 int damageTaken = Defend(aggressor, damage);
-                damageTaken = Random.Range(attackMin,attackMax);
+                //damageTaken = Random.Range(attackMin,attackMax);
                 HitPoints -= damageTaken;  
                 DefenceActionPerformed();
                 IsIgnored = false; 

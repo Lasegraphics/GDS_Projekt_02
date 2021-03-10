@@ -5,13 +5,28 @@ using UnityEngine.UI;
 using GridPack.Units;
 public class EnemyScorePanel : MonoBehaviour
 {
-    [SerializeField] Text name;   
-    [SerializeField] Text damage;
-    [SerializeField] Slider slider;
+    ScorePanelControll scorePanelControll;
 
-    void Start()
+    [SerializeField] Text name;
+
+    [Header("Sliders")]
+    [SerializeField] Slider sliderHp;
+    [SerializeField] Text hp;
+    [SerializeField] Slider sliderArmor;
+    [SerializeField] Text armor;
+
+    [Header("Events")]
+    [SerializeField] Text event1;
+    [SerializeField] Text event2;
+
+    [Header("ShowDmg")]
+    [SerializeField] Text firstSegment;
+    [SerializeField] Text secondSegment;
+    [SerializeField] Text result;
+
+    private void Awake()
     {
-        
+        scorePanelControll = FindObjectOfType<ScorePanelControll>();
     }
 
     void Update()
@@ -20,10 +35,20 @@ public class EnemyScorePanel : MonoBehaviour
     }
     public void UpgradeParameters(GameObject enemy)
     {
-        Unit unitParameters = enemy.GetComponent<Unit>();
+        Unit unitInfo = enemy.GetComponent<Unit>();
         name.text = enemy.name;
-        damage.text = unitParameters.AttackFactor.ToString();
-        slider.maxValue = unitParameters.TotalHitPoints;
-        slider.value = unitParameters.HitPoints;
+
+        sliderHp.maxValue = unitInfo.TotalHitPoints;
+        sliderHp.value = unitInfo.HitPoints;
+        hp.text = unitInfo.HitPoints.ToString();
+
+        sliderArmor.maxValue = unitInfo.TotalArmorPoints;
+        sliderArmor.value = unitInfo.ArmorPoints;
+        armor.text = unitInfo.ArmorPoints.ToString();
+
+        firstSegment.text = ("("+ unitInfo.ArmorPoints+"+"+ unitInfo.HitPoints+")");
+        secondSegment.text = (scorePanelControll.damage.text+"=");
+        result.text = ((unitInfo.ArmorPoints + unitInfo.HitPoints) - int.Parse(scorePanelControll.damage.text)).ToString();
+
     }
 }

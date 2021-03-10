@@ -71,36 +71,12 @@ namespace GridPack.Units
         public int HitPoints; 
         public int AttackRange;
         public int AttackFactor; 
-        public int DefenceFactor; 
-        [SerializeField]protected int attackMin;
-        [SerializeField]protected int attackMax;
-        
+        public int DefenceFactor;
 
-        public virtual int AttackMin
-        {
-            get
-            {
-                return attackMin; 
-            }
-            set
-            {
+        public int ArmorPoints;
+        public int TotalArmorPoints;
 
-                attackMin = value; 
-            }
-        }
 
-        public virtual int AttackMax
-        {
-            get
-            {
-                return attackMax; 
-            }
-            set
-            {
-                attackMax = value; 
-            }
-        }
-        
         //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
         [SerializeField]
         private float movementPoints; 
@@ -283,7 +259,6 @@ namespace GridPack.Units
            
             MarkAsDefending(aggressor); 
             int damageTaken = Defend(aggressor, damage);
-            damageTaken = Random.Range(attackMin,attackMax);
             HitPoints -= damageTaken;  
             DefenceActionPerformed();
 
