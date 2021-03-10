@@ -7,15 +7,10 @@ public class ScrollCamera : MonoBehaviour
     [SerializeField] float movmentSpeed;
     [SerializeField] float minimumXValue;
     [SerializeField] float maximumXValue;
-    KeyCode code;
-    void Start()
-    {
-
-    }
 
     void Update()
     {
-        if (Input.GetKey("w"))
+        if (Input.GetAxis("Mouse ScrollWheel")>0f)
         {
             if (transform.position.y < maximumXValue)
             {
@@ -23,7 +18,7 @@ public class ScrollCamera : MonoBehaviour
                 transform.Translate(newPos, Space.World);
             }
         }
-        if (Input.GetKey("s"))
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             if (transform.position.y > minimumXValue)
             {
@@ -31,22 +26,6 @@ public class ScrollCamera : MonoBehaviour
                 transform.Translate(newPos, Space.World);
             }
 
-        }
-        if (Input.GetKey("a"))
-        {
-            if (transform.position.x > minimumXValue)
-            {
-                var newPos = Vector3.left * movmentSpeed * Time.deltaTime;
-                transform.Translate(newPos, Space.World);
-            }
-        }      
-        if (Input.GetKey("d"))
-        {
-            if (transform.position.x < maximumXValue)
-            {
-                var newPos = Vector3.right * movmentSpeed * Time.deltaTime;
-                transform.Translate(newPos, Space.World);
-            }
         }
     }
 }
