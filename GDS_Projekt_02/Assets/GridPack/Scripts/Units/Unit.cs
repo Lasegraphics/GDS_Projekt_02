@@ -190,7 +190,7 @@ namespace GridPack.Units
         {
             Cell.IsTaken = false; 
             MarkAsDestroyed();
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
 
         //Metoda jest wywoływana w momencie zaznaczenia jednostki
@@ -231,7 +231,7 @@ namespace GridPack.Units
 
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack); 
-            unitToAttack.DefendHandler(this, attackAction.Damage); 
+            unitToAttack.DefendHandler(this, attackAction.Damage);
             AttackActionPerformed(attackAction.ActionCost);
         }
 
@@ -256,32 +256,41 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
-           
-            MarkAsDefending(aggressor); 
-            int damageTaken = Defend(aggressor, damage);
-            HitPoints -= damageTaken;  
-            DefenceActionPerformed();
-
-            if(UnitAttacked != null)
+            if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
+            {
+                MarkAsDefending(aggressor);
+                int damageTaken = aggressor.AttackFactor;
+                ArmorPoints -= damageTaken;
+                DefenceActionPerformed();
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+            }
+            else
+            {
+                if (ArmorPoints <= 0 || aggressor.GetComponent<Wizard>() != null)
+                {
+                    MarkAsDefending(aggressor);
+                    int damageTaken = aggressor.AttackFactor;
+                    HitPoints -= damageTaken;
+                    DefenceActionPerformed();
+                    if (HitPoints <= 0)
+                    {
+                        if (UnitDestroyed != null)
+                        {
+                            UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
+                        }
+                        OnDestroyed();
+                    }
+                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                }
+            }
+           if(UnitAttacked != null)
             {
                 UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage)); 
             }
-
-            if(HitPoints <= 0)
-            {
-                if (UnitDestroyed != null)
-                {
-                    UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
-                }
-                OnDestroyed();
-            }
-            Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+               
         }
 
-        protected virtual int Defend(Unit aggresor, int damage)
-        {
-            return Mathf.Clamp(damage - DefenceFactor, 1, damage);
-        } 
+       
 
         protected virtual void DefenceActionPerformed(){}
 
