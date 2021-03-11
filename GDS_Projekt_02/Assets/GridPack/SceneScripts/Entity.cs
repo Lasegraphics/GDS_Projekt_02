@@ -10,14 +10,18 @@ namespace GridPack.SceneScripts
     public class Entity : Unit
     {
         Coroutine PulseCoroutine;
-
+        UiManager uiManager;
+        private void Awake()
+        {
+            uiManager = FindObjectOfType<UiManager>();
+        }
         private TurnChanger turnChanger; 
 
         public override void Initialize()
         {
             base.Initialize();
             transform.localPosition += new Vector3(0, 0, -1);
-            turnChanger =  GameObject.Find("GameController").GetComponent<TurnChanger>();
+            turnChanger = GameObject.Find("GameController").GetComponent<TurnChanger>();
             
         }
 

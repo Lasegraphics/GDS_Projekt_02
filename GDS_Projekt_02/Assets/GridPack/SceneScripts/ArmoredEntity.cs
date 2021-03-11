@@ -2,156 +2,92 @@ using System.Collections;
 using GridPack.Cells;
 using GridPack.Units;
 using UnityEngine;
+using System; 
+using System.Threading; 
+using Random = UnityEngine.Random;
 
 namespace GridPack.SceneScripts
 {
     
-    public class ArmoredEntity : Unit
+    public class ArmoredEntity : Entity
     {
-            Coroutine PulseCoroutine;
+        public override event EventHandler<AttackEventArgs> UnitAttacked;
+        public override event EventHandler<AttackEventArgs> UnitDestroyed; 
+        public int TotalArmorPoints{get; private set;}
+        public int ArmorPoints; 
+        protected static bool IsIgnored;
+        public override void Initialize()
+        {  
+            base.Initialize();
+            TotalArmorPoints = ArmorPoints;
+            IsIgnored = false; 
+        }
 
-            public override void Initialize()
+        public override void DefendHandler(Unit aggressor, int damage)
+        {
+            Thread th = Thread.CurrentThread; 
+            int armorDamageTaken = Defend(aggressor, damage);
+            armorDamageTaken = Random.Range(attackMin,attackMax);
+            if(ArmorPoints >= 0)
             {
-                base.Initialize();
-                transform.localPosition += new Vector3(0, 0, -1);
-            }
-
-            public override bool IsCellMovableTo(Cell cell)
-            {
-                return base.IsCellMovableTo(cell) && (cell as MyOtherHexagon).GroundType != GroundType.Water;
-                //Zabrania poruszania się do komórek typu woda 
-            }
-            public override bool IsCellTraversable(Cell cell)
-            {
-                return base.IsCellTraversable(cell) && (cell as MyOtherHexagon).GroundType != GroundType.Water;
-            //Zabrania poruszania się przez komórki typu woda
-            }
-
-            public override void OnUnitDeselected()
-            {
-                //Zatrzymuje pulsacje jednostki
-                base.OnUnitDeselected();
-                StopCoroutine(PulseCoroutine);
-                transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
-            }
-
-            public override void MarkAsAttacking(Unit other)
-            {
-                StartCoroutine(Jerk(other, 0.25f));
-            }
-            public override void MarkAsDefending(Unit other)
-            {
-                StartCoroutine(Glow(new Color(1, 0.5f, 0.5f), 1));
-            }
-            public override void MarkAsDestroyed()
-            {
-            }
-
-            private IEnumerator Jerk(Unit other, float movementTime)
-            {
-                var heading = other.transform.position - transform.position;
-                var direction = heading / heading.magnitude;
-                float startTime = Time.time;
-
-                while (true)
+                try 
                 {
-                    var currentTime = Time.time;
-                    if (startTime + movementTime < currentTime)
-                        break;
-                    transform.position = Vector3.Lerp(transform.position, transform.position + (direction / 2.5f), ((startTime + movementTime) - currentTime));
-                    yield return 0;
+                    ArmorPoints -= armorDamageTaken;
+                    Debug.Log("Obecny Pancerz: " + ArmorPoints + " Zadane Obrazenia: " + armorDamageTaken);
                 }
-                startTime = Time.time;
-                while (true)
+                
+                catch(ThreadAbortException)
                 {
-                    var currentTime = Time.time;
-                    if (startTime + movementTime < currentTime)
-                        break;
-                    transform.position = Vector3.Lerp(transform.position, transform.position - (direction / 2.5f), ((startTime + movementTime) - currentTime));
-                    yield return 0;
-                }
-                transform.position = Cell.transform.position + new Vector3(0, 0, -1);
-            }
-            private IEnumerator Glow(Color color, float cooloutTime)
-            {
-                var _renderer = GetComponent<SpriteRenderer>();
-                float startTime = Time.time;
-
-                while (true)
-                {
-                    var currentTime = Time.time;
-                    if (startTime + cooloutTime < currentTime)
-                        break;
-
-                    _renderer.color = Color.Lerp(Color.white, color, (startTime + cooloutTime) - currentTime);
-                    yield return 0;
-                }
-
-                _renderer.color = Color.white;
-            }
-            private IEnumerator Pulse(float breakTime, float delay, float scaleFactor)
-            {
-                var baseScale = transform.localScale;
-                while (true)
-                {
-                    float time1 = Time.time;
-                    while (time1 + delay > Time.time)
+                    if(ArmorPoints == 0)
                     {
-                        transform.localScale = Vector3.Lerp(baseScale * scaleFactor, baseScale, (time1 + delay) - Time.time);
-                        yield return 0;
+                     th.Abort();
                     }
+                }
+            }
+                
+           if(ArmorPoints <= 0 || IsIgnored == true)
+            {
+                int damageTaken = Defend(aggressor, damage);
+                damageTaken = Random.Range(attackMin,attackMax);
+                HitPoints -= damageTaken;  
+                DefenceActionPerformed();
+                IsIgnored = false; 
+                if(UnitAttacked != null)
+                {
+                    UnitAttacked?.Invoke(this, new AttackEventArgs(aggressor, this, damage)); 
+                }
 
-                    float time2 = Time.time;
-                    while (time2 + delay > Time.time)
+                if(HitPoints <= 0)
+                {
+                    if (UnitDestroyed != null)
                     {
-                        transform.localScale = Vector3.Lerp(baseScale, baseScale * scaleFactor, (time2 + delay) - Time.time);
-                        yield return 0;
+                        UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
                     }
-
-                    yield return new WaitForSeconds(breakTime);
+                    OnDestroyed();
                 }
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                
             }
+          /*  MarkAsDefending(aggressor); 
+            int damageTaken = Defend(aggressor, damage);
+            damageTaken = Random.Range(attackMin,attackMax);
+            
+           
 
-            public override void MarkAsFriendly()
+           
+            if(HitPoints <= 0)
             {
-                SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));
-            }
-            public override void MarkAsReachableEnemy()
-            {
-                SetHighlighterColor(new Color(1, 0, 0, 0.5f));
-            }
-            public override void MarkAsSelected()
-            {
-                PulseCoroutine = StartCoroutine(Pulse(1.0f, 0.5f, 1.25f));
-                SetHighlighterColor(new Color(0, 1, 0, 0.5f));
-            }
-            public override void MarkAsFinished()
-            {
-                SetColor(Color.gray);
-                SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));
-            }
-            public override void UnMark()
-            {
-                SetHighlighterColor(Color.clear);
-                SetColor(Color.white);
-            }
-
-            private void SetColor(Color color)
-            {
-                var _renderer = GetComponent<SpriteRenderer>();
-                if (_renderer != null)
+                if (UnitDestroyed != null)
                 {
-                    _renderer.color = color;
+                    UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
                 }
+                OnDestroyed();
             }
-            private void SetHighlighterColor(Color color)
-            {
-                var highlighter = transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
-                if (highlighter != null)
-                {
-                    highlighter.color = color;
-                }
-            }
+            Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+            */
+        }
+
+        
     }
 
 }

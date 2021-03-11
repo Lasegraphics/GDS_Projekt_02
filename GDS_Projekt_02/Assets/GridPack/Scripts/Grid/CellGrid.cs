@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
@@ -30,6 +31,8 @@ namespace GridPack.Grid
 
         //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
+
+       [SerializeField] UiManager uiManager;
 
 
         public CellGridState CellGridState
@@ -68,7 +71,7 @@ namespace GridPack.Grid
 
         private void Start()
         {
-            if (LevelLoading != null)
+            if(LevelLoading != null)
                LevelLoading.Invoke(this, new EventArgs());
 
             Initialize();
@@ -161,13 +164,9 @@ namespace GridPack.Grid
             Units.Add(unit.GetComponent<Unit>());
             unit.GetComponent<Unit>().UnitClicked += OnUnitClicked; 
             unit.GetComponent<Unit>().UnitDestroyed += OnUnitDestroyed;
-            
 
-            if (UnitAdded != null)
-            {
+            if(UnitAdded != null)
                 UnitAdded.Invoke(this, new UnitCreatedEventArgs(unit));
-            }
-               
             
         }
 
@@ -181,7 +180,7 @@ namespace GridPack.Grid
         }
 
         public void EndTurn()
-        {   
+        {
             //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
@@ -195,11 +194,14 @@ namespace GridPack.Grid
             CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
             while(Units.FindAll(u =>u.PlayerNumber.Equals(CurrentPlayerNumber)).Count == 0)
             {
+                Debug.Log(1);
                 CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
+                
             }
 
             if(TurnEnded != null)
                 TurnEnded.Invoke(this, new EventArgs());
+            uiManager.ActiveEndText(CurrentPlayerNumber);
             Debug.Log(string.Format("Player{0} turn", CurrentPlayerNumber));
             Units.FindAll(u => u.PlayerNumber.Equals(CurrentPlayerNumber)).ForEach(u=>{u.OnTurnStart(); });
             Players.Find(p => p.PlayerNumber.Equals(CurrentPlayerNumber)).Play(this);
