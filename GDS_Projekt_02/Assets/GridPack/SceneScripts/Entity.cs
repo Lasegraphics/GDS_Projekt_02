@@ -10,10 +10,8 @@ namespace GridPack.SceneScripts
     public class Entity : Unit
     {
         Coroutine PulseCoroutine;
-        UiManager uiManager;
         private void Awake()
         {
-            uiManager = FindObjectOfType<UiManager>();
         }
         private TurnChanger turnChanger; 
 
