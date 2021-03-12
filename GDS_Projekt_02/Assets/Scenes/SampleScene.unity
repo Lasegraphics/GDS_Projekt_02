@@ -3655,7 +3655,7 @@ MonoBehaviour:
   TotalArmorPoints: 0
   movementPoints: 4
   MovementAnimationSpeed: 20
-  actionPoints: 10
+  actionPoints: 1
   PlayerNumber: 0
 --- !u!58 &996258465
 CircleCollider2D:
@@ -7426,7 +7426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd25ae12a5eef3148964890235a784eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movmentSpeed: 100
+  movmentSpeed: 50
   minimumXValue: -2
   maximumXValue: 2
   dragSpeed: 2
