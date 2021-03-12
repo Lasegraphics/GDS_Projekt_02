@@ -296,7 +296,7 @@ namespace GridPack.Units
             {
                 UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage));
             }
-            uiManager.attackButton = false;
+            
         }
         
 
