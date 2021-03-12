@@ -1,6 +1,8 @@
 ﻿using GridPack.Cells;
 using GridPack.Units;
-using GridPack.Grid; 
+using GridPack.Grid;
+using UnityEngine;
+using System;
 
 namespace GridPack.Grid.GridStates
 {
@@ -24,7 +26,7 @@ namespace GridPack.Grid.GridStates
         //Metoda jest wywoływana w momencie wyjścia myszki z obszaru komórki 
         public virtual void OnCellDeselected(Cell cell)
         {
-            cell.UnMark();
+                cell.UnMark();       
         }
 
         //Metoda jest wywoływana w momencie kiedy kursor znajduje się w obszarze komórki 
@@ -36,7 +38,6 @@ namespace GridPack.Grid.GridStates
         //Metoda jest wywoływana w momencie kiedy komórka jest kliknięta
         public virtual void OnCellClicked(Cell cell)
         {
-
         }
 
         //Metoda jest wywoływana w momencie wejścia w stan

@@ -39,12 +39,13 @@ namespace GridPack.Cells
         {
             if(CellDehighlighted != null)
                 CellDehighlighted?.Invoke(this, new EventArgs());
-        }     
+        }
         void OnMouseDown()
         {
-            if(CellClicked != null)
+            if (CellClicked != null)
                 CellClicked?.Invoke(this, new EventArgs());
-        }  
+
+        }
         //Metoda zwraca dystans do komórki podanej jako parametr
         public abstract int GetDistance(Cell other);
         //Metoda zwraca komórki sąsiadujące z biezącą komórką z listy komórek podanej jako parametr

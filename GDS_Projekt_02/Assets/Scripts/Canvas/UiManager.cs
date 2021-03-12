@@ -18,7 +18,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] Animator scorePanel;
     [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
-
+ public bool attackButton;
 
     private void Start()
     {
@@ -53,5 +53,9 @@ public class UiManager : MonoBehaviour
     public void CloseScorePanel()
     {
         scorePanel.SetBool("Out", true);
+    }
+    public void AttackButton()
+    {
+        attackButton = true;
     }
 }
