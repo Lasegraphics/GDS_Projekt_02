@@ -1073,12 +1073,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: {fileID: 1873509333}
   damage: {fileID: 1102721454}
-  sliderHp: {fileID: 0}
+  sliderHp: {fileID: 1131972503}
   HP: {fileID: 2110945676}
-  sliderArmor: {fileID: 0}
-  armor: {fileID: 0}
-  event1: {fileID: 0}
-  event2: {fileID: 0}
+  sliderArmor: {fileID: 57981382}
+  armor: {fileID: 1721633661}
+  event1: {fileID: 1402706588}
+  event2: {fileID: 541970456}
 --- !u!114 &335247610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4712,15 +4712,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 528832330}
-  sliderHp: {fileID: 0}
-  hp: {fileID: 0}
-  sliderArmor: {fileID: 0}
-  armor: {fileID: 0}
-  event1: {fileID: 0}
-  event2: {fileID: 0}
-  firstSegment: {fileID: 0}
-  secondSegment: {fileID: 0}
-  result: {fileID: 0}
+  sliderHp: {fileID: 1723740706}
+  hp: {fileID: 131639396}
+  sliderArmor: {fileID: 536295813}
+  armor: {fileID: 489614753}
+  event1: {fileID: 1058957311}
+  event2: {fileID: 376316537}
+  firstSegment: {fileID: 927757924}
+  secondSegment: {fileID: 120987841}
+  result: {fileID: 871752043}
 --- !u!114 &1191900079
 MonoBehaviour:
   m_ObjectHideFlags: 0
