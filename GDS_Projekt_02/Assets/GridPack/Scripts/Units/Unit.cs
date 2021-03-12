@@ -172,6 +172,12 @@ namespace GridPack.Units
             MovementPoints = TotalMovementPoints;
             ActionPoints = TotalActionPoints;
 
+            if(Cell != null && Cell.IsEffected == true)
+            {
+                Debug.Log("Zadano Obrazenia");
+                HitPoints -= 1;
+            }
+
             SetState(new UnitStateMarkedAsFriendly(this)); 
         }
 
@@ -327,6 +333,12 @@ namespace GridPack.Units
             if(UnitMoved != null)
             {
                 UnitMoved.Invoke(this, new MovementEventArgs(Cell, destinationCell, path));
+            }
+
+            if(destinationCell.IsEffected == true)
+            {
+                Debug.Log("Zadano Obrazenia");
+                HitPoints -= 1;
             }
 
         }

@@ -16,6 +16,7 @@ namespace GridPack.Cells
         public Vector2 OffsetCoord {get {return _offsetCoord;} set {_offsetCoord = value;}}
         //Sprawdza czy na komórce cos się znajduje
         public bool IsTaken; 
+        public bool IsEffected; 
         //Koszt ruchu jednoski 
         public float MovementCost  = 1;
 
