@@ -1285,6 +1285,7 @@ MonoBehaviour:
   scorePanel: {fileID: 335247608}
   enemyScorePanel: {fileID: 1191900077}
   endRoundText: {fileID: 1633378406}
+  attackButton: 0
 --- !u!4 &364494463
 Transform:
   m_ObjectHideFlags: 0
@@ -4096,7 +4097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1091152430}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 364494462}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: AttackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1094752120
 GameObject:
   m_ObjectHideFlags: 0

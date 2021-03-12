@@ -75,6 +75,7 @@ namespace GridPack.Units
 
         public int ArmorPoints;
         public int TotalArmorPoints;
+        UiManager uiManager;
 
 
         //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
@@ -206,11 +207,14 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
+
             SetState(new UnitStateMarkedAsFriendly(this));
-            if(UnitDeselected != null)
+            if (UnitDeselected != null)
             {
                 UnitDeselected.Invoke(this, new EventArgs());
             }
+
+
         }
 
         //Metoda wskazuje czy mozna zaatakowac jednostkę z danej komórki 
@@ -224,15 +228,19 @@ namespace GridPack.Units
         //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
-            if(!IsUnitAttackable(unitToAttack, Cell))
+            uiManager = FindObjectOfType<UiManager>();
+            if (uiManager.attackButton)
             {
-                return; 
-            }
+                if (!IsUnitAttackable(unitToAttack, Cell))
+                {
+                    return;
+                }
 
-            AttackAction attackAction = DealDamage(unitToAttack);
-            MarkAsAttacking(unitToAttack); 
-            unitToAttack.DefendHandler(this, attackAction.Damage);
-            AttackActionPerformed(attackAction.ActionCost);
+                AttackAction attackAction = DealDamage(unitToAttack);
+                MarkAsAttacking(unitToAttack);
+                unitToAttack.DefendHandler(this, attackAction.Damage);
+                AttackActionPerformed(attackAction.ActionCost);
+            }
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
@@ -256,6 +264,7 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
+            
             if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
             {
                 MarkAsDefending(aggressor);
@@ -283,12 +292,13 @@ namespace GridPack.Units
                     Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                 }
             }
-           if(UnitAttacked != null)
+            if (UnitAttacked != null)
             {
-                UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage)); 
+                UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage));
             }
-               
+            uiManager.attackButton = false;
         }
+        
 
        
 
