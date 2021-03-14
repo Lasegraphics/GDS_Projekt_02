@@ -12,13 +12,12 @@ using GridPack.Units;
 
 public class UiManager : MonoBehaviour
 {
-    [SerializeField] Button menuButton;
-    [SerializeField] Button endRound;
     [SerializeField] Text roundToEnd;
     [SerializeField] Animator scorePanel;
     [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
- public bool attackButton;
+
+    public bool attackButton;
 
     private void Start()
     {
