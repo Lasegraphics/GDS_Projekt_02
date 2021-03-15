@@ -16,6 +16,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] Animator scorePanel;
     [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
+    [SerializeField] Texture2D cursorTexture;
 
     public bool attackButton;
 

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ScrollCamera : MonoBehaviour
 {
-    [SerializeField] float movmentSpeed;
-    [SerializeField] float minimumXValue;
-    [SerializeField] float maximumXValue;
 
 
     public float dragSpeed = 2;
