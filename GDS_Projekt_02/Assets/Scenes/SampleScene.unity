@@ -593,7 +593,7 @@ RectTransform:
   - {fileID: 1042976996}
   - {fileID: 1165460069}
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -750,6 +750,7 @@ MonoBehaviour:
   scorePanel: {fileID: 1227786928}
   enemyScorePanel: {fileID: 342192079}
   endRoundText: {fileID: 1633378406}
+  cursorTexture: {fileID: 0}
   attackButton: 0
 --- !u!4 &364494463
 Transform:
@@ -779,7 +780,7 @@ GameObject:
   - component: {fileID: 368538667}
   - component: {fileID: 368538669}
   m_Layer: 0
-  m_Name: 'Ice 03 '
+  m_Name: TANK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,7 +918,7 @@ GameObject:
   - component: {fileID: 384177461}
   - component: {fileID: 384177463}
   m_Layer: 0
-  m_Name: Ice 05
+  m_Name: TANK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1191,7 +1192,7 @@ GameObject:
   - component: {fileID: 477622316}
   - component: {fileID: 477622315}
   m_Layer: 5
-  m_Name: TopPlayerUI (1)
+  m_Name: TopEnemyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,7 +1210,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1547,7 +1548,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1719,7 +1720,7 @@ GameObject:
   - component: {fileID: 682067779}
   - component: {fileID: 682067781}
   m_Layer: 0
-  m_Name: Ice 06
+  m_Name: ARCHER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2368,7 +2369,7 @@ GameObject:
   - component: {fileID: 887467869}
   - component: {fileID: 887467871}
   m_Layer: 0
-  m_Name: Ice 04
+  m_Name: ROGUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2638,7 +2639,7 @@ GameObject:
   - component: {fileID: 996258464}
   - component: {fileID: 996258467}
   m_Layer: 0
-  m_Name: Ice 07
+  m_Name: WIZARD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2924,7 +2925,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3467,7 +3468,7 @@ RectTransform:
   m_Children:
   - {fileID: 1936903756}
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3893,7 +3894,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4294,7 +4295,7 @@ GameObject:
   - component: {fileID: 1214006333}
   - component: {fileID: 1214006336}
   m_Layer: 0
-  m_Name: Ice 08
+  m_Name: WARRIOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4511,7 +4512,7 @@ GameObject:
   - component: {fileID: 1219078012}
   - component: {fileID: 1219078015}
   m_Layer: 0
-  m_Name: Ice 10
+  m_Name: WARRIOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5363,14 +5364,14 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1227786926}
-  - {fileID: 1040993160}
   - {fileID: 342192078}
+  - {fileID: 1040993160}
+  - {fileID: 477622314}
   - {fileID: 1099128003}
   - {fileID: 1781398253}
   - {fileID: 599464744}
   - {fileID: 1633378403}
   - {fileID: 1140122402}
-  - {fileID: 477622314}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5392,7 +5393,7 @@ GameObject:
   - component: {fileID: 1633378404}
   - component: {fileID: 1633378406}
   m_Layer: 5
-  m_Name: TextToEndGame (1)
+  m_Name: TextToEndGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5410,7 +5411,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5450,7 +5451,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Koniec rundy gracza :1
+  m_Text: 'KONIEC RUNDY GRACZA: 1'
 --- !u!222 &1633378405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5886,7 +5887,7 @@ RectTransform:
   - {fileID: 1184029918}
   - {fileID: 1216007544}
   m_Father: {fileID: 1619029240}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6109,7 +6110,7 @@ GameObject:
   - component: {fileID: 1814842404}
   - component: {fileID: 1814842406}
   m_Layer: 0
-  m_Name: Ice 02
+  m_Name: WARRIOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6301,7 +6302,7 @@ GameObject:
   - component: {fileID: 1836238538}
   - component: {fileID: 1836238541}
   m_Layer: 0
-  m_Name: Ice 09
+  m_Name: WARRIOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6822,9 +6823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd25ae12a5eef3148964890235a784eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movmentSpeed: 50
-  minimumXValue: -2
-  maximumXValue: 2
   dragSpeed: 2
   cameraDragging: 1
   outerLeft: -10
@@ -6963,7 +6961,7 @@ GameObject:
   - component: {fileID: 2035172569}
   - component: {fileID: 2035172572}
   m_Layer: 0
-  m_Name: Ice 01
+  m_Name: WARRIOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
