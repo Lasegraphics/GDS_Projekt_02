@@ -78,6 +78,7 @@ namespace GridPack.Units
         UiManager uiManager;
 
 
+       
         //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
         [SerializeField]
         private float movementPoints; 
@@ -213,13 +214,14 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
-
+            uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
+           
             if (UnitDeselected != null)
-            {
+            {            
                 UnitDeselected.Invoke(this, new EventArgs());
             }
-
+            uiManager.CloseScorePanel();
 
         }
 

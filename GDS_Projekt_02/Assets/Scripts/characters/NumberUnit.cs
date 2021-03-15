@@ -34,6 +34,7 @@ public class NumberUnit : MonoBehaviour
     }
     private void OnMouseExit()
     {
+
         uiManager.CloseEnemyScorePanel();
     }
     private void OnMouseDown()

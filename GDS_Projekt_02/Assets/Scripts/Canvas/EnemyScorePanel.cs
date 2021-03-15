@@ -12,6 +12,7 @@ public class EnemyScorePanel : MonoBehaviour
     [Header("Sliders")]
     [SerializeField] Slider sliderHp;
     [SerializeField] Text hp;
+    //[SerializeField] Image hpBack;
     [SerializeField] Slider sliderArmor;
     [SerializeField] Text armor;
 
@@ -19,36 +20,39 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] Text event1;
     [SerializeField] Text event2;
 
-    [Header("ShowDmg")]
-    [SerializeField] Text firstSegment;
-    [SerializeField] Text secondSegment;
-    [SerializeField] Text result;
 
     private void Awake()
     {
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
     }
 
-    void Update()
-    {
-        
-    }
+
     public void UpgradeParameters(GameObject enemy)
     {
         Unit unitInfo = enemy.GetComponent<Unit>();
         name.text = enemy.name;
 
-        sliderHp.maxValue = unitInfo.TotalHitPoints;
-        sliderHp.value = unitInfo.HitPoints;
-        hp.text = unitInfo.HitPoints.ToString();
-
+        sliderHp.maxValue = unitInfo.TotalHitPoints;       
         sliderArmor.maxValue = unitInfo.TotalArmorPoints;
-        sliderArmor.value = unitInfo.ArmorPoints;
-        armor.text = unitInfo.ArmorPoints.ToString();
 
-        firstSegment.text = ("("+ unitInfo.ArmorPoints+"+"+ unitInfo.HitPoints+")");
-        secondSegment.text = (scorePanelControll.damage.text+"=");
-        result.text = ((unitInfo.ArmorPoints + unitInfo.HitPoints) - int.Parse(scorePanelControll.damage.text)).ToString();
+        if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0 )
+        {
+            sliderHp.value = unitInfo.HitPoints - scorePanelControll.damage;
+            hp.text = unitInfo.HitPoints.ToString() +" - " + scorePanelControll.damage;
 
+            sliderArmor.value = unitInfo.ArmorPoints;
+            armor.text = unitInfo.ArmorPoints.ToString(); 
+        }
+        else
+        {
+            sliderHp.value = unitInfo.HitPoints;
+            hp.text = unitInfo.HitPoints.ToString();
+
+            sliderArmor.value = unitInfo.ArmorPoints - scorePanelControll.damage;
+            armor.text = unitInfo.ArmorPoints.ToString() + " - " +scorePanelControll.damage;
+        }
+       
+
+     
     }
 }
