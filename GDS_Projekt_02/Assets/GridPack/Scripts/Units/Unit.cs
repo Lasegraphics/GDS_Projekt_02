@@ -75,6 +75,7 @@ namespace GridPack.Units
 
         public int ArmorPoints;
         public int TotalArmorPoints;
+        public bool ignoreEnemyArmor;
         UiManager uiManager;
 
 
@@ -283,7 +284,7 @@ namespace GridPack.Units
             }
             else
             {
-                if (ArmorPoints <= 0 || aggressor.GetComponent<Wizard>() != null)
+                if (ArmorPoints <= 0 || ignoreEnemyArmor==true)
                 {
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
