@@ -45,7 +45,6 @@ namespace GridPack.Cells
         {
             if (CellClicked != null)
                 CellClicked?.Invoke(this, new EventArgs());
-
         }
         //Metoda zwraca dystans do komórki podanej jako parametr
         public abstract int GetDistance(Cell other);

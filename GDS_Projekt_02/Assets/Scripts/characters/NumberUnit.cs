@@ -39,17 +39,25 @@ public class NumberUnit : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (playerNumber == cellGrid.CurrentPlayerNumber)
+        if (isSelected == false)
         {
-            uiManager.ActiveScorePanel();
-            foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+            if (playerNumber == cellGrid.CurrentPlayerNumber)
             {
-                item.GetComponent<NumberUnit>().isSelected = false;
+                foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+                {
+                    item.GetComponent<NumberUnit>().isSelected = true;
+                }
+                uiManager.ActiveScorePanel();
+                scorePanelControll.TakeUnit(gameObject);
             }
-            isSelected = true;
-            scorePanelControll.TakeUnit(gameObject);
+        }      
+    }
+    public void DeselectallUnits()
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+        {
+            item.GetComponent<NumberUnit>().isSelected = false;
         }
-
     }
 }
 
