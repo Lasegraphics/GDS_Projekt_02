@@ -32,7 +32,7 @@ namespace GridPack.Grid
         //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
 
-       [SerializeField] UiManager uiManager;
+        [SerializeField] UiManager uiManager;
 
 
         public CellGridState CellGridState
