@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnUnits : MonoBehaviour
 {
 
-    public NumberUnit unit;
+    public GameObject unit;
     public GameObject parentUnits;
     private void OnMouseDown()
     {
@@ -14,7 +14,7 @@ public class SpawnUnits : MonoBehaviour
             AttemptToPlaceUnitAt(GetClicked());
         }
     }
-    public void SetSelectedUnit(NumberUnit UnitToSlecet)
+    public void SetSelectedUnit(GameObject UnitToSlecet)
     {
         unit = UnitToSlecet;
     }
@@ -39,6 +39,15 @@ public class SpawnUnits : MonoBehaviour
     void SpawnUnit(Vector2 worldPos)
     {
        var newUnit = Instantiate(unit, worldPos, transform.rotation);
+        foreach (var item in FindObjectsOfType<UnitsButton>())
+        {
+            if (newUnit.tag == item.tag)
+            {
+                item.gameObject.SetActive(false);
+                unit = null;
+            }
+        }
+       
         newUnit.transform.parent = parentUnits.transform;
     }
 }

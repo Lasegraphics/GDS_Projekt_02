@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class UnitsButton : MonoBehaviour
 {
-    public NumberUnit unitPreFab;
+    public GameObject unitPreFab;
 
+    private void Update()
+    {
+        if (unitPreFab)
+        {
 
+        }
+    }
     private void OnMouseDown()
     {
         var buttons = FindObjectsOfType<UnitsButton>();

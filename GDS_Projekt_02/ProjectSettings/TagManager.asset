@@ -4,12 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Tank
-  - Warrior
-  - Magic
-  - Archer
-  - Rouge
   - Unit
+  - P1-Warrior
+  - P2-Warrior
+  - P1-Tank
+  - P2-Tank
+  - P1-Archer
+  - P2-Archer
+  - P1-Rouge
+  - P2-Rouge
+  - P1-Wizzard
+  - P2-Wizzard
   layers:
   - Default
   - TransparentFX
