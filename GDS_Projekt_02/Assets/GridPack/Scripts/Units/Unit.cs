@@ -206,7 +206,7 @@ namespace GridPack.Units
         public virtual void OnUnitSelected()
         {
             SetState(new UnitStateMarkedAsSelected(this));
-            if(UnitSelected != null)
+            if (UnitSelected != null)
             {
                 UnitSelected.Invoke(this, new EventArgs());
             }
@@ -217,11 +217,11 @@ namespace GridPack.Units
         {
             uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
-           
+
             if (UnitDeselected != null)
-            {            
+            {
                 UnitDeselected.Invoke(this, new EventArgs());
-            }
+            }      
             uiManager.CloseScorePanel();
 
         }
@@ -237,19 +237,16 @@ namespace GridPack.Units
         //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
-            uiManager = FindObjectOfType<UiManager>();
-            if (uiManager.attackButton)
-            {
-                if (!IsUnitAttackable(unitToAttack, Cell))
-                {
-                    return;
-                }
 
-                AttackAction attackAction = DealDamage(unitToAttack);
-                MarkAsAttacking(unitToAttack);
-                unitToAttack.DefendHandler(this, attackAction.Damage);
-                AttackActionPerformed(attackAction.ActionCost);
+            if (!IsUnitAttackable(unitToAttack, Cell))
+            {
+                return;
             }
+
+            AttackAction attackAction = DealDamage(unitToAttack);
+            MarkAsAttacking(unitToAttack);
+            unitToAttack.DefendHandler(this, attackAction.Damage);
+            AttackActionPerformed(attackAction.ActionCost);
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
