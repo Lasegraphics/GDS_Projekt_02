@@ -100,6 +100,7 @@ namespace GridPack.Cells
             newCell.OffsetCoord = OffsetCoord;
             (newCell as Hexagon).HexGridType = HexGridType;
         }
+        
     }
 
     public enum HexGridType
