@@ -7,12 +7,23 @@ public class SpawnUnits : MonoBehaviour
 
     public GameObject unit;
     public GameObject parentUnits;
+    public int player;
+
+    StartGameController startGameController;
+    private void Awake()
+    {
+        startGameController = FindObjectOfType<StartGameController>();
+    }
     private void OnMouseDown()
     {
-        if (unit != null)
+        if (startGameController.currentTurn == player)
         {
-            AttemptToPlaceUnitAt(GetClicked());
+            if (unit != null)
+            {
+                AttemptToPlaceUnitAt(GetClicked());
+            }
         }
+        
     }
     public void SetSelectedUnit(GameObject UnitToSlecet)
     {
@@ -47,7 +58,7 @@ public class SpawnUnits : MonoBehaviour
                 unit = null;
             }
         }
-       
+        startGameController.ChangeTurn();
         newUnit.transform.parent = parentUnits.transform;
     }
 }

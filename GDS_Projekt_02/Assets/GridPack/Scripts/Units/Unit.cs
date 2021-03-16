@@ -81,8 +81,8 @@ namespace GridPack.Units
 
         //Determinuje szybkość przemieszczania jednostki. 
         public float MovementAnimationSpeed;
+        public int PlayerNumber;
 
-        
         [HideInInspector] public int TotalArmorPoints;
         UiManager uiManager;
 
@@ -124,7 +124,6 @@ namespace GridPack.Units
 
         //Wskazuje gracza do którego nalezy jednostka
         //Powinien korespondować ze zmienna PlayerNumber w skrypcie gracza.  
-        public int PlayerNumber; 
         public CellGrid EndTrn {get; set;}
 
         //Wskazuje jesli animacja ruchu jest odpalona. 

@@ -7,19 +7,26 @@ public class StartGameController : MonoBehaviour
 {
 
     [SerializeField] GameObject[] panels;
+    public int currentTurn;
 
     UiManager uiManager;
     CellGrid cellGrid;
-    ScrollCamera scrollCamera;
     private void Awake()
     {
-        scrollCamera = FindObjectOfType<ScrollCamera>();
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
     }
-    void Update()
+    public void ChangeTurn()
     {
-
+        if (currentTurn==0)
+        {
+            currentTurn = 1;
+        }
+        else
+        {
+            currentTurn = 0;
+        }
+        
     }
     public void StartMainGame()
     {

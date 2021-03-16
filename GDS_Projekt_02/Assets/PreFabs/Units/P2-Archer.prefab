@@ -214,8 +214,9 @@ MonoBehaviour:
   AttackRange: 5
   AttackFactor: 5
   ArmorPoints: 5
-  TotalArmorPoints: 0
-  movementPoints: 0
-  MovementAnimationSpeed: 0
+  ignorArmor: 0
   actionPoints: 1
-  PlayerNumber: 0
+  movementPoints: 3
+  MovementAnimationSpeed: 20
+  TotalArmorPoints: 0
+  PlayerNumber: 1

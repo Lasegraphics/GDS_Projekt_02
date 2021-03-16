@@ -210,13 +210,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 0
-  AttackRange: 0
-  AttackFactor: 0
-  DefenceFactor: 0
-  ArmorPoints: 0
-  TotalArmorPoints: 0
-  movementPoints: 0
-  MovementAnimationSpeed: 0
+  HitPoints: 10
+  AttackRange: 5
+  AttackFactor: 5
+  ArmorPoints: 5
+  ignorArmor: 1
   actionPoints: 1
-  PlayerNumber: 0
+  movementPoints: 3
+  MovementAnimationSpeed: 20
+  TotalArmorPoints: 0
+  PlayerNumber: 1
