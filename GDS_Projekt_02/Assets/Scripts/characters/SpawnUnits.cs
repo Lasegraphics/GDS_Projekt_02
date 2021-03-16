@@ -6,6 +6,7 @@ public class SpawnUnits : MonoBehaviour
 {
 
     public NumberUnit unit;
+    public GameObject parentUnits;
     private void OnMouseDown()
     {
         if (unit != null)
@@ -37,6 +38,7 @@ public class SpawnUnits : MonoBehaviour
     }
     void SpawnUnit(Vector2 worldPos)
     {
-        Instantiate(unit, worldPos, transform.rotation);
+       var newUnit = Instantiate(unit, worldPos, transform.rotation);
+        newUnit.transform.parent = parentUnits.transform;
     }
 }

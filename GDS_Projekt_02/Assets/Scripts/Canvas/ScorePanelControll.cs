@@ -28,7 +28,7 @@ public class ScorePanelControll : MonoBehaviour
 
     public void TakeUnit(GameObject unit)
     {
-        if (FindObjectOfType<UiManager>().isStart == true)
+        if (FindObjectOfType<UiManager>().IsStartGame() == false)
         {
             isMage = false;
             if (unit.gameObject.GetComponent<Wizard>() != null)

@@ -17,7 +17,7 @@ TagManager:
   - Unit
   - Water
   - UI
-  - 
+  - StartPanel
   - 
   - 
   - 
@@ -44,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: StartPanel
+    uniqueID: 335381259
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 823248275
     locked: 0
