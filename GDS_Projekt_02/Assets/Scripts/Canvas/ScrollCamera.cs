@@ -27,7 +27,7 @@ public class ScrollCamera : MonoBehaviour
     }
     void Update()
     {
-        if (uiManager.IsStartGame() == false)
+        if (uiManager.isStart == false)
         {
             MoveCameraToNormalPos();
         }

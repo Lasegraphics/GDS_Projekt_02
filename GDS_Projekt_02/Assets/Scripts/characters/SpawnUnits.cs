@@ -58,6 +58,10 @@ public class SpawnUnits : MonoBehaviour
                 unit = null;
             }
         }
+        if (FindObjectsOfType<NumberUnit>().Length == 10)
+        {
+            startGameController.buttonStartGame.SetActive(true);
+        }
         startGameController.ChangeTurn();
         newUnit.transform.parent = parentUnits.transform;
     }

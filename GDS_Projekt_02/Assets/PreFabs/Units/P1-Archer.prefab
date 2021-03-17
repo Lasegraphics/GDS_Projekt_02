@@ -200,13 +200,14 @@ MonoBehaviour:
   HitPoints: 10
   AttackRange: 5
   AttackFactor: 5
-  DefenceFactor: 2
   ArmorPoints: 0
-  TotalArmorPoints: 0
-  movementPoints: 3
-  MovementAnimationSpeed: 20
+  ignorArmor: 0
   actionPoints: 2
+  movementPoints: 3
+  nameUnit: Archer
+  MovementAnimationSpeed: 20
   PlayerNumber: 0
+  TotalArmorPoints: 0
 --- !u!114 &5955414324406064378
 MonoBehaviour:
   m_ObjectHideFlags: 0

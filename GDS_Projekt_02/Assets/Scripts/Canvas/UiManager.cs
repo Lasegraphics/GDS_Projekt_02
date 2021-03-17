@@ -38,10 +38,7 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
 
     }
-    public bool IsStartGame()
-    {
-        return isStart;
-    }
+  
     public void ActiveEnemyScorePanel()
     {
         enemyScorePanel.SetBool("Out", false);

@@ -75,11 +75,12 @@ namespace GridPack.Units
         public bool ignorArmor;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
-        
+
 
         [Header("nie potrzebne")]
 
         //Determinuje szybkość przemieszczania jednostki. 
+        public string nameUnit;
         public float MovementAnimationSpeed;
         public int PlayerNumber;
 

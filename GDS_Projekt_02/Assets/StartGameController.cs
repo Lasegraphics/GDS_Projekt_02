@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using GridPack.Grid;
 
 public class StartGameController : MonoBehaviour
 {
 
     [SerializeField] GameObject[] panels;
+    [SerializeField] GameObject mainGameCanvas;
+    public GameObject buttonStartGame;
     public int currentTurn;
 
     UiManager uiManager;
@@ -15,6 +18,10 @@ public class StartGameController : MonoBehaviour
     {
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
+    }
+    private void Update()
+    {
+       
     }
     public void ChangeTurn()
     {
@@ -39,4 +46,5 @@ public class StartGameController : MonoBehaviour
         cellGrid.StartGame();
 
     }
+    
 }

@@ -28,7 +28,7 @@ public class ScorePanelControll : MonoBehaviour
 
     public void TakeUnit(GameObject unit)
     {
-        if (FindObjectOfType<UiManager>().IsStartGame() == false)
+        if (FindObjectOfType<UiManager>().isStart == false)
         {
             isMage = false;
             if (unit.gameObject.GetComponent<Wizard>() != null)
@@ -45,7 +45,7 @@ public class ScorePanelControll : MonoBehaviour
             sliderArmor.value = unitInfo.ArmorPoints;
             armor.text = unitInfo.ArmorPoints.ToString();
 
-            name.text = unit.name;
+            name.text = unitInfo.nameUnit;
         }      
     }
 

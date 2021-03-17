@@ -200,13 +200,14 @@ MonoBehaviour:
   HitPoints: 10
   AttackRange: 5
   AttackFactor: 5
-  DefenceFactor: 20
   ArmorPoints: 10
-  TotalArmorPoints: 0
-  movementPoints: 3
-  MovementAnimationSpeed: 20
+  ignorArmor: 0
   actionPoints: 1
+  movementPoints: 3
+  nameUnit: Tank
+  MovementAnimationSpeed: 20
   PlayerNumber: 1
+  TotalArmorPoints: 0
 --- !u!114 &7801343158370318071
 MonoBehaviour:
   m_ObjectHideFlags: 0

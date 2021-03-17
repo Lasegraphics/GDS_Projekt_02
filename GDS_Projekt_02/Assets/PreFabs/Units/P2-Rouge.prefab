@@ -135,9 +135,10 @@ MonoBehaviour:
   ignorArmor: 0
   actionPoints: 1
   movementPoints: 3
+  nameUnit: Rouge
   MovementAnimationSpeed: 20
-  TotalArmorPoints: 0
   PlayerNumber: 1
+  TotalArmorPoints: 0
 --- !u!1 &2737745491245196769
 GameObject:
   m_ObjectHideFlags: 0

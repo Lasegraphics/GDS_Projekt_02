@@ -7,7 +7,7 @@ public class EnemyScorePanel : MonoBehaviour
 {
     ScorePanelControll scorePanelControll;
 
-    [SerializeField] Text name;
+    [SerializeField] Text nameEnemy;
 
     [Header("Sliders")]
     [SerializeField] Slider sliderHp;
@@ -30,7 +30,7 @@ public class EnemyScorePanel : MonoBehaviour
     public void UpgradeParameters(GameObject enemy)
     {
         Unit unitInfo = enemy.GetComponent<Unit>();
-        name.text = enemy.name;
+        nameEnemy.text = unitInfo.nameUnit;
 
         sliderHp.maxValue = unitInfo.TotalHitPoints;       
         sliderArmor.maxValue = unitInfo.TotalArmorPoints;

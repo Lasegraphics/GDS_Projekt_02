@@ -204,9 +204,10 @@ MonoBehaviour:
   ignorArmor: 1
   actionPoints: 1
   movementPoints: 4
+  nameUnit: Wizzard
   MovementAnimationSpeed: 20
-  TotalArmorPoints: 0
   PlayerNumber: 0
+  TotalArmorPoints: 0
 --- !u!114 &6198400621601585274
 MonoBehaviour:
   m_ObjectHideFlags: 0
