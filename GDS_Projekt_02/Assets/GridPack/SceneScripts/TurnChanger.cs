@@ -12,7 +12,7 @@ namespace GridPack.SceneScripts
         public Entity entity; 
         private bool isFinished;
         private int unitDiscard;
-        void Awake()
+       public void StartGame()
         {
            EndTrn.LevelLoading += onLevelLoading;
            EndTrn.LevelLoadingDone += onLevelLoadingDone;

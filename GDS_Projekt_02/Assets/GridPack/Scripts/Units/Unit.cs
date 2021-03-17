@@ -67,22 +67,30 @@ namespace GridPack.Units
                 cell = value; 
             }
         }
-
+        [Header("DO EDYCJI")]
         public int HitPoints; 
         public int AttackRange;
-        public int AttackFactor; 
-        public int DefenceFactor;
-
+        public int AttackFactor;
         public int ArmorPoints;
-        public int TotalArmorPoints;
-        public bool ignoreEnemyArmor;
+        public bool ignorArmor;
+        public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
+        [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
+
+
+        [Header("nie potrzebne")]
+
+        //Determinuje szybkość przemieszczania jednostki. 
+        public string nameUnit;
+        public float MovementAnimationSpeed;
+        public int PlayerNumber;
+
+        [HideInInspector] public int TotalArmorPoints;
         UiManager uiManager;
 
 
        
-        //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
-        [SerializeField]
-        private float movementPoints; 
+       
+         
 
 
         public virtual float MovementPoints
@@ -98,12 +106,10 @@ namespace GridPack.Units
             }
         }
 
-        //Determinuje szybkość przemieszczania jednostki. 
-        public float MovementAnimationSpeed; 
+        
 
-        //Determinuje Jak duzo ataków moze wykonać jednostka. 
-        [SerializeField]
-        public float actionPoints = 1;
+        
+        
         public float ActionPoints
         {
             get
@@ -119,7 +125,6 @@ namespace GridPack.Units
 
         //Wskazuje gracza do którego nalezy jednostka
         //Powinien korespondować ze zmienna PlayerNumber w skrypcie gracza.  
-        public int PlayerNumber; 
         public CellGrid EndTrn {get; set;}
 
         //Wskazuje jesli animacja ruchu jest odpalona. 
@@ -206,7 +211,7 @@ namespace GridPack.Units
         public virtual void OnUnitSelected()
         {
             SetState(new UnitStateMarkedAsSelected(this));
-            if (UnitSelected != null)
+            if(UnitSelected != null)
             {
                 UnitSelected.Invoke(this, new EventArgs());
             }
@@ -217,11 +222,11 @@ namespace GridPack.Units
         {
             uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
-
+           
             if (UnitDeselected != null)
-            {
+            {            
                 UnitDeselected.Invoke(this, new EventArgs());
-            }      
+            }
             uiManager.CloseScorePanel();
 
         }
@@ -237,16 +242,19 @@ namespace GridPack.Units
         //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
-
-            if (!IsUnitAttackable(unitToAttack, Cell))
+            uiManager = FindObjectOfType<UiManager>();
+            if (uiManager.attackButton)
             {
-                return;
-            }
+                if (!IsUnitAttackable(unitToAttack, Cell))
+                {
+                    return;
+                }
 
-            AttackAction attackAction = DealDamage(unitToAttack);
-            MarkAsAttacking(unitToAttack);
-            unitToAttack.DefendHandler(this, attackAction.Damage);
-            AttackActionPerformed(attackAction.ActionCost);
+                AttackAction attackAction = DealDamage(unitToAttack);
+                MarkAsAttacking(unitToAttack);
+                unitToAttack.DefendHandler(this, attackAction.Damage);
+                AttackActionPerformed(attackAction.ActionCost);
+            }
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
@@ -281,7 +289,7 @@ namespace GridPack.Units
             }
             else
             {
-                if (ArmorPoints <= 0 || ignoreEnemyArmor==true)
+                if (ArmorPoints <= 0 || aggressor.ignorArmor == true)
                 {
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;

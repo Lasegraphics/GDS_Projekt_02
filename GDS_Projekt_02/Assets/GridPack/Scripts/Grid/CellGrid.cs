@@ -74,14 +74,14 @@ namespace GridPack.Grid
             if(LevelLoading != null)
                LevelLoading.Invoke(this, new EventArgs());
 
-            Initialize();
+            //Initialize();
 
             if(LevelLoadingDone != null)
                LevelLoadingDone.Invoke(this, new EventArgs());
-            StartGame();
+            //StartGame();
         }
 
-        private void Initialize()
+        public void Initialize()
         {
             GameFinished = false; 
             Players = new List<Player>();

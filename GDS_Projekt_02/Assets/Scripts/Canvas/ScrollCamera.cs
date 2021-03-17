@@ -4,39 +4,44 @@ using UnityEngine;
 
 public class ScrollCamera : MonoBehaviour
 {
+    [Header("Pozycja kamery")]
+    public int startPosCam;
+    public int normalPosCam;
+    public float sppedChangeCamera;
 
-
+    [Header("Poruszanie siê kamery")]
     public float dragSpeed = 2;
-    private Vector3 dragOrigin;
-
-    public bool cameraDragging = true;
-
     public float outerLeft = -10f;
     public float outerRight = 10f;
-
+   
+    private Vector3 dragOrigin;
+    bool cameraDragging = true;
+    Camera posCamera;
+    UiManager uiManager;
+    float timeToScroll;
+    private void Awake()
+    {
+        posCamera = GetComponent<Camera>();
+        posCamera.orthographicSize = startPosCam;
+        uiManager = FindObjectOfType<UiManager>();
+    }
     void Update()
     {
-
-
-
+        if (uiManager.isStart == false)
+        {
+            MoveCameraToNormalPos();
+        }
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
         float left = Screen.width * 0.2f;
         float right = Screen.width - (Screen.width * 0.2f);
-
-
         if (mousePosition.x < left)
         {
             cameraDragging = true;
         }
-         if (mousePosition.x > right)
+        if (mousePosition.x > right)
         {
             cameraDragging = true;
         }
-
-
-
-
         if (cameraDragging)
         {
 
@@ -83,7 +88,15 @@ public class ScrollCamera : MonoBehaviour
                 }
             }
         }
-     
-    }
 
+    }
+    public void MoveCameraToNormalPos()
+    {
+        if (startPosCam != normalPosCam)
+        {
+            timeToScroll += Time.deltaTime;
+            posCamera.orthographicSize = Mathf.SmoothStep(startPosCam, normalPosCam, timeToScroll);
+        }
+       
+    }
 }
