@@ -2560,6 +2560,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7707565432969553781, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2056591932}
+    - target: {fileID: 7707565432969553781, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndTurn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565432969553781, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GridPack.Grid.CellGrid, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7707565433077647797, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Grid;
+using GridPack.SceneScripts;
 
 public class StartGameController : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class StartGameController : MonoBehaviour
 
     UiManager uiManager;
     CellGrid cellGrid;
+    TurnChanger turnChanger;
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
+        turnChanger = FindObjectOfType<TurnChanger>();
     }
     private void Update()
     {
@@ -37,6 +40,7 @@ public class StartGameController : MonoBehaviour
     }
     public void StartMainGame()
     {
+        turnChanger.StartGame();
         uiManager.isStart = false;
         foreach (var item in panels)
         {
@@ -44,6 +48,7 @@ public class StartGameController : MonoBehaviour
         }
         cellGrid.Initialize();
         cellGrid.StartGame();
+
 
     }
     
