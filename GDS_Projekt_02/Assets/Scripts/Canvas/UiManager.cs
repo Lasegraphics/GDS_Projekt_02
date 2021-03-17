@@ -16,9 +16,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] Animator scorePanel;
     [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
-    [SerializeField] Texture2D cursorTexture;
 
     public bool attackButton;
+    public bool isStart = true;
 
     private void Start()
     {
@@ -38,6 +38,7 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
 
     }
+  
     public void ActiveEnemyScorePanel()
     {
         enemyScorePanel.SetBool("Out", false);

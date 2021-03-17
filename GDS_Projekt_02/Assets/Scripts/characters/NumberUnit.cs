@@ -14,6 +14,7 @@ public class NumberUnit : MonoBehaviour
     ScorePanelControll scorePanelControll;
     CellGrid cellGrid;
     EnemyScorePanel enemyScorePanel;
+    StartGameController startGameController;
     public bool isSelected = false;
     int playerNumber;
     private void Awake()
@@ -22,15 +23,20 @@ public class NumberUnit : MonoBehaviour
         enemyScorePanel = FindObjectOfType<EnemyScorePanel>();
         uiManager = FindObjectOfType<UiManager>();
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
+        startGameController = FindObjectOfType<StartGameController>();
         playerNumber = GetComponent<Unit>().PlayerNumber;
     }
     private void OnMouseEnter()
     {
-        if (playerNumber != cellGrid.CurrentPlayerNumber)
+        if (uiManager.isStart == false)
         {
-            uiManager.ActiveEnemyScorePanel();
-            enemyScorePanel.UpgradeParameters(gameObject);
+            if (playerNumber != cellGrid.CurrentPlayerNumber)
+            {
+                uiManager.ActiveEnemyScorePanel();
+                enemyScorePanel.UpgradeParameters(gameObject);
+            }
         }
+        
     }
     private void OnMouseExit()
     {
@@ -39,17 +45,28 @@ public class NumberUnit : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (playerNumber == cellGrid.CurrentPlayerNumber)
+        if (uiManager.isStart == false)
         {
-            uiManager.ActiveScorePanel();
-            foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+            if (isSelected == false)
             {
-                item.GetComponent<NumberUnit>().isSelected = false;
+                if (playerNumber == cellGrid.CurrentPlayerNumber)
+                {
+                    foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+                    {
+                        item.GetComponent<NumberUnit>().isSelected = true;
+                    }
+                    uiManager.ActiveScorePanel();
+                    scorePanelControll.TakeUnit(gameObject);
+                }
             }
-            isSelected = true;
-            scorePanelControll.TakeUnit(gameObject);
         }
-
+    }
+    public void DeselectallUnits()
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+        {
+            item.GetComponent<NumberUnit>().isSelected = false;
+        }
     }
 }
 

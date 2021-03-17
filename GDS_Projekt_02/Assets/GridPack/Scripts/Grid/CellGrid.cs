@@ -74,14 +74,14 @@ namespace GridPack.Grid
             if(LevelLoading != null)
                LevelLoading.Invoke(this, new EventArgs());
 
-            Initialize();
+            //Initialize();
 
             if(LevelLoadingDone != null)
                LevelLoadingDone.Invoke(this, new EventArgs());
-            StartGame();
+            //StartGame();
         }
 
-        private void Initialize()
+        public void Initialize()
         {
             GameFinished = false; 
             Players = new List<Player>();
@@ -203,7 +203,6 @@ namespace GridPack.Grid
                 TurnEnded.Invoke(this, new EventArgs());
             uiManager.ActiveEndText(CurrentPlayerNumber);
             uiManager.CloseScorePanel();
-            uiManager.attackButton = false;
             Debug.Log(string.Format("Player{0} turn", CurrentPlayerNumber));
             Units.FindAll(u => u.PlayerNumber.Equals(CurrentPlayerNumber)).ForEach(u=>{u.OnTurnStart(); });
             Players.Find(p => p.PlayerNumber.Equals(CurrentPlayerNumber)).Play(this);

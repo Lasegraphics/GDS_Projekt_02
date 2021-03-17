@@ -28,22 +28,25 @@ public class ScorePanelControll : MonoBehaviour
 
     public void TakeUnit(GameObject unit)
     {
-        isMage = false;
-        if (unit.gameObject.GetComponent<Wizard>() !=null)
+        if (FindObjectOfType<UiManager>().isStart == false)
         {
-            isMage = true;
-        }
-        var unitInfo = unit.GetComponent<Unit>();
-        damage = unitInfo.AttackFactor;
-        sliderHp.maxValue = unitInfo.TotalHitPoints;
-        sliderHp.value = unitInfo.HitPoints;
-        HP.text = unitInfo.HitPoints.ToString();
+            isMage = false;
+            if (unit.gameObject.GetComponent<Wizard>() != null)
+            {
+                isMage = true;
+            }
+            var unitInfo = unit.GetComponent<Unit>();
+            damage = unitInfo.AttackFactor;
+            sliderHp.maxValue = unitInfo.TotalHitPoints;
+            sliderHp.value = unitInfo.HitPoints;
+            HP.text = unitInfo.HitPoints.ToString();
 
-        sliderArmor.maxValue = unitInfo.TotalArmorPoints;
-        sliderArmor.value = unitInfo.ArmorPoints;
-        armor.text = unitInfo.ArmorPoints.ToString();
+            sliderArmor.maxValue = unitInfo.TotalArmorPoints;
+            sliderArmor.value = unitInfo.ArmorPoints;
+            armor.text = unitInfo.ArmorPoints.ToString();
 
-        name.text = unit.name;
+            name.text = unitInfo.nameUnit;
+        }      
     }
 
 }

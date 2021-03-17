@@ -4,12 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Tank
-  - Warrior
-  - Magic
-  - Archer
-  - Rouge
   - Unit
+  - P1-Warrior
+  - P2-Warrior
+  - P1-Tank
+  - P2-Tank
+  - P1-Archer
+  - P2-Archer
+  - P1-Rouge
+  - P2-Rouge
+  - P1-Wizzard
+  - P2-Wizzard
+  - P1-Panel
+  - P2-Panel
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - Unit
   - Water
   - UI
-  - 
+  - StartPanel
   - 
   - 
   - 
@@ -44,6 +51,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: StartPanel
+    uniqueID: 335381259
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 823248275
     locked: 0
