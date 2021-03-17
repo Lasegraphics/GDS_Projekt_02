@@ -59,6 +59,7 @@ namespace GridPack.SceneScripts
     public enum GroundType
     {
         Land,
-        Water
+        Water,
+        Forest
     };
 }

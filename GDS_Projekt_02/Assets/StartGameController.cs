@@ -9,22 +9,17 @@ public class StartGameController : MonoBehaviour
 {
 
     [SerializeField] GameObject[] panels;
-    [SerializeField] GameObject mainGameCanvas;
     public GameObject buttonStartGame;
     public int currentTurn;
 
-    UiManager uiManager;
-    CellGrid cellGrid;
-    TurnChanger turnChanger;
+   public UiManager uiManager;
+    public CellGrid cellGrid;
+    public TurnChanger turnChanger;
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
         turnChanger = FindObjectOfType<TurnChanger>();
-    }
-    private void Update()
-    {
-       
     }
     public void ChangeTurn()
     {

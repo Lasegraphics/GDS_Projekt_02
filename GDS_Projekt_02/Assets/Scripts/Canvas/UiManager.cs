@@ -17,7 +17,6 @@ public class UiManager : MonoBehaviour
     [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
 
-    public bool attackButton;
     public bool isStart = true;
 
     private void Start()
@@ -29,7 +28,7 @@ public class UiManager : MonoBehaviour
     public void ActiveEndText(int player)
     {
         endRoundText.SetBool("Out", false);
-        endRoundText.GetComponent<Text>().text = "Koniec rundy gracza :" + player;
+        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
         StartCoroutine(CloseEndText());
     }
     IEnumerator CloseEndText()
@@ -55,8 +54,5 @@ public class UiManager : MonoBehaviour
     {
         scorePanel.SetBool("Out", true);
     }
-    public void AttackButton()
-    {
-        attackButton = true;
-    }
+ 
 }

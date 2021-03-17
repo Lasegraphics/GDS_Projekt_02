@@ -79,13 +79,17 @@ namespace GridPack.Cells
             return Equals(other as Cell); 
         }
         //Indywidualny kod Hash dla pojedyńczej komórki 
+        
         public override int GetHashCode()
         {
+            
             int hash = 23; 
             hash = (hash * 37) + (int)OffsetCoord.x;
             hash = (hash * 37) + (int)OffsetCoord.y;
             return hash; 
+            
         }
+        
         //Metoda klonowania wratości do nowych pól 
 
         public abstract void CopyFields(Cell newCell);
