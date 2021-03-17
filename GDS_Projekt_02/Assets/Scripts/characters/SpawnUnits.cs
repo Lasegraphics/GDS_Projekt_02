@@ -16,14 +16,16 @@ public class SpawnUnits : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (startGameController.currentTurn == player)
+        if (gameObject.tag !="Unit")
         {
-            if (unit != null)
+            if (startGameController.currentTurn == player)
             {
-                AttemptToPlaceUnitAt(GetClicked());
+                if (unit != null)
+                {
+                    AttemptToPlaceUnitAt(GetClicked());
+                }
             }
-        }
-        
+        }             
     }
     public void SetSelectedUnit(GameObject UnitToSlecet)
     {
@@ -43,13 +45,20 @@ public class SpawnUnits : MonoBehaviour
     }
     private Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
-        float newX = Mathf.RoundToInt(rawWorldPos.x);
-        float newY = Mathf.RoundToInt(rawWorldPos.y);
+
+        int newX = Mathf.RoundToInt(rawWorldPos.x);        
+        int newY = Mathf.RoundToInt(rawWorldPos.y);
+        Debug.Log(newX + " " + newY);
+        newX /= 7;
+        newX *= 7;
+        newY /= 4;
+        newY *= 4;
+        Debug.Log(newX+ " "+ newY);
         return new Vector2(newX, newY);
     }
     void SpawnUnit(Vector2 worldPos)
     {
-       var newUnit = Instantiate(unit, worldPos, transform.rotation);
+       var newUnit = Instantiate(unit, new Vector3(worldPos.x,worldPos.y,-2), transform.rotation);
         foreach (var item in FindObjectsOfType<UnitsButton>())
         {
             if (newUnit.tag == item.tag)
