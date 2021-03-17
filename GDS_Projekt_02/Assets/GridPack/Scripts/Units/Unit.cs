@@ -243,18 +243,17 @@ namespace GridPack.Units
         public void AttackHandler(Unit unitToAttack)
         {
             uiManager = FindObjectOfType<UiManager>();
-            if (uiManager.attackButton)
-            {
-                if (!IsUnitAttackable(unitToAttack, Cell))
-                {
-                    return;
-                }
 
-                AttackAction attackAction = DealDamage(unitToAttack);
-                MarkAsAttacking(unitToAttack);
-                unitToAttack.DefendHandler(this, attackAction.Damage);
-                AttackActionPerformed(attackAction.ActionCost);
+            if (!IsUnitAttackable(unitToAttack, Cell))
+            {
+                return;
             }
+
+            AttackAction attackAction = DealDamage(unitToAttack);
+            MarkAsAttacking(unitToAttack);
+            unitToAttack.DefendHandler(this, attackAction.Damage);
+            AttackActionPerformed(attackAction.ActionCost);
+
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
