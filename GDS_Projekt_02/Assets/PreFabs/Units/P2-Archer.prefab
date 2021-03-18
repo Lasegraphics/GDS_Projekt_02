@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585833226598458523}
   - component: {fileID: 1585833226598458520}
-  - component: {fileID: 743023987834271058}
+  - component: {fileID: 3672363058862939364}
   m_Layer: 0
   m_Name: WhiteTile
   m_TagString: Unit
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &743023987834271058
-BoxCollider2D:
+--- !u!58 &3672363058862939364
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,19 +96,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.34, y: 4.62}
-    newSize: {x: 5.34, y: 4.62}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.00000047683716}
   serializedVersion: 2
-  m_Size: {x: 5.34, y: 4.62}
-  m_EdgeRadius: 0
+  m_Radius: 2.6700003
 --- !u!1 &1585833226774951694
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +234,7 @@ MonoBehaviour:
   ignorArmor: 0
   actionPoints: 1
   movementPoints: 3
-  nameUnit: Archer
+  nameUnit: ARCHER
   MovementAnimationSpeed: 20
   PlayerNumber: 1
   TotalArmorPoints: 0

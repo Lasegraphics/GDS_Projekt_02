@@ -10,11 +10,13 @@ public class StartGameController : MonoBehaviour
 
     [SerializeField] GameObject[] panels;
     public GameObject buttonStartGame;
-    public int currentTurn;
+    public int currentPlayer;
+    bool firstRound = true;
+    int tourCurrent = 0;
 
-   public UiManager uiManager;
-    public CellGrid cellGrid;
-    public TurnChanger turnChanger;
+    UiManager uiManager;
+    CellGrid cellGrid;
+    TurnChanger turnChanger;
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
@@ -23,15 +25,28 @@ public class StartGameController : MonoBehaviour
     }
     public void ChangeTurn()
     {
-        if (currentTurn==0)
+
+        if (firstRound)
         {
-            currentTurn = 1;
+            currentPlayer = 1;
+            firstRound = false;
         }
         else
         {
-            currentTurn = 0;
+            tourCurrent++;
+            if (tourCurrent ==2)
+            {
+                if (currentPlayer == 0)
+                {
+                    currentPlayer = 1;
+                }
+                else
+                {
+                    currentPlayer = 0;
+                }
+                tourCurrent = 0;
+            }
         }
-        
     }
     public void StartMainGame()
     {
@@ -43,8 +58,6 @@ public class StartGameController : MonoBehaviour
         }
         cellGrid.Initialize();
         cellGrid.StartGame();
-
-
     }
-    
+
 }

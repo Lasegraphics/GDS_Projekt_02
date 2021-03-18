@@ -17,7 +17,7 @@ public class UnitsButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (startGameController.currentTurn == player)
+        if (startGameController.currentPlayer == player)
         {
             var buttons = FindObjectsOfType<UnitsButton>();
             foreach (var button in buttons)
