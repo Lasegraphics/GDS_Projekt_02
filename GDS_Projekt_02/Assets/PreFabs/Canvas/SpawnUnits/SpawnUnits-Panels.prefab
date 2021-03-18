@@ -205,7 +205,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 4.8, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1284,7 +1284,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 4.8, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1575,6 +1575,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6013877877727720728, guid: 51a64234fd221f24880fe8c54f0025a5, type: 3}
+      propertyPath: m_Size.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013877877727720728, guid: 51a64234fd221f24880fe8c54f0025a5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.28
+      objectReference: {fileID: 0}
     - target: {fileID: 6013877877727720729, guid: 51a64234fd221f24880fe8c54f0025a5, type: 3}
       propertyPath: parentUnits
       value: 
@@ -1660,6 +1668,14 @@ PrefabInstance:
     - target: {fileID: 2347970015376242210, guid: 05065f6007d1d634eaabbb39519d752b, type: 3}
       propertyPath: parentUnits
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2347970015376242211, guid: 05065f6007d1d634eaabbb39519d752b, type: 3}
+      propertyPath: m_Size.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2347970015376242211, guid: 05065f6007d1d634eaabbb39519d752b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 2347970015376242236, guid: 05065f6007d1d634eaabbb39519d752b, type: 3}
       propertyPath: m_RootOrder
