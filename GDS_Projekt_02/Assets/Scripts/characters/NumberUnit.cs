@@ -51,10 +51,11 @@ public class NumberUnit : MonoBehaviour
             {
                 if (playerNumber == cellGrid.CurrentPlayerNumber)
                 {
-                    foreach (var item in GameObject.FindGameObjectsWithTag("Unit"))
+                    foreach (var item in FindObjectsOfType<NumberUnit>())
                     {
-                        item.GetComponent<NumberUnit>().isSelected = true;
+                        item.GetComponent<NumberUnit>().isSelected = false;
                     }
+                    isSelected = true;
                     uiManager.ActiveScorePanel();
                     scorePanelControll.TakeUnit(gameObject);
                 }

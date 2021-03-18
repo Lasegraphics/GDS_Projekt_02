@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 831c56653cced4145a46ac30e0205830, type: 3}
+  m_Sprite: {fileID: -5877259873991932285, guid: e9b8583b8b9afbe46b5c9f6eae31f596, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,7 +149,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3194660028824744563}
   - component: {fileID: 3194660028824744560}
-  - component: {fileID: 6695975816943940818}
   m_Layer: 0
   m_Name: WhiteTile
   m_TagString: Unit
@@ -222,19 +221,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6695975816943940818
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3194660028824744562}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0000038146973, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.6700003

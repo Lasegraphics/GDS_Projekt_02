@@ -17,6 +17,9 @@ TagManager:
   - P2-Wizzard
   - P1-Panel
   - P2-Panel
+  - G-normal
+  - G-Water
+  - 'G-Mountain '
   layers:
   - Default
   - TransparentFX
