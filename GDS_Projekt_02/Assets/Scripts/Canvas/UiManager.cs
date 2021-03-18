@@ -12,17 +12,25 @@ using GridPack.Units;
 
 public class UiManager : MonoBehaviour
 {
+    [Header("Animations")]
     [SerializeField] Text roundToEnd;
     [SerializeField] Animator scorePanel;
     [SerializeField] Animator enemyScorePanel;
     [SerializeField] Animator endRoundText;
 
-    public bool isStart = true;
+    [Header("Desinger button")]
+    [SerializeField] Sprite groundNormal;
+    [SerializeField] Sprite groundWater;
+    [SerializeField] Sprite groundMountion;
+    [SerializeField] Sprite unit;
+
+    [HideInInspector] public bool isStart = true;
+    public bool isDesing;
 
     private void Start()
     {
         endRoundText.SetBool("Out", true);
-        CloseEnemyScorePanel();        
+        CloseEnemyScorePanel();
         CloseScorePanel();
     }
     public void ActiveEndText(int player)
@@ -37,7 +45,7 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
 
     }
-  
+
     public void ActiveEnemyScorePanel()
     {
         enemyScorePanel.SetBool("Out", false);
@@ -54,5 +62,15 @@ public class UiManager : MonoBehaviour
     {
         scorePanel.SetBool("Out", true);
     }
- 
+    public void DesingerButton()
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))
+        {
+            item.GetComponent<SpriteRenderer>().sprite = groundNormal;
+        }
+        foreach (var item in FindObjectsOfType<Unit>())
+        {
+            item.GetComponent<SpriteRenderer>().sprite = unit;
+        }
+    }
 }
