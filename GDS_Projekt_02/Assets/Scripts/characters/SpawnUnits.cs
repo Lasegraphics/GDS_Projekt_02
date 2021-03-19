@@ -33,20 +33,43 @@ public class SpawnUnits : MonoBehaviour
     }
     void SpawnUnit()
     {
-       var newUnit = Instantiate(unit, new Vector3(transform.position.x,transform.position.y,-2), transform.rotation);
-        foreach (var item in FindObjectsOfType<UnitsButton>())
+        if (player==0)
         {
-            if (newUnit.tag == item.tag)
+            var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), transform.rotation);
+            foreach (var item in FindObjectsOfType<UnitsButton>())
             {
-                item.gameObject.SetActive(false);
-                unit = null;
+                if (newUnit.tag == item.tag)
+                {
+                    item.gameObject.SetActive(false);
+                    unit = null;
+                }
             }
+            if (FindObjectsOfType<NumberUnit>().Length == 10)
+            {
+                startGameController.buttonStartGame.SetActive(true);
+            }
+            startGameController.ChangeTurn();
+            newUnit.transform.parent = parentUnits.transform;
         }
-        if (FindObjectsOfType<NumberUnit>().Length == 10)
+        else
         {
-            startGameController.buttonStartGame.SetActive(true);
+            var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), Quaternion.Euler(0, 180, 0));
+            foreach (var item in FindObjectsOfType<UnitsButton>())
+            {
+                if (newUnit.tag == item.tag)
+                {
+                    item.gameObject.SetActive(false);
+                    unit = null;
+                }
+            }
+            if (FindObjectsOfType<NumberUnit>().Length == 10)
+            {
+                startGameController.buttonStartGame.SetActive(true);
+            }
+            startGameController.ChangeTurn();
+            newUnit.transform.parent = parentUnits.transform;
         }
-        startGameController.ChangeTurn();
-        newUnit.transform.parent = parentUnits.transform;
+       
+       
     }
 }
