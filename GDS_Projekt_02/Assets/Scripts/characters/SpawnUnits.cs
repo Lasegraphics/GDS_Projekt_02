@@ -7,12 +7,14 @@ public class SpawnUnits : MonoBehaviour
 
     public GameObject unit;
     public GameObject parentUnits;
+    UnitsButton[] unitsButtons;
     public int player;
 
     StartGameController startGameController;
     private void Awake()
     {
         startGameController = FindObjectOfType<StartGameController>();
+        unitsButtons = FindObjectsOfType<UnitsButton>();
     }
     private void OnMouseDown()
     {
@@ -23,6 +25,10 @@ public class SpawnUnits : MonoBehaviour
                 if (unit != null)
                 {
                     SpawnUnit();
+                    foreach (var item in unitsButtons)
+                    {
+                        item.ChangeColorImage();
+                    }
                 }
             }
         }             
