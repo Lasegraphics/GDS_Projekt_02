@@ -1317,7 +1317,6 @@ GameObject:
   - component: {fileID: 7707565432478531124}
   - component: {fileID: 7707565432478531131}
   - component: {fileID: 7707565432478531130}
-  - component: {fileID: 7828839612564729408}
   m_Layer: 5
   m_Name: EnemyScorePanel
   m_TagString: Untagged
@@ -1405,27 +1404,6 @@ MonoBehaviour:
   armor: {fileID: 7707565432411020075}
   event1: {fileID: 7707565433171843542}
   event2: {fileID: 7707565433499760227}
---- !u!114 &7828839612564729408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7707565432478531128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b49858b5ad83b47a582348361ea400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: {fileID: 7707565433262363269}
-  sliderHp: {fileID: 7707565433429912765}
-  HP: {fileID: 7707565432040821011}
-  sliderArmor: {fileID: 7707565432426714689}
-  armor: {fileID: 7707565432411020075}
-  event1: {fileID: 0}
-  event2: {fileID: 0}
-  damage: 0
-  isMage: 0
 --- !u!1 &7707565432480407681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,7 +2427,6 @@ GameObject:
   - component: {fileID: 7707565433419711883}
   - component: {fileID: 7707565433419711882}
   - component: {fileID: 7707565433419711876}
-  - component: {fileID: 5491070963642581737}
   m_Layer: 5
   m_Name: ScorePlayerPanel
   m_TagString: Untagged
@@ -2539,25 +2516,6 @@ MonoBehaviour:
   event2: {fileID: 7707565432928742468}
   damage: 0
   isMage: 0
---- !u!114 &5491070963642581737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7707565433419711880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d589977c8bc7a1743ac4385251af8b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameEnemy: {fileID: 7707565432096065417}
-  sliderHp: {fileID: 7707565432445172683}
-  hp: {fileID: 7707565432333632976}
-  sliderArmor: {fileID: 7707565433518638490}
-  armor: {fileID: 7707565431944378145}
-  event1: {fileID: 0}
-  event2: {fileID: 0}
 --- !u!1 &7707565433427965915
 GameObject:
   m_ObjectHideFlags: 0
