@@ -47,5 +47,9 @@ MonoBehaviour:
   scorePanel: {fileID: 0}
   enemyScorePanel: {fileID: 0}
   endRoundText: {fileID: 0}
-  attackButton: 0
+  groundNormal: {fileID: 21300000, guid: cdf852709d27980409197d359657a8e1, type: 3}
+  groundWater: {fileID: 0}
+  groundMountion: {fileID: 0}
+  unit: {fileID: 21300000, guid: 831c56653cced4145a46ac30e0205830, type: 3}
   isStart: 1
+  isDesing: 0
