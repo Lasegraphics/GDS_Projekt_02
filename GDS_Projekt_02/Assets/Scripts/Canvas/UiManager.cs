@@ -84,10 +84,15 @@ public class UiManager : MonoBehaviour
         foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))
         {
             item.GetComponent<SpriteRenderer>().sprite = groundNormal;
+            var highlighter = item.transform.Find("Highlighter");
+            var spriteRenderer = highlighter.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = groundNormal;
         }
         foreach (var item in FindObjectsOfType<Unit>())
         {
-            item.GetComponent<SpriteRenderer>().sprite = unit;
+           var Sprite = item.GetComponent<SpriteRenderer>();
+            Sprite.color = item.colorUnit;
+            Sprite.sprite = unit;
         }
     }
 }

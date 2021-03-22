@@ -73,6 +73,7 @@ namespace GridPack.Units
         public int AttackFactor;
         public int ArmorPoints;
         public bool ignorArmor;
+        public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
 

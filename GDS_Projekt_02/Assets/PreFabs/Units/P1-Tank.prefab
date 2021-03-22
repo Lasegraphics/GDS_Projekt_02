@@ -202,6 +202,7 @@ MonoBehaviour:
   AttackFactor: 5
   ArmorPoints: 10
   ignorArmor: 0
+  colorUnit: {r: 1, g: 0, b: 0, a: 1}
   actionPoints: 10
   movementPoints: 3
   nameUnit: TANK
