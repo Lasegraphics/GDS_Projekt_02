@@ -14,8 +14,8 @@ public class UiManager : MonoBehaviour
 {
     [Header("Animations")]
     [SerializeField] Text roundToEnd;
-    [SerializeField] Animator scorePanel;
-    [SerializeField] Animator enemyScorePanel;
+    [SerializeField] Animator orangePanel;
+    [SerializeField] Animator bluePanel;
     [SerializeField] Animator endRoundText;
 
     [Header("Desinger button")]
@@ -23,6 +23,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] Sprite groundWater;
     [SerializeField] Sprite groundMountion;
     [SerializeField] Sprite unit;
+
+    [Header("Static")]
+    public int currentPlayer = 0;
 
     [HideInInspector] public bool isStart = true;
     public bool isDesing;
@@ -32,9 +35,23 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
         CloseEnemyScorePanel();
         CloseScorePanel();
+
+        orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
+        bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
     }
-    public void ActiveEndText(int player)
+    public void ChangeTurnUi(int player)
     {
+        currentPlayer = player;
+        if (player == 0)
+        {
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
+        }
+        else
+        {
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
+        }
         endRoundText.SetBool("Out", false);
         endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
         StartCoroutine(CloseEndText());
@@ -48,29 +65,34 @@ public class UiManager : MonoBehaviour
 
     public void ActiveEnemyScorePanel()
     {
-        enemyScorePanel.SetBool("Out", false);
+        bluePanel.SetBool("Out", false);
     }
     public void CloseEnemyScorePanel()
     {
-        enemyScorePanel.SetBool("Out", true);
+        bluePanel.SetBool("Out", true);
     }
     public void ActiveScorePanel()
     {
-        scorePanel.SetBool("Out", false);
+        orangePanel.SetBool("Out", false);
     }
     public void CloseScorePanel()
     {
-        scorePanel.SetBool("Out", true);
+        orangePanel.SetBool("Out", true);
     }
     public void DesingerButton()
     {
         foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))
         {
             item.GetComponent<SpriteRenderer>().sprite = groundNormal;
+            var highlighter = item.transform.Find("Highlighter");
+            var spriteRenderer = highlighter.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = groundNormal;
         }
         foreach (var item in FindObjectsOfType<Unit>())
         {
-            item.GetComponent<SpriteRenderer>().sprite = unit;
+           var Sprite = item.GetComponent<SpriteRenderer>();
+            Sprite.color = item.colorUnit;
+            Sprite.sprite = unit;
         }
     }
 }

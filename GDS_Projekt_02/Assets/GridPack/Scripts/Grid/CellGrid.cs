@@ -202,7 +202,7 @@ namespace GridPack.Grid
             if(TurnEnded != null)
                 TurnEnded.Invoke(this, new EventArgs());
             uiManager = FindObjectOfType<UiManager>();
-            uiManager.ActiveEndText(CurrentPlayerNumber);
+            uiManager.ChangeTurnUi(CurrentPlayerNumber);
             uiManager.CloseScorePanel();
             Debug.Log(string.Format("Player{0} turn", CurrentPlayerNumber));
             Units.FindAll(u => u.PlayerNumber.Equals(CurrentPlayerNumber)).ForEach(u=>{u.OnTurnStart(); });

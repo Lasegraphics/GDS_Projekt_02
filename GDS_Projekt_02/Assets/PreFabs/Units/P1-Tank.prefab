@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 8759150981705163766, guid: e9b8583b8b9afbe46b5c9f6eae31f596, type: 3}
+  m_Sprite: {fileID: -7821985364676667074, guid: 4325863465aa84ae7a11d9cf6b69e0b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -202,6 +202,7 @@ MonoBehaviour:
   AttackFactor: 5
   ArmorPoints: 10
   ignorArmor: 0
+  colorUnit: {r: 1, g: 0, b: 0, a: 1}
   actionPoints: 10
   movementPoints: 3
   nameUnit: TANK
