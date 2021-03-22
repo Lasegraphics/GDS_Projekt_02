@@ -41,6 +41,12 @@ public class UiManager : MonoBehaviour
     }
     public void ChangeTurnUi(int player)
     {
+        StartCoroutine(CloseEndText());
+        StartCoroutine(StartChangeUi(player));      
+    }
+    IEnumerator StartChangeUi(int player)
+    {
+        yield return new WaitForSeconds(1);
         currentPlayer = player;
         if (player == 0)
         {
@@ -52,12 +58,12 @@ public class UiManager : MonoBehaviour
             orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
             bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
         }
-        endRoundText.SetBool("Out", false);
-        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
-        StartCoroutine(CloseEndText());
+        
     }
     IEnumerator CloseEndText()
     {
+        endRoundText.SetBool("Out", false);
+        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + (currentPlayer + 1);
         yield return new WaitForSeconds(3);
         endRoundText.SetBool("Out", true);
 
