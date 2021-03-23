@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_PixelsPerUnitMultiplier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 490284006, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 844575255, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -302,6 +306,10 @@ PrefabInstance:
     - target: {fileID: 844575255, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844575255, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.1308899
       objectReference: {fileID: 0}
     - target: {fileID: 844575256, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_Color.b
