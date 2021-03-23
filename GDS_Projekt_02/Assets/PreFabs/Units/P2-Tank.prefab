@@ -197,14 +197,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 10
-  AttackRange: 5
-  AttackFactor: 5
-  ArmorPoints: 10
+  HitPoints: 90
+  AttackRange: 1
+  AttackFactor: 20
+  ArmorPoints: 150
   ignorArmor: 0
   colorUnit: {r: 0.6886792, g: 0.23713954, b: 0.23713954, a: 1}
   actionPoints: 1
-  movementPoints: 3
+  movementPoints: 2
   nameUnit: TANK
   MovementAnimationSpeed: 20
   PlayerNumber: 1

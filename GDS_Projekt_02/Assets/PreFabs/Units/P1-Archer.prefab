@@ -197,14 +197,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 10
-  AttackRange: 5
-  AttackFactor: 5
+  HitPoints: 50
+  AttackRange: 7
+  AttackFactor: 15
   ArmorPoints: 0
   ignorArmor: 0
   colorUnit: {r: 1, g: 0, b: 0.8595643, a: 1}
   actionPoints: 2
-  movementPoints: 3
+  movementPoints: 4
   nameUnit: ARCHER
   MovementAnimationSpeed: 20
   PlayerNumber: 0

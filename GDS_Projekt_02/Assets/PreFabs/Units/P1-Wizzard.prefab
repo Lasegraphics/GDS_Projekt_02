@@ -197,14 +197,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 10
-  AttackRange: 2
-  AttackFactor: 2
+  HitPoints: 50
+  AttackRange: 5
+  AttackFactor: 20
   ArmorPoints: 0
   ignorArmor: 1
   colorUnit: {r: 0, g: 0.17416215, b: 1, a: 1}
   actionPoints: 1
-  movementPoints: 4
+  movementPoints: 3
   nameUnit: WIZZARD
   MovementAnimationSpeed: 20
   PlayerNumber: 0

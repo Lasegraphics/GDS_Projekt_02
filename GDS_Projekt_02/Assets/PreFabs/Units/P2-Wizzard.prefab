@@ -210,10 +210,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 10
+  HitPoints: 50
   AttackRange: 5
-  AttackFactor: 5
-  ArmorPoints: 5
+  AttackFactor: 20
+  ArmorPoints: 0
   ignorArmor: 1
   colorUnit: {r: 0.20265219, g: 0.3062715, b: 0.6226415, a: 1}
   actionPoints: 1
