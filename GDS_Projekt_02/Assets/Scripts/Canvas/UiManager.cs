@@ -19,9 +19,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] Animator endRoundText;
 
     [Header("Desinger button")]
-    [SerializeField] Sprite groundNormal;
-    [SerializeField] Sprite groundWater;
-    [SerializeField] Sprite groundMountion;
+
     [SerializeField] Sprite unit;
 
     [Header("Static")]
@@ -81,13 +79,7 @@ public class UiManager : MonoBehaviour
     }
     public void DesingerButton()
     {
-        foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))
-        {
-            item.GetComponent<SpriteRenderer>().sprite = groundNormal;
-            var highlighter = item.transform.Find("Highlighter");
-            var spriteRenderer = highlighter.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = groundNormal;
-        }
+      
         foreach (var item in FindObjectsOfType<Unit>())
         {
            var Sprite = item.GetComponent<SpriteRenderer>();
