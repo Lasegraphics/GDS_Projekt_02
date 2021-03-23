@@ -17,11 +17,13 @@ public class StartGameController : MonoBehaviour
     UiManager uiManager;
     CellGrid cellGrid;
     TurnChanger turnChanger;
+    ScoreController scoreController;
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
         turnChanger = FindObjectOfType<TurnChanger>();
+        scoreController = FindObjectOfType<ScoreController>();
     }
     public void ChangeTurn()
     {
@@ -58,6 +60,7 @@ public class StartGameController : MonoBehaviour
         }
         cellGrid.Initialize();
         cellGrid.StartGame();
+        scoreController.StartGame();
     }
 
 }

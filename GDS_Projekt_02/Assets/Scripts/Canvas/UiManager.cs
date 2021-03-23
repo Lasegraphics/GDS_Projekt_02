@@ -19,9 +19,6 @@ public class UiManager : MonoBehaviour
     [SerializeField] Animator endRoundText;
 
     [Header("Desinger button")]
-    [SerializeField] Sprite groundNormal;
-    [SerializeField] Sprite groundWater;
-    [SerializeField] Sprite groundMountion;
     [SerializeField] Sprite unit;
 
     [Header("Static")]
@@ -41,6 +38,12 @@ public class UiManager : MonoBehaviour
     }
     public void ChangeTurnUi(int player)
     {
+        StartCoroutine(CloseEndText());
+        StartCoroutine(StartChangeUi(player));      
+    }
+    IEnumerator StartChangeUi(int player)
+    {
+        yield return new WaitForSeconds(1);
         currentPlayer = player;
         if (player == 0)
         {
@@ -52,12 +55,12 @@ public class UiManager : MonoBehaviour
             orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
             bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
         }
-        endRoundText.SetBool("Out", false);
-        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
-        StartCoroutine(CloseEndText());
+        
     }
     IEnumerator CloseEndText()
     {
+        endRoundText.SetBool("Out", false);
+        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + (currentPlayer + 1);
         yield return new WaitForSeconds(3);
         endRoundText.SetBool("Out", true);
 
@@ -70,6 +73,8 @@ public class UiManager : MonoBehaviour
     public void CloseEnemyScorePanel()
     {
         bluePanel.SetBool("Out", true);
+        bluePanel.SetBool("BlinkArmor", false);
+        bluePanel.SetBool("BlinkHp", false);
     }
     public void ActiveScorePanel()
     {
@@ -80,14 +85,7 @@ public class UiManager : MonoBehaviour
         orangePanel.SetBool("Out", true);
     }
     public void DesingerButton()
-    {
-        foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))
-        {
-            item.GetComponent<SpriteRenderer>().sprite = groundNormal;
-            var highlighter = item.transform.Find("Highlighter");
-            var spriteRenderer = highlighter.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = groundNormal;
-        }
+    {       
         foreach (var item in FindObjectsOfType<Unit>())
         {
            var Sprite = item.GetComponent<SpriteRenderer>();
