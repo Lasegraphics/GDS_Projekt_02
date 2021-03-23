@@ -87,12 +87,7 @@ namespace GridPack.Units
 
         [HideInInspector] public int TotalArmorPoints;
         UiManager uiManager;
-
-
-       
-       
-         
-
+        ScoreController scoreController;
 
         public virtual float MovementPoints
         {
@@ -105,12 +100,7 @@ namespace GridPack.Units
             {
                 movementPoints = value;    
             }
-        }
-
-        
-
-        
-        
+        }      
         public float ActionPoints
         {
             get
@@ -211,11 +201,13 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie zaznaczenia jednostki
         public virtual void OnUnitSelected()
         {
+            uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsSelected(this));
             if(UnitSelected != null)
             {
                 UnitSelected.Invoke(this, new EventArgs());
             }
+            uiManager.ActiveScorePanel();
         }
 
         //Metoda jest wywoływana w momencie odznaczenia jednostki
@@ -243,13 +235,11 @@ namespace GridPack.Units
         //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
-            uiManager = FindObjectOfType<UiManager>();
-
             if (!IsUnitAttackable(unitToAttack, Cell))
             {
                 return;
             }
-
+            
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
@@ -310,7 +300,8 @@ namespace GridPack.Units
             {
                 UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage));
             }
-            
+            scoreController = FindObjectOfType<ScoreController>();
+            scoreController.UpgradeScore();
         }
         
 
