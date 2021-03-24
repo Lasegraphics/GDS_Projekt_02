@@ -10,6 +10,7 @@ namespace GridPack.SceneScripts
     public class Entity : Unit
     {
         Coroutine PulseCoroutine;
+        Color myColor;
         private void Awake()
         {
         }
@@ -44,6 +45,7 @@ namespace GridPack.SceneScripts
 
         public override void MarkAsAttacking(Unit other)
         {
+            myColor = gameObject.GetComponent<SpriteRenderer>().color;            
             StartCoroutine(Jerk(other, 0.25f));
         }
         public override void MarkAsDefending(Unit other)
@@ -90,11 +92,11 @@ namespace GridPack.SceneScripts
                 if (startTime + cooloutTime < currentTime)
                     break;
 
-                _renderer.color = Color.Lerp(Color.white, color, (startTime + cooloutTime) - currentTime);
+               // _renderer.color = Color.Lerp(Color.white, color, (startTime + cooloutTime) - currentTime);
                 yield return 0;
             }
 
-            _renderer.color = Color.white;
+           
         }
         private IEnumerator Pulse(float breakTime, float delay, float scaleFactor)
         {
@@ -134,7 +136,7 @@ namespace GridPack.SceneScripts
         }
         public override void MarkAsFinished()
         {
-            SetColor(Color.gray);
+
             SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));
             
             turnChanger.ChangeTurn();
@@ -143,17 +145,8 @@ namespace GridPack.SceneScripts
         public override void UnMark()
         {
             SetHighlighterColor(Color.clear);
-            SetColor(Color.white);
         }
-
-        private void SetColor(Color color)
-        {
-            var _renderer = GetComponent<SpriteRenderer>();
-            if (_renderer != null)
-            {
-                _renderer.color = color;
-            }
-        }
+      
         private void SetHighlighterColor(Color color)
         {
             var highlighter = transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
