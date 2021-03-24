@@ -450,7 +450,6 @@ RectTransform:
   - {fileID: 1346045941}
   - {fileID: 1878511239}
   - {fileID: 1417003795}
-  - {fileID: 1184137763}
   - {fileID: 883613443}
   - {fileID: 1467964553}
   m_Father: {fileID: 0}
@@ -735,7 +734,7 @@ RectTransform:
   - {fileID: 461476967}
   - {fileID: 42601399}
   m_Father: {fileID: 334381396}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1171,8 +1170,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 334381396}
-  m_RootOrder: 3
+  m_Father: {fileID: 1528663329}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1549,7 +1548,7 @@ RectTransform:
   - {fileID: 1473234141}
   - {fileID: 1096285367}
   m_Father: {fileID: 334381396}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1723,6 +1722,11 @@ CanvasRenderer:
 --- !u!95 &1507763432 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7707565432540985068, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+  m_PrefabInstance: {fileID: 1119557349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1528663329 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7707565431841722532, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
   m_PrefabInstance: {fileID: 1119557349}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1615181140 stripped
