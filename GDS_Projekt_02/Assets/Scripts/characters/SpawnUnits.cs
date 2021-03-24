@@ -29,6 +29,10 @@ public class SpawnUnits : MonoBehaviour
                     {
                         item.ChangeColorImage();
                     }
+                    foreach (var item in FindObjectsOfType<SpawnUnits>())
+                    {
+                        item.unit = null;
+                    }
                 }
             }
         }             
