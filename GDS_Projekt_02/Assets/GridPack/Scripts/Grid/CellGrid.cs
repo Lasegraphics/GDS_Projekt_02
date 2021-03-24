@@ -181,6 +181,7 @@ namespace GridPack.Grid
 
         public void EndTurn()
         {
+            
             //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
@@ -207,7 +208,19 @@ namespace GridPack.Grid
             Debug.Log(string.Format("Player{0} turn", CurrentPlayerNumber));
             Units.FindAll(u => u.PlayerNumber.Equals(CurrentPlayerNumber)).ForEach(u=>{u.OnTurnStart(); });
             Players.Find(p => p.PlayerNumber.Equals(CurrentPlayerNumber)).Play(this);
+            foreach (var item in FindObjectsOfType<NumberUnit>())
+            {
+                if (item.GetComponent<Unit>().PlayerNumber != CurrentPlayerNumber)
+                {
+                    var highlighter = item.transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
+                    if (highlighter != null)
+                    {
+                        Debug.Log(item.name);
+                        highlighter.color = new Color(1, 1, 1, 0);
+                    }
+                }
 
+            }
         }
  
     }
