@@ -16,16 +16,17 @@ namespace GridPack.SceneScripts
             
             if(ActionPoints == 0)
             {
-               // MovementPoints = 0; 
-                //SetState(new UnitStateMarkedAsFinished(this));
+                MovementPoints = 0; 
+                SetState(new UnitStateMarkedAsFinished(this));
                // EndTrn.EndTurn();
                 Debug.Log("ActionPoints = 0 You cannot attack");   
             }
 
-            if (MovementPoints == 0)
+           /* if (MovementPoints == 0)
             {
                 SetState(new UnitStateMarkedAsFinished(this));
             }
+            */
 
         }
 
