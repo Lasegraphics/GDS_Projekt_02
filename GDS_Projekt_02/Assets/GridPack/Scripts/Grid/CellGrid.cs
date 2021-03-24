@@ -205,6 +205,7 @@ namespace GridPack.Grid
             uiManager = FindObjectOfType<UiManager>();
             uiManager.ChangeTurnUi(CurrentPlayerNumber);
             uiManager.CloseScorePanel();
+            uiManager.CloseEnemyScorePanel();
             Debug.Log(string.Format("Player{0} turn", CurrentPlayerNumber));
             Units.FindAll(u => u.PlayerNumber.Equals(CurrentPlayerNumber)).ForEach(u=>{u.OnTurnStart(); });
             Players.Find(p => p.PlayerNumber.Equals(CurrentPlayerNumber)).Play(this);
