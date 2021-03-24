@@ -221,4 +221,5 @@ MonoBehaviour:
   nameUnit: ARCHER
   MovementAnimationSpeed: 20
   PlayerNumber: 1
+  StartSprite: {fileID: -3484401552186409162, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   TotalArmorPoints: 0

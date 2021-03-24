@@ -84,6 +84,7 @@ namespace GridPack.Units
         public string nameUnit;
         public float MovementAnimationSpeed;
         public int PlayerNumber;
+        public Sprite StartSprite;
 
         [HideInInspector] public int TotalArmorPoints;
         UiManager uiManager;

@@ -79,12 +79,26 @@ public class UiManager : MonoBehaviour
     }
     public void DesingerButton()
     {
-      
-        foreach (var item in FindObjectsOfType<Unit>())
+        if (isDesing ==false)
         {
-           var Sprite = item.GetComponent<SpriteRenderer>();
-            Sprite.color = item.colorUnit;
-            Sprite.sprite = unit;
+            foreach (var item in FindObjectsOfType<Unit>())
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.color = item.colorUnit;
+                Sprite.sprite = unit;
+            }
+            isDesing = true;
         }
+        else
+        {
+            foreach (var item in FindObjectsOfType<Unit>())
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.color = new Color(1, 1, 1);
+                Sprite.sprite = item.StartSprite;
+            }
+            isDesing = true;
+        }
+        
     }
 }

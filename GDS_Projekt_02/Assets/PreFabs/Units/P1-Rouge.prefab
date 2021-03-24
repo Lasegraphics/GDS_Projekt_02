@@ -126,6 +126,7 @@ MonoBehaviour:
   nameUnit: ROUGE
   MovementAnimationSpeed: 20
   PlayerNumber: 0
+  StartSprite: {fileID: 4300654558263623679, guid: 4325863465aa84ae7a11d9cf6b69e0b8, type: 3}
   TotalArmorPoints: 0
 --- !u!114 &3194660028762322009
 MonoBehaviour:
