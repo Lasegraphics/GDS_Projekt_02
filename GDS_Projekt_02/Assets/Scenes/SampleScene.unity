@@ -2222,8 +2222,8 @@ MonoBehaviour:
   normalPosCam: 19
   sppedChangeCamera: 2
   dragSpeed: 2
-  outerLeft: -10
-  outerRight: 10
+  outerLeft: 0
+  outerRight: 0
 --- !u!1 &1993241290
 GameObject:
   m_ObjectHideFlags: 0
