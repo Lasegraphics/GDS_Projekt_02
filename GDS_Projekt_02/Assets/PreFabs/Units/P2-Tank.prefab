@@ -208,6 +208,7 @@ MonoBehaviour:
   nameUnit: TANK
   MovementAnimationSpeed: 20
   PlayerNumber: 1
+  StartSprite: {fileID: -7093490766826894409, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   TotalArmorPoints: 0
 --- !u!114 &7801343158370318071
 MonoBehaviour:

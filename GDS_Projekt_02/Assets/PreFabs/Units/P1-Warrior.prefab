@@ -126,6 +126,7 @@ MonoBehaviour:
   nameUnit: WARRIOR
   MovementAnimationSpeed: 20
   PlayerNumber: 0
+  StartSprite: {fileID: -3187755495466294383, guid: 4325863465aa84ae7a11d9cf6b69e0b8, type: 3}
   TotalArmorPoints: 0
 --- !u!114 &6817933579456391912
 MonoBehaviour:
