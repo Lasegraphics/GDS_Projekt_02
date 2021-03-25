@@ -34,21 +34,28 @@ public class UiManager : MonoBehaviour
         CloseEnemyScorePanel();
         CloseScorePanel();
 
-        orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
-        bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
+        orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
+        bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            DesingerButton();
+        }
     }
     public void ChangeTurnUi(int player)
     {
         currentPlayer = player;
         if (player == 0)
         {
-            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
-            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
         }
         else
         {
-            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
-            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
         }
         endRoundText.SetBool("Out", false);
         endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
@@ -68,6 +75,8 @@ public class UiManager : MonoBehaviour
     public void CloseEnemyScorePanel()
     {
         bluePanel.SetBool("Out", true);
+        bluePanel.SetBool("BlinkArmor", false);
+        bluePanel.SetBool("BlinkHp", false);
     }
     public void ActiveScorePanel()
     {
@@ -97,7 +106,7 @@ public class UiManager : MonoBehaviour
                 Sprite.color = new Color(1, 1, 1);
                 Sprite.sprite = item.StartSprite;
             }
-            isDesing = true;
+            isDesing = false;
         }
         
     }

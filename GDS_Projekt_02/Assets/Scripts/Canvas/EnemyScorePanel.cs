@@ -6,7 +6,7 @@ using GridPack.Units;
 public class EnemyScorePanel : MonoBehaviour
 {
     ScorePanelControll scorePanelControll;
-    Animator animator;
+   public Animator animator;
     [SerializeField] Text nameEnemy;
 
     [Header("Sliders")]
@@ -24,12 +24,12 @@ public class EnemyScorePanel : MonoBehaviour
     private void Awake()
     {
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
-        animator = FindObjectOfType<Animator>();
     }
 
 
     public void UpgradeParameters(GameObject enemy)
     {
+       
         Unit unitInfo = enemy.GetComponent<Unit>();
         nameEnemy.text = unitInfo.nameUnit;
 
@@ -39,7 +39,7 @@ public class EnemyScorePanel : MonoBehaviour
         if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0 )
         {
             animator.SetBool("BlinkHp",true);
-
+            animator.SetBool("BlinkArmor", false);
             sliderHp.value = unitInfo.HitPoints - scorePanelControll.damage;
             hp.text = unitInfo.HitPoints.ToString() +" - " + scorePanelControll.damage;
 
@@ -49,12 +49,20 @@ public class EnemyScorePanel : MonoBehaviour
         else
         {
             animator.SetBool("BlinkArmor", true);
-
+            animator.SetBool("BlinkHp", false);
             sliderHp.value = unitInfo.HitPoints;
             hp.text = unitInfo.HitPoints.ToString();
-
+            if (unitInfo.ArmorPoints<=0)
+            {
+                armor.text = "0";
+            }
+            else
+            {
+                armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
+            }
             sliderArmor.value = unitInfo.ArmorPoints - scorePanelControll.damage;
-            armor.text = unitInfo.ArmorPoints.ToString() + " - " +scorePanelControll.damage;
+
+           
         }
        
 

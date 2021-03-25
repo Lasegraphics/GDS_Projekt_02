@@ -45,7 +45,6 @@ namespace GridPack.SceneScripts
                 var childColor = new Color(color.r, color.g, color.b, 1);
                 spriteRenderer = child.GetComponent<SpriteRenderer>();
                 if (spriteRenderer == null) continue;
-
                 child.GetComponent<SpriteRenderer>().color = childColor;
             }
         }

@@ -236,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256, y: 60}
+  m_AnchoredPosition: {x: 0.00055504, y: -0.0001421}
+  m_SizeDelta: {x: 344.38, y: 80.713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117340931
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7f2c45f08d73ba54f96634b746fbf72c, type: 3}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -373,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995809467214946937, guid: b22b769be57ec4b9a914963510d24941, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8995809467214946937, guid: b22b769be57ec4b9a914963510d24941, type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,7 +738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -449, y: -504}
+  m_AnchoredPosition: {x: -551, y: -504}
   m_SizeDelta: {x: 377.79, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883613444
@@ -1013,9 +1013,25 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7707565432445172682, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7707565432445172683, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_Direction
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565432478531130, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1392334656}
+    - target: {fileID: 7707565432540985074, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565432540985074, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 392
       objectReference: {fileID: 0}
     - target: {fileID: 7707565432747443342, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1069,13 +1085,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.000045776367
       objectReference: {fileID: 0}
+    - target: {fileID: 7707565433419711881, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 421.51126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565433419711881, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 222.98335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565433419711881, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.7556305
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565433419711881, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.491676
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565433427965908, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 320
+      objectReference: {fileID: 0}
     - target: {fileID: 7707565433429912765, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7707565433518638489, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 7707565433518638490, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_Direction
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707565433802757010, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -361
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
@@ -1222,7 +1266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1253057667
 MonoBehaviour:
@@ -1238,8 +1282,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueSlider: {fileID: 883613444}
   blueText: {fileID: 42601400}
+  scoreBlueTeam: 0
   redSlider: {fileID: 1467964554}
   redText: {fileID: 1096285368}
+  scoreRedTeam: 0
   speed: 5
 --- !u!1 &1284795120
 GameObject:
@@ -1374,8 +1420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.948, y: 474.61}
-  m_SizeDelta: {x: 232.7471, y: 130.7849}
+  m_AnchoredPosition: {x: 0.000026703, y: 490.44}
+  m_SizeDelta: {x: 102.735, y: 99.1191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417003796
 MonoBehaviour:
@@ -1552,7 +1598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 522, y: -504}
+  m_AnchoredPosition: {x: 530, y: -504}
   m_SizeDelta: {x: 377.79, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467964554
@@ -1948,6 +1994,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
+--- !u!1 &1737426193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737426195}
+  - component: {fileID: 1737426194}
+  m_Layer: 0
+  m_Name: EndGameCon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1737426194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737426193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77213875da7450e409fc4e00d0cd1b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueTeamScore: 1
+  redTeamScore: 1
+--- !u!4 &1737426195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737426193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9867947, y: -3.6217766, z: -7.1801853}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794361317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +2103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1838547120 stripped
 MonoBehaviour:
@@ -2061,8 +2152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -510}
-  m_SizeDelta: {x: 256, y: 60}
+  m_AnchoredPosition: {x: 0, y: -499.64346}
+  m_SizeDelta: {x: 344.3757, y: 80.7131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878511240
 MonoBehaviour:
@@ -2253,9 +2344,9 @@ MonoBehaviour:
   startPosCam: 22
   normalPosCam: 19
   sppedChangeCamera: 2
-  movmentSpeed: 5
-  minimumYValue: 7.9
-  maximumYValue: 3.9
+  movmentSpeed: 100
+  minimumYValue: 3.9
+  maximumYValue: 7.9
 --- !u!1 &1993241290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,40 +2551,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 651255052}
     - target: {fileID: 5805368906134415077, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805368906134415077, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805368906134415077, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -33.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805368906134415077, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
+      propertyPath: m_LocalPosition.z
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 5805368907535503715, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805368907535503715, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805368907535503715, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 33.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805368907535503715, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
+      propertyPath: m_LocalPosition.z
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 5805368907571898944, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5805368907571898944, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2619,7 +2686,7 @@ Transform:
   - {fileID: 1993241291}
   - {fileID: 1454487016}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2136098943
 PrefabInstance:
@@ -3018,25 +3085,6 @@ Transform:
   m_Father: {fileID: 294961420178654863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961418881170336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961418881170338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961418881170337
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3065,7 +3113,6 @@ GameObject:
   - component: {fileID: 294961418881170351}
   - component: {fileID: 294961418881170350}
   - component: {fileID: 294961418881170337}
-  - component: {fileID: 294961418881170336}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -3310,25 +3357,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961418896021370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961418896021372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961418896021371
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3357,7 +3385,6 @@ GameObject:
   - component: {fileID: 294961418896021369}
   - component: {fileID: 294961418896021368}
   - component: {fileID: 294961418896021371}
-  - component: {fileID: 294961418896021370}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -3638,7 +3665,6 @@ GameObject:
   - component: {fileID: 294961418933090109}
   - component: {fileID: 294961418933090108}
   - component: {fileID: 294961418933090111}
-  - component: {fileID: 294961418933090110}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -3731,25 +3757,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961418933090110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961418933090096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961418933090111
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4164,25 +4171,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961418953958954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961418953958956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961418953958955
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4211,7 +4199,6 @@ GameObject:
   - component: {fileID: 294961418953958953}
   - component: {fileID: 294961418953958952}
   - component: {fileID: 294961418953958955}
-  - component: {fileID: 294961418953958954}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -4331,25 +4318,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961418967239873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961418967239875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961418967239875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,7 +4330,6 @@ GameObject:
   - component: {fileID: 294961418967239884}
   - component: {fileID: 294961418967239887}
   - component: {fileID: 294961418967239886}
-  - component: {fileID: 294961418967239873}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -4690,25 +4657,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961418998389348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961418998389350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961418998389349
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4737,7 +4685,6 @@ GameObject:
   - component: {fileID: 294961418998389347}
   - component: {fileID: 294961418998389346}
   - component: {fileID: 294961418998389349}
-  - component: {fileID: 294961418998389348}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -4854,7 +4801,6 @@ GameObject:
   - component: {fileID: 294961419027758954}
   - component: {fileID: 294961419027758957}
   - component: {fileID: 294961419027758956}
-  - component: {fileID: 294961419027758959}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -4963,25 +4909,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419027758959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419027758945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419030523201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5411,25 +5338,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419051853563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419051853565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419051853565
 GameObject:
   m_ObjectHideFlags: 0
@@ -5442,7 +5350,6 @@ GameObject:
   - component: {fileID: 294961419051853542}
   - component: {fileID: 294961419051853561}
   - component: {fileID: 294961419051853560}
-  - component: {fileID: 294961419051853563}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -5715,25 +5622,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419084568203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419084568205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419084568205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,7 +5634,6 @@ GameObject:
   - component: {fileID: 294961419084568182}
   - component: {fileID: 294961419084568201}
   - component: {fileID: 294961419084568200}
-  - component: {fileID: 294961419084568203}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -5851,25 +5738,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419116117617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419116117619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419116117619
 GameObject:
   m_ObjectHideFlags: 0
@@ -5882,7 +5750,6 @@ GameObject:
   - component: {fileID: 294961419116117628}
   - component: {fileID: 294961419116117631}
   - component: {fileID: 294961419116117630}
-  - component: {fileID: 294961419116117617}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -6140,25 +6007,6 @@ Transform:
   m_Father: {fileID: 294961420498886545}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419136385824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419136385826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419136385825
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6187,7 +6035,6 @@ GameObject:
   - component: {fileID: 294961419136385839}
   - component: {fileID: 294961419136385838}
   - component: {fileID: 294961419136385825}
-  - component: {fileID: 294961419136385824}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -6381,25 +6228,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419140031415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419140031433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419140031433
 GameObject:
   m_ObjectHideFlags: 0
@@ -6412,7 +6240,6 @@ GameObject:
   - component: {fileID: 294961419140031410}
   - component: {fileID: 294961419140031413}
   - component: {fileID: 294961419140031412}
-  - component: {fileID: 294961419140031415}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -6502,25 +6329,6 @@ Transform:
   m_Father: {fileID: 294961420273594791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419158997424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419158997426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419158997425
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6549,7 +6357,6 @@ GameObject:
   - component: {fileID: 294961419158997439}
   - component: {fileID: 294961419158997438}
   - component: {fileID: 294961419158997425}
-  - component: {fileID: 294961419158997424}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -6712,25 +6519,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419164695332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419164695334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419164695333
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6759,7 +6547,6 @@ GameObject:
   - component: {fileID: 294961419164695331}
   - component: {fileID: 294961419164695330}
   - component: {fileID: 294961419164695333}
-  - component: {fileID: 294961419164695332}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -6883,25 +6670,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419167051751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419167051769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419167051769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6914,7 +6682,6 @@ GameObject:
   - component: {fileID: 294961419167051746}
   - component: {fileID: 294961419167051749}
   - component: {fileID: 294961419167051748}
-  - component: {fileID: 294961419167051751}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -7187,25 +6954,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419204794953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419204794955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419204794955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7218,7 +6966,6 @@ GameObject:
   - component: {fileID: 294961419204794932}
   - component: {fileID: 294961419204794935}
   - component: {fileID: 294961419204794934}
-  - component: {fileID: 294961419204794953}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -7327,25 +7074,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 107
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419205335369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419205335371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419205335371
 GameObject:
   m_ObjectHideFlags: 0
@@ -7358,7 +7086,6 @@ GameObject:
   - component: {fileID: 294961419205335348}
   - component: {fileID: 294961419205335351}
   - component: {fileID: 294961419205335350}
-  - component: {fileID: 294961419205335369}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -7467,25 +7194,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419208039467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419208039469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419208039469
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,7 +7206,6 @@ GameObject:
   - component: {fileID: 294961419208039446}
   - component: {fileID: 294961419208039465}
   - component: {fileID: 294961419208039464}
-  - component: {fileID: 294961419208039467}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -7576,25 +7283,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419237223612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419237223614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419237223613
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7623,7 +7311,6 @@ GameObject:
   - component: {fileID: 294961419237223611}
   - component: {fileID: 294961419237223610}
   - component: {fileID: 294961419237223613}
-  - component: {fileID: 294961419237223612}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -8075,25 +7762,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419263949161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419263949163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419263949163
 GameObject:
   m_ObjectHideFlags: 0
@@ -8106,7 +7774,6 @@ GameObject:
   - component: {fileID: 294961419263949140}
   - component: {fileID: 294961419263949143}
   - component: {fileID: 294961419263949142}
-  - component: {fileID: 294961419263949161}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -8184,25 +7851,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419266980924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419266980926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419266980925
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8231,7 +7879,6 @@ GameObject:
   - component: {fileID: 294961419266980923}
   - component: {fileID: 294961419266980922}
   - component: {fileID: 294961419266980925}
-  - component: {fileID: 294961419266980924}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -8734,25 +8381,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419300098444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419300098446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419300098445
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8781,7 +8409,6 @@ GameObject:
   - component: {fileID: 294961419300098443}
   - component: {fileID: 294961419300098442}
   - component: {fileID: 294961419300098445}
-  - component: {fileID: 294961419300098444}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -8956,25 +8583,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419324393620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419324393622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419324393621
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9003,7 +8611,6 @@ GameObject:
   - component: {fileID: 294961419324393619}
   - component: {fileID: 294961419324393618}
   - component: {fileID: 294961419324393621}
-  - component: {fileID: 294961419324393620}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -9127,25 +8734,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419324842523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419324842525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419324842525
 GameObject:
   m_ObjectHideFlags: 0
@@ -9158,7 +8746,6 @@ GameObject:
   - component: {fileID: 294961419324842502}
   - component: {fileID: 294961419324842521}
   - component: {fileID: 294961419324842520}
-  - component: {fileID: 294961419324842523}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -9267,25 +8854,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419336695899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419336695901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419336695901
 GameObject:
   m_ObjectHideFlags: 0
@@ -9298,7 +8866,6 @@ GameObject:
   - component: {fileID: 294961419336695878}
   - component: {fileID: 294961419336695897}
   - component: {fileID: 294961419336695896}
-  - component: {fileID: 294961419336695899}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -9376,25 +8943,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419339756490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419339756492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419339756491
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9423,7 +8971,6 @@ GameObject:
   - component: {fileID: 294961419339756489}
   - component: {fileID: 294961419339756488}
   - component: {fileID: 294961419339756491}
-  - component: {fileID: 294961419339756490}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -9629,25 +9176,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419355416443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419355416445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419355416445
 GameObject:
   m_ObjectHideFlags: 0
@@ -9660,7 +9188,6 @@ GameObject:
   - component: {fileID: 294961419355416422}
   - component: {fileID: 294961419355416441}
   - component: {fileID: 294961419355416440}
-  - component: {fileID: 294961419355416443}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -9718,25 +9245,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419365070803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419365070805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419365070805
 GameObject:
   m_ObjectHideFlags: 0
@@ -9749,7 +9257,6 @@ GameObject:
   - component: {fileID: 294961419365070814}
   - component: {fileID: 294961419365070801}
   - component: {fileID: 294961419365070800}
-  - component: {fileID: 294961419365070803}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -9991,25 +9498,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419381102827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419381102829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419381102829
 GameObject:
   m_ObjectHideFlags: 0
@@ -10022,7 +9510,6 @@ GameObject:
   - component: {fileID: 294961419381102806}
   - component: {fileID: 294961419381102825}
   - component: {fileID: 294961419381102824}
-  - component: {fileID: 294961419381102827}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -10124,7 +9611,6 @@ GameObject:
   - component: {fileID: 294961419394173005}
   - component: {fileID: 294961419394173004}
   - component: {fileID: 294961419394173007}
-  - component: {fileID: 294961419394173006}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -10217,25 +9703,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419394173006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419394172992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419394173007
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10252,25 +9719,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.6440026}
   serializedVersion: 2
   m_Radius: 1.800036
---- !u!114 &294961419398458592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419398458594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419398458593
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10299,7 +9747,6 @@ GameObject:
   - component: {fileID: 294961419398458607}
   - component: {fileID: 294961419398458606}
   - component: {fileID: 294961419398458593}
-  - component: {fileID: 294961419398458592}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -10462,25 +9909,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419404452166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419404452184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419404452167
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10509,7 +9937,6 @@ GameObject:
   - component: {fileID: 294961419404452165}
   - component: {fileID: 294961419404452164}
   - component: {fileID: 294961419404452167}
-  - component: {fileID: 294961419404452166}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -10602,25 +10029,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419405308980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419405308982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419405308981
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10649,7 +10057,6 @@ GameObject:
   - component: {fileID: 294961419405308979}
   - component: {fileID: 294961419405308978}
   - component: {fileID: 294961419405308981}
-  - component: {fileID: 294961419405308980}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -10855,25 +10262,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 116
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419428750213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419428750215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419428750215
 GameObject:
   m_ObjectHideFlags: 0
@@ -10886,7 +10274,6 @@ GameObject:
   - component: {fileID: 294961419428750208}
   - component: {fileID: 294961419428750211}
   - component: {fileID: 294961419428750210}
-  - component: {fileID: 294961419428750213}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -10995,25 +10382,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419429689061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419429689063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419429689063
 GameObject:
   m_ObjectHideFlags: 0
@@ -11026,7 +10394,6 @@ GameObject:
   - component: {fileID: 294961419429689056}
   - component: {fileID: 294961419429689059}
   - component: {fileID: 294961419429689058}
-  - component: {fileID: 294961419429689061}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -11217,25 +10584,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419441044533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419441044535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419441044535
 GameObject:
   m_ObjectHideFlags: 0
@@ -11248,7 +10596,6 @@ GameObject:
   - component: {fileID: 294961419441044528}
   - component: {fileID: 294961419441044531}
   - component: {fileID: 294961419441044530}
-  - component: {fileID: 294961419441044533}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -11306,25 +10653,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419456657443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419456657445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419456657445
 GameObject:
   m_ObjectHideFlags: 0
@@ -11337,7 +10665,6 @@ GameObject:
   - component: {fileID: 294961419456657454}
   - component: {fileID: 294961419456657441}
   - component: {fileID: 294961419456657440}
-  - component: {fileID: 294961419456657443}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -11712,25 +11039,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419493807212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419493807214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419493807213
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11759,7 +11067,6 @@ GameObject:
   - component: {fileID: 294961419493807211}
   - component: {fileID: 294961419493807210}
   - component: {fileID: 294961419493807213}
-  - component: {fileID: 294961419493807212}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -11883,25 +11190,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419496009657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419496009659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419496009659
 GameObject:
   m_ObjectHideFlags: 0
@@ -11914,7 +11202,6 @@ GameObject:
   - component: {fileID: 294961419496009636}
   - component: {fileID: 294961419496009639}
   - component: {fileID: 294961419496009638}
-  - component: {fileID: 294961419496009657}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -12156,25 +11443,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419512620108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419512620110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419512620109
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12203,7 +11471,6 @@ GameObject:
   - component: {fileID: 294961419512620107}
   - component: {fileID: 294961419512620106}
   - component: {fileID: 294961419512620109}
-  - component: {fileID: 294961419512620108}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -12409,25 +11676,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 132
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419512939993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419512939995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419512939995
 GameObject:
   m_ObjectHideFlags: 0
@@ -12440,7 +11688,6 @@ GameObject:
   - component: {fileID: 294961419512939972}
   - component: {fileID: 294961419512939975}
   - component: {fileID: 294961419512939974}
-  - component: {fileID: 294961419512939993}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -12928,25 +12175,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419562388618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419562388620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419562388619
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12975,7 +12203,6 @@ GameObject:
   - component: {fileID: 294961419562388617}
   - component: {fileID: 294961419562388616}
   - component: {fileID: 294961419562388619}
-  - component: {fileID: 294961419562388618}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -13092,7 +12319,6 @@ GameObject:
   - component: {fileID: 294961419572187418}
   - component: {fileID: 294961419572187421}
   - component: {fileID: 294961419572187420}
-  - component: {fileID: 294961419572187423}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -13201,25 +12427,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419572187423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419572187409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!212 &294961419582287812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13321,25 +12528,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419582287833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419582287835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419582287835
 GameObject:
   m_ObjectHideFlags: 0
@@ -13352,7 +12540,6 @@ GameObject:
   - component: {fileID: 294961419582287812}
   - component: {fileID: 294961419582287815}
   - component: {fileID: 294961419582287814}
-  - component: {fileID: 294961419582287833}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -13512,25 +12699,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419600223174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419600223192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419600223175
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13559,7 +12727,6 @@ GameObject:
   - component: {fileID: 294961419600223173}
   - component: {fileID: 294961419600223172}
   - component: {fileID: 294961419600223175}
-  - component: {fileID: 294961419600223174}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -13652,25 +12819,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419606316646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419606316664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419606316647
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13699,7 +12847,6 @@ GameObject:
   - component: {fileID: 294961419606316645}
   - component: {fileID: 294961419606316644}
   - component: {fileID: 294961419606316647}
-  - component: {fileID: 294961419606316646}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -13722,25 +12869,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419608388224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419608388226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419608388225
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13769,7 +12897,6 @@ GameObject:
   - component: {fileID: 294961419608388239}
   - component: {fileID: 294961419608388238}
   - component: {fileID: 294961419608388225}
-  - component: {fileID: 294961419608388224}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -13932,25 +13059,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419610862788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419610862790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419610862789
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13979,7 +13087,6 @@ GameObject:
   - component: {fileID: 294961419610862787}
   - component: {fileID: 294961419610862786}
   - component: {fileID: 294961419610862789}
-  - component: {fileID: 294961419610862788}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -14002,25 +13109,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419612825232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419612825234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419612825233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14049,7 +13137,6 @@ GameObject:
   - component: {fileID: 294961419612825247}
   - component: {fileID: 294961419612825246}
   - component: {fileID: 294961419612825233}
-  - component: {fileID: 294961419612825232}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -14243,25 +13330,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419616909721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419616909723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419616909723
 GameObject:
   m_ObjectHideFlags: 0
@@ -14274,7 +13342,6 @@ GameObject:
   - component: {fileID: 294961419616909700}
   - component: {fileID: 294961419616909703}
   - component: {fileID: 294961419616909702}
-  - component: {fileID: 294961419616909721}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -14352,25 +13419,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419619675828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419619675830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419619675829
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14399,7 +13447,6 @@ GameObject:
   - component: {fileID: 294961419619675827}
   - component: {fileID: 294961419619675826}
   - component: {fileID: 294961419619675829}
-  - component: {fileID: 294961419619675828}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -14516,7 +13563,6 @@ GameObject:
   - component: {fileID: 294961419634122762}
   - component: {fileID: 294961419634122765}
   - component: {fileID: 294961419634122764}
-  - component: {fileID: 294961419634122767}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -14625,25 +13671,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419634122767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419634122753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!114 &294961419638257382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14714,25 +13741,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419638257400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419638257402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419638257401
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14761,7 +13769,6 @@ GameObject:
   - component: {fileID: 294961419638257383}
   - component: {fileID: 294961419638257382}
   - component: {fileID: 294961419638257401}
-  - component: {fileID: 294961419638257400}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -14854,25 +13861,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419640609474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419640609476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419640609475
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14901,7 +13889,6 @@ GameObject:
   - component: {fileID: 294961419640609473}
   - component: {fileID: 294961419640609472}
   - component: {fileID: 294961419640609475}
-  - component: {fileID: 294961419640609474}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -15107,25 +14094,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 148
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419645424937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419645424939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419645424939
 GameObject:
   m_ObjectHideFlags: 0
@@ -15138,7 +14106,6 @@ GameObject:
   - component: {fileID: 294961419645424916}
   - component: {fileID: 294961419645424919}
   - component: {fileID: 294961419645424918}
-  - component: {fileID: 294961419645424937}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -15575,25 +14542,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419662150125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419662150127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419662150127
 GameObject:
   m_ObjectHideFlags: 0
@@ -15606,7 +14554,6 @@ GameObject:
   - component: {fileID: 294961419662150120}
   - component: {fileID: 294961419662150123}
   - component: {fileID: 294961419662150122}
-  - component: {fileID: 294961419662150125}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -15684,25 +14631,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419667634104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419667634106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419667634105
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15731,7 +14659,6 @@ GameObject:
   - component: {fileID: 294961419667634087}
   - component: {fileID: 294961419667634086}
   - component: {fileID: 294961419667634105}
-  - component: {fileID: 294961419667634104}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -15804,25 +14731,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419673718531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419673718533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419673718533
 GameObject:
   m_ObjectHideFlags: 0
@@ -15835,7 +14743,6 @@ GameObject:
   - component: {fileID: 294961419673718542}
   - component: {fileID: 294961419673718529}
   - component: {fileID: 294961419673718528}
-  - component: {fileID: 294961419673718531}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -15988,7 +14895,6 @@ GameObject:
   - component: {fileID: 294961419678215101}
   - component: {fileID: 294961419678215100}
   - component: {fileID: 294961419678215103}
-  - component: {fileID: 294961419678215102}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -16081,25 +14987,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419678215102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419678215088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419678215103
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16186,25 +15073,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419685985364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419685985366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419685985365
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16233,7 +15101,6 @@ GameObject:
   - component: {fileID: 294961419685985363}
   - component: {fileID: 294961419685985362}
   - component: {fileID: 294961419685985365}
-  - component: {fileID: 294961419685985364}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -16408,25 +15275,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419706420396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419706420398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419706420397
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16455,7 +15303,6 @@ GameObject:
   - component: {fileID: 294961419706420395}
   - component: {fileID: 294961419706420394}
   - component: {fileID: 294961419706420397}
-  - component: {fileID: 294961419706420396}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -16661,25 +15508,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419726644663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419726644681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419726644681
 GameObject:
   m_ObjectHideFlags: 0
@@ -16692,7 +15520,6 @@ GameObject:
   - component: {fileID: 294961419726644658}
   - component: {fileID: 294961419726644661}
   - component: {fileID: 294961419726644660}
-  - component: {fileID: 294961419726644663}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -16770,25 +15597,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419728382392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419728382394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419728382393
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16817,7 +15625,6 @@ GameObject:
   - component: {fileID: 294961419728382375}
   - component: {fileID: 294961419728382374}
   - component: {fileID: 294961419728382393}
-  - component: {fileID: 294961419728382392}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -16941,25 +15748,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 120
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419741995929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419741995931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419741995931
 GameObject:
   m_ObjectHideFlags: 0
@@ -16972,7 +15760,6 @@ GameObject:
   - component: {fileID: 294961419741995908}
   - component: {fileID: 294961419741995911}
   - component: {fileID: 294961419741995910}
-  - component: {fileID: 294961419741995929}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -17214,25 +16001,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419767631304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419767631306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419767631305
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17261,7 +16029,6 @@ GameObject:
   - component: {fileID: 294961419767631287}
   - component: {fileID: 294961419767631286}
   - component: {fileID: 294961419767631305}
-  - component: {fileID: 294961419767631304}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -17467,25 +16234,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419772268649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419772268651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419772268651
 GameObject:
   m_ObjectHideFlags: 0
@@ -17498,7 +16246,6 @@ GameObject:
   - component: {fileID: 294961419772268628}
   - component: {fileID: 294961419772268631}
   - component: {fileID: 294961419772268630}
-  - component: {fileID: 294961419772268649}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -17576,25 +16323,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419784979076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419784979078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419784979077
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17623,7 +16351,6 @@ GameObject:
   - component: {fileID: 294961419784979075}
   - component: {fileID: 294961419784979074}
   - component: {fileID: 294961419784979077}
-  - component: {fileID: 294961419784979076}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -17716,25 +16443,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419802119146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419802119148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419802119147
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17763,7 +16471,6 @@ GameObject:
   - component: {fileID: 294961419802119145}
   - component: {fileID: 294961419802119144}
   - component: {fileID: 294961419802119147}
-  - component: {fileID: 294961419802119146}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -17856,25 +16563,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419809077306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419809077308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419809077307
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17903,7 +16591,6 @@ GameObject:
   - component: {fileID: 294961419809077305}
   - component: {fileID: 294961419809077304}
   - component: {fileID: 294961419809077307}
-  - component: {fileID: 294961419809077306}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -18184,7 +16871,6 @@ GameObject:
   - component: {fileID: 294961419832807437}
   - component: {fileID: 294961419832807436}
   - component: {fileID: 294961419832807439}
-  - component: {fileID: 294961419832807438}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -18277,25 +16963,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419832807438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419832807424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419832807439
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18324,7 +16991,6 @@ GameObject:
   - component: {fileID: 294961419843887994}
   - component: {fileID: 294961419843887997}
   - component: {fileID: 294961419843887996}
-  - component: {fileID: 294961419843887999}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -18426,32 +17092,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294961419843887985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.20000076, y: -0.010000229, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9850188, y: 1, z: 1}
   m_Children:
   - {fileID: 294961420440207746}
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419843887999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419843887985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!212 &294961419845035142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18799,25 +17446,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 115
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419860016525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419860016527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419860016527
 GameObject:
   m_ObjectHideFlags: 0
@@ -18830,7 +17458,6 @@ GameObject:
   - component: {fileID: 294961419860016520}
   - component: {fileID: 294961419860016523}
   - component: {fileID: 294961419860016522}
-  - component: {fileID: 294961419860016525}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -18990,25 +17617,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419909039672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419909039674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419909039673
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19037,7 +17645,6 @@ GameObject:
   - component: {fileID: 294961419909039655}
   - component: {fileID: 294961419909039654}
   - component: {fileID: 294961419909039673}
-  - component: {fileID: 294961419909039672}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -19060,25 +17667,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419923951232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419923951234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419923951233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19107,7 +17695,6 @@ GameObject:
   - component: {fileID: 294961419923951247}
   - component: {fileID: 294961419923951246}
   - component: {fileID: 294961419923951233}
-  - component: {fileID: 294961419923951232}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -19465,25 +18052,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419929929355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419929929357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419929929357
 GameObject:
   m_ObjectHideFlags: 0
@@ -19496,7 +18064,6 @@ GameObject:
   - component: {fileID: 294961419929929334}
   - component: {fileID: 294961419929929353}
   - component: {fileID: 294961419929929352}
-  - component: {fileID: 294961419929929355}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -19656,25 +18223,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419933930470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419933930488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419933930471
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19703,7 +18251,6 @@ GameObject:
   - component: {fileID: 294961419933930469}
   - component: {fileID: 294961419933930468}
   - component: {fileID: 294961419933930471}
-  - component: {fileID: 294961419933930470}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -19738,7 +18285,6 @@ GameObject:
   - component: {fileID: 294961419939479914}
   - component: {fileID: 294961419939479917}
   - component: {fileID: 294961419939479916}
-  - component: {fileID: 294961419939479919}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -19847,25 +18393,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419939479919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419939479905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!212 &294961419940735554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19967,25 +18494,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 112
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419940735559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419940735577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419940735577
 GameObject:
   m_ObjectHideFlags: 0
@@ -19998,7 +18506,6 @@ GameObject:
   - component: {fileID: 294961419940735554}
   - component: {fileID: 294961419940735557}
   - component: {fileID: 294961419940735556}
-  - component: {fileID: 294961419940735559}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -20431,25 +18938,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419974901473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419974901475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419974901475
 GameObject:
   m_ObjectHideFlags: 0
@@ -20462,7 +18950,6 @@ GameObject:
   - component: {fileID: 294961419974901484}
   - component: {fileID: 294961419974901487}
   - component: {fileID: 294961419974901486}
-  - component: {fileID: 294961419974901473}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -20708,25 +19195,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961419980902904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419980902906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961419980902905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20755,7 +19223,6 @@ GameObject:
   - component: {fileID: 294961419980902887}
   - component: {fileID: 294961419980902886}
   - component: {fileID: 294961419980902905}
-  - component: {fileID: 294961419980902904}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21043,25 +19510,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961419997724821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961419997724823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961419997724823
 GameObject:
   m_ObjectHideFlags: 0
@@ -21074,7 +19522,6 @@ GameObject:
   - component: {fileID: 294961419997724816}
   - component: {fileID: 294961419997724819}
   - component: {fileID: 294961419997724818}
-  - component: {fileID: 294961419997724821}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21152,25 +19599,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420002373290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420002373292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420002373291
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21199,7 +19627,6 @@ GameObject:
   - component: {fileID: 294961420002373289}
   - component: {fileID: 294961420002373288}
   - component: {fileID: 294961420002373291}
-  - component: {fileID: 294961420002373290}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21234,7 +19661,6 @@ GameObject:
   - component: {fileID: 294961420007018250}
   - component: {fileID: 294961420007018253}
   - component: {fileID: 294961420007018252}
-  - component: {fileID: 294961420007018255}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21343,25 +19769,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420007018255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420007018241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!114 &294961420011825284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21432,25 +19839,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420011825286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420011825304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420011825287
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21479,7 +19867,6 @@ GameObject:
   - component: {fileID: 294961420011825285}
   - component: {fileID: 294961420011825284}
   - component: {fileID: 294961420011825287}
-  - component: {fileID: 294961420011825286}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21654,25 +20041,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420029153766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420029153784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420029153767
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21701,7 +20069,6 @@ GameObject:
   - component: {fileID: 294961420029153765}
   - component: {fileID: 294961420029153764}
   - component: {fileID: 294961420029153767}
-  - component: {fileID: 294961420029153766}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21825,25 +20192,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420051823017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420051823019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420051823019
 GameObject:
   m_ObjectHideFlags: 0
@@ -21856,7 +20204,6 @@ GameObject:
   - component: {fileID: 294961420051822996}
   - component: {fileID: 294961420051822999}
   - component: {fileID: 294961420051822998}
-  - component: {fileID: 294961420051823017}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -21934,25 +20281,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420054021028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420054021030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420054021029
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21981,7 +20309,6 @@ GameObject:
   - component: {fileID: 294961420054021027}
   - component: {fileID: 294961420054021026}
   - component: {fileID: 294961420054021029}
-  - component: {fileID: 294961420054021028}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -22351,25 +20678,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 149
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420080470427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420080470429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420080470429
 GameObject:
   m_ObjectHideFlags: 0
@@ -22382,7 +20690,6 @@ GameObject:
   - component: {fileID: 294961420080470406}
   - component: {fileID: 294961420080470425}
   - component: {fileID: 294961420080470424}
-  - component: {fileID: 294961420080470427}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -22624,25 +20931,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420083098026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420083098028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420083098027
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22671,7 +20959,6 @@ GameObject:
   - component: {fileID: 294961420083098025}
   - component: {fileID: 294961420083098024}
   - component: {fileID: 294961420083098027}
-  - component: {fileID: 294961420083098026}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -22744,25 +21031,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420114785539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420114785541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420114785541
 GameObject:
   m_ObjectHideFlags: 0
@@ -22775,7 +21043,6 @@ GameObject:
   - component: {fileID: 294961420114785550}
   - component: {fileID: 294961420114785537}
   - component: {fileID: 294961420114785536}
-  - component: {fileID: 294961420114785539}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -23181,25 +21448,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420151733849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420151733851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420151733851
 GameObject:
   m_ObjectHideFlags: 0
@@ -23212,7 +21460,6 @@ GameObject:
   - component: {fileID: 294961420151733828}
   - component: {fileID: 294961420151733831}
   - component: {fileID: 294961420151733830}
-  - component: {fileID: 294961420151733849}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -23403,25 +21650,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420159027549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420159027551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420159027551
 GameObject:
   m_ObjectHideFlags: 0
@@ -23434,7 +21662,6 @@ GameObject:
   - component: {fileID: 294961420159027544}
   - component: {fileID: 294961420159027547}
   - component: {fileID: 294961420159027546}
-  - component: {fileID: 294961420159027549}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -23789,25 +22016,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420172791159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420172791177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420172791177
 GameObject:
   m_ObjectHideFlags: 0
@@ -23820,7 +22028,6 @@ GameObject:
   - component: {fileID: 294961420172791154}
   - component: {fileID: 294961420172791157}
   - component: {fileID: 294961420172791156}
-  - component: {fileID: 294961420172791159}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -23898,25 +22105,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420178654860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420178654862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420178654861
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23945,7 +22133,6 @@ GameObject:
   - component: {fileID: 294961420178654859}
   - component: {fileID: 294961420178654858}
   - component: {fileID: 294961420178654861}
-  - component: {fileID: 294961420178654860}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -24120,25 +22307,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420200933402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420200933404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420200933403
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24167,7 +22335,6 @@ GameObject:
   - component: {fileID: 294961420200933401}
   - component: {fileID: 294961420200933400}
   - component: {fileID: 294961420200933403}
-  - component: {fileID: 294961420200933402}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -24342,25 +22509,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420217746484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420217746486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420217746485
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24389,7 +22537,6 @@ GameObject:
   - component: {fileID: 294961420217746483}
   - component: {fileID: 294961420217746482}
   - component: {fileID: 294961420217746485}
-  - component: {fileID: 294961420217746484}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -24482,25 +22629,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420218797740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420218797742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420218797741
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24529,7 +22657,6 @@ GameObject:
   - component: {fileID: 294961420218797739}
   - component: {fileID: 294961420218797738}
   - component: {fileID: 294961420218797741}
-  - component: {fileID: 294961420218797740}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -24950,25 +23077,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420273594788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420273594790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420273594789
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24997,7 +23105,6 @@ GameObject:
   - component: {fileID: 294961420273594787}
   - component: {fileID: 294961420273594786}
   - component: {fileID: 294961420273594789}
-  - component: {fileID: 294961420273594788}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -25199,25 +23306,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420285029233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420285029235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420285029235
 GameObject:
   m_ObjectHideFlags: 0
@@ -25230,7 +23318,6 @@ GameObject:
   - component: {fileID: 294961420285029244}
   - component: {fileID: 294961420285029247}
   - component: {fileID: 294961420285029246}
-  - component: {fileID: 294961420285029233}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -25425,25 +23512,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420292694377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420292694379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420292694379
 GameObject:
   m_ObjectHideFlags: 0
@@ -25456,7 +23524,6 @@ GameObject:
   - component: {fileID: 294961420292694356}
   - component: {fileID: 294961420292694359}
   - component: {fileID: 294961420292694358}
-  - component: {fileID: 294961420292694377}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -25534,25 +23601,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420293798444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420293798446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420293798445
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25581,7 +23629,6 @@ GameObject:
   - component: {fileID: 294961420293798443}
   - component: {fileID: 294961420293798442}
   - component: {fileID: 294961420293798445}
-  - component: {fileID: 294961420293798444}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -25756,25 +23803,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420302201452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420302201454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420302201453
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25803,7 +23831,6 @@ GameObject:
   - component: {fileID: 294961420302201451}
   - component: {fileID: 294961420302201450}
   - component: {fileID: 294961420302201453}
-  - component: {fileID: 294961420302201452}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -26002,7 +24029,6 @@ GameObject:
   - component: {fileID: 294961420311889690}
   - component: {fileID: 294961420311889693}
   - component: {fileID: 294961420311889692}
-  - component: {fileID: 294961420311889695}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -26111,25 +24137,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 113
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420311889695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420311889681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!114 &294961420319146006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26200,25 +24207,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420319146024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420319146026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420319146025
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26247,7 +24235,6 @@ GameObject:
   - component: {fileID: 294961420319146007}
   - component: {fileID: 294961420319146006}
   - component: {fileID: 294961420319146025}
-  - component: {fileID: 294961420319146024}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -26340,25 +24327,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420331664098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420331664100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420331664099
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26387,7 +24355,6 @@ GameObject:
   - component: {fileID: 294961420331664097}
   - component: {fileID: 294961420331664096}
   - component: {fileID: 294961420331664099}
-  - component: {fileID: 294961420331664098}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -26480,25 +24447,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420335609962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420335609964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420335609963
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26527,7 +24475,6 @@ GameObject:
   - component: {fileID: 294961420335609961}
   - component: {fileID: 294961420335609960}
   - component: {fileID: 294961420335609963}
-  - component: {fileID: 294961420335609962}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -26960,25 +24907,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &294961420364524448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420364524450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420364524449
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27007,7 +24935,6 @@ GameObject:
   - component: {fileID: 294961420364524463}
   - component: {fileID: 294961420364524462}
   - component: {fileID: 294961420364524449}
-  - component: {fileID: 294961420364524448}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -27115,25 +25042,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420366825649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420366825651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420366825651
 GameObject:
   m_ObjectHideFlags: 0
@@ -27146,7 +25054,6 @@ GameObject:
   - component: {fileID: 294961420366825660}
   - component: {fileID: 294961420366825663}
   - component: {fileID: 294961420366825662}
-  - component: {fileID: 294961420366825649}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -27392,25 +25299,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420373397882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420373397884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420373397883
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27439,7 +25327,6 @@ GameObject:
   - component: {fileID: 294961420373397881}
   - component: {fileID: 294961420373397880}
   - component: {fileID: 294961420373397883}
-  - component: {fileID: 294961420373397882}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -27614,25 +25501,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420373997608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420373997610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420373997609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27661,7 +25529,6 @@ GameObject:
   - component: {fileID: 294961420373997591}
   - component: {fileID: 294961420373997590}
   - component: {fileID: 294961420373997609}
-  - component: {fileID: 294961420373997608}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -27918,25 +25785,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420386133778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420386133780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420386133779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27965,7 +25813,6 @@ GameObject:
   - component: {fileID: 294961420386133777}
   - component: {fileID: 294961420386133776}
   - component: {fileID: 294961420386133779}
-  - component: {fileID: 294961420386133778}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28000,7 +25847,6 @@ GameObject:
   - component: {fileID: 294961420388418938}
   - component: {fileID: 294961420388418941}
   - component: {fileID: 294961420388418940}
-  - component: {fileID: 294961420388418943}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28109,25 +25955,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420388418943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420388418929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!4 &294961420400477888
 Transform:
   m_ObjectHideFlags: 0
@@ -28143,25 +25970,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420400477889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420400477891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420400477891
 GameObject:
   m_ObjectHideFlags: 0
@@ -28174,7 +25982,6 @@ GameObject:
   - component: {fileID: 294961420400477900}
   - component: {fileID: 294961420400477903}
   - component: {fileID: 294961420400477902}
-  - component: {fileID: 294961420400477889}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28369,25 +26176,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 117
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420404910055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420404910073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420404910073
 GameObject:
   m_ObjectHideFlags: 0
@@ -28400,7 +26188,6 @@ GameObject:
   - component: {fileID: 294961420404910050}
   - component: {fileID: 294961420404910053}
   - component: {fileID: 294961420404910052}
-  - component: {fileID: 294961420404910055}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28478,25 +26265,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420405864348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420405864350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420405864349
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28525,7 +26293,6 @@ GameObject:
   - component: {fileID: 294961420405864347}
   - component: {fileID: 294961420405864346}
   - component: {fileID: 294961420405864349}
-  - component: {fileID: 294961420405864348}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28563,25 +26330,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420409618929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420409618931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420409618931
 GameObject:
   m_ObjectHideFlags: 0
@@ -28594,7 +26342,6 @@ GameObject:
   - component: {fileID: 294961420409618940}
   - component: {fileID: 294961420409618943}
   - component: {fileID: 294961420409618942}
-  - component: {fileID: 294961420409618929}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28758,25 +26505,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420410869992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420410869994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420410869993
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28805,7 +26533,6 @@ GameObject:
   - component: {fileID: 294961420410869975}
   - component: {fileID: 294961420410869974}
   - component: {fileID: 294961420410869993}
-  - component: {fileID: 294961420410869992}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -28925,25 +26652,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420411664001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420411664003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420411664003
 GameObject:
   m_ObjectHideFlags: 0
@@ -28956,7 +26664,6 @@ GameObject:
   - component: {fileID: 294961420411664012}
   - component: {fileID: 294961420411664015}
   - component: {fileID: 294961420411664014}
-  - component: {fileID: 294961420411664001}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -29151,25 +26858,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420416976027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420416976029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420416976029
 GameObject:
   m_ObjectHideFlags: 0
@@ -29182,7 +26870,6 @@ GameObject:
   - component: {fileID: 294961420416976006}
   - component: {fileID: 294961420416976025}
   - component: {fileID: 294961420416976024}
-  - component: {fileID: 294961420416976027}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -29373,25 +27060,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420424265243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420424265245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420424265245
 GameObject:
   m_ObjectHideFlags: 0
@@ -29404,7 +27072,6 @@ GameObject:
   - component: {fileID: 294961420424265222}
   - component: {fileID: 294961420424265241}
   - component: {fileID: 294961420424265240}
-  - component: {fileID: 294961420424265243}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -29482,25 +27149,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420432384754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420432384756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420432384755
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29529,7 +27177,6 @@ GameObject:
   - component: {fileID: 294961420432384753}
   - component: {fileID: 294961420432384752}
   - component: {fileID: 294961420432384755}
-  - component: {fileID: 294961420432384754}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -29766,25 +27413,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 111
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420452471459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420452471461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420452471461
 GameObject:
   m_ObjectHideFlags: 0
@@ -29797,7 +27425,6 @@ GameObject:
   - component: {fileID: 294961420452471470}
   - component: {fileID: 294961420452471457}
   - component: {fileID: 294961420452471456}
-  - component: {fileID: 294961420452471459}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -29926,25 +27553,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420475413508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420475413510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420475413509
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29973,7 +27581,6 @@ GameObject:
   - component: {fileID: 294961420475413507}
   - component: {fileID: 294961420475413506}
   - component: {fileID: 294961420475413509}
-  - component: {fileID: 294961420475413508}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -30008,7 +27615,6 @@ GameObject:
   - component: {fileID: 294961420498886557}
   - component: {fileID: 294961420498886556}
   - component: {fileID: 294961420498886559}
-  - component: {fileID: 294961420498886558}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -30101,25 +27707,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420498886558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420498886544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420498886559
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30148,7 +27735,6 @@ GameObject:
   - component: {fileID: 294961420501385581}
   - component: {fileID: 294961420501385580}
   - component: {fileID: 294961420501385583}
-  - component: {fileID: 294961420501385582}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -30241,25 +27827,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420501385582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420501385568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420501385583
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30428,25 +27995,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420510586626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420510586628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420510586627
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30475,7 +28023,6 @@ GameObject:
   - component: {fileID: 294961420510586625}
   - component: {fileID: 294961420510586624}
   - component: {fileID: 294961420510586627}
-  - component: {fileID: 294961420510586626}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -30513,25 +28060,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420520025153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420520025155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420520025155
 GameObject:
   m_ObjectHideFlags: 0
@@ -30544,7 +28072,6 @@ GameObject:
   - component: {fileID: 294961420520025164}
   - component: {fileID: 294961420520025167}
   - component: {fileID: 294961420520025166}
-  - component: {fileID: 294961420520025153}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -30985,25 +28512,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420548812425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420548812427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420548812427
 GameObject:
   m_ObjectHideFlags: 0
@@ -31016,7 +28524,6 @@ GameObject:
   - component: {fileID: 294961420548812404}
   - component: {fileID: 294961420548812407}
   - component: {fileID: 294961420548812406}
-  - component: {fileID: 294961420548812425}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -31176,25 +28683,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420567804338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420567804340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420567804339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31223,7 +28711,6 @@ GameObject:
   - component: {fileID: 294961420567804337}
   - component: {fileID: 294961420567804336}
   - component: {fileID: 294961420567804339}
-  - component: {fileID: 294961420567804338}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -31316,25 +28803,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420579130022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420579130040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420579130023
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31363,7 +28831,6 @@ GameObject:
   - component: {fileID: 294961420579130021}
   - component: {fileID: 294961420579130020}
   - component: {fileID: 294961420579130023}
-  - component: {fileID: 294961420579130022}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -31386,25 +28853,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420579391392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420579391394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420579391393
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31433,7 +28881,6 @@ GameObject:
   - component: {fileID: 294961420579391407}
   - component: {fileID: 294961420579391406}
   - component: {fileID: 294961420579391393}
-  - component: {fileID: 294961420579391392}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -31620,7 +29067,6 @@ GameObject:
   - component: {fileID: 294961420619541789}
   - component: {fileID: 294961420619541788}
   - component: {fileID: 294961420619541791}
-  - component: {fileID: 294961420619541790}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -31713,25 +29159,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420619541790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420619541776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420619541791
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31982,25 +29409,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420631665868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420631665870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420631665869
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32029,7 +29437,6 @@ GameObject:
   - component: {fileID: 294961420631665867}
   - component: {fileID: 294961420631665866}
   - component: {fileID: 294961420631665869}
-  - component: {fileID: 294961420631665868}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -32122,25 +29529,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420635175398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420635175416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420635175399
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32169,7 +29557,6 @@ GameObject:
   - component: {fileID: 294961420635175397}
   - component: {fileID: 294961420635175396}
   - component: {fileID: 294961420635175399}
-  - component: {fileID: 294961420635175398}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -32344,25 +29731,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420656918090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420656918092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420656918091
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32391,7 +29759,6 @@ GameObject:
   - component: {fileID: 294961420656918089}
   - component: {fileID: 294961420656918088}
   - component: {fileID: 294961420656918091}
-  - component: {fileID: 294961420656918090}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -32648,25 +30015,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420689740482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420689740484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420689740483
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32695,7 +30043,6 @@ GameObject:
   - component: {fileID: 294961420689740481}
   - component: {fileID: 294961420689740480}
   - component: {fileID: 294961420689740483}
-  - component: {fileID: 294961420689740482}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -32788,25 +30135,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420702218280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420702218282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420702218281
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32835,7 +30163,6 @@ GameObject:
   - component: {fileID: 294961420702218263}
   - component: {fileID: 294961420702218262}
   - component: {fileID: 294961420702218281}
-  - component: {fileID: 294961420702218280}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -32873,25 +30200,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420707133105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420707133107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420707133107
 GameObject:
   m_ObjectHideFlags: 0
@@ -32904,7 +30212,6 @@ GameObject:
   - component: {fileID: 294961420707133116}
   - component: {fileID: 294961420707133119}
   - component: {fileID: 294961420707133118}
-  - component: {fileID: 294961420707133105}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -33396,25 +30703,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420734310024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420734310026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420734310025
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -33443,7 +30731,6 @@ GameObject:
   - component: {fileID: 294961420734310007}
   - component: {fileID: 294961420734310006}
   - component: {fileID: 294961420734310025}
-  - component: {fileID: 294961420734310024}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -33536,25 +30823,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420743534312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420743534314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420743534313
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -33583,7 +30851,6 @@ GameObject:
   - component: {fileID: 294961420743534295}
   - component: {fileID: 294961420743534294}
   - component: {fileID: 294961420743534313}
-  - component: {fileID: 294961420743534312}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -33789,25 +31056,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 131
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420761233829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420761233831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420761233831
 GameObject:
   m_ObjectHideFlags: 0
@@ -33820,7 +31068,6 @@ GameObject:
   - component: {fileID: 294961420761233824}
   - component: {fileID: 294961420761233827}
   - component: {fileID: 294961420761233826}
-  - component: {fileID: 294961420761233829}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -33929,25 +31176,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 135
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420761399959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420761399977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420761399977
 GameObject:
   m_ObjectHideFlags: 0
@@ -33960,7 +31188,6 @@ GameObject:
   - component: {fileID: 294961420761399954}
   - component: {fileID: 294961420761399957}
   - component: {fileID: 294961420761399956}
-  - component: {fileID: 294961420761399959}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -34182,25 +31409,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420826662819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420826662821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420826662821
 GameObject:
   m_ObjectHideFlags: 0
@@ -34213,7 +31421,6 @@ GameObject:
   - component: {fileID: 294961420826662830}
   - component: {fileID: 294961420826662817}
   - component: {fileID: 294961420826662816}
-  - component: {fileID: 294961420826662819}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -34287,25 +31494,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420827531969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420827531971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420827531971
 GameObject:
   m_ObjectHideFlags: 0
@@ -34318,7 +31506,6 @@ GameObject:
   - component: {fileID: 294961420827531980}
   - component: {fileID: 294961420827531983}
   - component: {fileID: 294961420827531982}
-  - component: {fileID: 294961420827531969}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -34513,25 +31700,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420839652859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420839652861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420839652861
 GameObject:
   m_ObjectHideFlags: 0
@@ -34544,7 +31712,6 @@ GameObject:
   - component: {fileID: 294961420839652838}
   - component: {fileID: 294961420839652857}
   - component: {fileID: 294961420839652856}
-  - component: {fileID: 294961420839652859}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -34564,7 +31731,6 @@ GameObject:
   - component: {fileID: 294961420847210538}
   - component: {fileID: 294961420847210541}
   - component: {fileID: 294961420847210540}
-  - component: {fileID: 294961420847210543}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -34673,25 +31839,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420847210543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420847210529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!4 &294961420849609028
 Transform:
   m_ObjectHideFlags: 0
@@ -34926,25 +32073,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420877139946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420877139948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420877139947
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -34973,7 +32101,6 @@ GameObject:
   - component: {fileID: 294961420877139945}
   - component: {fileID: 294961420877139944}
   - component: {fileID: 294961420877139947}
-  - component: {fileID: 294961420877139946}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -35179,25 +32306,6 @@ Transform:
   m_Father: {fileID: 294961420920243570}
   m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294961420888873961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420888873963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!1 &294961420888873963
 GameObject:
   m_ObjectHideFlags: 0
@@ -35210,7 +32318,6 @@ GameObject:
   - component: {fileID: 294961420888873940}
   - component: {fileID: 294961420888873943}
   - component: {fileID: 294961420888873942}
-  - component: {fileID: 294961420888873961}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -35390,7 +32497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294961420920243575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.290989, y: -14.087637, z: 0}
+  m_LocalPosition: {x: -21.2, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 294961419843887998}
@@ -35544,7 +32651,7 @@ Transform:
   - {fileID: 294961419645424936}
   - {fileID: 294961420080470426}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &294961420920243572
 MonoBehaviour:
@@ -35826,25 +32933,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420943239996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420943239998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420943239997
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -35873,7 +32961,6 @@ GameObject:
   - component: {fileID: 294961420943239995}
   - component: {fileID: 294961420943239994}
   - component: {fileID: 294961420943239997}
-  - component: {fileID: 294961420943239996}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal
@@ -35966,25 +33053,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &294961420955498098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294961420955498100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be860b71a739c544a47e8f765dfed98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
-  MovementCost: 1
-  HexGridType: 0
-  GroundType: 0
-  IsSkyTaken: 0
 --- !u!58 &294961420955498099
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36013,7 +33081,6 @@ GameObject:
   - component: {fileID: 294961420955498097}
   - component: {fileID: 294961420955498096}
   - component: {fileID: 294961420955498099}
-  - component: {fileID: 294961420955498098}
   m_Layer: 0
   m_Name: NewCell
   m_TagString: G-normal

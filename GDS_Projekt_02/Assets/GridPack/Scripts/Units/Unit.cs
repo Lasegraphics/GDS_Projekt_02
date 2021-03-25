@@ -214,6 +214,7 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
+            Debug.Log(1);
             uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
            
@@ -236,16 +237,57 @@ namespace GridPack.Units
         //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
+            if (PlayerNumber == 1)
+            {
+                if (unitToAttack.gameObject.transform.position.x > gameObject.transform.position.x)
+                {
+                    gameObject.transform.rotation = Quaternion.Euler(0,0,0);
+                    MainAttack(unitToAttack);
+                    StartCoroutine(SwapUnit());
+                }
+                else
+                {
+                    MainAttack(unitToAttack);
+                }
+            }
+            else
+            {
+                if (unitToAttack.gameObject.transform.position.x < gameObject.transform.position.x)
+                {
+                    gameObject.transform.rotation = Quaternion.Euler(0, -180, 0);
+                    MainAttack(unitToAttack);
+                    StartCoroutine(SwapUnit());
+                }
+                else
+                {
+                    MainAttack(unitToAttack);
+                }
+            }        
+        }
+        IEnumerator SwapUnit()
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (PlayerNumber ==0)
+            {
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        }
+
+        private void MainAttack(Unit unitToAttack)
+        {
             if (!IsUnitAttackable(unitToAttack, Cell))
             {
                 return;
             }
-            
+
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
             AttackActionPerformed(attackAction.ActionCost);
-
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
@@ -270,8 +312,9 @@ namespace GridPack.Units
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
             
-            if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
+            if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
             {
+               
                 MarkAsDefending(aggressor);
                 int damageTaken = aggressor.AttackFactor;
                 ArmorPoints -= damageTaken;
