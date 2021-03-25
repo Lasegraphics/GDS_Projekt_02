@@ -34,21 +34,21 @@ public class UiManager : MonoBehaviour
         CloseEnemyScorePanel();
         CloseScorePanel();
 
-        orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
-        bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
+        orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
+        bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
     }
     public void ChangeTurnUi(int player)
     {
         currentPlayer = player;
         if (player == 0)
         {
-            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
-            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
         }
         else
         {
-            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(477, 392);
-            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-364, 392);
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
         }
         endRoundText.SetBool("Out", false);
         endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
