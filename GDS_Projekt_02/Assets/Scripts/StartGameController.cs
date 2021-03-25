@@ -18,12 +18,14 @@ public class StartGameController : MonoBehaviour
     CellGrid cellGrid;
     TurnChanger turnChanger;
     ScoreController scoreController;
+    ScrollCamera camera;
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
         turnChanger = FindObjectOfType<TurnChanger>();
         scoreController = FindObjectOfType<ScoreController>();
+        camera = FindObjectOfType<ScrollCamera>();
     }
     public void ChangeTurn()
     {
@@ -61,6 +63,7 @@ public class StartGameController : MonoBehaviour
         cellGrid.Initialize();
         cellGrid.StartGame();
         scoreController.StartGame();
+        camera.MoveCameraToNormalPos();
     }
 
 }
