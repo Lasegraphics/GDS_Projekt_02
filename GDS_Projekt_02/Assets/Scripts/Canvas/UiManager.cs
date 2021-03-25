@@ -37,6 +37,13 @@ public class UiManager : MonoBehaviour
         orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
         bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            DesingerButton();
+        }
+    }
     public void ChangeTurnUi(int player)
     {
         currentPlayer = player;
