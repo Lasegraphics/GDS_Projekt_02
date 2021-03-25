@@ -311,8 +311,10 @@ namespace GridPack.Units
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
             
-            if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
+            if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
             {
+                Debug.Log(gameObject.name);
+                Debug.Log(aggressor.name);
                 MarkAsDefending(aggressor);
                 int damageTaken = aggressor.AttackFactor;
                 ArmorPoints -= damageTaken;

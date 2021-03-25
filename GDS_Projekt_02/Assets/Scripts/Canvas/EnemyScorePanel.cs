@@ -52,10 +52,17 @@ public class EnemyScorePanel : MonoBehaviour
             animator.SetBool("BlinkHp", false);
             sliderHp.value = unitInfo.HitPoints;
             hp.text = unitInfo.HitPoints.ToString();
-
+            if (unitInfo.ArmorPoints - scorePanelControll.damage<=0)
+            {
+                armor.text = "0";
+            }
+            else
+            {
+                armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
+            }
             sliderArmor.value = unitInfo.ArmorPoints - scorePanelControll.damage;
 
-            armor.text = unitInfo.ArmorPoints.ToString() + " - " +scorePanelControll.damage;
+           
         }
        
 

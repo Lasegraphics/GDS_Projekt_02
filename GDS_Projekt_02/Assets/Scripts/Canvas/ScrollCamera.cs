@@ -16,6 +16,7 @@ public class ScrollCamera : MonoBehaviour
 
     Camera posCamera;
     float timeToScroll;
+    bool startGame = false;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class ScrollCamera : MonoBehaviour
     }
     void Update()
     {
+
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             if (transform.position.y < maximumYValue)
@@ -48,8 +50,10 @@ public class ScrollCamera : MonoBehaviour
         if (startPosCam != normalPosCam)
         {
             timeToScroll += Time.deltaTime;
-            posCamera.orthographicSize = Mathf.SmoothStep(startPosCam, normalPosCam, timeToScroll);
+            // posCamera.orthographicSize = Mathf.SmoothStep(startPosCam, normalPosCam, timeToScroll);
+            posCamera.orthographicSize  = normalPosCam;
         }
+
     }
 
 }
