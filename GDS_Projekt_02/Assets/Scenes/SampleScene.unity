@@ -1017,6 +1017,10 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7707565432478531130, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1392334656}
     - target: {fileID: 7707565432747443342, guid: da73ce361a5bc334ab7e1d7e668165e8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1238,8 +1242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueSlider: {fileID: 883613444}
   blueText: {fileID: 42601400}
+  scoreBlueTeam: 0
   redSlider: {fileID: 1467964554}
   redText: {fileID: 1096285368}
+  scoreRedTeam: 0
   speed: 5
 --- !u!1 &1284795120
 GameObject:
@@ -1948,6 +1954,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
+--- !u!1 &1737426193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737426195}
+  - component: {fileID: 1737426194}
+  m_Layer: 0
+  m_Name: EndGameCon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1737426194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737426193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77213875da7450e409fc4e00d0cd1b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueTeamScore: 1
+  redTeamScore: 1
+--- !u!4 &1737426195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737426193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9867947, y: -3.6217766, z: -7.1801853}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794361317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,9 +2304,9 @@ MonoBehaviour:
   startPosCam: 22
   normalPosCam: 19
   sppedChangeCamera: 2
-  movmentSpeed: 5
-  minimumYValue: 7.9
-  maximumYValue: 3.9
+  movmentSpeed: 20
+  minimumYValue: 3.9
+  maximumYValue: 7.9
 --- !u!1 &1993241290
 GameObject:
   m_ObjectHideFlags: 0

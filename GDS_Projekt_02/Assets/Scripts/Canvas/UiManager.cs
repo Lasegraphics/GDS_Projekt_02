@@ -68,6 +68,8 @@ public class UiManager : MonoBehaviour
     public void CloseEnemyScorePanel()
     {
         bluePanel.SetBool("Out", true);
+        bluePanel.SetBool("BlinkArmor", false);
+        bluePanel.SetBool("BlinkHp", false);
     }
     public void ActiveScorePanel()
     {
