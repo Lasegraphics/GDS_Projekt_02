@@ -9,12 +9,12 @@ public class ScoreController : MonoBehaviour
     [Header("Blue Team")]
     public Slider blueSlider;
     public Text blueText;
-    int scoreBlueTeam;
+    public int scoreBlueTeam;
     
     [Header("Red Team")]
     public Slider redSlider;
     public Text redText;
-    int scoreRedTeam;
+    public int scoreRedTeam;
 
     [Header("Parameters")]
     public int speed;

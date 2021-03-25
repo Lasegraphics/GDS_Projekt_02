@@ -97,7 +97,7 @@ public class UiManager : MonoBehaviour
                 Sprite.color = new Color(1, 1, 1);
                 Sprite.sprite = item.StartSprite;
             }
-            isDesing = true;
+            isDesing = false;
         }
         
     }

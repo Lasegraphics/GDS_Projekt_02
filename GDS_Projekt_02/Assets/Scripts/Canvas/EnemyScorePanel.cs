@@ -38,8 +38,7 @@ public class EnemyScorePanel : MonoBehaviour
 
         if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0 )
         {
-            animator.SetBool("BlinkHp",true);
-
+            animator.SetBool("BlinkHp",true);          
             sliderHp.value = unitInfo.HitPoints - scorePanelControll.damage;
             hp.text = unitInfo.HitPoints.ToString() +" - " + scorePanelControll.damage;
 
