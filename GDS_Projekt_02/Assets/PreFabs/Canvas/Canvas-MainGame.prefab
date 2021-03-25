@@ -334,7 +334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000071526, y: 114.14012}
+  m_AnchoredPosition: {x: 0, y: 114.14012}
   m_SizeDelta: {x: 512.8, y: 58.4823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7707565432096065418
@@ -952,8 +952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.9200134, y: -13.73999}
-  m_SizeDelta: {x: 412.80176, y: 223.48468}
+  m_AnchoredPosition: {x: 1.1604462, y: -13.741165}
+  m_SizeDelta: {x: 420.3209, y: 223.48233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7707565432478531124
 CanvasRenderer:
@@ -1005,6 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d589977c8bc7a1743ac4385251af8b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   nameEnemy: {fileID: 7707565433262363269}
   sliderHp: {fileID: 7707565433429912765}
   hp: {fileID: 7707565432040821011}
@@ -1772,8 +1773,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.91845703, y: -12.73999}
-  m_SizeDelta: {x: 412.80176, y: 223.48474}
+  m_AnchoredPosition: {x: -2.800003, y: -13.241}
+  m_SizeDelta: {x: 412.4, y: 222.482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7707565433419711883
 CanvasRenderer:
