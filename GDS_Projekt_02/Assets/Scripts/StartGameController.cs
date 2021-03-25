@@ -36,6 +36,10 @@ public class StartGameController : MonoBehaviour
         {
             currentPlayer = 1;
             firstRound = false;
+            
+
+            panels[0].GetComponent<SpriteRenderer>().color = new Color32(150, 150, 150, 255);
+            panels[1].GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
         }
         else
         {
@@ -44,10 +48,14 @@ public class StartGameController : MonoBehaviour
             {
                 if (currentPlayer == 0)
                 {
+                    panels[0].GetComponent<SpriteRenderer>().color = new Color32(150, 150, 150, 255);
+                    panels[1].GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
                     currentPlayer = 1;
                 }
                 else
                 {
+                    panels[0].GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+                    panels[1].GetComponent<SpriteRenderer>().color = new Color32(150, 150, 150, 255);
                     currentPlayer = 0;
                 }
                 tourCurrent = 0;

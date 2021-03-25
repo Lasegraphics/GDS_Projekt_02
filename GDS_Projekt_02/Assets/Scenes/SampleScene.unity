@@ -701,6 +701,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764371715}
   m_CullTransparentMesh: 1
+--- !u!1 &869738885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869738887}
+  - component: {fileID: 869738886}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &869738886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410026117b4733242947b439c543ff73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+  sounds:
+  - name: 
+    clip: {fileID: 0}
+    mixerGroup: {fileID: 0}
+    loop: 0
+    valume: 0
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &869738887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1683671, y: 1.2396518, z: -0.38410348}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &883613442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,19 +2027,19 @@ PrefabInstance:
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[0]
       value: 
-      objectReference: {fileID: 7272720391045842853}
+      objectReference: {fileID: 1942223183}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[1]
       value: 
-      objectReference: {fileID: 596428650}
+      objectReference: {fileID: 938936495}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[2]
       value: 
-      objectReference: {fileID: 1942223183}
+      objectReference: {fileID: 596428650}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[3]
       value: 
-      objectReference: {fileID: 938936495}
+      objectReference: {fileID: 7272720391045842853}
     - target: {fileID: 2226668463685938910, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: m_Name
       value: StartGameController
@@ -2554,6 +2606,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5805368906134415082, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368906134415082, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368906134415082, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368907535503712, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368907535503712, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368907535503712, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
     - target: {fileID: 5805368907535503715, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.55
@@ -2606,6 +2682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnUnits-Panels
       objectReference: {fileID: 0}
+    - target: {fileID: 6013877877286121753, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Name
+      value: Hide-LeftScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6295648410085108479, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: parentUnits
       value: 
@@ -2626,6 +2706,10 @@ PrefabInstance:
       propertyPath: parentUnits
       value: 
       objectReference: {fileID: 651255052}
+    - target: {fileID: 7272720390908093459, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Name
+      value: Hide-RightScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7355166372433763656, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: parentUnits
       value: 
