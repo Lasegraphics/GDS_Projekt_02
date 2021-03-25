@@ -139,7 +139,7 @@ namespace GridPack.SceneScripts
 
             SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));
             
-            turnChanger.ChangeTurn();
+           // turnChanger.ChangeTurn();
 
         }
         public override void UnMark()
