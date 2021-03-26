@@ -164,7 +164,7 @@ namespace GridPack.Units
         }
 
         //Metoda jest wywoływana na początku kazdej tury. 
-        public virtual void OnTurnStart()
+         public virtual void OnTurnStart()
         {
             MovementPoints = TotalMovementPoints;
             ActionPoints = TotalActionPoints;
@@ -174,6 +174,11 @@ namespace GridPack.Units
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= 1;
             }
+            if(Cell != null && Cell.Temple == true)
+            {
+                
+            }
+
 
             SetState(new UnitStateMarkedAsFriendly(this)); 
         }
@@ -186,13 +191,15 @@ namespace GridPack.Units
             Buffs.RemoveAll(b => b.Duration ==0);
             Buffs.ForEach(b => { b.Duration--; });
 
+            SetState(new UnitStateNormal(this)); 
+
             if(Cell != null && Cell.Temple == true)
             {
                 Debug.Log("Uzdrowiono");
                 HitPoints += 1;
             }
 
-            SetState(new UnitStateNormal(this)); 
+
         }
 
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
