@@ -212,7 +212,7 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
-            Debug.Log(1);
+           // Debug.Log(1);
             uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
            
