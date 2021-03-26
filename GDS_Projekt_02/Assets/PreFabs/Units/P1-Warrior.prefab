@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 150
-  AttackRange: 1
+  HitPoints: 120
+  AttackRange: 2
   AttackFactor: 15
   ArmorPoints: 0
   ignorArmor: 0

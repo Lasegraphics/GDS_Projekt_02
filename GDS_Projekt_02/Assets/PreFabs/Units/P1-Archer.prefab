@@ -203,7 +203,7 @@ MonoBehaviour:
   ArmorPoints: 0
   ignorArmor: 0
   colorUnit: {r: 1, g: 0, b: 0.8595643, a: 1}
-  actionPoints: 2
+  actionPoints: 1
   movementPoints: 4
   nameUnit: ARCHER
   MovementAnimationSpeed: 20
