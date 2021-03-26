@@ -134,19 +134,20 @@ namespace GridPack.Grid
             {
                 if(cell.Ruins == true)
                 {
-                    cellTypeRuins.Add(cell); 
+                   cellTypeRuins.Add(cell);
                 }
             }
             Random random = new Random();
-           // var ranomizeCell = random.Next(cellTypeRuins.Count);
-            Debug.Log(cellTypeRuins);
-           // cellTypeRuins[ranomizeCell].Ruins = false;
+            var randomizedCell = random.Next(cellTypeRuins.Count);
+            Debug.Log(cellTypeRuins[randomizedCell]);
+            cellTypeRuins[randomizedCell].Ruins = true;
+            //randomizedCell.Add(cell);
+            //randomizedCell.Ruins = true; 
 
-            /*if(cellTypeRuins[ranomizeCell].Ruins == false)
+            if(cellTypeRuins[randomizedCell].Ruins == true)
             {
-                Debug.Log("Ruiny"); 
+                Debug.Log("Ruiny");
             }
-            */
               
         }
 
