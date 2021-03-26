@@ -8,12 +8,13 @@ using GridPack.Grid.GridStates;
 using GridPack.Grid.UnitGenerators;
 using GridPack.Players;
 using GridPack.Units;
+using Random = System.Random;
 
 namespace GridPack.Grid
 {
     //Klasa CellGrid śledzi przebieg rozgrywki, przechowuje informacje o komórkach, jednostkach oraz obiektach graczy. Rozpoczyna rozgrywkę i wykonuje przejścia tur
     //Reaguje na interakcje uzytkownika z jednostkami i komórkami oraz wywołuje zdarzenia związane z postępem w grze.  
-    public class CellGrid : MonoBehaviour
+    public class CellGrid : MonoBehaviour, ISpellSwitcher
     {
         //LevelLoading jest wywoływane przed uruchomieniem metody initialize.
         public event EventHandler LevelLoading; 
@@ -68,6 +69,7 @@ namespace GridPack.Grid
         public List<Player> Players{get; private set;}
         public List<Cell> Cells {get; private set;}
         public List<Unit> Units {get; private set;} 
+        public bool IsSwitched {get; private set;} 
 
         private void Start()
         {
@@ -85,6 +87,7 @@ namespace GridPack.Grid
         {
             GameFinished = false; 
             Players = new List<Player>();
+            List<Cell> cellTypeRuins = new List<Cell>(); 
             for (int i = 0; i < PlayersParent.childCount; i++)
             {
                 var player = PlayersParent.GetChild(i).GetComponent<Player>();
@@ -126,6 +129,25 @@ namespace GridPack.Grid
             }
             else 
             Debug.LogError("No IUnitGenerators script attached to cell grid");
+
+           foreach (var cell in Cells)
+            {
+                if(cell.Ruins == true)
+                {
+                   cellTypeRuins.Add(cell);
+                }
+            }
+            Random random = new Random();
+            var randomizedCell = random.Next(cellTypeRuins.Count);
+            Debug.Log(cellTypeRuins[randomizedCell]);
+           // cellTypeRuins[randomizedCell].Ruins = true;
+            //randomizedCell.Add(cell);
+            //randomizedCell.Ruins = true; 
+
+            if(cellTypeRuins[randomizedCell].Ruins == true)
+            {
+                Debug.Log("Ruiny");
+            }
               
         }
 
@@ -222,6 +244,16 @@ namespace GridPack.Grid
                 }
 
             }
+        }
+
+        public void Activate()
+        {
+            IsSwitched = true; 
+        }
+
+        public void Deactivate()
+        {
+            IsSwitched = false; 
         }
  
     }

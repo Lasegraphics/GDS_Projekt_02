@@ -24,7 +24,7 @@ namespace GridPack.Grid.UnitGenerators
 
                     var cell = cells.OrderBy(h => Math.Abs((h.transform.position - unit.transform.position).magnitude)).First();
                     {
-                        cell.IsTaken = true;
+                        cell.IsBlocked = true;
                         unit.Cell = cell;
                         cell.CurrentUnit = unit;
                         unit.transform.position = cell.transform.position;
@@ -53,7 +53,7 @@ namespace GridPack.Grid.UnitGenerators
             foreach (Transform unit in UnitsParent)
             {
                 var closestCell = cells.OrderBy(h => Math.Abs((h.transform.position - unit.transform.position).magnitude)).First();
-                if (!closestCell.GetComponent<Cell>().IsTaken)
+                if (!closestCell.GetComponent<Cell>().IsBlocked)
                 {
                     Vector3 offset = new Vector3(0, closestCell.GetComponent<Cell>().GetCellDimensions().y, 0);
                     unit.localPosition = closestCell.transform.localPosition + offset;

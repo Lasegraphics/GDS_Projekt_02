@@ -15,9 +15,12 @@ namespace GridPack.Cells
         //Pozycja komórki w scenie
         public Vector2 OffsetCoord {get {return _offsetCoord;} set {_offsetCoord = value;}}
         //Sprawdza czy na komórce cos się znajduje
-        public bool IsTaken; 
-        public bool IsEffected;
-        public bool testTerenBonus;
+        public bool IsBlocked; 
+        public bool Spikes;
+        public bool Forest;
+        public bool Swamp; 
+        public bool Temple; 
+        public bool Ruins; 
         //Koszt ruchu jednoski 
         public float MovementCost  = 1;
 
@@ -27,29 +30,10 @@ namespace GridPack.Cells
         //Podświetla komórkę gdy najezdza się kursorem
         public event EventHandler CellHighlighted; 
         //Zdarzenie jest wywoływane gdy kursor opuści komórkę
-        public event EventHandler CellDehighlighted;
+        public event EventHandler CellDehighlighted; 
 
-        float delayTime;
-        public MoveToMousePosCanvas panel;
-        bool frezePanel=false;
         //Metody on mouse dla poszczególnych zdarzeń 
-        private void OnMouseOver()
-        {
-            if (testTerenBonus)
-            {
-                delayTime += Time.deltaTime;
-                if (delayTime >= 2)
-                {
-                    panel.gameObject.SetActive(true);
-                    if (frezePanel==false)
-                    {
-                        panel.UpdatePos();
-                        frezePanel = true;
-                    }
-                   
-                }
-            }
-        }
+
         protected virtual void OnMouseEnter()
         {
             if(CellHighlighted != null)
@@ -58,14 +42,7 @@ namespace GridPack.Cells
 
         protected virtual void OnMouseExit()
         {
-            if (testTerenBonus)
-            {
-                delayTime = 0;
-                panel.gameObject.SetActive(false);
-                frezePanel = false;
-            }
-
-            if (CellDehighlighted != null)
+            if(CellDehighlighted != null)
                 CellDehighlighted?.Invoke(this, new EventArgs());
         }
         void OnMouseDown()
