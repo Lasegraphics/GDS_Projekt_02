@@ -142,7 +142,9 @@ namespace GridPack.Grid.GridStates
 
                     if(_cellGrid.IsSwitched == true)
                     {
-                        Debug.Log(currentUnit); 
+                        Debug.Log(currentUnit);
+                        currentUnit.HitPoints -= 1; 
+                        Debug.Log("Zdrowie:" + currentUnit.HitPoints); 
                     }
 
                     _unitsInRange.Add(currentUnit);
