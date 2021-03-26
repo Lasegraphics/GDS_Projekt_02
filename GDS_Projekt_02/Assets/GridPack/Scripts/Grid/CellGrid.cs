@@ -13,7 +13,7 @@ namespace GridPack.Grid
 {
     //Klasa CellGrid śledzi przebieg rozgrywki, przechowuje informacje o komórkach, jednostkach oraz obiektach graczy. Rozpoczyna rozgrywkę i wykonuje przejścia tur
     //Reaguje na interakcje uzytkownika z jednostkami i komórkami oraz wywołuje zdarzenia związane z postępem w grze.  
-    public class CellGrid : MonoBehaviour
+    public class CellGrid : MonoBehaviour, ISpellSwitcher
     {
         //LevelLoading jest wywoływane przed uruchomieniem metody initialize.
         public event EventHandler LevelLoading; 
@@ -68,6 +68,7 @@ namespace GridPack.Grid
         public List<Player> Players{get; private set;}
         public List<Cell> Cells {get; private set;}
         public List<Unit> Units {get; private set;} 
+        public bool IsSwitched {get; private set;} 
 
         private void Start()
         {
@@ -222,6 +223,16 @@ namespace GridPack.Grid
                 }
 
             }
+        }
+
+        public void Activate()
+        {
+            IsSwitched = true; 
+        }
+
+        public void Deactivate()
+        {
+             IsSwitched = false; 
         }
  
     }

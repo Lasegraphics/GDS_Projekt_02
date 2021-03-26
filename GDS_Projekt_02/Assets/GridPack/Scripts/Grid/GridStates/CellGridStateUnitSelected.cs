@@ -3,10 +3,11 @@ using System.Linq;
 using GridPack.Cells;
 using GridPack.Units;
 using GridPack.Units.UnitStates;
+using UnityEngine; 
 
 namespace GridPack.Grid.GridStates
 {
-    class CellGridStateUnitSelected : CellGridState
+    public class CellGridStateUnitSelected : CellGridState
     {
         private Unit _unit;
         private HashSet<Cell> _pathsInRange;
@@ -138,6 +139,12 @@ namespace GridPack.Grid.GridStates
                 if (_unit.IsUnitAttackable(currentUnit, _unit.Cell))
                 {
                     currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+
+                    if(_cellGrid.IsSwitched == true)
+                    {
+                        Debug.Log(currentUnit); 
+                    }
+
                     _unitsInRange.Add(currentUnit);
                 }
             }
