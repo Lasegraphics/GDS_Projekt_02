@@ -186,6 +186,12 @@ namespace GridPack.Units
             Buffs.RemoveAll(b => b.Duration ==0);
             Buffs.ForEach(b => { b.Duration--; });
 
+            if(Cell != null && Cell.Temple == true)
+            {
+                Debug.Log("Uzdrowiono");
+                HitPoints += 1;
+            }
+
             SetState(new UnitStateNormal(this)); 
         }
 
