@@ -9,7 +9,7 @@ using GridPack.Units.UnitStates;
 using GridPack.Grid; 
 using GridPack.Grid.GridStates; 
 using GridPack.SceneScripts;
-using Random = UnityEngine.Random;
+using Random = System.Random;
 
 
 namespace GridPack.Units
@@ -152,7 +152,6 @@ namespace GridPack.Units
             if(UnitHighlighted != null)
             {
                 UnitHighlighted.Invoke(this, new EventArgs());
-
             }
         }
 
@@ -161,7 +160,6 @@ namespace GridPack.Units
             if(UnitDehighlighted != null)
             {
                 UnitDehighlighted.Invoke(this, new EventArgs());
-
             }
         }
 
@@ -171,7 +169,7 @@ namespace GridPack.Units
             MovementPoints = TotalMovementPoints;
             ActionPoints = TotalActionPoints;
 
-            if(Cell != null && Cell.IsEffected == true)
+            if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= 1;
@@ -194,7 +192,7 @@ namespace GridPack.Units
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
         protected virtual void OnDestroyed()
         {
-            Cell.IsTaken = false; 
+            Cell.IsBlocked = false; 
             MarkAsDestroyed();
             gameObject.SetActive(false);
         }
@@ -311,34 +309,89 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
-            
-            if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
+            Random rand = new Random();
+            int randInt = rand.Next(0, 100); 
+            if(Cell != null && Cell.Forest == true)
             {
-               
-                MarkAsDefending(aggressor);
-                int damageTaken = aggressor.AttackFactor;
-                ArmorPoints -= damageTaken;
-                DefenceActionPerformed();
-                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
-            }
-            else
-            {
-                if (ArmorPoints <= 0 || aggressor.ignorArmor == true)
+                if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
                 {
+                
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
-                    HitPoints -= damageTaken;
-                    DefenceActionPerformed();
-                    if (HitPoints <= 0)
+                    if(randInt <= 25)
                     {
-                        if (UnitDestroyed != null)
-                        {
-                            UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
-                        }
-                        OnDestroyed();
+                        ArmorPoints -= damageTaken;
+                        DefenceActionPerformed();
+                        Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+
                     }
-                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                    else
+                    {
+                        Debug.Log("Defence"); 
+                    }
+                    
                 }
+                else
+                {
+                    if (ArmorPoints <= 0 || aggressor.ignorArmor == true)
+                    {
+                        MarkAsDefending(aggressor);
+                        int damageTaken = aggressor.AttackFactor;
+                        if(randInt <= 25)
+                        {
+                            HitPoints -= damageTaken;
+                            DefenceActionPerformed();   
+                            Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                        }
+                        else
+                        {
+                            Debug.Log("Defence"); 
+                        }
+                        if (HitPoints <= 0)
+                        {
+                            if (UnitDestroyed != null)
+                            {
+                                UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
+                            }
+                            OnDestroyed();
+                        }
+                        
+                    }
+                }    
+            }
+            if(Cell != null && Cell.Forest == false)
+            {
+                if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
+                {
+                
+                    MarkAsDefending(aggressor);
+                    int damageTaken = aggressor.AttackFactor;
+                        ArmorPoints -= damageTaken;
+                        DefenceActionPerformed();
+                        Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                    
+                }
+                else
+                {
+                    if (ArmorPoints <= 0 || aggressor.ignorArmor == true)
+                    {
+                        MarkAsDefending(aggressor);
+                        int damageTaken = aggressor.AttackFactor;
+                            HitPoints -= damageTaken;
+                            DefenceActionPerformed();   
+                            
+                      
+                        if (HitPoints <= 0)
+                        {
+                            if (UnitDestroyed != null)
+                            {
+                                UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
+                            }
+                            OnDestroyed();
+                        }
+                        Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                    }
+                }    
             }
             if (UnitAttacked != null)
             {
@@ -358,10 +411,10 @@ namespace GridPack.Units
         {
             var totalMovementCost = path.Sum(h => h.MovementCost);
             MovementPoints -= totalMovementCost;  
-            Cell.IsTaken = false;
+            Cell.IsBlocked = false;
             Cell.CurrentUnit = null;
             Cell = destinationCell; 
-            destinationCell.IsTaken = true; 
+            destinationCell.IsBlocked = true; 
             destinationCell.CurrentUnit = this; 
 
             if(MovementAnimationSpeed > 0)
@@ -378,10 +431,16 @@ namespace GridPack.Units
                 UnitMoved.Invoke(this, new MovementEventArgs(Cell, destinationCell, path));
             }
 
-            if(destinationCell.IsEffected == true)
+            if(destinationCell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= 1;
+            }
+
+            if(destinationCell.Swamp == true)
+            {
+                Debug.Log("Bagno");
+                MovementPoints = 0; 
             }
 
         }
@@ -411,13 +470,13 @@ namespace GridPack.Units
         //Metoda wskazuje czy jednostka moze przejść do komórki podanej jako parametr 
         public virtual bool IsCellMovableTo(Cell cell)
         {
-            return !cell.IsTaken; 
+            return !cell.IsBlocked; 
         }
 
         //Metoda wskazuje czy jednostka moze przejść przez komórki podane jako parametr 
         public virtual bool IsCellTraversable(Cell cell)
         {
-            return !cell.IsTaken; 
+            return !cell.IsBlocked; 
         }
 
         //Metoda zwraca wszystkie komórki do których jednostka moze się udać 
@@ -493,7 +552,7 @@ namespace GridPack.Units
         {
             if(Cell != null)
             {
-                Cell.IsTaken = false; 
+                Cell.IsBlocked = false; 
             }
         }
     }

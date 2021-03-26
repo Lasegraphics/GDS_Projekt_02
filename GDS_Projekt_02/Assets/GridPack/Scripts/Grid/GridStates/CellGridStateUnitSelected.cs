@@ -34,7 +34,7 @@ namespace GridPack.Grid.GridStates
                 return;
             }
 
-            if (cell.IsTaken || !_pathsInRange.Contains(cell))
+            if (cell.IsBlocked || !_pathsInRange.Contains(cell))
             {
                 _cellGrid.CellGridState = new CellGridStateWaitingForInput(_cellGrid);
                 return;

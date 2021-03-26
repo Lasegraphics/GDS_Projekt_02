@@ -8,6 +8,7 @@ using GridPack.Grid.GridStates;
 using GridPack.Grid.UnitGenerators;
 using GridPack.Players;
 using GridPack.Units;
+using Random = System.Random;
 
 namespace GridPack.Grid
 {
@@ -86,6 +87,7 @@ namespace GridPack.Grid
         {
             GameFinished = false; 
             Players = new List<Player>();
+            List<Cell> cellTypeRuins = new List<Cell>(); 
             for (int i = 0; i < PlayersParent.childCount; i++)
             {
                 var player = PlayersParent.GetChild(i).GetComponent<Player>();
@@ -127,6 +129,24 @@ namespace GridPack.Grid
             }
             else 
             Debug.LogError("No IUnitGenerators script attached to cell grid");
+
+           foreach (var cell in Cells)
+            {
+                if(cell.Ruins == true)
+                {
+                    cellTypeRuins.Add(cell); 
+                }
+            }
+            Random random = new Random();
+           // var ranomizeCell = random.Next(cellTypeRuins.Count);
+            Debug.Log(cellTypeRuins);
+            //cellTypeRuins[ranomizeCell].Ruins = false;
+
+            /*if(cellTypeRuins[ranomizeCell].Ruins == false)
+            {
+                Debug.Log("Ruiny"); 
+            }
+            */
               
         }
 
@@ -232,7 +252,7 @@ namespace GridPack.Grid
 
         public void Deactivate()
         {
-             IsSwitched = false; 
+            IsSwitched = false; 
         }
  
     }

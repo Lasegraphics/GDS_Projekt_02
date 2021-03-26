@@ -22,7 +22,7 @@ namespace GridPack.Grid.UnitGenerators
         {
             List<Unit> ret = new List<Unit>();
 
-            List<Cell> freeCells = cells.FindAll(h => h.GetComponent<Cell>().IsTaken == false);
+            List<Cell> freeCells = cells.FindAll(h => h.GetComponent<Cell>().IsBlocked == false);
             freeCells = freeCells.OrderBy(h => _rnd.Next()).ToList();
 
             for (int i = 0; i < NumberOfPlayers; i++)
@@ -31,7 +31,7 @@ namespace GridPack.Grid.UnitGenerators
                 {
                     var cell = freeCells.ElementAt(0);
                     freeCells.RemoveAt(0);
-                    cell.GetComponent<Cell>().IsTaken = true;
+                    cell.GetComponent<Cell>().IsBlocked = true;
 
                     var unit = Instantiate(UnitPrefab);
                     unit.transform.position = cell.transform.position + new Vector3(0, 0, 0);
