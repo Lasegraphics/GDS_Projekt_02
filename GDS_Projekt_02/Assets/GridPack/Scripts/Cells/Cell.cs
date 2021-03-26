@@ -30,6 +30,8 @@ namespace GridPack.Cells
         public event EventHandler CellDehighlighted;
 
         float delayTime;
+        public MoveToMousePosCanvas panel;
+        bool frezePanel=false;
         //Metody on mouse dla poszczególnych zdarzeń 
         private void OnMouseOver()
         {
@@ -37,9 +39,16 @@ namespace GridPack.Cells
             {
                 delayTime += Time.deltaTime;
                 if (delayTime >= 2)
-                    Debug.Log("Pokazuje się ekran");
+                {
+                    panel.gameObject.SetActive(true);
+                    if (frezePanel==false)
+                    {
+                        panel.UpdatePos();
+                        frezePanel = true;
+                    }
+                   
+                }
             }
-            
         }
         protected virtual void OnMouseEnter()
         {
@@ -52,9 +61,10 @@ namespace GridPack.Cells
             if (testTerenBonus)
             {
                 delayTime = 0;
-                Debug.Log("Ekran się chowa");
+                panel.gameObject.SetActive(false);
+                frezePanel = false;
             }
-           
+
             if (CellDehighlighted != null)
                 CellDehighlighted?.Invoke(this, new EventArgs());
         }
