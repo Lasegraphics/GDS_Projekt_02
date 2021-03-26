@@ -140,11 +140,11 @@ namespace GridPack.Grid
             Random random = new Random();
             var randomizedCell = random.Next(cellTypeRuins.Count);
             Debug.Log(cellTypeRuins[randomizedCell]);
-           // cellTypeRuins[randomizedCell].Ruins = true;
+            cellTypeRuins[randomizedCell].Ruins = false;
             //randomizedCell.Add(cell);
             //randomizedCell.Ruins = true; 
 
-            if(cellTypeRuins[randomizedCell].Ruins == true)
+            if(cellTypeRuins[randomizedCell].Ruins == false)
             {
                 Debug.Log("Ruiny");
             }
