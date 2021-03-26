@@ -309,13 +309,12 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
-            Random rand = new Random();
-            int randInt = rand.Next(0, 100); 
+           Random rand = new Random();
+            int randInt = rand.Next(0,100);
             if(Cell != null && Cell.Forest == true)
             {
-                if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
+                if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
                 {
-                
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
                     if(randInt <= 25)
@@ -323,12 +322,12 @@ namespace GridPack.Units
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
                         Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
-
                     }
-                    else
+                    else 
                     {
-                        Debug.Log("Defence"); 
+                        Debug.Log("Defence");
                     }
+                    
                     
                 }
                 else
@@ -340,13 +339,14 @@ namespace GridPack.Units
                         if(randInt <= 25)
                         {
                             HitPoints -= damageTaken;
-                            DefenceActionPerformed();   
+                            DefenceActionPerformed();
                             Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                         }
-                        else
+                        else 
                         {
-                            Debug.Log("Defence"); 
+                            Debug.Log("Defence");
                         }
+                        
                         if (HitPoints <= 0)
                         {
                             if (UnitDestroyed != null)
@@ -357,18 +357,17 @@ namespace GridPack.Units
                         }
                         
                     }
-                }    
+                }
             }
             if(Cell != null && Cell.Forest == false)
             {
-                if (ArmorPoints > 0 && aggressor.ignorArmor ==false)
+                if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
                 {
-                
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
-                        ArmorPoints -= damageTaken;
-                        DefenceActionPerformed();
-                        Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                    ArmorPoints -= damageTaken;
+                    DefenceActionPerformed();
+                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                     
                 }
                 else
@@ -377,10 +376,8 @@ namespace GridPack.Units
                     {
                         MarkAsDefending(aggressor);
                         int damageTaken = aggressor.AttackFactor;
-                            HitPoints -= damageTaken;
-                            DefenceActionPerformed();   
-                            
-                      
+                        HitPoints -= damageTaken;
+                        DefenceActionPerformed();
                         if (HitPoints <= 0)
                         {
                             if (UnitDestroyed != null)
@@ -391,7 +388,7 @@ namespace GridPack.Units
                         }
                         Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                     }
-                }    
+                }
             }
             if (UnitAttacked != null)
             {
