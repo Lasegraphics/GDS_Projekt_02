@@ -342,6 +342,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AfterStart-Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7486998332902236782, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7183688019906953790, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+    - target: {fileID: 7486998332902236782, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndTurn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
 --- !u!114 &502742930 stripped
