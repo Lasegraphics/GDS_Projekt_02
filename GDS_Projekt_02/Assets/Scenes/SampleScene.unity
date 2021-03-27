@@ -413,6 +413,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6763049295329303500, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
+      propertyPath: EndTrn
+      value: 
+      objectReference: {fileID: 1442885606}
     - target: {fileID: 6763049295329303501, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -791,6 +795,17 @@ PrefabInstance:
       objectReference: {fileID: 278532498}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+--- !u!114 &1442885606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7183688019906953790, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+  m_PrefabInstance: {fileID: 1442885605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ef4edc989c1e04499a8e995c801eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454487015
 GameObject:
   m_ObjectHideFlags: 0

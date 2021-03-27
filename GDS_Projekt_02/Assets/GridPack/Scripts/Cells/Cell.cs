@@ -15,9 +15,10 @@ namespace GridPack.Cells
         //Pozycja komórki w scenie
         public Vector2 OffsetCoord {get {return _offsetCoord;} set {_offsetCoord = value;}}
         //Sprawdza czy na komórce cos się znajduje
-        public bool IsBlocked; 
-        public bool Spikes;
-        public bool Forest;
+        public bool IsBlocked; //Mountains
+        public bool Mountains;
+        public bool Spikes; // LAVA
+        public bool Forest; 
         public bool Swamp; 
         public bool Temple; 
         public bool Ruins; 
@@ -38,36 +39,59 @@ namespace GridPack.Cells
         float delayTime;
         private void OnMouseOver()
         {
-            if ( Spikes|| Forest|| Temple)
-            {
-                delayTime += Time.deltaTime;
-                if (delayTime >= 2)
-                {
-                    panel.gameObject.SetActive(true);
-                    if (frezePanel == false)
-                    {
-                        if (Spikes)
-                        {
-                            var spikes = 0;
-                            panel.UpdatePos(spikes);
-                            frezePanel = true;
-                        }
-                        if (Forest)
-                        {
-                            var forest = 1;
-                            panel.UpdatePos(forest);
-                            frezePanel = true;
-                        }
-                        if (Temple)
-                        {
-                            var tample = 2;
-                            panel.UpdatePos(tample);
-                            frezePanel = true;
-                        }
-                    }
 
+            delayTime += Time.deltaTime;
+            if (delayTime >= 1.5f)
+            {
+                panel.gameObject.SetActive(true);
+                if (frezePanel == false)
+                {
+                    if (Mountains)
+                    {
+                        var number = 0;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
+                    if (Spikes)
+                    {
+                        var number = 1;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
+                    if (Forest)
+                    {
+                        var number = 2;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
+                    if (Swamp)
+                    {
+                        var number = 3;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
+                    if (Temple)
+                    {
+                        var number = 4;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
+                    if (Ruins)
+                    {
+                        var number = 5;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
+                    if (Ruins&& Temple&& Swamp&& Forest&& Spikes&& Mountains)
+                    {
+                        var number = 6;
+                        panel.UpdatePos(number);
+                        frezePanel = true;
+                    }
                 }
+
             }
+
         }
         protected virtual void OnMouseEnter()
         {
@@ -77,12 +101,11 @@ namespace GridPack.Cells
 
         protected virtual void OnMouseExit()
         {
-            if ( Spikes || Forest || Temple)
-            {
-                delayTime = 0;
-                panel.gameObject.SetActive(false);
-                frezePanel = false;
-            }
+
+            delayTime = 0;
+            panel.gameObject.SetActive(false);
+            frezePanel = false;
+
             if (CellDehighlighted != null)
                 CellDehighlighted?.Invoke(this, new EventArgs());
         }

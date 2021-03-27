@@ -238,7 +238,7 @@ namespace GridPack.Grid
                     var highlighter = item.transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
                     if (highlighter != null)
                     {
-                        Debug.Log(item.name);
+
                         highlighter.color = new Color(1, 1, 1, 0);
                     }
                 }
