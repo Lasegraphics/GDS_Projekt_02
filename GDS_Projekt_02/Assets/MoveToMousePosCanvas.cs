@@ -8,7 +8,7 @@ public class MoveToMousePosCanvas : MonoBehaviour
 {
    public Canvas myCanvas;
     public int changeX;
-    public TEXT text;
+    public TextMeshProUGUI text;
     public int dodge = 0;
 
    public void UpdatePos(int area )
@@ -34,7 +34,7 @@ public class MoveToMousePosCanvas : MonoBehaviour
                 text.text = "Has a chance to become a Temple after usage of the current one";
                 break;
             case 6:
-                text.text = "No effect";
+                text.text = "NO EFFECT";
                 break;
             default:
                 break;
