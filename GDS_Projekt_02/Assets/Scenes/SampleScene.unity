@@ -9478,7 +9478,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 0
+  Ruins: 1
   MovementCost: 1
   panel: {fileID: 1146832454}
   HexGridType: 1
@@ -9810,7 +9810,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 0
+  Ruins: 1
   MovementCost: 1
   panel: {fileID: 1146832454}
   HexGridType: 1
@@ -32501,7 +32501,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 0
+  Ruins: 1
   MovementCost: 1
   panel: {fileID: 1146832454}
   HexGridType: 1
