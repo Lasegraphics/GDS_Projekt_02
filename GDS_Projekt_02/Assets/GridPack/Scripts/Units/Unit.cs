@@ -75,6 +75,9 @@ namespace GridPack.Units
         public bool ignorArmor;
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
+        public int RandomHitPercentUnit;
+        public int HitSpikeParameterUnit;
+        public int HealTempleParameterUnit;
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
 
 
@@ -172,11 +175,14 @@ namespace GridPack.Units
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= 1;
+                HitPoints -= HitSpikeParameterUnit;
             }
+
             if(Cell != null && Cell.Temple == true)
             {
-                
+                Debug.Log("Uzdrowiono");
+                HitPoints += HealTempleParameterUnit;
+                Cell.Temple = false; 
             }
 
 
@@ -192,14 +198,6 @@ namespace GridPack.Units
             Buffs.ForEach(b => { b.Duration--; });
 
             SetState(new UnitStateNormal(this)); 
-
-            if(Cell != null && Cell.Temple == true)
-            {
-                Debug.Log("Uzdrowiono");
-                HitPoints += 1;
-            }
-
-
         }
 
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
@@ -330,7 +328,7 @@ namespace GridPack.Units
                 {
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
-                    if(randInt <= 25)
+                    if(randInt <= RandomHitPercentUnit)
                     {
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
@@ -349,7 +347,7 @@ namespace GridPack.Units
                     {
                         MarkAsDefending(aggressor);
                         int damageTaken = aggressor.AttackFactor;
-                        if(randInt <= 25)
+                        if(randInt <= RandomHitPercentUnit)
                         {
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
@@ -444,7 +442,7 @@ namespace GridPack.Units
             if(destinationCell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= 1;
+                HitPoints -= HitSpikeParameterUnit;
             }
 
             if(destinationCell.Swamp == true)

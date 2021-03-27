@@ -741,6 +741,18 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688018197521656, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018197521656, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018197521656, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3018868
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018197521663, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruins
       value: 1
@@ -764,6 +776,18 @@ PrefabInstance:
     - target: {fileID: 7183688018234896539, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Mountains
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018244542508, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.26415092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018244542508, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.26415092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018244542508, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018244542515, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
@@ -1217,6 +1241,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688019493759749, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Temple
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019513679946, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -1262,9 +1290,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2071666136}
     - target: {fileID: 7183688019672902230, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Ruins
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019672902230, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688019672902231, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019672902231, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019672902231, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019704643812, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -1281,6 +1325,18 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688019733601670, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28555533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019733601670, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.28555533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019733601670, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019734204651, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -1797,6 +1853,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4abc275a37b5b42bedc914ea551a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1874079889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6763049295329303501, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
+  m_PrefabInstance: {fileID: 703077081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1874079890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874079889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5c97bb6ed144ec83105cbc24b8349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomHitPercent: 0
+  HitSpikeParameter: 0
+  HealTempleParameter: 0
 --- !u!1 &1942223183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5805368906134415076, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
