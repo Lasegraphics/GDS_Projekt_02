@@ -15,8 +15,12 @@ namespace GridPack.Cells
         //Pozycja komórki w scenie
         public Vector2 OffsetCoord {get {return _offsetCoord;} set {_offsetCoord = value;}}
         //Sprawdza czy na komórce cos się znajduje
-        public bool IsTaken; 
-        public bool IsEffected; 
+        public bool IsBlocked; 
+        public bool Spikes;
+        public bool Forest;
+        public bool Swamp; 
+        public bool Temple; 
+        public bool Ruins; 
         //Koszt ruchu jednoski 
         public float MovementCost  = 1;
 

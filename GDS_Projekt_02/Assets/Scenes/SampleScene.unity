@@ -281,6 +281,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117340929}
   m_CullTransparentMesh: 1
+--- !u!1 &138830931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138830932}
+  - component: {fileID: 138830934}
+  - component: {fileID: 138830933}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &138830932
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138830931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 745946241}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &138830933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138830931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Spell
+--- !u!222 &138830934
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138830931}
+  m_CullTransparentMesh: 1
 --- !u!1 &158930483
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +701,139 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8995809467214946937, guid: b22b769be57ec4b9a914963510d24941, type: 3}
   m_PrefabInstance: {fileID: 278532497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &745946240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745946241}
+  - component: {fileID: 745946244}
+  - component: {fileID: 745946243}
+  - component: {fileID: 745946242}
+  m_Layer: 5
+  m_Name: Spell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &745946241
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745946240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 138830932}
+  m_Father: {fileID: 1528663329}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -96, y: -393}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &745946242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745946240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 745946243}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 294961420920243572}
+        m_TargetAssemblyTypeName: GridPack.Grid.CellGrid, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &745946243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745946240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &745946244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745946240}
+  m_CullTransparentMesh: 1
 --- !u!1 &764371715
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +913,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764371715}
   m_CullTransparentMesh: 1
+--- !u!1 &869738885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869738887}
+  - component: {fileID: 869738886}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &869738886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410026117b4733242947b439c543ff73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+  sounds:
+  - name: 
+    clip: {fileID: 0}
+    mixerGroup: {fileID: 0}
+    loop: 0
+    valume: 0
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &869738887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1683671, y: 1.2396518, z: -0.38410348}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &883613442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1497,7 @@ GameObject:
   - component: {fileID: 1253057666}
   - component: {fileID: 1253057665}
   - component: {fileID: 1253057667}
+  - component: {fileID: 1253057668}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1287,6 +1552,20 @@ MonoBehaviour:
   redText: {fileID: 1096285368}
   scoreRedTeam: 0
   speed: 5
+--- !u!114 &1253057668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253057664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5c97bb6ed144ec83105cbc24b8349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealValueTemple: 0
+  HitValueSpikesUnit: 0
 --- !u!1 &1284795120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,19 +2254,19 @@ PrefabInstance:
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[0]
       value: 
-      objectReference: {fileID: 7272720391045842853}
+      objectReference: {fileID: 1942223183}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[1]
       value: 
-      objectReference: {fileID: 596428650}
+      objectReference: {fileID: 938936495}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[2]
       value: 
-      objectReference: {fileID: 1942223183}
+      objectReference: {fileID: 596428650}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[3]
       value: 
-      objectReference: {fileID: 938936495}
+      objectReference: {fileID: 7272720391045842853}
     - target: {fileID: 2226668463685938910, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: m_Name
       value: StartGameController
@@ -2554,6 +2833,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5805368906134415082, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368906134415082, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368906134415082, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368907535503712, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368907535503712, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805368907535503712, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
     - target: {fileID: 5805368907535503715, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.55
@@ -2606,6 +2909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnUnits-Panels
       objectReference: {fileID: 0}
+    - target: {fileID: 6013877877286121753, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Name
+      value: Hide-LeftScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6295648410085108479, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: parentUnits
       value: 
@@ -2626,6 +2933,10 @@ PrefabInstance:
       propertyPath: parentUnits
       value: 
       objectReference: {fileID: 651255052}
+    - target: {fileID: 7272720390908093459, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
+      propertyPath: m_Name
+      value: Hide-RightScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7355166372433763656, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
       propertyPath: parentUnits
       value: 
@@ -3148,8 +3459,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 1
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -3300,8 +3615,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -3700,8 +4019,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -4114,8 +4437,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -4417,8 +4744,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -4600,8 +4931,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -4888,8 +5223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -5317,8 +5656,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 1
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -5601,8 +5944,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -5837,8 +6184,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -6070,8 +6421,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -6207,8 +6562,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -6392,8 +6751,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -6462,8 +6825,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -6649,8 +7016,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -6933,8 +7304,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -7053,8 +7428,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -7173,8 +7552,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -7226,8 +7609,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -7741,8 +8128,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -7794,8 +8185,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -8324,8 +8719,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -8526,8 +8925,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -8713,8 +9116,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -8833,8 +9240,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -8886,8 +9297,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9155,8 +9570,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9224,8 +9643,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9477,8 +9900,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9646,8 +10073,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9782,8 +10213,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9852,8 +10287,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -9972,8 +10411,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -10241,8 +10684,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -10361,8 +10808,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -10563,8 +11014,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -10632,8 +11087,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -10982,8 +11441,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -11169,8 +11632,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -11386,8 +11853,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -11655,8 +12126,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -12118,8 +12593,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -12406,8 +12885,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -12507,8 +12990,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -12642,8 +13129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -12762,8 +13253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -12932,8 +13427,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13002,8 +13501,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13172,8 +13675,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13309,8 +13816,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13362,8 +13873,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13650,8 +14165,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13684,8 +14203,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -13804,8 +14327,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -14073,8 +14600,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -14521,8 +15052,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -14574,8 +15109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -14710,8 +15249,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -14930,8 +15473,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -15016,8 +15563,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -15218,8 +15769,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -15487,8 +16042,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -15540,8 +16099,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -15727,8 +16290,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -15944,8 +16511,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -16213,8 +16784,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -16266,8 +16841,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -16386,8 +16965,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -16506,8 +17089,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -16906,8 +17493,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -17078,8 +17669,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -17425,8 +18020,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -17560,8 +18159,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -17730,8 +18333,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -18031,8 +18638,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -18166,8 +18777,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -18372,8 +18987,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -18473,8 +19092,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19037,8 +19660,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19138,8 +19765,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19489,8 +20120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19542,8 +20177,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19748,8 +20387,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19782,8 +20425,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -19984,8 +20631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -20171,8 +20822,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -20224,8 +20879,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -20657,8 +21316,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -20874,8 +21537,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -21010,8 +21677,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -21427,8 +22098,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -21629,8 +22304,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -21995,8 +22674,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -22048,8 +22731,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -22250,8 +22937,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -22452,8 +23143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -22572,8 +23267,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -23020,8 +23719,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -23405,8 +24108,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -23491,8 +24198,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -23544,8 +24255,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -23746,8 +24461,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -24116,8 +24835,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -24150,8 +24873,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -24270,8 +24997,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -24390,8 +25121,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -24970,8 +25705,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -25141,8 +25880,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -25242,8 +25985,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -25444,8 +26191,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -25728,8 +26479,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -25934,8 +26689,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26069,8 +26828,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26155,8 +26918,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26208,8 +26975,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26429,8 +27200,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26448,8 +27223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26751,8 +27530,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -26837,8 +27620,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27039,8 +27826,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27092,8 +27883,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27392,8 +28187,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 8, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27496,8 +28295,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27650,8 +28453,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27770,8 +28577,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -27938,8 +28749,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -28159,8 +28974,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 5}
-  IsTaken: 0
-  IsEffected: 1
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 1
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -28491,8 +29310,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 12, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -28626,8 +29449,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 3}
-  IsTaken: 1
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 2
@@ -28746,8 +29573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -28916,8 +29747,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -29102,8 +29937,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -29352,8 +30191,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 4}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -29472,8 +30315,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -29674,8 +30521,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 11, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -29958,8 +30809,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -30078,8 +30933,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -30299,8 +31158,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 2, y: 5}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -30646,8 +31509,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -30766,8 +31633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -31035,8 +31906,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 3, y: 1}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -31155,8 +32030,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -31388,8 +32267,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 6}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -31593,8 +32476,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 9}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -31679,8 +32566,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -31818,8 +32709,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 8}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -32016,8 +32911,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 7}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -32285,8 +33184,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 7, y: 0}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -32876,8 +33779,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 2}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0
@@ -32996,8 +33903,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 6, y: 3}
-  IsTaken: 0
-  IsEffected: 0
+  IsBlocked: 0
+  Spikes: 0
+  Forest: 0
+  Swamp: 0
+  Temple: 0
+  Ruins: 0
   MovementCost: 1
   HexGridType: 1
   GroundType: 0

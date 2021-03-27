@@ -3,10 +3,11 @@ using System.Linq;
 using GridPack.Cells;
 using GridPack.Units;
 using GridPack.Units.UnitStates;
+using UnityEngine; 
 
 namespace GridPack.Grid.GridStates
 {
-    class CellGridStateUnitSelected : CellGridState
+    public class CellGridStateUnitSelected : CellGridState
     {
         private Unit _unit;
         private HashSet<Cell> _pathsInRange;
@@ -33,7 +34,7 @@ namespace GridPack.Grid.GridStates
                 return;
             }
 
-            if (cell.IsTaken || !_pathsInRange.Contains(cell))
+            if (cell.IsBlocked || !_pathsInRange.Contains(cell))
             {
                 _cellGrid.CellGridState = new CellGridStateWaitingForInput(_cellGrid);
                 return;
@@ -138,6 +139,14 @@ namespace GridPack.Grid.GridStates
                 if (_unit.IsUnitAttackable(currentUnit, _unit.Cell))
                 {
                     currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+
+                    if(_cellGrid.IsSwitched == true)
+                    {
+                        Debug.Log(currentUnit);
+                        currentUnit.HitPoints -= 1; 
+                        Debug.Log("Zdrowie:" + currentUnit.HitPoints); 
+                    }
+
                     _unitsInRange.Add(currentUnit);
                 }
             }
