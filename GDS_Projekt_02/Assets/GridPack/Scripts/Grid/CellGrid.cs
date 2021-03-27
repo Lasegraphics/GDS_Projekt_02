@@ -87,7 +87,7 @@ namespace GridPack.Grid
         {
             GameFinished = false; 
             Players = new List<Player>();
-            List<Cell> cellTypeRuins = new List<Cell>(); 
+            
             for (int i = 0; i < PlayersParent.childCount; i++)
             {
                 var player = PlayersParent.GetChild(i).GetComponent<Player>();
@@ -128,27 +128,7 @@ namespace GridPack.Grid
                 }
             }
             else 
-            Debug.LogError("No IUnitGenerators script attached to cell grid");
-
-           foreach (var cell in Cells)
-            {
-                if(cell.Ruins == true)
-                {
-                   cellTypeRuins.Add(cell);
-                }
-            }
-            Random random = new Random();
-            var randomizedCell = random.Next(cellTypeRuins.Count);
-            Debug.Log(cellTypeRuins[randomizedCell]);
-            cellTypeRuins[randomizedCell].Ruins = false;
-            //randomizedCell.Add(cell);
-            //randomizedCell.Ruins = true; 
-
-            if(cellTypeRuins[randomizedCell].Ruins == false)
-            {
-                Debug.Log("Ruiny");
-            }
-              
+            Debug.LogError("No IUnitGenerators script attached to cell grid");   
         }
 
         private void OnCellDehighlighted(object sender, EventArgs e)
@@ -205,6 +185,7 @@ namespace GridPack.Grid
         {
             
             //CellGridState = new CellGridState(this);
+            List<Cell> cellTypeRuins = new List<Cell>(); 
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
             
@@ -243,6 +224,24 @@ namespace GridPack.Grid
                     }
                 }
 
+            }
+            foreach (var cell in Cells)
+            {
+                if(cell.Ruins == true)
+                {
+                   cellTypeRuins.Add(cell);
+                }
+            }
+            Random random = new Random();
+            var randomizedCell = random.Next(cellTypeRuins.Count);
+            Debug.Log(cellTypeRuins[randomizedCell]);
+            cellTypeRuins[randomizedCell].Ruins = false;
+            //randomizedCell.Add(cell);
+            //randomizedCell.Ruins = true; 
+
+            if(cellTypeRuins[randomizedCell].Ruins == false)
+            {
+                Debug.Log("Ruiny");
             }
         }
 
