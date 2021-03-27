@@ -19,7 +19,8 @@ public class StartGameController : MonoBehaviour
     TurnChanger turnChanger;
     ScoreController scoreController;
     ScrollCamera scrollCamera;
-    EndGame endGame;
+
+    FieldParameters fieldParameters;
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
@@ -27,7 +28,7 @@ public class StartGameController : MonoBehaviour
         turnChanger = FindObjectOfType<TurnChanger>();
         scoreController = FindObjectOfType<ScoreController>();
         scrollCamera = FindObjectOfType<ScrollCamera>();
-        endGame = FindObjectOfType<EndGame>();
+        fieldParameters = FindObjectOfType<FieldParameters>();
     }
     public void ChangeTurn()
     {
@@ -74,7 +75,7 @@ public class StartGameController : MonoBehaviour
         cellGrid.StartGame();
         scoreController.StartGame();
         scrollCamera.MoveCameraToNormalPos();
-        endGame.StartGame();
+     //   fieldParameters.StartGame();
     }
 
 }

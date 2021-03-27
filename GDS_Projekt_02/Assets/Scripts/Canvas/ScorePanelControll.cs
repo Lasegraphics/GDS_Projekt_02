@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using GridPack.Cells;
 using GridPack.SceneScripts;
 
 
@@ -16,8 +17,7 @@ public class ScorePanelControll : MonoBehaviour
     public Text armor;
 
     [Header("Events")]
-    public Text event1;
-    public Text event2;
+    public Text eventUnit;
 
     [HideInInspector] public int damage;
     [HideInInspector] public bool isMage;
@@ -36,7 +36,19 @@ public class ScorePanelControll : MonoBehaviour
                 isMage = true;
             }
             var unitInfo = unit.GetComponent<Unit>();
+
+            if (unitInfo.Cell.Forest)
+            {
+                eventUnit.text = "las";
+            }
+            else
+            {
+                eventUnit.text = "";
+            }
+
+            name.text = unitInfo.nameUnit;
             damage = unitInfo.AttackFactor;
+
             sliderHp.maxValue = unitInfo.TotalHitPoints;
             sliderHp.value = unitInfo.HitPoints;
             HP.text = unitInfo.HitPoints.ToString();
@@ -45,7 +57,7 @@ public class ScorePanelControll : MonoBehaviour
             sliderArmor.value = unitInfo.ArmorPoints;
             armor.text = unitInfo.ArmorPoints.ToString();
 
-            name.text = unitInfo.nameUnit;
+          
         }      
     }
 
