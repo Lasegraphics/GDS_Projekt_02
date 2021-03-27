@@ -82,7 +82,7 @@ namespace GridPack.Cells
                         panel.UpdatePos(number);
                         frezePanel = true;
                     }
-                    if (Ruins&& Temple&& Swamp&& Forest&& Spikes&& Mountains)
+                    if (Ruins==false&& Temple == false && Swamp == false && Forest == false && Spikes == false && Mountains == false)
                     {
                         var number = 6;
                         panel.UpdatePos(number);
