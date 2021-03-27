@@ -1497,6 +1497,7 @@ GameObject:
   - component: {fileID: 1253057666}
   - component: {fileID: 1253057665}
   - component: {fileID: 1253057667}
+  - component: {fileID: 1253057668}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1551,6 +1552,20 @@ MonoBehaviour:
   redText: {fileID: 1096285368}
   scoreRedTeam: 0
   speed: 5
+--- !u!114 &1253057668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253057664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5c97bb6ed144ec83105cbc24b8349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealValueTemple: 0
+  HitValueSpikesUnit: 0
 --- !u!1 &1284795120
 GameObject:
   m_ObjectHideFlags: 0
@@ -28961,9 +28976,9 @@ MonoBehaviour:
   _offsetCoord: {x: 10, y: 5}
   IsBlocked: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
-  Temple: 0
+  Temple: 1
   Ruins: 0
   MovementCost: 1
   HexGridType: 1

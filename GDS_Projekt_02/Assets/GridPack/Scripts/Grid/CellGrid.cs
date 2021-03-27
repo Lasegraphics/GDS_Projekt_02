@@ -236,6 +236,7 @@ namespace GridPack.Grid
             var randomizedCell = random.Next(cellTypeRuins.Count);
             Debug.Log(cellTypeRuins[randomizedCell]);
             cellTypeRuins[randomizedCell].Ruins = false;
+            cellTypeRuins[randomizedCell].Temple = true;
             //randomizedCell.Add(cell);
             //randomizedCell.Ruins = true; 
 
@@ -243,6 +244,11 @@ namespace GridPack.Grid
             {
                 Debug.Log("Ruiny");
             }
+            if(cellTypeRuins[randomizedCell].Temple == true)
+            {
+                Debug.Log("Temple");
+            }
+
         }
 
         public void Activate()
