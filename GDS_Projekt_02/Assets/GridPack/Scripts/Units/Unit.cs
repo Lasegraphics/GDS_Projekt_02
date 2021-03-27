@@ -75,6 +75,7 @@ namespace GridPack.Units
         public bool ignorArmor;
         public int HealValueTempleUnit; 
         public int HitValueSpikesUnit; 
+        public int RandomPercentHit; 
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
@@ -181,6 +182,7 @@ namespace GridPack.Units
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealValueTempleUnit;
                 Cell.Temple = false;
+                Cell.Ruins = true;
                 Debug.Log("Zmieniono");
 
             }
@@ -444,7 +446,7 @@ namespace GridPack.Units
             if(destinationCell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= 1;
+                HitPoints -= HitValueSpikesUnit;
             }
 
             if(destinationCell.Swamp == true)

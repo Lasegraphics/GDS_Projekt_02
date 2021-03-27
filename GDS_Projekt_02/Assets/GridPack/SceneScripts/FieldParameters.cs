@@ -12,12 +12,17 @@ using GridPack.Units;
 public class FieldParameters : MonoBehaviour
 {
     public int HealValueTemple;
-    public int HitValueSpikesUnit;
+    public int HitValueSpikes;
+    public int randomPercentInForest; 
 
     private Unit getTempleHeal; 
+    private Unit getSpikesHit;
+    private Unit getRandomPercent; 
 
     void Initialize()
     {
        HealValueTemple = getTempleHeal.HealValueTempleUnit;
+       HitValueSpikes = getSpikesHit.HitValueSpikesUnit;
+       randomPercentInForest = getRandomPercent.RandomPercentHit; 
     }
 }
