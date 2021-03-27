@@ -1565,7 +1565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealValueTemple: 0
-  HitValueSpikesUnit: 0
+  HitValueSpikes: 0
+  randomPercentInForest: 0
 --- !u!1 &1284795120
 GameObject:
   m_ObjectHideFlags: 0
