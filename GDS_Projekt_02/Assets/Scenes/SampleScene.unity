@@ -185,6 +185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22b769be57ec4b9a914963510d24941, type: 3}
+--- !u!4 &278532498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8995809467214946937, guid: b22b769be57ec4b9a914963510d24941, type: 3}
+  m_PrefabInstance: {fileID: 278532497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &398607399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -764,6 +769,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CellGrid (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7183688019906953790, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 2136098944}
+    - target: {fileID: 7183688019906953790, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: PlayersParent
+      value: 
+      objectReference: {fileID: 2114783406}
+    - target: {fileID: 7183688019906953791, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: UnitsParent
+      value: 
+      objectReference: {fileID: 278532498}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
 --- !u!1 &1454487015
@@ -1661,6 +1678,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+--- !u!114 &2136098944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+  m_PrefabInstance: {fileID: 2136098943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a89fcc14b8aaa04db3a6e4b754b63d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7272720391045842853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7272720390908093459, guid: edb4c16c4aac9c848acde20303fc5b9a, type: 3}
