@@ -223,7 +223,6 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
-           // Debug.Log(1);
             uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
            
@@ -232,6 +231,7 @@ namespace GridPack.Units
                 UnitDeselected.Invoke(this, new EventArgs());
             }
             uiManager.CloseScorePanel();
+            
 
         }
 
@@ -456,7 +456,8 @@ namespace GridPack.Units
         //Metoda obsługuje animacje poruszania jednostki. 
         protected virtual IEnumerator MovementAnimation(List<Cell> path)
         {
-            IsMoving = true; 
+            IsMoving = true;
+
             path.Reverse();
             foreach (var cell in path)
             {
@@ -468,7 +469,15 @@ namespace GridPack.Units
                 }
             }
 
-            IsMoving = false; 
+            IsMoving = false;
+            if (PlayerNumber == 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
             OnMoveFinished();
         }
 
@@ -516,15 +525,40 @@ namespace GridPack.Units
             return paths; 
         }
 
-        public List<Cell> FindPath(List<Cell>cells, Cell destination)
+        public List<Cell> FindPath(List<Cell> cells, Cell destination)
         {
-            if(catchedPaths != null && catchedPaths.ContainsKey(destination))
+            if (destination.gameObject.transform.position.x >= transform.position.x)
             {
-                return catchedPaths[destination]; 
+                if (PlayerNumber ==0) 
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);                
+                }
+                else 
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+
             }
-            else 
+            else
             {
-                return _fallbackPathfinder.FindPath(GetGraphEdges(cells),Cell, destination);
+                if (PlayerNumber == 0)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+
+                }
+                else //prawy gracz
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+
+            }
+            if (catchedPaths != null && catchedPaths.ContainsKey(destination))
+            {
+                return catchedPaths[destination];
+            }
+            else
+            {
+                return _fallbackPathfinder.FindPath(GetGraphEdges(cells), Cell, destination);
             }
         }
 
