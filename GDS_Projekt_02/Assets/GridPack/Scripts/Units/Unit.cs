@@ -332,7 +332,7 @@ namespace GridPack.Units
                 {
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
-                    if(randInt <= 25)
+                    if(randInt <= RandomPercentHit)
                     {
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
@@ -351,7 +351,7 @@ namespace GridPack.Units
                     {
                         MarkAsDefending(aggressor);
                         int damageTaken = aggressor.AttackFactor;
-                        if(randInt <= 25)
+                        if(randInt <= RandomPercentHit)
                         {
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
