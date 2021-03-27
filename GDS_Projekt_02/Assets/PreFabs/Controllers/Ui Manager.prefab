@@ -47,7 +47,7 @@ MonoBehaviour:
   orangePanel: {fileID: 0}
   bluePanel: {fileID: 0}
   endRoundText: {fileID: 0}
-  unit: {fileID: 21300000, guid: 095de0d6432740643828cb20af495c9d, type: 3}
+  unit: {fileID: 21300000, guid: 335f7e5edebac7a4cbb63cacdf30e6d6, type: 3}
   currentPlayer: 0
   isStart: 1
   isDesing: 0
