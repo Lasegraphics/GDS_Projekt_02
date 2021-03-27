@@ -21,7 +21,7 @@ namespace GridPack.Grid.UnitGenerators
                 var unit = UnitsParent.GetChild(i).GetComponent<Unit>();
                 if (unit != null)
                 {
-                    
+
                     var cell = cells.OrderBy(h => Math.Abs((h.transform.position - unit.transform.position).magnitude)).First();
                     {
                         cell.IsBlocked = true;

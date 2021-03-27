@@ -185,9 +185,9 @@ namespace GridPack.Grid
         {
             
             //CellGridState = new CellGridState(this);
-            List<Cell> cellTypeRuins = new List<Cell>(); 
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
+            List<Cell> cellTypeRuins = new List<Cell>(); 
             
             if(Units.Select(u => u.PlayerNumber).Distinct().Count() == 1)
             {
@@ -219,12 +219,13 @@ namespace GridPack.Grid
                     var highlighter = item.transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
                     if (highlighter != null)
                     {
-                        Debug.Log(item.name);
+
                         highlighter.color = new Color(1, 1, 1, 0);
                     }
                 }
 
             }
+
             foreach (var cell in Cells)
             {
                 if(cell.Ruins == true)
@@ -248,7 +249,6 @@ namespace GridPack.Grid
             {
                 Debug.Log("Temple");
             }
-
         }
 
         public void Activate()
