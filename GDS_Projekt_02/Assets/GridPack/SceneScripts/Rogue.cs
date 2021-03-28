@@ -22,6 +22,11 @@ namespace GridPack.SceneScripts
             {
                 SetState(new UnitStateMarkedAsFinished(this));
             }
+
+            if(ActionPoints == 0 && MovementPoints == 0)
+            {
+                MovementPoints += 1;
+            }
         }
 
     }

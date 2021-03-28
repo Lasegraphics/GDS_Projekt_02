@@ -75,9 +75,9 @@ namespace GridPack.Units
         public bool ignorArmor;
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
-        public int RandomHitPercentUnit;
-        public int HitSpikeParameterUnit;
-        public int HealTempleParameterUnit;
+        public  int RandomHitPercentUnit;
+        public  int HitSpikeParameterUnit;
+        public  int HealTempleParameterUnit;
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
 
 
