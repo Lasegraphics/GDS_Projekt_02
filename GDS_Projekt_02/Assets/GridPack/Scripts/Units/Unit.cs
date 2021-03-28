@@ -450,7 +450,7 @@ namespace GridPack.Units
                 Debug.Log("Bagno");
                 MovementPoints = 0; 
             }
-
+        
         }
 
         //Metoda obsługuje animacje poruszania jednostki. 
@@ -479,6 +479,7 @@ namespace GridPack.Units
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             OnMoveFinished();
+            
         }
 
         //Metoda wywoływana po zakończeniu animacji

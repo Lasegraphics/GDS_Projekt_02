@@ -12,10 +12,10 @@ public class FieldParameters : MonoBehaviour
     public int HitSpikeParameter; 
     public int HealTempleParameter; 
 
-    private Unit GetHeal;
+    protected Unit GetHeal;
     
     /*
-    public FieldParameters(Unit unit)
+    protected FieldParameters(Unit unit)
     {
         GetHeal = unit; 
     }
@@ -24,4 +24,5 @@ public class FieldParameters : MonoBehaviour
         GetHeal.UnMark();
     }
     */
+    
 }
