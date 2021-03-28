@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using GridPack.Units;
+using GridPack.Cells;
+using GridPack.Grid.GridStates;
+using GridPack.Grid;
 using UnityEngine;
 
 public class FieldParameters : MonoBehaviour
@@ -9,14 +12,16 @@ public class FieldParameters : MonoBehaviour
     public int HitSpikeParameter; 
     public int HealTempleParameter; 
 
-    private Unit GetHeal; 
-    private Unit GetSpike; 
-    private Unit GetRandom; 
-   public void Start()
+    private Unit GetHeal;
+    
+    /*
+    public FieldParameters(Unit unit)
     {
-       //  GetHeal.HealTempleParameterUnit = HealTempleParameter;
-        // GetSpike.HitSpikeParameterUnit = HitSpikeParameter;
-        // GetRandom.RandomHitPercentUnit = RandomHitPercent; 
-
+        GetHeal = unit; 
     }
+    void Start()
+    {
+        GetHeal.UnMark();
+    }
+    */
 }
