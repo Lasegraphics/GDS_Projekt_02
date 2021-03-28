@@ -12,11 +12,11 @@ public class FieldParameters : MonoBehaviour
     private Unit GetHeal; 
     private Unit GetSpike; 
     private Unit GetRandom; 
-    void Start()
+   public void Start()
     {
-        HealTempleParameter = GetHeal.HealTempleParameterUnit;
-        HitSpikeParameter = GetSpike.HitSpikeParameterUnit;
-        RandomHitPercent = GetRandom.RandomHitPercentUnit; 
+       // HealTempleParameter = GetHeal.HealTempleParameterUnit;
+       // HitSpikeParameter = GetSpike.HitSpikeParameterUnit;
+       // RandomHitPercent = GetRandom.RandomHitPercentUnit; 
 
     }
 }
