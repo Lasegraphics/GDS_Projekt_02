@@ -21,6 +21,7 @@ public class UiManager : MonoBehaviour
     [Header("Desinger button")]
 
     [SerializeField] Sprite unit;
+    [SerializeField] Sprite groundNormal;
 
     [Header("Static")]
     public int currentPlayer = 0;
@@ -90,11 +91,18 @@ public class UiManager : MonoBehaviour
     {
         if (isDesing ==false)
         {
-            foreach (var item in FindObjectsOfType<Unit>())
+            foreach (var item in FindObjectsOfType<Unit>())    /////// JEDNOSTKI
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.color = item.colorUnit;
                 Sprite.sprite = unit;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  ////////// TEREN NORMALNY
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundNormal;
+               // var childImage = item.transform.FindChild("Highlighter").GetComponent<SpriteRenderer>();
+                //childImage.sprite = groundNormal;
             }
             isDesing = true;
         }
@@ -105,6 +113,11 @@ public class UiManager : MonoBehaviour
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.color = new Color(1, 1, 1);
                 Sprite.sprite = item.StartSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  ////////// TEREN NORMALNY
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
             }
             isDesing = false;
         }
