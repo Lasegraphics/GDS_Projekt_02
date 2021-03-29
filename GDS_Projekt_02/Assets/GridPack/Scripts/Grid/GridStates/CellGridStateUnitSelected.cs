@@ -47,7 +47,10 @@ namespace GridPack.Grid.GridStates
 
         public override void OnUnitClicked(Unit unit)
         {
-            
+           _unit.UnMark();
+           _unit.OnUnitDeselected();
+           _cellGrid.CellGridState = new CellGridStateWaitingForInput(_cellGrid);
+           
             if (unit.Equals(_unit) || _unit.IsMoving)
             {
                 return;
