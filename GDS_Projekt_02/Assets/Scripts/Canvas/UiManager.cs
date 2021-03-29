@@ -101,8 +101,8 @@ public class UiManager : MonoBehaviour
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = groundNormal;
-               // var childImage = item.transform.FindChild("Highlighter").GetComponent<SpriteRenderer>();
-                //childImage.sprite = groundNormal;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundNormal;
             }
             isDesing = true;
         }
@@ -118,6 +118,8 @@ public class UiManager : MonoBehaviour
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
             }
             isDesing = false;
         }
