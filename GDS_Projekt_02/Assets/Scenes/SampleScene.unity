@@ -4780,6 +4780,10 @@ PrefabInstance:
       propertyPath: endRoundText
       value: 
       objectReference: {fileID: 123309568}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundNormal
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a9b54daf2243ea4c875e56218a7042d, type: 3}
     - target: {fileID: 2101705967034177075, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
       propertyPath: m_RootOrder
       value: 9

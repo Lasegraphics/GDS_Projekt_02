@@ -35,8 +35,13 @@ namespace GridPack.Cells
 
         //Metody on mouse dla poszczególnych zdarzeń 
        public MoveToMousePosCanvas panel;
+        public Sprite startSprite;
         bool frezePanel= false;
         float delayTime;
+        private void Awake()
+        {
+            startSprite = GetComponent<SpriteRenderer>().sprite;
+        }
         private void OnMouseOver()
         {
 
