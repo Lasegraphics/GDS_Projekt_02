@@ -92,6 +92,7 @@ namespace GridPack.Units
         [HideInInspector] public int TotalArmorPoints;
         UiManager uiManager;
         ScoreController scoreController;
+        ScorePanelControll scorePanelControll;
 
         public virtual float MovementPoints
         {
@@ -212,10 +213,21 @@ namespace GridPack.Units
         public virtual void OnUnitSelected()
         {
             uiManager = FindObjectOfType<UiManager>();
+            scorePanelControll = FindObjectOfType<ScorePanelControll>();
             SetState(new UnitStateMarkedAsSelected(this));
             if(UnitSelected != null)
             {
                 UnitSelected.Invoke(this, new EventArgs());
+            }
+           
+            if (Cell.Forest || Cell.Spikes||Cell.Temple )
+            {
+                scorePanelControll.UpgadeParameters(this);
+            }
+            else
+            {
+                scorePanelControll.RestEvents();
+
             }
             uiManager.ActiveScorePanel();
         }
@@ -320,10 +332,12 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
+            
            Random rand = new Random();
             int randInt = rand.Next(0,100);
             if(Cell != null && Cell.Forest == true)
             {
+
                 if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
                 {
                     MarkAsDefending(aggressor);

@@ -17,7 +17,11 @@ public class ScorePanelControll : MonoBehaviour
     public Text armor;
 
     [Header("Events")]
+    public Text events;
     public Text eventUnit;
+    public int dodge;
+    public int damageLava;
+    public int heal;
 
     [HideInInspector] public int damage;
     [HideInInspector] public bool isMage;
@@ -37,14 +41,7 @@ public class ScorePanelControll : MonoBehaviour
             }
             var unitInfo = unit.GetComponent<Unit>();
 
-            if (unitInfo.Cell.Forest)
-            {
-                eventUnit.text = "las";
-            }
-            else
-            {
-                eventUnit.text = "";
-            }
+           
 
             name.text = unitInfo.nameUnit;
             damage = unitInfo.AttackFactor;
@@ -56,9 +53,30 @@ public class ScorePanelControll : MonoBehaviour
             sliderArmor.maxValue = unitInfo.TotalArmorPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
             armor.text = unitInfo.ArmorPoints.ToString();
-
+           
           
         }      
     }
-
+   public void UpgadeParameters(Unit unit)
+    {
+        events.text = "EVENTS";
+        if (unit.Cell.Forest)
+        {           
+            eventUnit.text = ("FOREST- "+dodge+"% CHANCE TO DODGE");
+        }
+        if (unit.Cell.Spikes)
+        {
+            eventUnit.text = ( "LAVA- "+damageLava+" DAMAGE AT THE BEGINNING OF NEXT TURN ");
+        }
+        if (unit.Cell.Temple)
+        {
+            eventUnit.text = ("TEMPLE - HEAL "+heal+" AT THE END OF CURRENT TURN");
+        }
+       
+    }
+    public void RestEvents()
+    {
+        events.text = "";
+        eventUnit.text = "";
+    }
 }
