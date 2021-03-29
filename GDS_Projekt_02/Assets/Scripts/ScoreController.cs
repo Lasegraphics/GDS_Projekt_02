@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using GridPack.SceneScripts;
 
 public class ScoreController : MonoBehaviour
 {
@@ -68,6 +69,17 @@ public class ScoreController : MonoBehaviour
                     {
                         item.gameObject.SetActive(false);
                     }
+                    foreach (var item in FindObjectsOfType<Unit>())
+                    {
+
+                        Destroy(item.GetComponent<NumberUnit>());
+                        Destroy(item);
+
+                    }
+                    foreach (var item in FindObjectsOfType<MyOtherHexagon>())
+                    {
+                        Destroy(item);
+                    }
                 }
             }
             if (blueSlider.value != scoreBlueTeam)
@@ -82,9 +94,11 @@ public class ScoreController : MonoBehaviour
                     {
                         item.gameObject.SetActive(false);
                     }
-                    foreach (var item in FindObjectsOfType<Unit>())
+                    foreach (var item in FindObjectsOfType<NumberUnit>())
                     {
-                        Destroy(item);
+                       
+                        Debug.Log(1);
+                        Destroy(item.GetComponent<Unit>());
                        
                     }
                 }
