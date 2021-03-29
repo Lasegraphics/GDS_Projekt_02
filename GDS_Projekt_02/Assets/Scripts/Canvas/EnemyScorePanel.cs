@@ -68,17 +68,22 @@ public class EnemyScorePanel : MonoBehaviour
     }
     public void UpgadeParameters(Unit unit)
     {
-        events.text = "EVENTS";
+        events.text = "";
+        eventUnit.text = "";
         if (unit.Cell.Forest)
         {
+            events.text = "EVENTS";
             eventUnit.text = ("FOREST- " + dodge + "% CHANCE TO DODGE");
         }
+
         if (unit.Cell.Spikes)
         {
+            events.text = "EVENTS";
             eventUnit.text = ("LAVA- " + damageLava + " DAMAGE AT THE BEGINNING OF NEXT TURN ");
         }
         if (unit.Cell.Temple)
         {
+            events.text = "EVENTS";
             eventUnit.text = ("TEMPLE - HEAL " + heal + " AT THE END OF CURRENT TURN");
         }
 

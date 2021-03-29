@@ -36,6 +36,7 @@ public class NumberUnit : MonoBehaviour
             {
                 uiManager.ActiveEnemyScorePanel();
                 enemyScorePanel.UpgradeParameters(gameObject);
+                enemyScorePanel.UpgadeParameters(gameObject.GetComponent<Unit>());
             }
         }
         
@@ -43,6 +44,7 @@ public class NumberUnit : MonoBehaviour
     private void OnMouseExit()
     {
         uiManager.CloseEnemyScorePanel();
+        enemyScorePanel.RestEvents();
     }
     private void OnMouseDown()
     {
