@@ -75,9 +75,9 @@ namespace GridPack.Units
         public bool ignorArmor;
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
-        public int RandomHitPercentUnit;
-        public int HitSpikeParameterUnit;
-        public int HealTempleParameterUnit;
+        public  int RandomHitPercentUnit;
+        public  int HitSpikeParameterUnit;
+        public  int HealTempleParameterUnit;
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
 
 
@@ -450,7 +450,7 @@ namespace GridPack.Units
                 Debug.Log("Bagno");
                 MovementPoints = 0; 
             }
-
+        
         }
 
         //Metoda obsługuje animacje poruszania jednostki. 
@@ -479,6 +479,7 @@ namespace GridPack.Units
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             OnMoveFinished();
+            
         }
 
         //Metoda wywoływana po zakończeniu animacji

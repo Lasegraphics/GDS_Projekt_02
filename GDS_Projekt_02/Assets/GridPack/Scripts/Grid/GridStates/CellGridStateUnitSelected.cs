@@ -47,8 +47,12 @@ namespace GridPack.Grid.GridStates
 
         public override void OnUnitClicked(Unit unit)
         {
+            
             if (unit.Equals(_unit) || _unit.IsMoving)
+            {
                 return;
+            }
+                
             if (_unitsInRange.Contains(unit) && !_unit.IsMoving)
             {
                 _unit.AttackHandler(unit);
@@ -57,12 +61,14 @@ namespace GridPack.Grid.GridStates
                     _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
 
                 }
+               
             }
 
             if (unit.PlayerNumber.Equals(_unit.PlayerNumber))
             {
                 _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
             }
+            
         }
 
         public override void OnCellDeselected(Cell cell)
