@@ -15,6 +15,7 @@ public class EnemyScorePanel : MonoBehaviour
     //[SerializeField] Image hpBack;
     [SerializeField] Slider sliderArmor;
     [SerializeField] Text armor;
+    [SerializeField] int speed=20;
 
     [Header("Events")]
     public Text events;
@@ -43,7 +44,7 @@ public class EnemyScorePanel : MonoBehaviour
         {
             animator.SetBool("BlinkHp",true);
             animator.SetBool("BlinkArmor", false);
-            sliderHp.value = unitInfo.HitPoints - scorePanelControll.damage;
+            sliderHp.value = unitInfo.HitPoints;
             hp.text = unitInfo.HitPoints.ToString() +" - " + scorePanelControll.damage;
 
             sliderArmor.value = unitInfo.ArmorPoints;
@@ -54,6 +55,7 @@ public class EnemyScorePanel : MonoBehaviour
             animator.SetBool("BlinkArmor", true);
             animator.SetBool("BlinkHp", false);
             sliderHp.value = unitInfo.HitPoints;
+            sliderArmor.value = unitInfo.ArmorPoints;
             hp.text = unitInfo.HitPoints.ToString();
             if (unitInfo.ArmorPoints<=0)
             {
@@ -63,7 +65,7 @@ public class EnemyScorePanel : MonoBehaviour
             {
                 armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
             }
-            sliderArmor.value = unitInfo.ArmorPoints - scorePanelControll.damage;          
+           
         }  
     }
     public void UpgadeParameters(Unit unit)
@@ -88,6 +90,24 @@ public class EnemyScorePanel : MonoBehaviour
         }
 
     }
+    public void ChangeHpSlidder(Unit unit)
+    {
+        if (sliderHp.value != unit.HitPoints )
+        {
+            sliderHp.value = Mathf.MoveTowards(sliderHp.value, unit.HitPoints, speed * Time.deltaTime);
+            hp.text = unit.HitPoints.ToString();
+        }
+    }
+   
+    public void ChangeArmorSlidder(Unit unit)
+    {
+        if (sliderArmor.value != unit.ArmorPoints)
+        {
+            sliderArmor.value = Mathf.MoveTowards(sliderArmor.value, unit.ArmorPoints, speed * Time.deltaTime);
+            armor.text = unit.ArmorPoints.ToString();
+        }
+    }
+   
     public void RestEvents()
     {
         events.text = "";

@@ -41,6 +41,17 @@ public class NumberUnit : MonoBehaviour
         }
         
     }
+    private void OnMouseOver()
+    {
+        if (uiManager.isStart == false)
+        {
+            if (playerNumber != cellGrid.CurrentPlayerNumber)
+            {
+                enemyScorePanel.ChangeHpSlidder(gameObject.GetComponent<Unit>());
+                enemyScorePanel.ChangeArmorSlidder(gameObject.GetComponent<Unit>());
+            }
+        }
+    }
     private void OnMouseExit()
     {
         uiManager.CloseEnemyScorePanel();

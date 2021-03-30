@@ -57,7 +57,9 @@ public class ScorePanelControll : MonoBehaviour
           
         }      
     }
-   public void UpgadeParameters(Unit unit)
+   
+
+    public void UpgadeParameters(Unit unit)
     {
         events.text = "EVENTS";
         if (unit.Cell.Forest)
