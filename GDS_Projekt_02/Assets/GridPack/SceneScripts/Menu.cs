@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenu; 
     public GameObject QuitMenu; 
     public GameObject SettingsObject; 
+    public GameObject MusicMenu; 
     public static bool IsPaused; 
     private MyOtherHexagon Markoff; 
     
@@ -52,6 +53,18 @@ public class Menu : MonoBehaviour
     {
         SettingsObject.SetActive(true); 
         pauseMenu.SetActive(false); 
+    }
+
+    public void ToMusicMenu()
+    {
+        MusicMenu.SetActive(true);
+        SettingsObject.SetActive(false);
+    }
+
+    public void BackToSettings()
+    {
+        SettingsObject.SetActive(true);
+        MusicMenu.SetActive(false);
     }
 
     public void Back()

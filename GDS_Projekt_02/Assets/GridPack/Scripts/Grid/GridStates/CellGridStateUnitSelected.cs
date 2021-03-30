@@ -121,10 +121,14 @@ namespace GridPack.Grid.GridStates
             {
                 if (_unit.IsUnitAttackable(currentUnit, cell))
                 {
+                    
                     _unitCell = currentUnit.Cell;
                     _unitCell.MarkAsEnemyEntity();
-                    // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+                 // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
+                   
+                    
+                    
                 }
                 if (_unit.UnitIsntAttackable(currentUnit, cell))
                 {
