@@ -15,6 +15,7 @@ namespace GridPack.Grid.GridStates
         private List<Unit> _unitsMarkedInRange;
 
         private Cell _unitCell;
+        private Cell anotherUnitCell; 
 
         private List<Cell> _currentPath;
 
@@ -29,6 +30,7 @@ namespace GridPack.Grid.GridStates
 
         public override void OnCellClicked(Cell cell)
         {
+             _unitCell = _unit.Cell;
             if (_unit.IsMoving)
             {
                 return;
@@ -43,6 +45,7 @@ namespace GridPack.Grid.GridStates
             var path = _unit.FindPath(_cellGrid.Cells, cell);
             _unit.Move(cell, path);
             _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
+            _unitCell.MarkAsPlayerEntity();
         }
 
         public override void OnUnitClicked(Unit unit)
@@ -92,13 +95,16 @@ namespace GridPack.Grid.GridStates
             _unitsMarkedInRange.Clear();
             foreach (var unit in _unitsInRange)
             {
-                unit.MarkAsReachableEnemy();
+                _unitCell = unit.Cell;
+              //  unit.MarkAsReachableEnemy();
+               _unitCell.MarkAsEnemyEntity();
             }
         }
 
         public override void OnCellSelected(Cell cell)
         {
             base.OnCellSelected(cell);
+            anotherUnitCell = _unit.Cell;
             if (!_pathsInRange.Contains(cell)) return;
             _currentPath = _unit.FindPath(_cellGrid.Cells, cell);
             foreach (var _cell in _currentPath)
@@ -115,10 +121,14 @@ namespace GridPack.Grid.GridStates
             {
                 if (_unit.IsUnitAttackable(currentUnit, cell))
                 {
-                    currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+                    _unitCell = currentUnit.Cell;
+                    _unitCell.MarkAsEnemyEntity();
+                    // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
                 }
+               anotherUnitCell.MarkAsPlayerEntity();
             }
+           
         }
 
         public override void OnStateEnter()
@@ -138,6 +148,7 @@ namespace GridPack.Grid.GridStates
             {
                 cell.MarkAsReachable();
             }
+            _unitCell.MarkAsPlayerEntity();
 
             if (_unit.ActionPoints <= 0) return;
 
@@ -147,7 +158,9 @@ namespace GridPack.Grid.GridStates
                     continue;
                 if (_unit.IsUnitAttackable(currentUnit, _unit.Cell))
                 {
-                    currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+                    _unitCell = currentUnit.Cell;
+                    _unitCell.MarkAsEnemyEntity();
+                   // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
 
                     if(_cellGrid.IsSwitched == true)
                     {
@@ -166,7 +179,7 @@ namespace GridPack.Grid.GridStates
 
         public override void OnStateExit()
         {
-
+            _unitCell = _unit.Cell;
             _unit.OnUnitDeselected();
             foreach (var unit in _unitsInRange)
             {
@@ -177,6 +190,8 @@ namespace GridPack.Grid.GridStates
             {
                 cell.UnMark();
             }
+            _unitCell.MarkAsPlayerEntity();
+            
 
         }
 

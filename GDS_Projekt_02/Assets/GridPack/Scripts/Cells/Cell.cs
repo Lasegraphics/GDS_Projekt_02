@@ -134,6 +134,10 @@ namespace GridPack.Cells
         //Metoda zwraca komórkę do domyślnego stanu 
         public abstract void UnMark();
 
+        public abstract void MarkAsPlayerEntity();
+
+        public abstract void MarkAsEnemyEntity();
+
         //Pobiera dystans do punktu B 
         public int GetDistance(IGraphNode other)
         {
