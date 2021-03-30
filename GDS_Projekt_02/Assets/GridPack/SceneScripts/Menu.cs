@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
 {
     public GameObject pauseMenu; 
     public GameObject QuitMenu; 
+    public GameObject SettingsObject; 
     public static bool IsPaused; 
     private MyOtherHexagon Markoff; 
     
@@ -45,6 +46,18 @@ public class Menu : MonoBehaviour
         pauseMenu.SetActive(false); 
         Time.timeScale = 1f; 
         IsPaused = false; 
+    }
+
+    public void ToSettings()
+    {
+        SettingsObject.SetActive(true); 
+        pauseMenu.SetActive(false); 
+    }
+
+    public void Back()
+    {
+        SettingsObject.SetActive(false); 
+        pauseMenu.SetActive(true); 
     }
 
     public void ToMenu()
