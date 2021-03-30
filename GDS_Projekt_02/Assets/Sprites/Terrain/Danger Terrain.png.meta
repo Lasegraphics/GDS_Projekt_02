@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 48cde564a9980465aa5e0229b6643b79
+guid: 3e6ebe9ff87c448f5804a45d464571e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5242680085273314056
-    second: Mountains and Marsh_0
+      213: 4658977349556611861
+    second: Danger Terrain_0
   - first:
-      213: -3501845205504601038
-    second: Mountains and Marsh_1
+      213: 7792727292533711903
+    second: Danger Terrain_1
   - first:
-      213: -926650221285506613
-    second: Mountains and Marsh_2
-  - first:
-      213: -7074282728529041461
-    second: Mountains and Marsh_3
-  - first:
-      213: -5057045720263117116
-    second: Mountains and Marsh_4
-  - first:
-      213: -6767278594400073093
-    second: Mountains and Marsh_5
+      213: -8162138329647858801
+    second: Danger Terrain_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mountains and Marsh_0
+      name: Danger Terrain_0
       rect:
         serializedVersion: 2
         x: 0
@@ -135,14 +126,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fcf4464d324e37b0800000000000000
-      internalID: -5242680085273314056
+      spriteID: 51ba9e0173308a040800000000000000
+      internalID: 4658977349556611861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_1
+      name: Danger Terrain_1
       rect:
         serializedVersion: 2
         x: 128
@@ -156,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2345e73d652f66fc0800000000000000
-      internalID: -3501845205504601038
+      spriteID: f14a6f65f24552c60800000000000000
+      internalID: 7792727292533711903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_2
+      name: Danger Terrain_2
       rect:
         serializedVersion: 2
         x: 256
@@ -177,71 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc18d398880e323f0800000000000000
-      internalID: -926650221285506613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mountains and Marsh_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc7685de65913dd90800000000000000
-      internalID: -7074282728529041461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mountains and Marsh_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c6bec6f5b3c1d9b0800000000000000
-      internalID: -5057045720263117116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mountains and Marsh_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7acda419fbc512a0800000000000000
-      internalID: -6767278594400073093
+      spriteID: f8b3dbd1f624abe80800000000000000
+      internalID: -8162138329647858801
       vertices: []
       indices: 
       edges: []

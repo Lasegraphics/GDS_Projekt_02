@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 48cde564a9980465aa5e0229b6643b79
+guid: 5a17e80049732584bacce6728f95b870
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5242680085273314056
-    second: Mountains and Marsh_0
+      213: -6552930174734875488
+    second: Designer Mode Hexes_0
   - first:
-      213: -3501845205504601038
-    second: Mountains and Marsh_1
+      213: 3089218637257056130
+    second: Designer Mode Hexes_1
   - first:
-      213: -926650221285506613
-    second: Mountains and Marsh_2
+      213: 3966698296556355794
+    second: Designer Mode Hexes_2
   - first:
-      213: -7074282728529041461
-    second: Mountains and Marsh_3
+      213: -268128429168348310
+    second: Designer Mode Hexes_3
   - first:
-      213: -5057045720263117116
-    second: Mountains and Marsh_4
+      213: -2704497868521531669
+    second: Designer Mode Hexes_4
   - first:
-      213: -6767278594400073093
-    second: Mountains and Marsh_5
+      213: -3926303101392960976
+    second: Designer Mode Hexes_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +106,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -121,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mountains and Marsh_0
+      name: Designer Mode Hexes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -135,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fcf4464d324e37b0800000000000000
-      internalID: -5242680085273314056
+      spriteID: 0a44df899b05f05a0800000000000000
+      internalID: -6552930174734875488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_1
+      name: Designer Mode Hexes_1
       rect:
         serializedVersion: 2
         x: 128
@@ -156,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2345e73d652f66fc0800000000000000
-      internalID: -3501845205504601038
+      spriteID: 28f1933bbfb1fda20800000000000000
+      internalID: 3089218637257056130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_2
+      name: Designer Mode Hexes_2
       rect:
         serializedVersion: 2
         x: 256
@@ -177,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc18d398880e323f0800000000000000
-      internalID: -926650221285506613
+      spriteID: 2d08361951b8c0730800000000000000
+      internalID: 3966698296556355794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_3
+      name: Designer Mode Hexes_3
       rect:
         serializedVersion: 2
         x: 384
@@ -198,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7685de65913dd90800000000000000
-      internalID: -7074282728529041461
+      spriteID: a63bc314d9a674cf0800000000000000
+      internalID: -268128429168348310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_4
+      name: Designer Mode Hexes_4
       rect:
         serializedVersion: 2
         x: 512
@@ -219,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c6bec6f5b3c1d9b0800000000000000
-      internalID: -5057045720263117116
+      spriteID: be619f28481b77ad0800000000000000
+      internalID: -2704497868521531669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountains and Marsh_5
+      name: Designer Mode Hexes_5
       rect:
         serializedVersion: 2
         x: 640
@@ -240,8 +264,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7acda419fbc512a0800000000000000
-      internalID: -6767278594400073093
+      spriteID: 03245f8b128f289c0800000000000000
+      internalID: -3926303101392960976
       vertices: []
       indices: 
       edges: []
