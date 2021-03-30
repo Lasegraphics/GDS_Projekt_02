@@ -126,9 +126,7 @@ namespace GridPack.Grid.GridStates
                     _unitCell.MarkAsEnemyEntity();
                  // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
-                   
-                    
-                    
+                     
                 }
                 if (_unit.UnitIsntAttackable(currentUnit, cell))
                 {
@@ -138,7 +136,6 @@ namespace GridPack.Grid.GridStates
                     _unitsMarkedInRange.Add(currentUnit);
                 }
                 
-
                anotherUnitCell.MarkAsPlayerEntity();
             }
            
@@ -184,6 +181,7 @@ namespace GridPack.Grid.GridStates
 
                     _unitsInRange.Add(currentUnit);
                 }
+                
             }
             if (_unitCell.GetNeighbours(_cellGrid.Cells).FindAll(c => c.MovementCost <= _unit.MovementPoints).Count == 0
                 && _unitsInRange.Count == 0)

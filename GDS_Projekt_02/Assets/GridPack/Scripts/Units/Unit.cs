@@ -250,9 +250,19 @@ namespace GridPack.Units
         //Metoda wskazuje czy mozna zaatakowac jednostkę z danej komórki 
         public virtual bool IsUnitAttackable(Unit other, Cell sourceCell)
         {
-           return sourceCell.GetDistance(other.Cell) < AttackRange
-            && other.PlayerNumber != PlayerNumber
-            && ActionPoints >= 1; 
+            if(AttackRange == 1)
+            {
+                return sourceCell.GetDistance(other.Cell) == AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1; 
+            }
+            else
+            {
+                return sourceCell.GetDistance(other.Cell) < AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1; 
+            }
+           
         }
 
         public virtual bool UnitIsntAttackable(Unit other, Cell sourceCell)
