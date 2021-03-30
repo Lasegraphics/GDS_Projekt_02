@@ -199,11 +199,11 @@ MonoBehaviour:
   cell: {fileID: 0}
   HitPoints: 50
   AttackRange: 7
-  AttackFactor: 300
+  AttackFactor: 15
   ArmorPoints: 0
   ignorArmor: 0
   colorUnit: {r: 1, g: 0, b: 0.8595643, a: 1}
-  actionPoints: 10
+  actionPoints: 1
   RandomHitPercentUnit: 0
   HitSpikeParameterUnit: 0
   HealTempleParameterUnit: 0
