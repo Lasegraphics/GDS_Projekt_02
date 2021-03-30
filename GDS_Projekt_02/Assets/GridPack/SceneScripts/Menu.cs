@@ -9,11 +9,12 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenu; 
     public GameObject QuitMenu; 
     public static bool IsPaused; 
-    public MyOtherHexagon Markoff; 
+    private MyOtherHexagon Markoff; 
     
     void Start()
     {
         pauseMenu.SetActive(false);  
+        Markoff = gameObject.GetComponent<MyOtherHexagon>();
     }
 
     void Update()
