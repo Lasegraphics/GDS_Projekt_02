@@ -11134,6 +11134,7 @@ MonoBehaviour:
   hp: {fileID: 7707565433072945142}
   sliderArmor: {fileID: 7707565433458835620}
   armor: {fileID: 7707565433507499470}
+  speed: 20
   events: {fileID: 7707565432601988274}
   eventUnit: {fileID: 7707565432075620147}
   dodge: 0

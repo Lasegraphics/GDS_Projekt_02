@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 6198400621601585223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.28, y: 16, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9850188, y: 1, z: 1}
   m_Children:
   - {fileID: 6198400621087157930}
   m_Father: {fileID: 0}
@@ -204,6 +204,9 @@ MonoBehaviour:
   ignorArmor: 1
   colorUnit: {r: 0, g: 0.17416215, b: 1, a: 1}
   actionPoints: 1
+  RandomHitPercentUnit: 0
+  HitSpikeParameterUnit: 0
+  HealTempleParameterUnit: 0
   movementPoints: 3
   nameUnit: WIZARD
   MovementAnimationSpeed: 20
