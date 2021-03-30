@@ -50,7 +50,7 @@ public class ScrollCamera : MonoBehaviour
         if (startPosCam != normalPosCam)
         {
             timeToScroll += Time.deltaTime;
-            // posCamera.orthographicSize = Mathf.SmoothStep(startPosCam, normalPosCam, timeToScroll);
+           
             posCamera.orthographicSize  = normalPosCam;
         }
 

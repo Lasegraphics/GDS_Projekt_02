@@ -73,11 +73,11 @@ namespace GridPack.Units
         public int AttackFactor;
         public int ArmorPoints;
         public bool ignorArmor;
-        public int HealValueTempleUnit; 
-        public int HitValueSpikesUnit; 
-        public int RandomPercentHit; 
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
+        public  int RandomHitPercentUnit;
+        public  int HitSpikeParameterUnit;
+        public  int HealTempleParameterUnit;
         [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
 
 
@@ -92,6 +92,7 @@ namespace GridPack.Units
         [HideInInspector] public int TotalArmorPoints;
         UiManager uiManager;
         ScoreController scoreController;
+        ScorePanelControll scorePanelControll;
 
         public virtual float MovementPoints
         {
@@ -175,33 +176,29 @@ namespace GridPack.Units
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= HitValueSpikesUnit;
+                HitPoints -= HitSpikeParameterUnit;
             }
+
             if(Cell != null && Cell.Temple == true)
             {
                 Debug.Log("Uzdrowiono");
-                HitPoints += HealValueTempleUnit;
-                Cell.Temple = false;
-                Cell.Ruins = true;
-                Debug.Log("Zmieniono");
-
+                HitPoints += HealTempleParameterUnit;
+                Cell.Temple = false; 
             }
-        
+
+
             SetState(new UnitStateMarkedAsFriendly(this)); 
         }
 
         //Metoda jest wywoływana na końcu kazdej tury. 
         public virtual void OnTurnEnd()
         {
-            
             catchedPaths = null; 
             Buffs.FindAll(b =>  b.Duration == 0).ForEach(b => {b.Undo(this);});
             Buffs.RemoveAll(b => b.Duration ==0);
             Buffs.ForEach(b => { b.Duration--; });
 
             SetState(new UnitStateNormal(this)); 
-            
-
         }
 
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
@@ -216,10 +213,21 @@ namespace GridPack.Units
         public virtual void OnUnitSelected()
         {
             uiManager = FindObjectOfType<UiManager>();
+            scorePanelControll = FindObjectOfType<ScorePanelControll>();
             SetState(new UnitStateMarkedAsSelected(this));
             if(UnitSelected != null)
             {
                 UnitSelected.Invoke(this, new EventArgs());
+            }
+           
+            if (Cell.Forest || Cell.Spikes||Cell.Temple )
+            {
+                scorePanelControll.UpgadeParameters(this);
+            }
+            else
+            {
+                scorePanelControll.RestEvents();
+
             }
             uiManager.ActiveScorePanel();
         }
@@ -227,7 +235,6 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie odznaczenia jednostki
         public virtual void OnUnitDeselected()
         {
-           // Debug.Log(1);
             uiManager = FindObjectOfType<UiManager>();
             SetState(new UnitStateMarkedAsFriendly(this));
            
@@ -236,6 +243,7 @@ namespace GridPack.Units
                 UnitDeselected.Invoke(this, new EventArgs());
             }
             uiManager.CloseScorePanel();
+            
 
         }
 
@@ -324,15 +332,17 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
+            
            Random rand = new Random();
             int randInt = rand.Next(0,100);
             if(Cell != null && Cell.Forest == true)
             {
+
                 if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
                 {
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
-                    if(randInt <= RandomPercentHit)
+                    if(randInt <= RandomHitPercentUnit)
                     {
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
@@ -351,7 +361,7 @@ namespace GridPack.Units
                     {
                         MarkAsDefending(aggressor);
                         int damageTaken = aggressor.AttackFactor;
-                        if(randInt <= RandomPercentHit)
+                        if(randInt <= RandomHitPercentUnit)
                         {
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
@@ -446,7 +456,7 @@ namespace GridPack.Units
             if(destinationCell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= HitValueSpikesUnit;
+                HitPoints -= HitSpikeParameterUnit;
             }
 
             if(destinationCell.Swamp == true)
@@ -454,13 +464,14 @@ namespace GridPack.Units
                 Debug.Log("Bagno");
                 MovementPoints = 0; 
             }
-
+        
         }
 
         //Metoda obsługuje animacje poruszania jednostki. 
         protected virtual IEnumerator MovementAnimation(List<Cell> path)
         {
-            IsMoving = true; 
+            IsMoving = true;
+
             path.Reverse();
             foreach (var cell in path)
             {
@@ -472,8 +483,17 @@ namespace GridPack.Units
                 }
             }
 
-            IsMoving = false; 
+            IsMoving = false;
+            if (PlayerNumber == 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
             OnMoveFinished();
+            
         }
 
         //Metoda wywoływana po zakończeniu animacji
@@ -520,15 +540,40 @@ namespace GridPack.Units
             return paths; 
         }
 
-        public List<Cell> FindPath(List<Cell>cells, Cell destination)
+        public List<Cell> FindPath(List<Cell> cells, Cell destination)
         {
-            if(catchedPaths != null && catchedPaths.ContainsKey(destination))
+            if (destination.gameObject.transform.position.x >= transform.position.x)
             {
-                return catchedPaths[destination]; 
+                if (PlayerNumber ==0) 
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);                
+                }
+                else 
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+
             }
-            else 
+            else
             {
-                return _fallbackPathfinder.FindPath(GetGraphEdges(cells),Cell, destination);
+                if (PlayerNumber == 0)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+
+                }
+                else //prawy gracz
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+
+            }
+            if (catchedPaths != null && catchedPaths.ContainsKey(destination))
+            {
+                return catchedPaths[destination];
+            }
+            else
+            {
+                return _fallbackPathfinder.FindPath(GetGraphEdges(cells), Cell, destination);
             }
         }
 

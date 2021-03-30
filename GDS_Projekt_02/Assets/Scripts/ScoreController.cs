@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using GridPack.SceneScripts;
 
 public class ScoreController : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class ScoreController : MonoBehaviour
     [Header("Parameters")]
     public int speed;
     UiManager uiManager;
+
+    [Header("Victory Screens")]
+    public Animator blueWin;
+    public Animator orangeWin;
+    public Canvas[] canvasToOff;
+
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
@@ -54,11 +61,47 @@ public class ScoreController : MonoBehaviour
             {
                 redSlider.value = Mathf.MoveTowards(redSlider.value, scoreRedTeam, speed * Time.deltaTime);
                 redText.text = scoreRedTeam.ToString();
+                if (redSlider.value==0)
+                {
+                    blueWin.SetBool("In", true);
+                    Destroy(FindObjectOfType<ScrollCamera>());
+                    foreach (var item in canvasToOff)
+                    {
+                        item.gameObject.SetActive(false);
+                    }
+                    foreach (var item in FindObjectsOfType<Unit>())
+                    {
+
+                        Destroy(item.GetComponent<NumberUnit>());
+                        Destroy(item);
+
+                    }
+                    foreach (var item in FindObjectsOfType<MyOtherHexagon>())
+                    {
+                        Destroy(item);
+                    }
+                }
             }
             if (blueSlider.value != scoreBlueTeam)
             {
                 blueText.text = scoreBlueTeam.ToString();
                 blueSlider.value = Mathf.MoveTowards(blueSlider.value, scoreBlueTeam, speed * Time.deltaTime);
+                if (blueSlider.value==0)
+                {
+                    orangeWin.SetBool("In", true);
+                    Destroy(FindObjectOfType<ScrollCamera>());
+                    foreach (var item in canvasToOff)
+                    {
+                        item.gameObject.SetActive(false);
+                    }
+                    foreach (var item in FindObjectsOfType<NumberUnit>())
+                    {
+                       
+                        Debug.Log(1);
+                        Destroy(item.GetComponent<Unit>());
+                       
+                    }
+                }
             }
         }
        

@@ -17,8 +17,11 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] Text armor;
 
     [Header("Events")]
-    [SerializeField] Text event1;
-    [SerializeField] Text event2;
+    public Text events;
+    public Text eventUnit;
+    public int dodge;
+    public int damageLava;
+    public int heal;
 
 
     private void Awake()
@@ -60,12 +63,34 @@ public class EnemyScorePanel : MonoBehaviour
             {
                 armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
             }
-            sliderArmor.value = unitInfo.ArmorPoints - scorePanelControll.damage;
-
-           
+            sliderArmor.value = unitInfo.ArmorPoints - scorePanelControll.damage;          
+        }  
+    }
+    public void UpgadeParameters(Unit unit)
+    {
+        events.text = "";
+        eventUnit.text = "";
+        if (unit.Cell.Forest)
+        {
+            events.text = "EVENTS";
+            eventUnit.text = ("FOREST- " + dodge + "% CHANCE TO DODGE");
         }
-       
 
-     
+        if (unit.Cell.Spikes)
+        {
+            events.text = "EVENTS";
+            eventUnit.text = ("LAVA- " + damageLava + " DAMAGE AT THE BEGINNING OF NEXT TURN ");
+        }
+        if (unit.Cell.Temple)
+        {
+            events.text = "EVENTS";
+            eventUnit.text = ("TEMPLE - HEAL " + heal + " AT THE END OF CURRENT TURN");
+        }
+
+    }
+    public void RestEvents()
+    {
+        events.text = "";
+        eventUnit.text = "";
     }
 }

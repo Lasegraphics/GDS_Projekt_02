@@ -17,6 +17,7 @@ public class NumberUnit : MonoBehaviour
     StartGameController startGameController;
     public bool isSelected = false;
     int playerNumber;
+
     private void Awake()
     {
         cellGrid = FindObjectOfType<CellGrid>();
@@ -24,16 +25,18 @@ public class NumberUnit : MonoBehaviour
         uiManager = FindObjectOfType<UiManager>();
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
         startGameController = FindObjectOfType<StartGameController>();
-        playerNumber = GetComponent<Unit>().PlayerNumber;
+        playerNumber = GetComponent<Unit>().PlayerNumber;     
     }
+   
     private void OnMouseEnter()
-    {
+    {        
         if (uiManager.isStart == false)
         {
             if (playerNumber != cellGrid.CurrentPlayerNumber)
             {
                 uiManager.ActiveEnemyScorePanel();
                 enemyScorePanel.UpgradeParameters(gameObject);
+                enemyScorePanel.UpgadeParameters(gameObject.GetComponent<Unit>());
             }
         }
         
@@ -41,6 +44,7 @@ public class NumberUnit : MonoBehaviour
     private void OnMouseExit()
     {
         uiManager.CloseEnemyScorePanel();
+        enemyScorePanel.RestEvents();
     }
     private void OnMouseDown()
     {

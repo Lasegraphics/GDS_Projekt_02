@@ -21,6 +21,14 @@ namespace GridPack.SceneScripts
             if(MovementPoints == 0)
             {
                 SetState(new UnitStateMarkedAsFinished(this));
+              //  Cell.CurrentUnit.OnDestroyed();
+            }
+
+            if(ActionPoints == 0 && MovementPoints == 0)
+            {
+                MovementPoints += 1;
+
+              //  this.UnMark();
             }
         }
 

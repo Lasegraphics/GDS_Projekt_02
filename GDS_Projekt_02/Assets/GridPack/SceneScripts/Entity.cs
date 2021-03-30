@@ -137,10 +137,8 @@ namespace GridPack.SceneScripts
         public override void MarkAsFinished()
         {
 
-            SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));
-            
+            SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));  
            // turnChanger.ChangeTurn();
-
         }
         public override void UnMark()
         {

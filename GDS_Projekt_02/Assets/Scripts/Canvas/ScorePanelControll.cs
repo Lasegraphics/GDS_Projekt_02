@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using GridPack.Cells;
 using GridPack.SceneScripts;
 
 
@@ -16,8 +17,11 @@ public class ScorePanelControll : MonoBehaviour
     public Text armor;
 
     [Header("Events")]
-    public Text event1;
-    public Text event2;
+    public Text events;
+    public Text eventUnit;
+    public int dodge;
+    public int damageLava;
+    public int heal;
 
     [HideInInspector] public int damage;
     [HideInInspector] public bool isMage;
@@ -36,7 +40,12 @@ public class ScorePanelControll : MonoBehaviour
                 isMage = true;
             }
             var unitInfo = unit.GetComponent<Unit>();
+
+           
+
+            name.text = unitInfo.nameUnit;
             damage = unitInfo.AttackFactor;
+
             sliderHp.maxValue = unitInfo.TotalHitPoints;
             sliderHp.value = unitInfo.HitPoints;
             HP.text = unitInfo.HitPoints.ToString();
@@ -44,9 +53,30 @@ public class ScorePanelControll : MonoBehaviour
             sliderArmor.maxValue = unitInfo.TotalArmorPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
             armor.text = unitInfo.ArmorPoints.ToString();
-
-            name.text = unitInfo.nameUnit;
+           
+          
         }      
     }
-
+   public void UpgadeParameters(Unit unit)
+    {
+        events.text = "EVENTS";
+        if (unit.Cell.Forest)
+        {           
+            eventUnit.text = ("FOREST- "+dodge+"% CHANCE TO DODGE");
+        }
+        if (unit.Cell.Spikes)
+        {
+            eventUnit.text = ( "LAVA- "+damageLava+" DAMAGE AT THE BEGINNING OF NEXT TURN ");
+        }
+        if (unit.Cell.Temple)
+        {
+            eventUnit.text = ("TEMPLE - HEAL "+heal+" AT THE END OF CURRENT TURN");
+        }
+       
+    }
+    public void RestEvents()
+    {
+        events.text = "";
+        eventUnit.text = "";
+    }
 }

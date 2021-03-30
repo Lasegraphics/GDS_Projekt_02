@@ -1,28 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using GridPack.Units;
 using GridPack.Cells;
-using GridPack.Pathfinding.Algorithms;
-using GridPack.Units.UnitStates;
-using GridPack.Grid; 
-using GridPack.Grid.GridStates; 
-using GridPack.SceneScripts;
-using GridPack.Units; 
+using GridPack.Grid.GridStates;
+using GridPack.Grid;
+using UnityEngine;
 
 public class FieldParameters : MonoBehaviour
 {
-    public int HealValueTemple;
-    public int HitValueSpikes;
-    public int randomPercentInForest; 
+    public int RandomHitPercent; 
+    public int HitSpikeParameter; 
+    public int HealTempleParameter; 
 
-    private Unit getTempleHeal; 
-    private Unit getSpikesHit;
-    private Unit getRandomPercent; 
-
-    void Initialize()
+    protected Unit GetHeal;
+    
+    /*
+    protected FieldParameters(Unit unit)
     {
-       HealValueTemple = getTempleHeal.HealValueTempleUnit;
-       HitValueSpikes = getSpikesHit.HitValueSpikesUnit;
-       randomPercentInForest = getRandomPercent.RandomPercentHit; 
+        GetHeal = unit; 
     }
+    void Start()
+    {
+        GetHeal.UnMark();
+    }
+    */
+    
 }

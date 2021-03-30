@@ -198,12 +198,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
   HitPoints: 50
-  AttackRange: 6
-  AttackFactor: 15
+  AttackRange: 7
+  AttackFactor: 300
   ArmorPoints: 0
   ignorArmor: 0
   colorUnit: {r: 1, g: 0, b: 0.8595643, a: 1}
-  actionPoints: 1
+  actionPoints: 10
+  RandomHitPercentUnit: 0
+  HitSpikeParameterUnit: 0
+  HealTempleParameterUnit: 0
   movementPoints: 4
   nameUnit: ARCHER
   MovementAnimationSpeed: 20
