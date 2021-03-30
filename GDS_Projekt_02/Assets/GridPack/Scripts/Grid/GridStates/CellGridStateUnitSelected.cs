@@ -60,19 +60,19 @@ namespace GridPack.Grid.GridStates
             }
                 
             if (_unitsInRange.Contains(unit) && !_unit.IsMoving)
-            {
+            {             
                 _unit.AttackHandler(unit);
                 if (!_cellGrid.GameFinished)
                 {
-                    _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
+                    _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, unit);    /// KURWA DZIAŁA
 
                 }
-               
+
             }
 
             if (unit.PlayerNumber.Equals(_unit.PlayerNumber))
             {
-                _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
+                _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, unit);
             }
             
         }
