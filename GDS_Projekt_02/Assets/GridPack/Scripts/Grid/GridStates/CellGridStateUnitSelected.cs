@@ -80,6 +80,7 @@ namespace GridPack.Grid.GridStates
         public override void OnCellDeselected(Cell cell)
         {
             base.OnCellDeselected(cell);
+            anotherUnitCell = _unit.Cell;
             foreach (var _cell in _currentPath)
             {
                 if (_pathsInRange.Contains(_cell))
