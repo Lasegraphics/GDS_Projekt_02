@@ -67,7 +67,8 @@ namespace GridPack.Units
             }
         }
         [Header("DO EDYCJI")]
-        public int HitPoints; 
+        public int HitPoints;
+        public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
         public int ArmorPoints;
@@ -329,8 +330,7 @@ namespace GridPack.Units
             }
             if (gameObject.GetComponent<Wizard>() != null)
             {
-                audioManager.Play("MagicAttack");
-                Debug.Log(1);
+                audioManager.Play("MagicAtack");
             }
             if (AttackRange<=1)
             {

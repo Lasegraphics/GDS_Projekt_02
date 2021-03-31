@@ -38,14 +38,14 @@ namespace GridPack.SceneScripts
             if(AttackRange == 1)
             {
                 return sourceCell.GetDistance(other.Cell) == AttackRange
-                && sourceCell.GetDistance(other.Cell) > 2
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1; 
             }
             else
             {
                 return sourceCell.GetDistance(other.Cell) < AttackRange
-                && sourceCell.GetDistance(other.Cell) > 2 
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1; 
             }
