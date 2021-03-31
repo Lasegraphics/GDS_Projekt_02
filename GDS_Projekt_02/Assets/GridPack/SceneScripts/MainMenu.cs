@@ -40,6 +40,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
+    public void SetFullScreen(bool IsSet)
+    {
+        Screen.fullScreen = IsSet; 
+    }
+
+    public void SetDesignerMode(bool IsEnable)
+    {
+        
+    }
+
     
 
    /* private IEnumerator SceneLoading(int sceneNumber)
