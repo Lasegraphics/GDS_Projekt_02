@@ -85,7 +85,7 @@ namespace GridPack.Grid.GridStates
                 if (_pathsInRange.Contains(_cell))
                     _cell.MarkAsReachable();
                 else
-                    _unit.UnMark();
+                   _unit.UnMark();
             }
 
             foreach (var unit in _unitsMarkedInRange)
@@ -99,6 +99,7 @@ namespace GridPack.Grid.GridStates
               //  unit.MarkAsReachableEnemy();
                _unitCell.MarkAsEnemyEntity();
             }
+            anotherUnitCell.MarkAsPlayerEntity();
         }
 
         public override void OnCellSelected(Cell cell)
@@ -136,8 +137,9 @@ namespace GridPack.Grid.GridStates
                     _unitsMarkedInRange.Add(currentUnit);
                 }
                 
-               anotherUnitCell.MarkAsPlayerEntity();
+                 anotherUnitCell.MarkAsPlayerEntity();
             }
+             
            
         }
 
