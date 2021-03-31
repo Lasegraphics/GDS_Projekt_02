@@ -19,7 +19,7 @@ public class ScorePanelControll : MonoBehaviour
 
     [Header("Events")]
     public Text events;
-    public Text eventUnit;
+    public TextMeshProUGUI eventUnit;
     public int dodge;
     public int damageLava;
     public int heal;

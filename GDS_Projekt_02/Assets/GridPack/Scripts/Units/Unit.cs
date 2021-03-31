@@ -67,7 +67,8 @@ namespace GridPack.Units
             }
         }
         [Header("DO EDYCJI")]
-        public int HitPoints; 
+        public int HitPoints;
+        public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
         public int ArmorPoints;
@@ -187,6 +188,7 @@ namespace GridPack.Units
 
             if(Cell != null && Cell.Temple == true)
             {
+                audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
                 Cell.Temple = false; 
@@ -210,7 +212,8 @@ namespace GridPack.Units
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
         protected virtual void OnDestroyed()
         {
-            Cell.IsBlocked = false; 
+            Cell.IsBlocked = false;
+            audioManager.Play("Death");
             MarkAsDestroyed();
             gameObject.SetActive(false);
         }
@@ -327,20 +330,20 @@ namespace GridPack.Units
             {
                 return;
             }
-            Debug.Log("atak");
+            if (gameObject.GetComponent<Wizard>() != null)
+            {
+                audioManager.Play("MagicAtack");
+            }
             if (AttackRange<=1)
             {
                 audioManager.Play("MeleAtack");
             }
-            if(AttackRange>1)
+            if(AttackRange>1 && gameObject.GetComponent<Wizard>() == null)
             {
                 audioManager.Play("BowAtack");
                 
             }
-            if (gameObject.GetComponent<Wizard>() !=null)
-            {
-                audioManager.Play("MagicAttack");
-            }
+           
            
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
@@ -381,8 +384,14 @@ namespace GridPack.Units
                     int damageTaken = aggressor.AttackFactor;
                     if(randInt <= RandomHitPercentUnit)
                     {
+                        audioManager.Play("Miss");
+
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
+                        if (ArmorPoints <=0)
+                        {
+                            audioManager.Play("ArmorDestroy");
+                        }
                         Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                     }
                     else 
@@ -400,6 +409,8 @@ namespace GridPack.Units
                         int damageTaken = aggressor.AttackFactor;
                         if(randInt <= RandomHitPercentUnit)
                         {
+                            audioManager.Play("Miss");
+
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
                             Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
@@ -494,6 +505,7 @@ namespace GridPack.Units
 
             if(destinationCell.Spikes == true)
             {
+                audioManager.Play("Lava");
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
             }

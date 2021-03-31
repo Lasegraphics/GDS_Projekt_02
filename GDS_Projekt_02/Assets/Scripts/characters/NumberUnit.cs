@@ -14,7 +14,7 @@ public class NumberUnit : MonoBehaviour
     ScorePanelControll scorePanelControll;
     CellGrid cellGrid;
     EnemyScorePanel enemyScorePanel;
-    StartGameController startGameController;
+   private  AudioManager audioManager;
     public bool isSelected = false;
 
     int playerNumber;
@@ -25,7 +25,7 @@ public class NumberUnit : MonoBehaviour
         enemyScorePanel = FindObjectOfType<EnemyScorePanel>();
         uiManager = FindObjectOfType<UiManager>();
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
-        startGameController = FindObjectOfType<StartGameController>();
+        audioManager = FindObjectOfType<AudioManager>();
         playerNumber = GetComponent<Unit>().PlayerNumber;     
     }
    
@@ -35,6 +35,7 @@ public class NumberUnit : MonoBehaviour
         {
             if (playerNumber != cellGrid.CurrentPlayerNumber)
             {
+              
                 uiManager.ActiveEnemyScorePanel();
                 enemyScorePanel.UpgradeParameters(gameObject);
               
@@ -67,6 +68,7 @@ public class NumberUnit : MonoBehaviour
             {
                 if (playerNumber == cellGrid.CurrentPlayerNumber)
                 {
+                    audioManager.Play("SelectUnit");
                     foreach (var item in FindObjectsOfType<NumberUnit>())
                     {
                         item.GetComponent<NumberUnit>().isSelected = false;
