@@ -30,6 +30,28 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void ToMusic()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void SetFullScreen(bool IsSet)
+    {
+        Screen.fullScreen = IsSet; 
+    }
+
+    public void SetDesignerMode(bool IsEnable)
+    {
+        
+    }
+
+    
+
    /* private IEnumerator SceneLoading(int sceneNumber)
     {
         Debug.Log("Działa"); 
