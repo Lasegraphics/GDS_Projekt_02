@@ -40,15 +40,18 @@ namespace GridPack.Cells
         float delayTime;
         private void Awake()
         {
+           
             startSprite = GetComponent<SpriteRenderer>().sprite;
         }
         private void OnMouseOver()
         {
-
+           
             delayTime += Time.deltaTime;
             if (delayTime >= 1.5f)
             {
+
                 panel.gameObject.SetActive(true);
+
                 if (frezePanel == false)
                 {
                     if (Mountains)
@@ -94,7 +97,6 @@ namespace GridPack.Cells
                         frezePanel = true;
                     }
                 }
-
             }
 
         }
