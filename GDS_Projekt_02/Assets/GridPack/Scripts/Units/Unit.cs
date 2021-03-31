@@ -327,20 +327,20 @@ namespace GridPack.Units
             {
                 return;
             }
-            Debug.Log("atak");
+            if (gameObject.GetComponent<Wizard>() != null)
+            {
+                audioManager.Play("MagicAttack");
+            }
             if (AttackRange<=1)
             {
                 audioManager.Play("MeleAtack");
             }
-            if(AttackRange>1)
+            if(AttackRange>1 && gameObject.GetComponent<Wizard>() == null)
             {
                 audioManager.Play("BowAtack");
                 
             }
-            if (gameObject.GetComponent<Wizard>() !=null)
-            {
-                audioManager.Play("MagicAttack");
-            }
+           
            
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
