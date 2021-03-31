@@ -30,6 +30,18 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void ToMusic()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    
+
    /* private IEnumerator SceneLoading(int sceneNumber)
     {
         Debug.Log("Działa"); 
