@@ -94,4 +94,14 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void SetFullScreen(bool IsSet)
+    {
+        Screen.fullScreen = IsSet; 
+    }
+
+    public void SetDesignerMode(bool IsEnable)
+    {
+        
+    }
 }
