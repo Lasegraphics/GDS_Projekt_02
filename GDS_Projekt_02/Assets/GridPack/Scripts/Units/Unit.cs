@@ -51,8 +51,7 @@ namespace GridPack.Units
         public float TotalMovementPoints{get; private set;}
         public float TotalActionPoints {get; private set;}
 
-        [SerializeField]
-        [HideInInspector]
+  
 
         //Reprezentacja pola zajmowanego przez jednostkę 
         private Cell cell; 
@@ -94,6 +93,12 @@ namespace GridPack.Units
         UiManager uiManager;
         ScoreController scoreController;
         ScorePanelControll scorePanelControll;
+        AudioManager audioManager;
+
+        private void Start()
+        {
+            audioManager = FindObjectOfType<AudioManager>();
+        }
 
         public virtual float MovementPoints
         {
@@ -322,7 +327,21 @@ namespace GridPack.Units
             {
                 return;
             }
-
+            Debug.Log("atak");
+            if (AttackRange<=1)
+            {
+                audioManager.Play("MeleAtack");
+            }
+            if(AttackRange>1)
+            {
+                audioManager.Play("BowAtack");
+                
+            }
+            if (gameObject.GetComponent<Wizard>() !=null)
+            {
+                audioManager.Play("MagicAttack");
+            }
+           
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);

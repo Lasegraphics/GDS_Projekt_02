@@ -198,7 +198,6 @@ namespace GridPack.Grid
             CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
             while(Units.FindAll(u =>u.PlayerNumber.Equals(CurrentPlayerNumber)).Count == 0)
             {
-                Debug.Log(1);
                 CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
                 
             }
@@ -219,7 +218,6 @@ namespace GridPack.Grid
                     var highlighter = item.transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
                     if (highlighter != null)
                     {
-
                         highlighter.color = new Color(1, 1, 1, 0);
                     }
                 }
