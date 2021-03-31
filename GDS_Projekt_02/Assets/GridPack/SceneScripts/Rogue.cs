@@ -24,9 +24,11 @@ namespace GridPack.SceneScripts
               //  Cell.CurrentUnit.OnDestroyed();
             }
 
-            if(ActionPoints == 0 && MovementPoints == 0)
+
+            // Tu jest ta zmienna dla mnie i Micha³a do robienia movementu Rogue'a. ~Wojtek
+            if(ActionPoints == 0) //&& MovementPoints == 0)
             {
-                MovementPoints += 1;
+                MovementPoints = 3;//+= 1;
 
               //  this.UnMark();
             }

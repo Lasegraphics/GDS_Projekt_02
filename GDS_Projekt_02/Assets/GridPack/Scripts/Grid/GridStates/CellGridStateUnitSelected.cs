@@ -126,6 +126,15 @@ namespace GridPack.Grid.GridStates
                     // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
                 }
+                if (_unit.UnitIsntAttackable(currentUnit, cell))
+                {
+                    _unitCell = currentUnit.Cell;
+                    _unitCell.UnMark();
+                    // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+                    _unitsMarkedInRange.Add(currentUnit);
+                }
+                
+
                anotherUnitCell.MarkAsPlayerEntity();
             }
            

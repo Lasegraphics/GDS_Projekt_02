@@ -138,6 +138,7 @@ namespace GridPack.Cells
 
         public abstract void MarkAsEnemyEntity();
 
+
         //Pobiera dystans do punktu B 
         public int GetDistance(IGraphNode other)
         {

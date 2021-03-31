@@ -255,6 +255,13 @@ namespace GridPack.Units
             && ActionPoints >= 1; 
         }
 
+        public virtual bool UnitIsntAttackable(Unit other, Cell sourceCell)
+        {
+           return sourceCell.GetDistance(other.Cell) >= AttackRange
+            && other.PlayerNumber != PlayerNumber
+            && ActionPoints >= 1; 
+        }
+
         //Metoda wykonuje atak na daną jednostkę
         public void AttackHandler(Unit unitToAttack)
         {
