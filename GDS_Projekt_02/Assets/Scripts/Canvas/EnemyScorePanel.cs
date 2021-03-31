@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using TMPro;
 public class EnemyScorePanel : MonoBehaviour
 {
     
@@ -23,7 +24,11 @@ public class EnemyScorePanel : MonoBehaviour
     public int dodge;
     public int damageLava;
     public int heal;
-    public bool isBlinging;
+    public TextMeshProUGUI movmentText;
+    public TextMeshProUGUI rangeText;
+    public TextMeshProUGUI DamageText;
+
+    [HideInInspector]public bool isBlinging;
 
    [HideInInspector]public Unit unitInfo;
     [HideInInspector] public ScorePanelControll scorePanelControll;
@@ -37,11 +42,15 @@ public class EnemyScorePanel : MonoBehaviour
     public void UpgradeParameters(GameObject enemy)
     {
 
-         unitInfo = enemy.GetComponent<Unit>();
+        unitInfo = enemy.GetComponent<Unit>();
         nameEnemy.text = unitInfo.nameUnit;
 
         sliderHp.maxValue = unitInfo.TotalHitPoints;
         sliderArmor.maxValue = unitInfo.TotalArmorPoints;
+
+        movmentText.text = ("MOVEMENT:  " + unitInfo.MovementPoints);
+        rangeText.text = ("RANGE:  "+unitInfo.AttackRange);
+        DamageText.text = ("DAMAGE:  " + unitInfo.AttackFactor);
 
         if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0)
         {
