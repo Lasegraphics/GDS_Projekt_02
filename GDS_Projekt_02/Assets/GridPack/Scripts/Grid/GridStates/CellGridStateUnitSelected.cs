@@ -64,7 +64,7 @@ namespace GridPack.Grid.GridStates
                 _unit.AttackHandler(unit);
                 if (!_cellGrid.GameFinished)
                 {
-                    _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, unit);    /// KURWA DZIAŁA
+                    _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);    /// KURWA DZIAŁA
 
                 }
 
