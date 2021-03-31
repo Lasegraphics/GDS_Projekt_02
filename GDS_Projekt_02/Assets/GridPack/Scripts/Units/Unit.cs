@@ -450,7 +450,9 @@ namespace GridPack.Units
         public virtual void Move(Cell destinationCell, List<Cell> path)
         {
             var totalMovementCost = path.Sum(h => h.MovementCost);
-            MovementPoints -= totalMovementCost;  
+            scorePanelControll = FindObjectOfType<ScorePanelControll>();
+            MovementPoints -= totalMovementCost;
+            scorePanelControll.UpgradeMovment(this);
             Cell.IsBlocked = false;
             Cell.CurrentUnit = null;
             Cell = destinationCell; 
