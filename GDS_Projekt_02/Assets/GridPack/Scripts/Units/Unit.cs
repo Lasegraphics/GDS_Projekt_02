@@ -90,6 +90,7 @@ namespace GridPack.Units
         public Sprite StartSprite;
 
         [HideInInspector] public int TotalArmorPoints;
+        [HideInInspector] public bool isBlinking;
         UiManager uiManager;
         ScoreController scoreController;
         ScorePanelControll scorePanelControll;

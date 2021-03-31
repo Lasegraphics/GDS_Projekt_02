@@ -16,6 +16,7 @@ public class NumberUnit : MonoBehaviour
     EnemyScorePanel enemyScorePanel;
     StartGameController startGameController;
     public bool isSelected = false;
+
     int playerNumber;
 
     private void Awake()
@@ -36,6 +37,7 @@ public class NumberUnit : MonoBehaviour
             {
                 uiManager.ActiveEnemyScorePanel();
                 enemyScorePanel.UpgradeParameters(gameObject);
+              
                 enemyScorePanel.UpgadeParameters(gameObject.GetComponent<Unit>());
             }
         }

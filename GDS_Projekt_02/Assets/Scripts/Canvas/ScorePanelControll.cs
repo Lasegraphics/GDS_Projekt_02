@@ -8,7 +8,7 @@ using GridPack.SceneScripts;
 public class ScorePanelControll : MonoBehaviour
 {
     [Header("Static")]
-    public Text name;
+    public Text nameUnit;
    
     [Header("Sliders")]
     public Slider sliderHp;
@@ -43,7 +43,7 @@ public class ScorePanelControll : MonoBehaviour
 
            
 
-            name.text = unitInfo.nameUnit;
+            nameUnit.text = unitInfo.nameUnit;
             damage = unitInfo.AttackFactor;
 
             sliderHp.maxValue = unitInfo.TotalHitPoints;

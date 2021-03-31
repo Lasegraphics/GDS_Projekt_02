@@ -74,7 +74,7 @@ public class StartGameController : MonoBehaviour
         cellGrid.Initialize();
         cellGrid.StartGame();
         scoreController.StartGame();
-        scrollCamera.MoveCameraToNormalPos();
+       //scrollCamera.MoveCameraToNormalPos();
      //   fieldParameters.StartGame();
     }
 

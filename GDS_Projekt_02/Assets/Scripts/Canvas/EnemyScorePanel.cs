@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using GridPack.Units;
 public class EnemyScorePanel : MonoBehaviour
 {
-    ScorePanelControll scorePanelControll;
+    
    public Animator animator;
     [SerializeField] Text nameEnemy;
 
@@ -23,7 +23,10 @@ public class EnemyScorePanel : MonoBehaviour
     public int dodge;
     public int damageLava;
     public int heal;
+    public bool isBlinging;
 
+   [HideInInspector]public Unit unitInfo;
+    [HideInInspector] public ScorePanelControll scorePanelControll;
 
     private void Awake()
     {
@@ -33,31 +36,39 @@ public class EnemyScorePanel : MonoBehaviour
 
     public void UpgradeParameters(GameObject enemy)
     {
-       
-        Unit unitInfo = enemy.GetComponent<Unit>();
+
+         unitInfo = enemy.GetComponent<Unit>();
         nameEnemy.text = unitInfo.nameUnit;
 
-        sliderHp.maxValue = unitInfo.TotalHitPoints;       
+        sliderHp.maxValue = unitInfo.TotalHitPoints;
         sliderArmor.maxValue = unitInfo.TotalArmorPoints;
 
-        if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0 )
+        if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0)
         {
-            animator.SetBool("BlinkHp",true);
-            animator.SetBool("BlinkArmor", false);
+            if (unitInfo.isBlinking)
+            {
+                animator.SetBool("BlinkHp", true);
+                animator.SetBool("BlinkArmor", false);
+            }
+
             sliderHp.value = unitInfo.HitPoints;
-            hp.text = unitInfo.HitPoints.ToString() +" - " + scorePanelControll.damage;
+            hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage;
 
             sliderArmor.value = unitInfo.ArmorPoints;
-            armor.text = unitInfo.ArmorPoints.ToString(); 
+            armor.text = unitInfo.ArmorPoints.ToString();
         }
         else
         {
-            animator.SetBool("BlinkArmor", true);
-            animator.SetBool("BlinkHp", false);
+            if (unitInfo.isBlinking)
+            {
+                animator.SetBool("BlinkArmor", true);
+                animator.SetBool("BlinkHp", false);
+            }
+
             sliderHp.value = unitInfo.HitPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
             hp.text = unitInfo.HitPoints.ToString();
-            if (unitInfo.ArmorPoints<=0)
+            if (unitInfo.ArmorPoints <= 0)
             {
                 armor.text = "0";
             }
@@ -65,8 +76,21 @@ public class EnemyScorePanel : MonoBehaviour
             {
                 armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
             }
-           
-        }  
+
+        }
+    }
+    public void Blinking()
+    {
+        if (scorePanelControll.isMage || unitInfo.ArmorPoints == 0)
+        {
+            animator.SetBool("BlinkHp", true);
+            animator.SetBool("BlinkArmor", false);
+        }
+        else
+        {
+            animator.SetBool("BlinkArmor", true);
+            animator.SetBool("BlinkHp", false);
+        }
     }
     public void UpgadeParameters(Unit unit)
     {
