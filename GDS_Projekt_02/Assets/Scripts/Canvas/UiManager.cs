@@ -34,9 +34,11 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
         CloseEnemyScorePanel();
         CloseScorePanel();
+       // var oldBluePanelPos = bluePanel.GetComponent<RectTransform>().anchoredPosition;
+        //var oldOrangePanel = orangePanel.GetComponent<RectTransform>().anchoredPosition;
 
-        orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
-        bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
+       // orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
+        //bluePanel.GetComponent<RectTransform>().anchoredPosition = oldOrangePanel;
     }
     private void Update()
     {
@@ -50,13 +52,19 @@ public class UiManager : MonoBehaviour
         currentPlayer = player;
         if (player == 0)
         {
-            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
-            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
+            var oldBluePanelPos = bluePanel.GetComponent<RectTransform>().anchoredPosition;
+            var oldOrangePanel = orangePanel.GetComponent<RectTransform>().anchoredPosition;
+
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = oldOrangePanel;
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
         }
         else
         {
-            bluePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(-361, 392);
-            orangePanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(320, 391);
+            var oldBluePanelPos = bluePanel.GetComponent<RectTransform>().anchoredPosition;
+            var oldOrangePanel = orangePanel.GetComponent<RectTransform>().anchoredPosition;
+
+            bluePanel.GetComponent<RectTransform>().anchoredPosition = oldOrangePanel;
+            orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
         }
         endRoundText.SetBool("Out", false);
         endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;

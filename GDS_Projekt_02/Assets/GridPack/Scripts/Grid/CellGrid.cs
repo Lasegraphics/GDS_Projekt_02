@@ -97,7 +97,7 @@ namespace GridPack.Grid
                     Debug.LogError("Invalid object in Players Parent game object");
             }
             NumberOfPlayers = Players.Count; 
-            CurrentPlayerNumber = Players.Min(p => p.PlayerNumber); 
+            CurrentPlayerNumber = Players.Min(p => p.PlayerNumber+1); 
 
             Cells = new List<Cell>();
             for (int i = 0; i < transform.childCount; i++)

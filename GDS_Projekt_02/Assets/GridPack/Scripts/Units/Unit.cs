@@ -188,6 +188,7 @@ namespace GridPack.Units
 
             if(Cell != null && Cell.Temple == true)
             {
+                audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
                 Cell.Temple = false; 
@@ -211,7 +212,8 @@ namespace GridPack.Units
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
         protected virtual void OnDestroyed()
         {
-            Cell.IsBlocked = false; 
+            Cell.IsBlocked = false;
+            audioManager.Play("Death");
             MarkAsDestroyed();
             gameObject.SetActive(false);
         }
@@ -382,8 +384,14 @@ namespace GridPack.Units
                     int damageTaken = aggressor.AttackFactor;
                     if(randInt <= RandomHitPercentUnit)
                     {
+                        audioManager.Play("Miss");
+
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
+                        if (ArmorPoints <=0)
+                        {
+                            audioManager.Play("ArmorDestroy");
+                        }
                         Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                     }
                     else 
@@ -401,6 +409,8 @@ namespace GridPack.Units
                         int damageTaken = aggressor.AttackFactor;
                         if(randInt <= RandomHitPercentUnit)
                         {
+                            audioManager.Play("Miss");
+
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
                             Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
@@ -495,6 +505,7 @@ namespace GridPack.Units
 
             if(destinationCell.Spikes == true)
             {
+                audioManager.Play("Lava");
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
             }
