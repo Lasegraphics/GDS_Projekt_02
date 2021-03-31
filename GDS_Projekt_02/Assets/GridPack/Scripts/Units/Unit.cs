@@ -330,6 +330,7 @@ namespace GridPack.Units
             if (gameObject.GetComponent<Wizard>() != null)
             {
                 audioManager.Play("MagicAttack");
+                Debug.Log(1);
             }
             if (AttackRange<=1)
             {
