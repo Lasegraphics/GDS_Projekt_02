@@ -15,8 +15,7 @@ public class ScrollCamera : MonoBehaviour
     [SerializeField] float maximumYValue;
 
     Camera posCamera;
-    float timeToScroll;
-    bool startGame = false;
+
 
     private void Awake()
     {
@@ -45,15 +44,6 @@ public class ScrollCamera : MonoBehaviour
         }
 
     }
-    public void MoveCameraToNormalPos()
-    {
-        if (startPosCam != normalPosCam)
-        {
-            timeToScroll += Time.deltaTime;
-           
-            posCamera.orthographicSize  = normalPosCam;
-        }
-
-    }
+   
 
 }
