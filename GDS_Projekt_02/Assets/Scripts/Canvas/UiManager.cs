@@ -105,13 +105,13 @@ public class UiManager : MonoBehaviour
     {
         if (isDesing ==false)
         {
-            foreach (var item in FindObjectsOfType<Unit>())    /////// JEDNOSTKI
+            foreach (var item in FindObjectsOfType<Unit>())   
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.color = item.colorUnit;
                 Sprite.sprite = unit;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  ////////// TEREN NORMALNY
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = groundNormal;
@@ -139,12 +139,26 @@ public class UiManager : MonoBehaviour
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = groundWater;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-Tample"))
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Temple"))
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = groundTemple;
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = groundTemple;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-ruin"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundRuins;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundRuins;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G1-Lava"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundLava;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundLava;
             }
             isDesing = true;
         }
@@ -156,35 +170,48 @@ public class UiManager : MonoBehaviour
                 Sprite.color = new Color(1, 1, 1);
                 Sprite.sprite = item.StartSprite;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  ////////// TEREN NORMALNY
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-normal")) { 
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Forest")) 
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = item.GetComponent<Cell>().startSprite;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-Forest"))  ////////// TEREN NORMALNY
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Mountain"))  
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = item.GetComponent<Cell>().startSprite;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-Mountain"))  ////////// TEREN NORMALNY
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Water")) 
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = item.GetComponent<Cell>().startSprite;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-Water"))  ////////// TEREN NORMALNY
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Temple"))  
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = item.GetComponent<Cell>().startSprite;
             }
-            foreach (var item in GameObject.FindGameObjectsWithTag("G-Tample"))  ////////// TEREN NORMALNY
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-ruin"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G1-Lava"))
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;

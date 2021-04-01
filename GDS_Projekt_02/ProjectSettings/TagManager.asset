@@ -24,6 +24,7 @@ TagManager:
   - G-ruin
   - G1-Lava
   - G-Temple
+  - G-Mountain
   layers:
   - Default
   - TransparentFX
