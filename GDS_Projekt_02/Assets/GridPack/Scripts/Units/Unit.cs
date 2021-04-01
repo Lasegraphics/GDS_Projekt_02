@@ -245,6 +245,7 @@ namespace GridPack.Units
         public virtual void OnUnitDeselected()
         {
             uiManager = FindObjectOfType<UiManager>();
+
             SetState(new UnitStateMarkedAsFriendly(this));
            
             if (UnitDeselected != null)
@@ -512,6 +513,7 @@ namespace GridPack.Units
 
             if(destinationCell.Swamp == true)
             {
+                audioManager.Play("Marsh");
                 Debug.Log("Bagno");
                 MovementPoints = 0; 
             }
@@ -522,7 +524,7 @@ namespace GridPack.Units
         protected virtual IEnumerator MovementAnimation(List<Cell> path)
         {
             IsMoving = true;
-
+            audioManager.Play("MoveUnit");
             path.Reverse();
             foreach (var cell in path)
             {
@@ -535,6 +537,7 @@ namespace GridPack.Units
             }
 
             IsMoving = false;
+            audioManager.Stop("MoveUnit");
             if (PlayerNumber == 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
