@@ -22,8 +22,8 @@ public class ScoreController : MonoBehaviour
     UiManager uiManager;
 
     [Header("Victory Screens")]
-    public Animator blueWin;
-    public Animator orangeWin;
+    public GameObject blueWin;
+    public GameObject orangeWin;
     public Canvas[] canvasToOff;
 
     private void Awake()
@@ -63,7 +63,7 @@ public class ScoreController : MonoBehaviour
                 redText.text = scoreRedTeam.ToString();
                 if (redSlider.value==0)
                 {
-                    blueWin.SetBool("In", true);
+                    blueWin.SetActive(true);
                     Destroy(FindObjectOfType<ScrollCamera>());
                     foreach (var item in canvasToOff)
                     {
@@ -88,7 +88,7 @@ public class ScoreController : MonoBehaviour
                 blueSlider.value = Mathf.MoveTowards(blueSlider.value, scoreBlueTeam, speed * Time.deltaTime);
                 if (blueSlider.value==0)
                 {
-                    orangeWin.SetBool("In", true);
+                    orangeWin.SetActive(true);
                     Destroy(FindObjectOfType<ScrollCamera>());
                     foreach (var item in canvasToOff)
                     {
