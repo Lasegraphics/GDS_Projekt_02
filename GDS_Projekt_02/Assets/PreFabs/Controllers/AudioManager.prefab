@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5353496906611562734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5353496906611562732}
+  - component: {fileID: 5353496906611562733}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5353496906611562732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353496906611562734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1683671, y: 1.2396518, z: -0.38410348}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5353496906611562733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353496906611562734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410026117b4733242947b439c543ff73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+  sounds:
+  - name: MeleAtack
+    clip: {fileID: 8300000, guid: 3709a9e2d5f374949b1076273240f637, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: MagicAtack
+    clip: {fileID: 8300000, guid: c6066295b01156a48bf2e7b7e7836e60, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: BowAtack
+    clip: {fileID: 8300000, guid: 34533c8005e5b384cb8effd26ad75184, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: SelectUnit
+    clip: {fileID: 8300000, guid: a665ed855812d234d85b61afef8a18ee, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 636f783d8ff1b40b080e00185586f59e, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Miss
+    clip: {fileID: 8300000, guid: d9460048f8cfc40c98f6f3a1f3887411, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ArmorDestroy
+    clip: {fileID: 8300000, guid: 1b5449550144a44f18a0916d0becc426, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Lava
+    clip: {fileID: 8300000, guid: 88312b30b60ad43cd839b16cb9ebad9d, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Heal
+    clip: {fileID: 8300000, guid: b05eebf73e6154d4eaa4e2315a6b5353, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: UiClick
+    clip: {fileID: 8300000, guid: 0afee87c6f5f0466ea5d125a8b4f2427, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: MoveUnit
+    clip: {fileID: 8300000, guid: b9ab4ee0825a448759e56b9cf29de618, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 1
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: StartGame
+    clip: {fileID: 8300000, guid: bd1c7d09554364c99a666d410056bb0a, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Deselect
+    clip: {fileID: 8300000, guid: de451a219bdf440c693df30d8eb38cef, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Marsh
+    clip: {fileID: 8300000, guid: 23c30516b3c354a46b8101d5ffecb619, type: 3}
+    mixerGroup: {fileID: 24300002, guid: 0fe5254a16a4a5e4c8dfd1579425c85b, type: 2}
+    loop: 0
+    valume: 0.5
+    pitch: 1
+    source: {fileID: 0}
