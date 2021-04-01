@@ -20,6 +20,10 @@ TagManager:
   - G-normal
   - G-Water
   - 'G-Mountain '
+  - G-Forest
+  - G-ruin
+  - G1-Lava
+  - G-Temple
   layers:
   - Default
   - TransparentFX
