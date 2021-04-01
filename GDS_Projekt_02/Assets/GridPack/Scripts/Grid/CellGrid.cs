@@ -16,6 +16,7 @@ namespace GridPack.Grid
     //Reaguje na interakcje uzytkownika z jednostkami i komórkami oraz wywołuje zdarzenia związane z postępem w grze.  
     public class CellGrid : MonoBehaviour, ISpellSwitcher
     {
+        public AudioManager audioManager;
         //LevelLoading jest wywoływane przed uruchomieniem metody initialize.
         public event EventHandler LevelLoading; 
         //LevelLoadingDone zdarzenie jest wywoływane po zakończeniu metody initialize.  
@@ -85,6 +86,7 @@ namespace GridPack.Grid
 
         public void Initialize()
         {
+            audioManager.Play("StartGame");
             GameFinished = false; 
             Players = new List<Player>();
             
