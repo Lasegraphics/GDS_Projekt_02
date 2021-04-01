@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using GridPack.Cells;
 using GridPack.Units;
@@ -13,10 +13,8 @@ namespace GridPack.Grid.GridStates
         private HashSet<Cell> _pathsInRange;
         private List<Unit> _unitsInRange;
         private List<Unit> _unitsMarkedInRange;
-
         private Cell _unitCell;
         private Cell anotherUnitCell; 
-
         private List<Cell> _currentPath;
 
         public CellGridStateUnitSelected(CellGrid cellGrid, Unit unit) : base(cellGrid)
@@ -60,19 +58,19 @@ namespace GridPack.Grid.GridStates
             }
                 
             if (_unitsInRange.Contains(unit) && !_unit.IsMoving)
-            {
+            {             
                 _unit.AttackHandler(unit);
                 if (!_cellGrid.GameFinished)
                 {
-                    _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
+                    _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);    /// KURWA DZIAŁA
 
                 }
-               
+
             }
 
             if (unit.PlayerNumber.Equals(_unit.PlayerNumber))
             {
-                _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
+                _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, unit);
             }
             
         }
@@ -80,12 +78,13 @@ namespace GridPack.Grid.GridStates
         public override void OnCellDeselected(Cell cell)
         {
             base.OnCellDeselected(cell);
+            anotherUnitCell = _unit.Cell;
             foreach (var _cell in _currentPath)
             {
                 if (_pathsInRange.Contains(_cell))
                     _cell.MarkAsReachable();
                 else
-                    _unit.UnMark();
+                   _unit.UnMark();
             }
 
             foreach (var unit in _unitsMarkedInRange)
@@ -99,6 +98,7 @@ namespace GridPack.Grid.GridStates
               //  unit.MarkAsReachableEnemy();
                _unitCell.MarkAsEnemyEntity();
             }
+            anotherUnitCell.MarkAsPlayerEntity();
         }
 
         public override void OnCellSelected(Cell cell)
@@ -111,20 +111,19 @@ namespace GridPack.Grid.GridStates
             {
                 _cell.MarkAsPath();
             }
-
             foreach (var unit in _unitsInRange)
             {
                 unit.UnMark();
             }
-
             foreach (var currentUnit in _cellGrid.Units)
             {
                 if (_unit.IsUnitAttackable(currentUnit, cell))
-                {
+                {       
                     _unitCell = currentUnit.Cell;
                     _unitCell.MarkAsEnemyEntity();
-                    // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
+                 // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
+                     
                 }
                 if (_unit.UnitIsntAttackable(currentUnit, cell))
                 {
@@ -134,10 +133,9 @@ namespace GridPack.Grid.GridStates
                     _unitsMarkedInRange.Add(currentUnit);
                 }
                 
-
-               anotherUnitCell.MarkAsPlayerEntity();
+                 anotherUnitCell.MarkAsPlayerEntity();
             }
-           
+        
         }
 
         public override void OnStateEnter()
@@ -158,9 +156,7 @@ namespace GridPack.Grid.GridStates
                 cell.MarkAsReachable();
             }
             _unitCell.MarkAsPlayerEntity();
-
             if (_unit.ActionPoints <= 0) return;
-
             foreach (var currentUnit in _cellGrid.Units)
             {
                 if (currentUnit.PlayerNumber.Equals(_unit.PlayerNumber))
@@ -180,12 +176,12 @@ namespace GridPack.Grid.GridStates
 
                     _unitsInRange.Add(currentUnit);
                 }
+                
             }
             if (_unitCell.GetNeighbours(_cellGrid.Cells).FindAll(c => c.MovementCost <= _unit.MovementPoints).Count == 0
                 && _unitsInRange.Count == 0)
                 _unit.SetState(new UnitStateMarkedAsFinished(_unit));
         }
-
         public override void OnStateExit()
         {
             _unitCell = _unit.Cell;
@@ -200,8 +196,6 @@ namespace GridPack.Grid.GridStates
                 cell.UnMark();
             }
             _unitCell.MarkAsPlayerEntity();
-            
-
         }
 
     }

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cdf852709d27980409197d359657a8e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a9b54daf2243ea4c875e56218a7042d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 7801343158370318066}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 11.925, y: 6.8999996, z: -2}
-  m_LocalScale: {x: 0.9, y: 0.90000045, z: 0.90000045}
+  m_LocalScale: {x: 0.9850188, y: 1, z: 0.90000045}
   m_Children:
   - {fileID: 7801343158008514094}
   m_Father: {fileID: 0}
@@ -204,6 +204,9 @@ MonoBehaviour:
   ignorArmor: 0
   colorUnit: {r: 0.6886792, g: 0.23713954, b: 0.23713954, a: 1}
   actionPoints: 1
+  RandomHitPercentUnit: 0
+  HitSpikeParameterUnit: 0
+  HealTempleParameterUnit: 0
   movementPoints: 2
   nameUnit: TANK
   MovementAnimationSpeed: 20

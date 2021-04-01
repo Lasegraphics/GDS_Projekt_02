@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GridPack.Units.UnitStates;
+using GridPack.Units;
+using GridPack.Cells;
 
 namespace GridPack.SceneScripts
 {
@@ -29,6 +31,36 @@ namespace GridPack.SceneScripts
             */
 
         }
+
+         public override bool IsUnitAttackable(Unit other, Cell sourceCell)
+        {
+        
+            if(AttackRange == 1)
+            {
+                return sourceCell.GetDistance(other.Cell) == AttackRange
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1; 
+            }
+            else
+            {
+                return sourceCell.GetDistance(other.Cell) < AttackRange
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1; 
+            }
+            
+         
+        }
+
+        public override bool UnitIsntAttackable(Unit other, Cell sourceCell)
+        {
+           return sourceCell.GetDistance(other.Cell) >= AttackRange
+            && sourceCell.GetDistance(other.Cell) > 2 
+            && other.PlayerNumber != PlayerNumber
+            && ActionPoints <= 1; 
+        }
+           
 
     }
 }

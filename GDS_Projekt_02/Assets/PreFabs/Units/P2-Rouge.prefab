@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2737745491035125004}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 8.4, y: 5.21, z: -2}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 0.9850188, y: 1, z: 0.9}
   m_Children:
   - {fileID: 2737745491245196782}
   m_Father: {fileID: 0}
@@ -135,6 +135,9 @@ MonoBehaviour:
   ignorArmor: 0
   colorUnit: {r: 0.6415094, g: 0.63182336, b: 0.25720897, a: 1}
   actionPoints: 1
+  RandomHitPercentUnit: 0
+  HitSpikeParameterUnit: 0
+  HealTempleParameterUnit: 0
   movementPoints: 5
   nameUnit: ROUGE
   MovementAnimationSpeed: 20
@@ -212,7 +215,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cdf852709d27980409197d359657a8e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a9b54daf2243ea4c875e56218a7042d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0

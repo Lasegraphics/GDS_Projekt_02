@@ -14,8 +14,9 @@ public class NumberUnit : MonoBehaviour
     ScorePanelControll scorePanelControll;
     CellGrid cellGrid;
     EnemyScorePanel enemyScorePanel;
-    StartGameController startGameController;
+   private  AudioManager audioManager;
     public bool isSelected = false;
+
     int playerNumber;
 
     private void Awake()
@@ -24,7 +25,7 @@ public class NumberUnit : MonoBehaviour
         enemyScorePanel = FindObjectOfType<EnemyScorePanel>();
         uiManager = FindObjectOfType<UiManager>();
         scorePanelControll = FindObjectOfType<ScorePanelControll>();
-        startGameController = FindObjectOfType<StartGameController>();
+        audioManager = FindObjectOfType<AudioManager>();
         playerNumber = GetComponent<Unit>().PlayerNumber;     
     }
    
@@ -34,12 +35,25 @@ public class NumberUnit : MonoBehaviour
         {
             if (playerNumber != cellGrid.CurrentPlayerNumber)
             {
+              
                 uiManager.ActiveEnemyScorePanel();
                 enemyScorePanel.UpgradeParameters(gameObject);
+              
                 enemyScorePanel.UpgadeParameters(gameObject.GetComponent<Unit>());
             }
         }
         
+    }
+    private void OnMouseOver()
+    {
+        if (uiManager.isStart == false)
+        {
+            if (playerNumber != cellGrid.CurrentPlayerNumber)
+            {
+                enemyScorePanel.ChangeHpSlidder(gameObject.GetComponent<Unit>());
+                enemyScorePanel.ChangeArmorSlidder(gameObject.GetComponent<Unit>());
+            }
+        }
     }
     private void OnMouseExit()
     {
@@ -54,6 +68,7 @@ public class NumberUnit : MonoBehaviour
             {
                 if (playerNumber == cellGrid.CurrentPlayerNumber)
                 {
+                    audioManager.Play("SelectUnit");
                     foreach (var item in FindObjectsOfType<NumberUnit>())
                     {
                         item.GetComponent<NumberUnit>().isSelected = false;

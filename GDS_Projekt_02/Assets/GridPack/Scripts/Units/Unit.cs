@@ -51,8 +51,7 @@ namespace GridPack.Units
         public float TotalMovementPoints{get; private set;}
         public float TotalActionPoints {get; private set;}
 
-        [SerializeField]
-        [HideInInspector]
+  
 
         //Reprezentacja pola zajmowanego przez jednostkę 
         private Cell cell; 
@@ -68,7 +67,8 @@ namespace GridPack.Units
             }
         }
         [Header("DO EDYCJI")]
-        public int HitPoints; 
+        public int HitPoints;
+        public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
         public int ArmorPoints;
@@ -90,9 +90,16 @@ namespace GridPack.Units
         public Sprite StartSprite;
 
         [HideInInspector] public int TotalArmorPoints;
+        [HideInInspector] public bool isBlinking;
         UiManager uiManager;
         ScoreController scoreController;
         ScorePanelControll scorePanelControll;
+        AudioManager audioManager;
+
+        private void Start()
+        {
+            audioManager = FindObjectOfType<AudioManager>();
+        }
 
         public virtual float MovementPoints
         {
@@ -181,6 +188,7 @@ namespace GridPack.Units
 
             if(Cell != null && Cell.Temple == true)
             {
+                audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
                 Cell.Temple = false; 
@@ -204,7 +212,8 @@ namespace GridPack.Units
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
         protected virtual void OnDestroyed()
         {
-            Cell.IsBlocked = false; 
+            Cell.IsBlocked = false;
+            audioManager.Play("Death");
             MarkAsDestroyed();
             gameObject.SetActive(false);
         }
@@ -236,6 +245,7 @@ namespace GridPack.Units
         public virtual void OnUnitDeselected()
         {
             uiManager = FindObjectOfType<UiManager>();
+
             SetState(new UnitStateMarkedAsFriendly(this));
            
             if (UnitDeselected != null)
@@ -250,16 +260,26 @@ namespace GridPack.Units
         //Metoda wskazuje czy mozna zaatakowac jednostkę z danej komórki 
         public virtual bool IsUnitAttackable(Unit other, Cell sourceCell)
         {
-           return sourceCell.GetDistance(other.Cell) <= AttackRange
-            && other.PlayerNumber != PlayerNumber
-            && ActionPoints >= 1; 
+            if(AttackRange == 1)
+            {
+                return sourceCell.GetDistance(other.Cell) == AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1; 
+            }
+            else
+            {
+                return sourceCell.GetDistance(other.Cell) < AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1; 
+            }
+           
         }
 
         public virtual bool UnitIsntAttackable(Unit other, Cell sourceCell)
         {
            return sourceCell.GetDistance(other.Cell) >= AttackRange
             && other.PlayerNumber != PlayerNumber
-            && ActionPoints >= 1; 
+            && ActionPoints <= 1; 
         }
 
         //Metoda wykonuje atak na daną jednostkę
@@ -311,7 +331,21 @@ namespace GridPack.Units
             {
                 return;
             }
-
+            if (gameObject.GetComponent<Wizard>() != null)
+            {
+                audioManager.Play("MagicAtack");
+            }
+            if (AttackRange<=1)
+            {
+                audioManager.Play("MeleAtack");
+            }
+            if(AttackRange>1 && gameObject.GetComponent<Wizard>() == null)
+            {
+                audioManager.Play("BowAtack");
+                
+            }
+           
+           
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
@@ -351,8 +385,14 @@ namespace GridPack.Units
                     int damageTaken = aggressor.AttackFactor;
                     if(randInt <= RandomHitPercentUnit)
                     {
+                        audioManager.Play("Miss");
+
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
+                        if (ArmorPoints <=0)
+                        {
+                            audioManager.Play("ArmorDestroy");
+                        }
                         Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                     }
                     else 
@@ -370,6 +410,8 @@ namespace GridPack.Units
                         int damageTaken = aggressor.AttackFactor;
                         if(randInt <= RandomHitPercentUnit)
                         {
+                            audioManager.Play("Miss");
+
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
                             Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
@@ -439,7 +481,9 @@ namespace GridPack.Units
         public virtual void Move(Cell destinationCell, List<Cell> path)
         {
             var totalMovementCost = path.Sum(h => h.MovementCost);
-            MovementPoints -= totalMovementCost;  
+            scorePanelControll = FindObjectOfType<ScorePanelControll>();
+            MovementPoints -= totalMovementCost;
+            scorePanelControll.UpgradeMovment(this);
             Cell.IsBlocked = false;
             Cell.CurrentUnit = null;
             Cell = destinationCell; 
@@ -462,12 +506,14 @@ namespace GridPack.Units
 
             if(destinationCell.Spikes == true)
             {
+                audioManager.Play("Lava");
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
             }
 
             if(destinationCell.Swamp == true)
             {
+                audioManager.Play("Marsh");
                 Debug.Log("Bagno");
                 MovementPoints = 0; 
             }
@@ -478,7 +524,7 @@ namespace GridPack.Units
         protected virtual IEnumerator MovementAnimation(List<Cell> path)
         {
             IsMoving = true;
-
+            audioManager.Play("MoveUnit");
             path.Reverse();
             foreach (var cell in path)
             {
@@ -491,6 +537,7 @@ namespace GridPack.Units
             }
 
             IsMoving = false;
+            audioManager.Stop("MoveUnit");
             if (PlayerNumber == 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);

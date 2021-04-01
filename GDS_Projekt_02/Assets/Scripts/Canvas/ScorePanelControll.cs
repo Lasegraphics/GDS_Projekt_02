@@ -3,12 +3,13 @@ using UnityEngine.UI;
 using GridPack.Units;
 using GridPack.Cells;
 using GridPack.SceneScripts;
+using TMPro;
 
 
 public class ScorePanelControll : MonoBehaviour
 {
     [Header("Static")]
-    public Text name;
+    public Text nameUnit;
    
     [Header("Sliders")]
     public Slider sliderHp;
@@ -18,10 +19,13 @@ public class ScorePanelControll : MonoBehaviour
 
     [Header("Events")]
     public Text events;
-    public Text eventUnit;
+    public TextMeshProUGUI eventUnit;
     public int dodge;
     public int damageLava;
     public int heal;
+    public TextMeshProUGUI movmentText;
+    public TextMeshProUGUI rangeText;
+    public TextMeshProUGUI DamageText;
 
     [HideInInspector] public int damage;
     [HideInInspector] public bool isMage;
@@ -32,6 +36,9 @@ public class ScorePanelControll : MonoBehaviour
 
     public void TakeUnit(GameObject unit)
     {
+        movmentText.text = ("MOVEMENT:  " + unit.GetComponent<Unit>().MovementPoints);
+        rangeText.text = ("RANGE:  " + unit.GetComponent<Unit>().AttackRange);
+        DamageText.text = ("DAMAGE:  " + unit.GetComponent<Unit>().AttackFactor);
         if (FindObjectOfType<UiManager>().isStart == false)
         {
             isMage = false;
@@ -43,7 +50,7 @@ public class ScorePanelControll : MonoBehaviour
 
            
 
-            name.text = unitInfo.nameUnit;
+            nameUnit.text = unitInfo.nameUnit;
             damage = unitInfo.AttackFactor;
 
             sliderHp.maxValue = unitInfo.TotalHitPoints;
@@ -57,7 +64,12 @@ public class ScorePanelControll : MonoBehaviour
           
         }      
     }
-   public void UpgadeParameters(Unit unit)
+   public void UpgradeMovment(Unit unit)
+    {
+        movmentText.text = ("MOVEMENT:  " + unit.MovementPoints);
+    }
+
+    public void UpgadeParameters(Unit unit)
     {
         events.text = "EVENTS";
         if (unit.Cell.Forest)

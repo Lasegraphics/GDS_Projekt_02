@@ -16,6 +16,7 @@ namespace GridPack.Grid
     //Reaguje na interakcje uzytkownika z jednostkami i komórkami oraz wywołuje zdarzenia związane z postępem w grze.  
     public class CellGrid : MonoBehaviour, ISpellSwitcher
     {
+        public AudioManager audioManager;
         //LevelLoading jest wywoływane przed uruchomieniem metody initialize.
         public event EventHandler LevelLoading; 
         //LevelLoadingDone zdarzenie jest wywoływane po zakończeniu metody initialize.  
@@ -85,6 +86,7 @@ namespace GridPack.Grid
 
         public void Initialize()
         {
+            audioManager.Play("StartGame");
             GameFinished = false; 
             Players = new List<Player>();
             
@@ -97,7 +99,7 @@ namespace GridPack.Grid
                     Debug.LogError("Invalid object in Players Parent game object");
             }
             NumberOfPlayers = Players.Count; 
-            CurrentPlayerNumber = Players.Min(p => p.PlayerNumber); 
+            CurrentPlayerNumber = Players.Min(p => p.PlayerNumber+1); 
 
             Cells = new List<Cell>();
             for (int i = 0; i < transform.childCount; i++)
@@ -198,7 +200,6 @@ namespace GridPack.Grid
             CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
             while(Units.FindAll(u =>u.PlayerNumber.Equals(CurrentPlayerNumber)).Count == 0)
             {
-                Debug.Log(1);
                 CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
                 
             }
@@ -219,7 +220,6 @@ namespace GridPack.Grid
                     var highlighter = item.transform.Find("WhiteTile").GetComponent<SpriteRenderer>();
                     if (highlighter != null)
                     {
-
                         highlighter.color = new Color(1, 1, 1, 0);
                     }
                 }
