@@ -1458,6 +1458,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7486998331800735715, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_Text
+      value: DESING
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998331800735715, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7f2c45f08d73ba54f96634b746fbf72c, type: 3}
+    - target: {fileID: 7486998331800735715, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 234
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998331800735715, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998331800735715, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7486998332217848802, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -1469,6 +1489,30 @@ PrefabInstance:
     - target: {fileID: 7486998332742987762, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DesingerButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998332742987763, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998332742987763, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a54e30763e021d43977533ab1fba936, type: 3}
+    - target: {fileID: 7486998332742987763, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998332742987765, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 154.4638
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998332742987765, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486998332742987765, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 490.44
       objectReference: {fileID: 0}
     - target: {fileID: 7486998332760191084, guid: 22154fe8c143a744a80ee5a5af307cbb, type: 3}
       propertyPath: m_Interactable
