@@ -7,19 +7,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioMixer mainMixer;
     public Sound[] sounds;
 
-    public static AudioManager AM;
+
 
     void Awake()
     {
-        if (AM == null)
-            AM = this;
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
+ 
 
         foreach (var s in sounds)
         {

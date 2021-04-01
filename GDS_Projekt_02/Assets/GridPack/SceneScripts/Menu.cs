@@ -58,7 +58,10 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1f; 
         IsPaused = false; 
     }
-
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("MainGame");
+    }
     public void ToSettings()
     {
         SettingsObject.SetActive(true); 
