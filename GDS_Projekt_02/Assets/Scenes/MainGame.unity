@@ -4408,7 +4408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688017921883364, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Mountains
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7183688017921883365, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
@@ -6480,6 +6480,10 @@ PrefabInstance:
       objectReference: {fileID: 115364003}
     - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: IsBlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Mountains
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019335524806, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
