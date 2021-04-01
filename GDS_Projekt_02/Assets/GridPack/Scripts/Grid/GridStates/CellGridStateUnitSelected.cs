@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using GridPack.Cells;
 using GridPack.Units;
@@ -13,10 +13,8 @@ namespace GridPack.Grid.GridStates
         private HashSet<Cell> _pathsInRange;
         private List<Unit> _unitsInRange;
         private List<Unit> _unitsMarkedInRange;
-
         private Cell _unitCell;
         private Cell anotherUnitCell; 
-
         private List<Cell> _currentPath;
 
         public CellGridStateUnitSelected(CellGrid cellGrid, Unit unit) : base(cellGrid)
@@ -113,17 +111,14 @@ namespace GridPack.Grid.GridStates
             {
                 _cell.MarkAsPath();
             }
-
             foreach (var unit in _unitsInRange)
             {
                 unit.UnMark();
             }
-
             foreach (var currentUnit in _cellGrid.Units)
             {
                 if (_unit.IsUnitAttackable(currentUnit, cell))
-                {
-                    
+                {       
                     _unitCell = currentUnit.Cell;
                     _unitCell.MarkAsEnemyEntity();
                  // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
@@ -140,8 +135,7 @@ namespace GridPack.Grid.GridStates
                 
                  anotherUnitCell.MarkAsPlayerEntity();
             }
-             
-           
+        
         }
 
         public override void OnStateEnter()
@@ -162,9 +156,7 @@ namespace GridPack.Grid.GridStates
                 cell.MarkAsReachable();
             }
             _unitCell.MarkAsPlayerEntity();
-
             if (_unit.ActionPoints <= 0) return;
-
             foreach (var currentUnit in _cellGrid.Units)
             {
                 if (currentUnit.PlayerNumber.Equals(_unit.PlayerNumber))
@@ -190,7 +182,6 @@ namespace GridPack.Grid.GridStates
                 && _unitsInRange.Count == 0)
                 _unit.SetState(new UnitStateMarkedAsFinished(_unit));
         }
-
         public override void OnStateExit()
         {
             _unitCell = _unit.Cell;
@@ -205,8 +196,6 @@ namespace GridPack.Grid.GridStates
                 cell.UnMark();
             }
             _unitCell.MarkAsPlayerEntity();
-            
-
         }
 
     }

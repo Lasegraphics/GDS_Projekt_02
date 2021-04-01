@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     public GameObject SettingsObject; 
     public GameObject MusicMenu; 
     public static bool IsPaused; 
+    public static bool IsSettings; 
     private MyOtherHexagon Markoff; 
     
     void Start()
@@ -23,15 +24,23 @@ public class Menu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(IsPaused)
+            if(IsSettings == false)
             {
-                ResumeGame();
+                if(IsPaused)
+                {
+                    ResumeGame();
+                }
+                else 
+                {
+                    PauseGame();
+                    //Markoff.UnMark();
+                }
             }
             else 
             {
-                PauseGame();
-                //Markoff.UnMark();
+                Debug.Log("Jesteś w ustawieniach");
             }
+                
         }
     }
 
@@ -40,6 +49,7 @@ public class Menu : MonoBehaviour
         pauseMenu.SetActive(true);   
         Time.timeScale = 0f; 
         IsPaused = true; 
+         IsSettings = false;
     }
 
     public void ResumeGame()
@@ -53,6 +63,8 @@ public class Menu : MonoBehaviour
     {
         SettingsObject.SetActive(true); 
         pauseMenu.SetActive(false); 
+        IsSettings = true;
+        
     }
 
     public void ToMusicMenu()
@@ -71,6 +83,7 @@ public class Menu : MonoBehaviour
     {
         SettingsObject.SetActive(false); 
         pauseMenu.SetActive(true); 
+        IsSettings = false;
     }
 
     public void ToMenu()
