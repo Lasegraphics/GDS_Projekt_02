@@ -200,7 +200,7 @@ MonoBehaviour:
   HitPoints: 90
   AttackRange: 1
   AttackFactor: 20
-  ArmorPoints: 150
+  ArmorPoints: 100
   ignorArmor: 0
   colorUnit: {r: 0.6886792, g: 0.23713954, b: 0.23713954, a: 1}
   actionPoints: 1
