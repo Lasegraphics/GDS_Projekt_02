@@ -2344,7 +2344,7 @@ PrefabInstance:
     - target: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
       propertyPath: blueWin
       value: 
-      objectReference: {fileID: 971118726}
+      objectReference: {fileID: 971118730}
     - target: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
       propertyPath: redText
       value: 
@@ -2356,7 +2356,7 @@ PrefabInstance:
     - target: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
       propertyPath: orangeWin
       value: 
-      objectReference: {fileID: 1897422816}
+      objectReference: {fileID: 1897422817}
     - target: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
       propertyPath: redSlider
       value: 
@@ -2894,7 +2894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &971118727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6867,7 +6867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1897422817
 Animator:
   serializedVersion: 3

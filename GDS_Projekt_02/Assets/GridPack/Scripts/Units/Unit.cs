@@ -507,7 +507,7 @@ namespace GridPack.Units
             if(destinationCell.Spikes == true)
             {
                 audioManager.Play("Lava");
-                Debug.Log("Zadano Obrazenia "+ HitSpikeParameterUnit);
+                Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
             }
 
