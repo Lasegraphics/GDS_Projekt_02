@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
   HitPoints: 50
-  AttackRange: 7
+  AttackRange: 6
   AttackFactor: 15
   ArmorPoints: 0
   ignorArmor: 0
