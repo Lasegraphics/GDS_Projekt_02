@@ -205,8 +205,8 @@ MonoBehaviour:
   colorUnit: {r: 1, g: 0, b: 0.8595643, a: 1}
   actionPoints: 7
   RandomHitPercentUnit: 0
-  HitSpikeParameterUnit: 0
-  HealTempleParameterUnit: 0
+  HitSpikeParameterUnit: 20
+  HealTempleParameterUnit: 20
   movementPoints: 4
   nameUnit: ARCHER
   MovementAnimationSpeed: 20

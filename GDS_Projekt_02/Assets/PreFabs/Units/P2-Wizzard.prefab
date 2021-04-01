@@ -209,8 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918da5933ed14468eb68ef5825f0f14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cell: {fileID: 0}
   HitPoints: 50
+  MinAttackRange: 1
   AttackRange: 5
   AttackFactor: 20
   ArmorPoints: 0
@@ -218,11 +218,12 @@ MonoBehaviour:
   colorUnit: {r: 0.20265219, g: 0.3062715, b: 0.6226415, a: 1}
   actionPoints: 1
   RandomHitPercentUnit: 0
-  HitSpikeParameterUnit: 0
-  HealTempleParameterUnit: 0
+  HitSpikeParameterUnit: 20
+  HealTempleParameterUnit: 20
   movementPoints: 3
   nameUnit: WIZARD
   MovementAnimationSpeed: 20
   PlayerNumber: 1
   StartSprite: {fileID: 4325666681957049452, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   TotalArmorPoints: 0
+  isBlinking: 0

@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c235ac17a8f09440ab18b799701ccbcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cell: {fileID: 0}
   HitPoints: 90
+  MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 20
   ArmorPoints: 150
@@ -205,14 +205,15 @@ MonoBehaviour:
   colorUnit: {r: 0.6886792, g: 0.23713954, b: 0.23713954, a: 1}
   actionPoints: 1
   RandomHitPercentUnit: 0
-  HitSpikeParameterUnit: 0
-  HealTempleParameterUnit: 0
+  HitSpikeParameterUnit: 20
+  HealTempleParameterUnit: 20
   movementPoints: 2
   nameUnit: TANK
   MovementAnimationSpeed: 20
   PlayerNumber: 1
   StartSprite: {fileID: -7093490766826894409, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   TotalArmorPoints: 0
+  isBlinking: 0
 --- !u!114 &7801343158370318071
 MonoBehaviour:
   m_ObjectHideFlags: 0

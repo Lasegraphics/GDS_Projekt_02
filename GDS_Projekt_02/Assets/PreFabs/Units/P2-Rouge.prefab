@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feab2a7bd00a14c10829cf6d47e821df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cell: {fileID: 0}
   HitPoints: 75
+  MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 10
   ArmorPoints: 0
@@ -136,14 +136,15 @@ MonoBehaviour:
   colorUnit: {r: 0.6415094, g: 0.63182336, b: 0.25720897, a: 1}
   actionPoints: 1
   RandomHitPercentUnit: 0
-  HitSpikeParameterUnit: 0
-  HealTempleParameterUnit: 0
+  HitSpikeParameterUnit: 20
+  HealTempleParameterUnit: 20
   movementPoints: 5
   nameUnit: ROUGE
   MovementAnimationSpeed: 20
   PlayerNumber: 1
   StartSprite: {fileID: -4446029609787535626, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   TotalArmorPoints: 0
+  isBlinking: 0
 --- !u!1 &2737745491245196769
 GameObject:
   m_ObjectHideFlags: 0

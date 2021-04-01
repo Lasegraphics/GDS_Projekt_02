@@ -16,22 +16,22 @@ public class MoveToMousePosCanvas : MonoBehaviour
         switch (area)
         {
             case 0:
-                text.text = "Units can’t move onto tile";
+                text.text = "IMPASSABLE";
                 break;
             case 1:
-                text.text = "Any unit that crosses this tile or starts its turn on it takes X damage";
+                text.text = "ANY UNIT THAT CROSSES THIS TILE OR STARTS ITS TURN ON IT TAKES 20 DAMAGE";
                 break;
             case 2:
-                text.text = (dodge+"% chance to dodge incoming attack");
+                text.text = ("20% CHANCE TO DODGE INCOMING ATTACK.");
                 break;
             case 3:
-                text.text = "Any unit that crosses this tile will be forced to end its turn";
+                text.text = "ANY UNIT THAT CROSSES THIS TILE IS FORCED TO END ITS TURN.";
                 break;
             case 4:
-                text.text = "Restores X HP at the end of the turn. Becomes Ruins after";
+                text.text = "RESTORES 20 HP AT THE END OF THE TURN. BECOMES RUINS AFTER";
                 break;
             case 5:
-                text.text = "Has a chance to become a Temple after usage of the current one";
+                text.text = "HAS A CHANCE TO BECOME A TEMPLE AFTER USAGE OF THE EXISTING ONE";
                 break;
             case 6:
                 text.text = "NO EFFECT";

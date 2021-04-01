@@ -103,7 +103,6 @@ public class ScoreController : MonoBehaviour
                     foreach (var item in FindObjectsOfType<NumberUnit>())
                     {
                        
-                        Debug.Log(1);
                         Destroy(item.GetComponent<Unit>());
                        
                     }

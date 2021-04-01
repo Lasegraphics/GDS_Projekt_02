@@ -18,17 +18,14 @@ public class StartGameController : MonoBehaviour
     CellGrid cellGrid;
     TurnChanger turnChanger;
     ScoreController scoreController;
-    ScrollCamera scrollCamera;
 
-    FieldParameters fieldParameters;
+
     private void Awake()
     {
         uiManager = FindObjectOfType<UiManager>();
         cellGrid = FindObjectOfType<CellGrid>();
         turnChanger = FindObjectOfType<TurnChanger>();
         scoreController = FindObjectOfType<ScoreController>();
-        scrollCamera = FindObjectOfType<ScrollCamera>();
-        fieldParameters = FindObjectOfType<FieldParameters>();
     }
     public void ChangeTurn()
     {
