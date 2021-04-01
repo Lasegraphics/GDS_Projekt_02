@@ -24,6 +24,9 @@ public class ScoreController : MonoBehaviour
     [Header("Victory Screens")]
     public Animator blueWin;
     public Animator orangeWin;
+    public GameObject button1;
+    public GameObject button2;
+    public GameObject button3;
     public Canvas[] canvasToOff;
 
     private void Awake()
@@ -63,6 +66,9 @@ public class ScoreController : MonoBehaviour
                 redText.text = scoreRedTeam.ToString();
                 if (redSlider.value==0)
                 {
+                    StartCoroutine(Start1Buttons());
+                    StartCoroutine(Star2Buttons());
+                    StartCoroutine(Star3Buttons());
                     blueWin.SetBool("In", true);
                     Destroy(FindObjectOfType<ScrollCamera>());
                     foreach (var item in canvasToOff)
@@ -106,6 +112,21 @@ public class ScoreController : MonoBehaviour
         }
        
          
+    }
+    IEnumerator Start1Buttons()
+    {
+        yield return new WaitForSeconds(0.75f);
+        button1.SetActive(true);
+    }
+    IEnumerator Star2Buttons()
+    {
+        yield return new WaitForSeconds(1.5f);
+        button2.SetActive(true);
+    }
+    IEnumerator Star3Buttons()
+    {
+        yield return new WaitForSeconds(2.25f);
+        button3.SetActive(true);
     }
     public void UpgradeScore()
     {
