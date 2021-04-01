@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6817933579456391913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31.99, y: 16, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9850188, y: 1, z: 1}
   m_Children:
   - {fileID: 6817933579696031100}
   m_Father: {fileID: 0}
@@ -115,14 +115,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell: {fileID: 0}
-  HitPoints: 120
-  AttackRange: 2
+  HitPoints: 150
+  AttackRange: 1
   AttackFactor: 15
   ArmorPoints: 0
   ignorArmor: 0
   colorUnit: {r: 0, g: 1, b: 0, a: 1}
   actionPoints: 1
-  movementPoints: 3
+  RandomHitPercentUnit: 0
+  HitSpikeParameterUnit: 0
+  HealTempleParameterUnit: 0
+  movementPoints: 4
   nameUnit: WARRIOR
   MovementAnimationSpeed: 20
   PlayerNumber: 0
@@ -212,7 +215,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cdf852709d27980409197d359657a8e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a9b54daf2243ea4c875e56218a7042d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
