@@ -3972,7 +3972,7 @@ PrefabInstance:
     - target: {fileID: 7183688018009137580, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
+      objectReference: {fileID: 21300000, guid: 27bf311e0292f497b9114ce874ed18ef, type: 3}
     - target: {fileID: 7183688018009137584, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9589158
@@ -3983,12 +3983,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018009137587, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruins
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018009137587, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688018009137587, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Temple
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018035079207, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4113,10 +4117,18 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688018281145676, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688018281145683, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688018281145683, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: IsBlocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018281844696, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruins
       value: 1
@@ -4150,8 +4162,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2071666136}
     - target: {fileID: 7183688018362477552, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
-      propertyPath: Spikes
+      propertyPath: Forest
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018362477552, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Spikes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018362477553, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
@@ -4245,18 +4261,30 @@ PrefabInstance:
       propertyPath: Forest
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7183688018523187705, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688018528449988, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
     - target: {fileID: 7183688018530242862, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Ruins
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018530242862, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688018530242862, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Temple
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018530242863, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 27bf311e0292f497b9114ce874ed18ef, type: 3}
+      objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
     - target: {fileID: 7183688018532393428, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4665,6 +4693,14 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: IsBlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019335524806, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688019336741843, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4737,6 +4773,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688019454377722, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: IsBlocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019454377723, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4885,6 +4925,14 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2071666136}
+    - target: {fileID: 7183688019797819113, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Forest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019797819114, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688019817341340, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -6800,6 +6848,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 278789161}
   QuitMenu: {fileID: 933085837}
   SettingsObject: {fileID: 139131873}
+  MusicMenu: {fileID: 0}
 --- !u!1 &1897422816
 GameObject:
   m_ObjectHideFlags: 0
@@ -8894,16 +8943,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b49858b5ad83b47a582348361ea400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 7707565433143005548}
+  nameUnit: {fileID: 0}
   sliderHp: {fileID: 7707565433473363246}
   HP: {fileID: 7707565433450697525}
   sliderArmor: {fileID: 7707565432400401279}
   armor: {fileID: 7707565432993276356}
   events: {fileID: 7707565432774051232}
-  eventUnit: {fileID: 7707565433748025381}
+  eventUnit: {fileID: 0}
   dodge: 5
   damageLava: 7
   heal: 12
+  movmentText: {fileID: 0}
+  rangeText: {fileID: 0}
+  DamageText: {fileID: 0}
   damage: 0
   isMage: 0
 --- !u!224 &7707565432323232620
@@ -10384,11 +10436,18 @@ MonoBehaviour:
   hp: {fileID: 7707565433072945142}
   sliderArmor: {fileID: 7707565433458835620}
   armor: {fileID: 7707565433507499470}
+  speed: 20
   events: {fileID: 7707565432601988274}
-  eventUnit: {fileID: 7707565432075620147}
+  eventUnit: {fileID: 0}
   dodge: 0
   damageLava: 0
   heal: 0
+  movmentText: {fileID: 0}
+  rangeText: {fileID: 0}
+  DamageText: {fileID: 0}
+  isBlinging: 0
+  unitInfo: {fileID: 0}
+  scorePanelControll: {fileID: 0}
 --- !u!95 &7707565433638117385
 Animator:
   serializedVersion: 3
