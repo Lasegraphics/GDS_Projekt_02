@@ -22,6 +22,12 @@ public class UiManager : MonoBehaviour
 
     [SerializeField] Sprite unit;
     [SerializeField] Sprite groundNormal;
+    [SerializeField] Sprite groundForest;
+    [SerializeField] Sprite groundMountains;
+    [SerializeField] Sprite groundWater;
+    [SerializeField] Sprite groundTemple;
+    [SerializeField] Sprite groundRuins;
+    [SerializeField] Sprite groundLava;
 
     [Header("Static")]
     public int currentPlayer = 0;
@@ -112,6 +118,34 @@ public class UiManager : MonoBehaviour
                 var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
                 childImage.sprite = groundNormal;
             }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Forest"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundForest;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundForest;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Mountain"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundMountains;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundMountains;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Water"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundWater;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundWater;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Tample"))
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = groundTemple;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = groundTemple;
+            }
             isDesing = true;
         }
         else
@@ -123,6 +157,34 @@ public class UiManager : MonoBehaviour
                 Sprite.sprite = item.StartSprite;
             }
             foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  ////////// TEREN NORMALNY
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Forest"))  ////////// TEREN NORMALNY
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Mountain"))  ////////// TEREN NORMALNY
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Water"))  ////////// TEREN NORMALNY
+            {
+                var Sprite = item.GetComponent<SpriteRenderer>();
+                Sprite.sprite = item.GetComponent<Cell>().startSprite;
+                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                childImage.sprite = item.GetComponent<Cell>().startSprite;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("G-Tample"))  ////////// TEREN NORMALNY
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
