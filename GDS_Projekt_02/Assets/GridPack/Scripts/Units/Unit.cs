@@ -184,6 +184,10 @@ namespace GridPack.Units
             {
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
+                if (HitPoints <=0)
+                {
+                    OnDestroyed();
+                }
             }
 
             if(Cell != null && Cell.Temple == true)
@@ -191,6 +195,10 @@ namespace GridPack.Units
                 audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
+                if (HitPoints >this.TotalHitPoints )
+                {
+                    HitPoints = this.TotalHitPoints;
+                }
                 Cell.Temple = false; 
             }
 

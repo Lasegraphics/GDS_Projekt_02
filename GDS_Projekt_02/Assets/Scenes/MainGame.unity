@@ -4396,7 +4396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688017898623030, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: 'G-Mountain '
+      value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688017921883364, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
@@ -4432,7 +4432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688017921883368, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: 'G-Mountain '
+      value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688017986900284, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Color.b
@@ -4473,6 +4473,10 @@ PrefabInstance:
     - target: {fileID: 7183688018009137587, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Temple
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018009137591, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-Temple
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018035079200, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Color.b
@@ -4797,6 +4801,10 @@ PrefabInstance:
     - target: {fileID: 7183688018281844700, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Name
       value: NewCell
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018281844700, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-ruin
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018308241088, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
@@ -5545,6 +5553,10 @@ PrefabInstance:
     - target: {fileID: 7183688018731272267, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Forest
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018731272271, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-Forest
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018735181046, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
@@ -6508,7 +6520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019335524809, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: 'G-Mountain '
+      value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019336348111, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
@@ -6808,7 +6820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019454377726, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: 'G-Mountain '
+      value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019473099069, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
@@ -7162,6 +7174,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019734204655, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019797362136, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Color.b
       value: 0.8679245
@@ -7408,7 +7424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019930209441, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: 'G-Mountain '
+      value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019939627266, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
@@ -7452,7 +7468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019952421030, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: 'G-Mountain '
+      value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019964221561, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
@@ -9843,6 +9859,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7707565432753849718}
     - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundLava
+      value: 
+      objectReference: {fileID: -3926303101392960976, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundRuins
+      value: 
+      objectReference: {fileID: 3966698296556355794, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundWater
+      value: 
+      objectReference: {fileID: -2704497868521531669, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
       propertyPath: orangePanel
       value: 
       objectReference: {fileID: 7707565433638117385}
@@ -9851,9 +9879,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 70227141}
     - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundForest
+      value: 
+      objectReference: {fileID: -6552930174734875488, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
       propertyPath: groundNormal
       value: 
       objectReference: {fileID: 21300000, guid: 3a9b54daf2243ea4c875e56218a7042d, type: 3}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundTemple
+      value: 
+      objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 2101705967034177074, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
+      propertyPath: groundMountains
+      value: 
+      objectReference: {fileID: -268128429168348310, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 2101705967034177075, guid: 07b38e0943f550d4e9b5aea1d9788d24, type: 3}
       propertyPath: m_RootOrder
       value: 10
