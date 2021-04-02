@@ -1,13 +1,12 @@
 ﻿using UnityEngine.Audio;
 using System;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioMixer mainMixer;
     [SerializeField] private Sound[] sounds;
-
-
+    [SerializeField] private Slider volumeSlider;
 
     void Awake()
     {
@@ -21,6 +20,7 @@ public class AudioManager : MonoBehaviour
             s.source.outputAudioMixerGroup = s.mixerGroup;
             s.source.loop = s.loop;
         }
+        volumeSlider.value = PlayerPrefs.GetFloat("volumeMain");
     }
 
     private void Start()
@@ -47,5 +47,10 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Stop();
+    }
+    public void SetVolume(float volume)
+    {
+        mainMixer.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("volumeMain", volume);
     }
 }

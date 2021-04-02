@@ -15,8 +15,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
-  m_AudioMixerGroupViews: []
+  m_ExposedParameters:
+  - guid: 8bb47efc904ff8548979c1adae95edef
+    name: Volume
+  m_AudioMixerGroupViews:
+  - guids:
+    - d3605d6a264d5ec42b30c11e41499ebe
+    name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
@@ -61,5 +66,6 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 3e627d50fb13aa046b2ef2262fa404d3
-  m_FloatValues: {}
+  m_FloatValues:
+    8bb47efc904ff8548979c1adae95edef: 0
   m_TransitionOverrides: {}
