@@ -180,7 +180,7 @@ namespace GridPack.Units
             MovementPoints = TotalMovementPoints;
             ActionPoints = TotalActionPoints;
             HitSpikeParameterUnit = 30; 
-            RandomHitPercentUnit = 5; 
+            RandomHitPercentUnit = 2; 
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
