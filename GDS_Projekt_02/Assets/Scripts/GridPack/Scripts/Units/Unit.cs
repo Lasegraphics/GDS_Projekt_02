@@ -179,11 +179,13 @@ namespace GridPack.Units
         {
             MovementPoints = TotalMovementPoints;
             ActionPoints = TotalActionPoints;
-
+            HitSpikeParameterUnit = 30; 
+            RandomHitPercentUnit = 5; 
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + HitSpikeParameterUnit);
                 if (HitPoints <=0)
                 {
                     OnDestroyed();
@@ -200,6 +202,7 @@ namespace GridPack.Units
                     HitPoints = this.TotalHitPoints;
                 }
                 Cell.Temple = false; 
+                Cell.Ruins = true; 
             }
 
 
@@ -517,6 +520,7 @@ namespace GridPack.Units
                 audioManager.Play("Lava");
                 Debug.Log("Zadano Obrazenia");
                 HitPoints -= HitSpikeParameterUnit;
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + HitSpikeParameterUnit);
             }
 
             if(destinationCell.Swamp == true)

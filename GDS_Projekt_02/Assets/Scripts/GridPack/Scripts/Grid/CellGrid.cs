@@ -71,6 +71,7 @@ namespace GridPack.Grid
         public List<Cell> Cells {get; private set;}
         public List<Unit> Units {get; private set;} 
         public bool IsSwitched {get; private set;} 
+        
 
         private void Start()
         {
@@ -230,6 +231,7 @@ namespace GridPack.Grid
             {
                 if(cell.Ruins == true)
                 {
+                   
                    cellTypeRuins.Add(cell);
                 }
             }
