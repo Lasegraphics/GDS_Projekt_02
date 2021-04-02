@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitPoints: 50
   MinAttackRange: 1
-  AttackRange: 7
+  AttackRange: 6
   AttackFactor: 15
   ArmorPoints: 0
   ignorArmor: 0
