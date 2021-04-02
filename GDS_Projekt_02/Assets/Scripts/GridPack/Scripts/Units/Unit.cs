@@ -181,6 +181,7 @@ namespace GridPack.Units
             ActionPoints = TotalActionPoints;
             HitSpikeParameterUnit = 30; 
             RandomHitPercentUnit = 2; 
+            HealTempleParameterUnit = 20; 
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
@@ -194,13 +195,16 @@ namespace GridPack.Units
 
             if(Cell != null && Cell.Temple == true)
             {
+                Debug.Log("Obecne Zdrowie: " + HitPoints);
                 audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
-                if (HitPoints >this.TotalHitPoints )
+               /* if (HitPoints >this.TotalHitPoints )
                 {
                     HitPoints = this.TotalHitPoints;
                 }
+                */
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
                 Cell.Temple = false; 
                 Cell.Ruins = true; 
             }
