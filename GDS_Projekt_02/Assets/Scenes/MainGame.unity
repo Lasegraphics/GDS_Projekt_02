@@ -4334,6 +4334,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688017898623030, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-normal
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688017921883364, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4470,6 +4474,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688018480500490, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G1-Lava
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018485190563, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4662,10 +4670,18 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019045894851, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-normal
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019049434641, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019049434645, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-Mountain
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019058850061, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4722,6 +4738,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019275726678, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-normal
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019300073920, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4746,6 +4766,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019336741847, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-Mountain
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019340173487, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4838,6 +4862,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019576926713, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_TagString
+      value: G-Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019588398940, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
