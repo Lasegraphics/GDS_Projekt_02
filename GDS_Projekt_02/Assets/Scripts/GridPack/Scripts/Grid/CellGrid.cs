@@ -186,7 +186,7 @@ namespace GridPack.Grid
 
         public void EndTurn()
         {
-            
+           
             //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
@@ -233,6 +233,11 @@ namespace GridPack.Grid
                 {
                    
                    cellTypeRuins.Add(cell);
+                }
+                if(cell.Temple == true)
+                {
+                    cell.Temple = false; 
+                    cell.Ruins = true; 
                 }
             }
             Random random = new Random();
