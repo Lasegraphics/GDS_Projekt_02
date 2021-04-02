@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -903,7 +903,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1111,8 +1111,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1135,8 +1135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 0}
-  IsBlocked: 1
-  Mountains: 1
+  IsBlocked: 0
+  Mountains: 0
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -1403,7 +1403,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1776,7 +1776,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2006,7 +2006,7 @@ GameObject:
   - component: {fileID: 7183688018009137586}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-Temple
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2066,8 +2066,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 27bf311e0292f497b9114ce874ed18ef, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2093,9 +2093,9 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
-  Temple: 1
+  Temple: 0
   Ruins: 0
   MovementCost: 1
   panel: {fileID: 0}
@@ -2297,7 +2297,7 @@ GameObject:
   - component: {fileID: 7183688018035079206}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2357,8 +2357,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2384,7 +2384,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -2731,7 +2731,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3022,7 +3022,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3149,7 +3149,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3276,7 +3276,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3567,7 +3567,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3694,7 +3694,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3821,7 +3821,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4030,7 +4030,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4157,7 +4157,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4448,7 +4448,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5242680085273314056, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4596,7 +4596,7 @@ GameObject:
   - component: {fileID: 7183688018234896538}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4656,8 +4656,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4681,9 +4681,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 9}
   IsBlocked: 0
-  Mountains: 1
+  Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -4784,7 +4784,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4993,7 +4993,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5120,7 +5120,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5329,7 +5329,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5395,7 +5395,7 @@ GameObject:
   - component: {fileID: 7183688018281844703}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-ruin
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5455,8 +5455,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5485,7 +5485,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 1
+  Ruins: 0
   MovementCost: 1
   panel: {fileID: 0}
   startSprite: {fileID: 0}
@@ -5583,7 +5583,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6120,7 +6120,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6247,7 +6247,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6559,7 +6559,7 @@ GameObject:
   - component: {fileID: 7183688018362477559}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-Forest
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6619,8 +6619,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6646,7 +6646,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -6911,7 +6911,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7038,7 +7038,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7411,7 +7411,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7538,7 +7538,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5242680085273314056, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7665,7 +7665,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7874,7 +7874,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8083,7 +8083,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8149,7 +8149,7 @@ GameObject:
   - component: {fileID: 7183688018462831487}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8209,8 +8209,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8233,8 +8233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 13, y: 6}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -8337,7 +8337,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8463,8 +8463,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3501845205504601038, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4658977349556611861, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8489,9 +8489,9 @@ MonoBehaviour:
   _offsetCoord: {x: 8, y: 1}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 0
+  Spikes: 1
   Forest: 0
-  Swamp: 1
+  Swamp: 0
   Temple: 0
   Ruins: 0
   MovementCost: 1
@@ -8591,7 +8591,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8821,7 +8821,7 @@ GameObject:
   - component: {fileID: 7183688018502444870}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8881,8 +8881,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8908,7 +8908,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -8948,7 +8948,7 @@ GameObject:
   - component: {fileID: 7183688018506969523}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9008,8 +9008,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9032,8 +9032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 0, y: 4}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -9218,7 +9218,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9284,7 +9284,7 @@ GameObject:
   - component: {fileID: 7183688018523187711}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-Forest
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9344,8 +9344,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9371,7 +9371,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -9411,7 +9411,7 @@ GameObject:
   - component: {fileID: 7183688018528449995}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-ruin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9471,8 +9471,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9501,7 +9501,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 0
+  Ruins: 1
   MovementCost: 1
   panel: {fileID: 0}
   startSprite: {fileID: 0}
@@ -9538,7 +9538,7 @@ GameObject:
   - component: {fileID: 7183688018530242861}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-ruin
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9598,8 +9598,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9625,10 +9625,10 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
-  Ruins: 1
+  Ruins: 0
   MovementCost: 1
   panel: {fileID: 0}
   startSprite: {fileID: 0}
@@ -9665,7 +9665,7 @@ GameObject:
   - component: {fileID: 7183688018532393435}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9725,8 +9725,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9752,7 +9752,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -9853,7 +9853,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9980,7 +9980,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10046,7 +10046,7 @@ GameObject:
   - component: {fileID: 7183688018552187020}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10106,8 +10106,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10130,12 +10130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 9, y: 9}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
-  Temple: 1
+  Temple: 0
   Ruins: 0
   MovementCost: 1
   panel: {fileID: 0}
@@ -10255,7 +10255,7 @@ GameObject:
   - component: {fileID: 7183688018562537046}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-ruin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10315,8 +10315,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10345,7 +10345,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 0
+  Ruins: 1
   MovementCost: 1
   panel: {fileID: 0}
   startSprite: {fileID: 0}
@@ -10525,7 +10525,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10980,7 +10980,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11353,7 +11353,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11419,7 +11419,7 @@ GameObject:
   - component: {fileID: 7183688018637359747}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Temple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11479,8 +11479,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 27bf311e0292f497b9114ce874ed18ef, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11508,7 +11508,7 @@ MonoBehaviour:
   Spikes: 0
   Forest: 0
   Swamp: 0
-  Temple: 0
+  Temple: 1
   Ruins: 0
   MovementCost: 1
   panel: {fileID: 0}
@@ -11689,7 +11689,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11980,7 +11980,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12107,7 +12107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12234,7 +12234,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12441,9 +12441,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12652,7 +12652,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12859,9 +12859,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12988,7 +12988,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13115,7 +13115,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13406,7 +13406,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13779,7 +13779,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13906,7 +13906,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14054,7 +14054,7 @@ GameObject:
   - component: {fileID: 7183688018813696704}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14114,8 +14114,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14141,7 +14141,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -14406,7 +14406,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -8136719290385018730, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14554,7 +14554,7 @@ GameObject:
   - component: {fileID: 7183688018840622917}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G1-Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14614,8 +14614,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -8162138329647858801, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14640,7 +14640,7 @@ MonoBehaviour:
   _offsetCoord: {x: 6, y: 7}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 0
+  Spikes: 1
   Forest: 0
   Swamp: 0
   Temple: 0
@@ -14988,7 +14988,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15054,7 +15054,7 @@ GameObject:
   - component: {fileID: 7183688018877598881}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15114,8 +15114,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15138,8 +15138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 14, y: 5}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -15242,7 +15242,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3501845205504601038, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15308,7 +15308,7 @@ GameObject:
   - component: {fileID: 7183688018919003821}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-Forest
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15368,8 +15368,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15395,7 +15395,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -15496,7 +15496,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15644,7 +15644,7 @@ GameObject:
   - component: {fileID: 7183688018937670113}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G1-Lava
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15704,8 +15704,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8162138329647858801, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15730,7 +15730,7 @@ MonoBehaviour:
   _offsetCoord: {x: 10, y: 2}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 1
+  Spikes: 0
   Forest: 0
   Swamp: 0
   Temple: 0
@@ -15832,7 +15832,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16041,7 +16041,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16250,7 +16250,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16377,7 +16377,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16853,7 +16853,7 @@ GameObject:
   - component: {fileID: 7183688018999307534}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-ruin
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16913,8 +16913,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16943,7 +16943,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 1
+  Ruins: 0
   MovementCost: 1
   panel: {fileID: 0}
   startSprite: {fileID: 0}
@@ -17205,7 +17205,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17332,7 +17332,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17480,7 +17480,7 @@ GameObject:
   - component: {fileID: 7183688019016075723}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17540,8 +17540,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17567,7 +17567,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -17750,7 +17750,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17816,7 +17816,7 @@ GameObject:
   - component: {fileID: 7183688019033080179}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17876,8 +17876,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -926650221285506613, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17904,7 +17904,7 @@ MonoBehaviour:
   Mountains: 0
   Spikes: 0
   Forest: 0
-  Swamp: 0
+  Swamp: 1
   Temple: 0
   Ruins: 0
   MovementCost: 1
@@ -18085,8 +18085,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18112,7 +18112,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -18294,8 +18294,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18318,8 +18318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 1}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -18586,7 +18586,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18959,7 +18959,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19250,7 +19250,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19541,7 +19541,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19668,7 +19668,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19795,7 +19795,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20004,7 +20004,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5242680085273314056, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20295,7 +20295,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20504,7 +20504,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20631,7 +20631,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -926650221285506613, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20922,7 +20922,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21213,7 +21213,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21279,7 +21279,7 @@ GameObject:
   - component: {fileID: 7183688019260197351}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G1-Lava
+  m_TagString: G-Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21339,8 +21339,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8162138329647858801, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -5242680085273314056, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21365,9 +21365,9 @@ MonoBehaviour:
   _offsetCoord: {x: 4, y: 7}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 1
+  Spikes: 0
   Forest: 0
-  Swamp: 0
+  Swamp: 1
   Temple: 0
   Ruins: 0
   MovementCost: 1
@@ -21712,8 +21712,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21739,7 +21739,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -21861,7 +21861,7 @@ GameObject:
   - component: {fileID: 7183688019300073927}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21921,8 +21921,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21948,7 +21948,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -22070,7 +22070,7 @@ GameObject:
   - component: {fileID: 7183688019323184569}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22130,8 +22130,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -6767278594400073093, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22154,8 +22154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 1, y: 4}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -22197,7 +22197,7 @@ GameObject:
   - component: {fileID: 7183688019331316050}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22257,8 +22257,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22284,7 +22284,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -22385,7 +22385,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22594,7 +22594,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -6767278594400073093, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22802,8 +22802,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22826,8 +22826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 4, y: 5}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -22930,7 +22930,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23057,7 +23057,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23184,7 +23184,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23311,7 +23311,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23438,7 +23438,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23565,7 +23565,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23877,7 +23877,7 @@ GameObject:
   - component: {fileID: 7183688019380065841}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23937,8 +23937,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23964,7 +23964,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -24065,7 +24065,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24356,7 +24356,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24483,7 +24483,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24938,7 +24938,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25065,7 +25065,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25192,7 +25192,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25319,7 +25319,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25446,7 +25446,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -6767278594400073093, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25655,7 +25655,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25946,7 +25946,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26176,7 +26176,7 @@ GameObject:
   - component: {fileID: 7183688019513679945}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G1-Lava
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26236,8 +26236,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4658977349556611861, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26262,7 +26262,7 @@ MonoBehaviour:
   _offsetCoord: {x: 10, y: 1}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 1
+  Spikes: 0
   Forest: 0
   Swamp: 0
   Temple: 0
@@ -26364,7 +26364,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26491,7 +26491,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26557,7 +26557,7 @@ GameObject:
   - component: {fileID: 7183688019546501967}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26617,8 +26617,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26644,7 +26644,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 0
+  Forest: 1
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -26684,7 +26684,7 @@ GameObject:
   - component: {fileID: 7183688019561309674}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G1-Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26744,8 +26744,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4658977349556611861, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26953,8 +26953,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -3501845205504601038, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27163,7 +27163,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27290,7 +27290,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27581,7 +27581,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27729,7 +27729,7 @@ GameObject:
   - component: {fileID: 7183688019652389767}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27789,8 +27789,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27813,8 +27813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 10, y: 4}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -27856,7 +27856,7 @@ GameObject:
   - component: {fileID: 7183688019655442093}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27916,8 +27916,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27940,8 +27940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetCoord: {x: 5, y: 0}
-  IsBlocked: 0
-  Mountains: 0
+  IsBlocked: 1
+  Mountains: 1
   Spikes: 0
   Forest: 0
   Swamp: 0
@@ -28208,7 +28208,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -28417,7 +28417,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -28544,7 +28544,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -28671,7 +28671,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -28880,7 +28880,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29007,7 +29007,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -926650221285506613, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29216,7 +29216,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29282,7 +29282,7 @@ GameObject:
   - component: {fileID: 7183688019797819112}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-Forest
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29342,8 +29342,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29369,7 +29369,7 @@ MonoBehaviour:
   IsBlocked: 0
   Mountains: 0
   Spikes: 0
-  Forest: 1
+  Forest: 0
   Swamp: 0
   Temple: 0
   Ruins: 0
@@ -29491,7 +29491,7 @@ GameObject:
   - component: {fileID: 7183688019817341347}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-Water
+  m_TagString: G1-Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29551,8 +29551,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5242680085273314056, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 7792727292533711903, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29577,9 +29577,9 @@ MonoBehaviour:
   _offsetCoord: {x: 6, y: 8}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 0
+  Spikes: 1
   Forest: 0
-  Swamp: 1
+  Swamp: 0
   Temple: 0
   Ruins: 0
   MovementCost: 1
@@ -29843,7 +29843,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -30155,7 +30155,7 @@ GameObject:
   - component: {fileID: 7183688019874083129}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G-normal
+  m_TagString: G-ruin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30215,8 +30215,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -30245,7 +30245,7 @@ MonoBehaviour:
   Forest: 0
   Swamp: 0
   Temple: 0
-  Ruins: 0
+  Ruins: 1
   MovementCost: 1
   panel: {fileID: 0}
   startSprite: {fileID: 0}
@@ -30343,7 +30343,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31009,7 +31009,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6767278594400073093, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31218,7 +31218,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31448,7 +31448,7 @@ GameObject:
   - component: {fileID: 7183688019971876710}
   m_Layer: 0
   m_Name: NewCell
-  m_TagString: G1-Lava
+  m_TagString: G-normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31460,14 +31460,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7183688019971876715}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.592, y: 4.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.005459162, w: 0.9999851}
+  m_LocalPosition: {x: 36.592, y: 4.6000004, z: 0}
   m_LocalScale: {x: 0.9850188, y: 1, z: 1}
   m_Children:
   - {fileID: 7183688019846425686}
   m_Father: {fileID: 7183688019906953784}
   m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.626}
 --- !u!212 &7183688019971876704
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31508,8 +31508,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8162138329647858801, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+  m_Color: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31534,7 +31534,7 @@ MonoBehaviour:
   _offsetCoord: {x: 4, y: 8}
   IsBlocked: 0
   Mountains: 0
-  Spikes: 1
+  Spikes: 0
   Forest: 0
   Swamp: 0
   Temple: 0
