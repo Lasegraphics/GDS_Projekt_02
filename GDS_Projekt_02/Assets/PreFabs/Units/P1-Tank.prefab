@@ -200,10 +200,10 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 20
-  ArmorPoints: 150
+  ArmorPoints: 95
   ignorArmor: 0
   colorUnit: {r: 1, g: 0, b: 0, a: 1}
-  actionPoints: 10
+  actionPoints: 1
   RandomHitPercentUnit: 0
   HitSpikeParameterUnit: 20
   HealTempleParameterUnit: 20
