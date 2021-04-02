@@ -14,6 +14,8 @@ public class ScrollCamera : MonoBehaviour
     [SerializeField] float minimumYValue;
     [SerializeField] float maximumYValue;
 
+
+    [SerializeField] AudioManager audioManager;
     Camera posCamera;
 
 
@@ -21,9 +23,24 @@ public class ScrollCamera : MonoBehaviour
     {
         posCamera = GetComponent<Camera>();
         posCamera.orthographicSize = startPosCam;
+        StartCoroutine(FirstMusic());
+    }
+    IEnumerator FirstMusic()
+    {
+        audioManager.Play("MainMusic1");
+        yield return new WaitForSeconds(120);
+        audioManager.Play("MainMusic2");
+        StartCoroutine(SecondMusic());
+    }
+    IEnumerator SecondMusic()
+    {
+        yield return new WaitForSeconds(240);
+        audioManager.Play("MainMusic3");
+        StartCoroutine(FirstMusic());
     }
     void Update()
     {
+   
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {

@@ -7,17 +7,20 @@ public class MainMenu : MonoBehaviour
   public void PlayThat()
     {
         
-         SceneManager.LoadScene(0);
+         SceneManager.LoadScene(1);
+    }
+    public void GoToCreditsMusic()
+    {
+        SceneManager.LoadScene("CreditsMusic");
+    }
+    public void GoToAreYouSure()
+    {
+         SceneManager.LoadScene("AreYouSure");
     }
 
-    public void Quit()
+    public void GoToMainMenu()
     {
-         SceneManager.LoadScene(2);
-    }
-
-    public void Back()
-    {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Menu");
     }
 
     public void Yes()
@@ -25,38 +28,23 @@ public class MainMenu : MonoBehaviour
         Application.Quit(); 
     }
 
-    public void Credits()
+    public void GoToCredits()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Credits");
     }
 
-    public void Settings()
+    public void GoToSettings()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Settigns");
     }
 
-    public void ToMusic()
+    public void GoToMusic()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("CreditsMusic");
     }
 
     public void SetFullScreen(bool IsSet)
     {
         Screen.fullScreen = IsSet; 
     }
-
-    public void SetDesignerMode(bool IsEnable)
-    {
-        
-    }
-
-    
-
-   /* private IEnumerator SceneLoading(int sceneNumber)
-    {
-        Debug.Log("Działa"); 
-        yield return new WaitForSeconds(delayTime);
-        SceneManager.LoadScene(sceneNumber);
-    }
-    */
 }

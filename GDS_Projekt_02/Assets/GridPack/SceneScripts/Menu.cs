@@ -22,6 +22,7 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
+        /*
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             if(IsSettings == false)
@@ -42,22 +43,12 @@ public class Menu : MonoBehaviour
             }
                 
         }
+        */
     }
 
-    public void PauseGame()
-    {
-        pauseMenu.SetActive(true);   
-        Time.timeScale = 0f; 
-        IsPaused = true; 
-         IsSettings = false;
-    }
+    
 
-    public void ResumeGame()
-    {
-        pauseMenu.SetActive(false); 
-        Time.timeScale = 1f; 
-        IsPaused = false; 
-    }
+   
     public void PlayAgain()
     {
         SceneManager.LoadScene("MainGame");
@@ -91,7 +82,7 @@ public class Menu : MonoBehaviour
 
     public void ToMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Menu");
     }
 
     public void Quit()
