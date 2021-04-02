@@ -4394,6 +4394,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688018234896532, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018234896539, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4482,6 +4486,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688018502444864, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018502444871, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4510,6 +4518,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688018532393429, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018534101896, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4522,6 +4534,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688018552187022, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018562537047, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4750,6 +4766,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019331316044, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019331316051, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
@@ -4882,6 +4902,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019652389761, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019655442094, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
