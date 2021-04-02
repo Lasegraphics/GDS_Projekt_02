@@ -9,30 +9,26 @@ using TMPro;
 public class ScorePanelControll : MonoBehaviour
 {
     [Header("Static")]
-    public Text nameUnit;
+    [SerializeField] private Text nameUnit;
    
     [Header("Sliders")]
-    public Slider sliderHp;
-    public Text HP;
-    public Slider sliderArmor;
-    public Text armor;
+    [SerializeField] private Slider sliderHp;
+    [SerializeField] private Text HP;
+    [SerializeField] private Slider sliderArmor;
+    [SerializeField] private Text armor;
 
     [Header("Events")]
-    public Text events;
-    public TextMeshProUGUI eventUnit;
-    public int dodge;
-    public int damageLava;
-    public int heal;
-    public TextMeshProUGUI movmentText;
-    public TextMeshProUGUI rangeText;
-    public TextMeshProUGUI DamageText;
+    [SerializeField] private Text events;
+    [SerializeField] private TextMeshProUGUI eventUnit;
+    [SerializeField] private int dodge;
+    [SerializeField] private int damageLava;
+    [SerializeField] private int heal;
+    [SerializeField] private TextMeshProUGUI movmentText;
+    [SerializeField] private TextMeshProUGUI rangeText;
+    [SerializeField] private TextMeshProUGUI DamageText;
 
     [HideInInspector] public int damage;
     [HideInInspector] public bool isMage;
-
-    private void Awake()
-    {
-    }
 
     public void TakeUnit(GameObject unit)
     {

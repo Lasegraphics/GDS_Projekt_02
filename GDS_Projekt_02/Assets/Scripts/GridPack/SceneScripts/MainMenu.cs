@@ -12,18 +12,14 @@ public class MainMenu : MonoBehaviour
     public void GoToCreditsMusic()
     {
         SceneManager.LoadScene("CreditsMusic");
-    }
-    public void GoToAreYouSure()
-    {
-         SceneManager.LoadScene("AreYouSure");
-    }
+    } 
 
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Menu");
     }
 
-    public void Yes()
+    public void QuitGame()
     {
         Application.Quit(); 
     }
@@ -31,11 +27,6 @@ public class MainMenu : MonoBehaviour
     public void GoToCredits()
     {
         SceneManager.LoadScene("Credits");
-    }
-
-    public void GoToSettings()
-    {
-        SceneManager.LoadScene("Settigns");
     }
 
     public void GoToMusic()

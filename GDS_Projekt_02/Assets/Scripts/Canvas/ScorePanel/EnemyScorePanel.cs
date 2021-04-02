@@ -6,38 +6,31 @@ using GridPack.Units;
 using TMPro;
 public class EnemyScorePanel : MonoBehaviour
 {
-    
-   public Animator animator;
+    [Header("Animator i nazwa")]
     [SerializeField] Text nameEnemy;
+    [SerializeField] private Animator animator;
+    [SerializeField] public ScorePanelControll scorePanelControll;
+
 
     [Header("Sliders")]
-    [SerializeField] Slider sliderHp;
-    [SerializeField] Text hp;
-    //[SerializeField] Image hpBack;
-    [SerializeField] Slider sliderArmor;
-    [SerializeField] Text armor;
-    [SerializeField] int speed=20;
+    [SerializeField] private Slider sliderHp;
+    [SerializeField] private Text hp;
+    [SerializeField] private Slider sliderArmor;
+    [SerializeField] private Text armor;
+    [SerializeField] private int speed=20;
 
     [Header("Events")]
-    public Text events;
-    public TextMeshProUGUI eventUnit;
-    public int dodge;
-    public int damageLava;
-    public int heal;
-    public TextMeshProUGUI movmentText;
-    public TextMeshProUGUI rangeText;
-    public TextMeshProUGUI DamageText;
+    [SerializeField] private Text events;
+    [SerializeField] private TextMeshProUGUI eventUnit;
+    [SerializeField] private int dodge;
+    [SerializeField] private int damageLava;
+    [SerializeField] private int heal;
+    [SerializeField] private TextMeshProUGUI movmentText;
+    [SerializeField] private TextMeshProUGUI rangeText;
+    [SerializeField] private TextMeshProUGUI DamageText;
 
-    [HideInInspector]public bool isBlinging;
-
-   [HideInInspector]public Unit unitInfo;
-    [HideInInspector] public ScorePanelControll scorePanelControll;
-
-    private void Awake()
-    {
-        scorePanelControll = FindObjectOfType<ScorePanelControll>();
-    }
-
+    [HideInInspector] public bool isBlinging;
+    [HideInInspector] public Unit unitInfo;
 
     public void UpgradeParameters(GameObject enemy)
     {

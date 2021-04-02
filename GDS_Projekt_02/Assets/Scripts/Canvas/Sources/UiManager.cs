@@ -13,38 +13,31 @@ using GridPack.Units;
 public class UiManager : MonoBehaviour
 {
     [Header("Animations")]
-    [SerializeField] Text roundToEnd;
-    [SerializeField] Animator orangePanel;
-    [SerializeField] Animator bluePanel;
-    [SerializeField] Animator endRoundText;
+    [SerializeField] private Text roundToEnd;
+    [SerializeField] private Animator orangePanel;
+    [SerializeField] private Animator bluePanel;
+    [SerializeField] private Animator endRoundText;
 
     [Header("Desinger button")]
-
-    [SerializeField] Sprite unit;
-    [SerializeField] Sprite groundNormal;
-    [SerializeField] Sprite groundForest;
-    [SerializeField] Sprite groundMountains;
-    [SerializeField] Sprite groundWater;
-    [SerializeField] Sprite groundTemple;
-    [SerializeField] Sprite groundRuins;
-    [SerializeField] Sprite groundLava;
+    [SerializeField] private Sprite unit;
+    [SerializeField] private Sprite groundNormal;
+    [SerializeField] private Sprite groundForest;
+    [SerializeField] private Sprite groundMountains;
+    [SerializeField] private Sprite groundWater;
+    [SerializeField] private Sprite groundTemple;
+    [SerializeField] private Sprite groundRuins;
+    [SerializeField] private Sprite groundLava;
 
     [Header("Static")]
-    public int currentPlayer = 0;
+    [SerializeField] public int currentPlayer = 0;
+    [SerializeField] public bool isDesing;
 
     [HideInInspector] public bool isStart = true;
-    public bool isDesing;
-
     private void Start()
     {
         endRoundText.SetBool("Out", true);
         CloseEnemyScorePanel();
-        CloseScorePanel();
-       // var oldBluePanelPos = bluePanel.GetComponent<RectTransform>().anchoredPosition;
-        //var oldOrangePanel = orangePanel.GetComponent<RectTransform>().anchoredPosition;
-
-       // orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
-        //bluePanel.GetComponent<RectTransform>().anchoredPosition = oldOrangePanel;
+        CloseScorePanel();   
     }
     private void Update()
     {
@@ -82,7 +75,6 @@ public class UiManager : MonoBehaviour
         endRoundText.SetBool("Out", true);
 
     }
-
     public void ActiveEnemyScorePanel()
     {
         bluePanel.SetBool("Out", false);

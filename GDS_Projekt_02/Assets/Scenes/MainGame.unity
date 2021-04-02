@@ -1765,6 +1765,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 502742931}
     - target: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 2136098944}
+    - target: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
       propertyPath: blueSlider
       value: 
       objectReference: {fileID: 502742933}
@@ -1826,6 +1830,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
+--- !u!114 &703077082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6763049295329303502, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
+  m_PrefabInstance: {fileID: 703077081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874079889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7625809d7aa9594892fba9b677dda15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &703077083 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6763049295329303500, guid: 4d2affdccd510da42963285eb0c01a5a, type: 3}
+  m_PrefabInstance: {fileID: 703077081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874079889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef408d8be34e4cfebeab8e022dfa948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732428327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6058,9 +6084,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
+      propertyPath: cellGrid
+      value: 
+      objectReference: {fileID: 1442885606}
+    - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 2136098944}
+    - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
+      propertyPath: turnChanger
+      value: 
+      objectReference: {fileID: 703077083}
+    - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: buttonStartGame
       value: 
       objectReference: {fileID: 1615181140}
+    - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
+      propertyPath: scoreController
+      value: 
+      objectReference: {fileID: 703077082}
     - target: {fileID: 2226668463685938909, guid: c7fff30427ce10e408a7d0b719b3d50d, type: 3}
       propertyPath: panels.Array.data[0]
       value: 
@@ -8554,9 +8596,9 @@ MonoBehaviour:
   armor: {fileID: 7707565432993276356}
   events: {fileID: 7707565432774051232}
   eventUnit: {fileID: 7707565433748025379}
-  dodge: 5
-  damageLava: 7
-  heal: 12
+  dodge: 20
+  damageLava: 20
+  heal: 20
   movmentText: {fileID: 1538406596}
   rangeText: {fileID: 510120669}
   DamageText: {fileID: 1012202900}
@@ -10076,8 +10118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d589977c8bc7a1743ac4385251af8b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 7707565432753849718}
   nameEnemy: {fileID: 7707565432212145248}
+  animator: {fileID: 7707565432753849718}
+  scorePanelControll: {fileID: 7707565432323232609}
   sliderHp: {fileID: 7707565432312461912}
   hp: {fileID: 7707565433072945142}
   sliderArmor: {fileID: 7707565433458835620}
@@ -10085,15 +10128,14 @@ MonoBehaviour:
   speed: 20
   events: {fileID: 7707565432601988274}
   eventUnit: {fileID: 7707565432075620147}
-  dodge: 0
-  damageLava: 0
-  heal: 0
+  dodge: 20
+  damageLava: 20
+  heal: 20
   movmentText: {fileID: 1206995071}
   rangeText: {fileID: 1267629625}
   DamageText: {fileID: 1182716858}
   isBlinging: 0
   unitInfo: {fileID: 0}
-  scorePanelControll: {fileID: 0}
 --- !u!95 &7707565433638117385
 Animator:
   serializedVersion: 3

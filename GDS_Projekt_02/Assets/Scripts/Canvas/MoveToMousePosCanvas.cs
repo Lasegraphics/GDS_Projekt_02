@@ -6,10 +6,10 @@ using TMPro;
 
 public class MoveToMousePosCanvas : MonoBehaviour
 {
-   public Canvas myCanvas;
-    public int changeX;
-    public TextMeshProUGUI text;
-    public int dodge = 0;
+   [SerializeField] private Canvas myCanvas;
+   [SerializeField] private int changeX;
+   [SerializeField] private TextMeshProUGUI text;
+   [SerializeField] private int dodge = 0;
 
    public void UpdatePos(int area )
     {
@@ -39,8 +39,6 @@ public class MoveToMousePosCanvas : MonoBehaviour
             default:
                 break;
         }
-
-
         Vector2 pos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
         transform.position = myCanvas.transform.TransformPoint(pos.x+ changeX, pos.y, 0);

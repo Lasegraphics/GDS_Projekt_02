@@ -8,31 +8,28 @@ using GridPack.SceneScripts;
 public class ScoreController : MonoBehaviour
 {
     [Header("Blue Team")]
-    public Slider blueSlider;
-    public Text blueText;
-    public int scoreBlueTeam;
+    [SerializeField] private Slider blueSlider;
+    [SerializeField] private Text blueText;
+    [SerializeField] private int scoreBlueTeam;
     
     [Header("Red Team")]
-    public Slider redSlider;
-    public Text redText;
-    public int scoreRedTeam;
+    [SerializeField] private Slider redSlider;
+    [SerializeField] private Text redText;
+    [SerializeField] private int scoreRedTeam;
 
     [Header("Parameters")]
-    public int speed;
-    UiManager uiManager;
+    [SerializeField] private int speed;
+    [SerializeField] private UiManager uiManager;
 
     [Header("Victory Screens")]
-    public Animator blueWin;
-    public Animator orangeWin;
-    public GameObject button1;
-    public GameObject button2;
-    public GameObject button3;
-    public Canvas[] canvasToOff;
+    [SerializeField] private Animator blueWin;
+    [SerializeField] private Animator orangeWin;
+    [SerializeField] private GameObject button1;
+    [SerializeField] private GameObject button2;
+    [SerializeField] private GameObject button3;
+    [SerializeField] private Canvas[] canvasToOff;
 
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UiManager>();
-    }
+   
     public void StartGame()
     {
         foreach (var item in FindObjectsOfType<Unit>())

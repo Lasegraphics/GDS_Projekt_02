@@ -7,26 +7,19 @@ using GridPack.SceneScripts;
 
 public class StartGameController : MonoBehaviour
 {
+    [Header("Panels to be closed")]
+    [SerializeField] private GameObject[] panels;
+    [SerializeField] public GameObject buttonStartGame;
+    [SerializeField] public int currentPlayer; 
 
-    [SerializeField] GameObject[] panels;
-    public GameObject buttonStartGame;
-    public int currentPlayer;
-    bool firstRound = true;
-    int tourCurrent = 0;
+    [Header("Other game soucres")]
+    [SerializeField] private UiManager uiManager;
+    [SerializeField] private CellGrid cellGrid;
+    [SerializeField] private TurnChanger turnChanger;
+    [SerializeField] private ScoreController scoreController;
 
-    UiManager uiManager;
-    CellGrid cellGrid;
-    TurnChanger turnChanger;
-    ScoreController scoreController;
-
-
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UiManager>();
-        cellGrid = FindObjectOfType<CellGrid>();
-        turnChanger = FindObjectOfType<TurnChanger>();
-        scoreController = FindObjectOfType<ScoreController>();
-    }
+    [HideInInspector] private bool firstRound = true;
+    [HideInInspector] public int currentTurn = 0;
     public void ChangeTurn()
     {
 
@@ -41,8 +34,8 @@ public class StartGameController : MonoBehaviour
         }
         else
         {
-            tourCurrent++;
-            if (tourCurrent ==2)
+            currentTurn++;
+            if (currentTurn ==2)
             {
                 if (currentPlayer == 0)
                 {
@@ -56,7 +49,7 @@ public class StartGameController : MonoBehaviour
                     panels[1].GetComponent<SpriteRenderer>().color = new Color32(150, 150, 150, 255);
                     currentPlayer = 0;
                 }
-                tourCurrent = 0;
+                currentTurn = 0;
             }
         }
     }
@@ -70,9 +63,6 @@ public class StartGameController : MonoBehaviour
         }
         cellGrid.Initialize();
         cellGrid.StartGame();
-        scoreController.StartGame();
-       //scrollCamera.MoveCameraToNormalPos();
-     //   fieldParameters.StartGame();
+        scoreController.StartGame(); 
     }
-
 }
