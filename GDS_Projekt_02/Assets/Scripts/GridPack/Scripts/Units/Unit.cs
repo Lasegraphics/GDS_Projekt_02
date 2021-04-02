@@ -18,7 +18,7 @@ namespace GridPack.Units
    [ExecuteInEditMode]
     public abstract class Unit : MonoBehaviour
     {
-        Dictionary<Cell, List<Cell>> catchedPaths = null;  
+        protected Dictionary<Cell, List<Cell>> catchedPaths = null;  
 
         //UnitClicked jest wywoływane w momencie naciśnięcia na jednostkę. 
         public event EventHandler UnitClicked; 
@@ -199,11 +199,22 @@ namespace GridPack.Units
                 audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
-               /* if (HitPoints >this.TotalHitPoints )
+                if(HitPoints > 75 && gameObject.GetComponent<Rogue>() != null)
                 {
-                    HitPoints = this.TotalHitPoints;
+                    HitPoints = 75; 
                 }
-                */
+                if(HitPoints > 50 && gameObject.GetComponent<DistanceEntity>() != null || HitPoints > 50 && gameObject.GetComponent<Wizard>() != null)
+                {
+                    HitPoints = 50; 
+                }
+                if(HitPoints > 90 && gameObject.GetComponent<ArmoredEntity>() != null)
+                {
+                    HitPoints = 90; 
+                }
+                if(HitPoints > 120 && gameObject.GetComponent<Entity>() != null)
+                {
+                    HitPoints = 120; 
+                }
                 Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
                 Cell.Temple = false; 
                 Cell.Ruins = true; 
