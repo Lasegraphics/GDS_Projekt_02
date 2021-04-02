@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioMixer mainMixer;
-    public Sound[] sounds;
+    [SerializeField] private AudioMixer mainMixer;
+    [SerializeField] private Sound[] sounds;
 
 
 
     void Awake()
     {
- 
-
         foreach (var s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();

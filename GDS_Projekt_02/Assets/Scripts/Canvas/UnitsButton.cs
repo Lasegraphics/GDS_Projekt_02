@@ -5,28 +5,21 @@ using GridPack.Units;
 
 public class UnitsButton : MonoBehaviour
 {
-   public GameObject unitPreFab;
-    public int player;
-    UnitsButton[] buttons;
-    StartGameController startGameController;
+    [SerializeField] private GameObject unitPreFab;
+    [SerializeField] private int player;
+    [SerializeField] private UnitsButton[] buttons;
+    [SerializeField] private StartGameController startGameController;
 
-    private void Awake()
-    {
-        startGameController = FindObjectOfType<StartGameController>();
-        buttons = FindObjectsOfType<UnitsButton>();
-    }
     public void ChangeColorImage()
     {
-       
-            if (startGameController.currentPlayer == player)
-            {
-                GetComponent<SpriteRenderer>().color = new Color32(150, 150, 150, 255);
-            }
-            else
-            {
-               GetComponent<SpriteRenderer>().color = new Color32(65, 65, 65, 255);
-            }
-        
+        if (startGameController.currentPlayer == player)
+        {
+            GetComponent<SpriteRenderer>().color = new Color32(150, 150, 150, 255);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = new Color32(65, 65, 65, 255);
+        }
     }
     private void OnMouseDown()
     {
@@ -49,6 +42,6 @@ public class UnitsButton : MonoBehaviour
                 }
             }
         }
-       
+
     }
 }

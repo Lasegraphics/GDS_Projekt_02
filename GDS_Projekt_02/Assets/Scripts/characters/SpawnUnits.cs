@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnUnits : MonoBehaviour
-{
+{   
+    [SerializeField] public int player;
+    [SerializeField] private GameObject parentUnits;
+    [SerializeField] private UnitsButton[] unitsButtons;
+    [SerializeField] private StartGameController startGameController;
 
-    public GameObject unit;
-    public GameObject parentUnits;
-    UnitsButton[] unitsButtons;
-    public int player;
-
-    StartGameController startGameController;
-    private void Awake()
-    {
-        startGameController = FindObjectOfType<StartGameController>();
-        unitsButtons = FindObjectsOfType<UnitsButton>();
-    }
+    [HideInInspector] public GameObject unit;   
     private void OnMouseDown()
     {
         if (gameObject.tag !="Unit")

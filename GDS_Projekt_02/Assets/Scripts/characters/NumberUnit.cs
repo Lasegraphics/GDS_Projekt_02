@@ -10,11 +10,11 @@ using UnityEngine.UI;
 
 public class NumberUnit : MonoBehaviour
 {
-    UiManager uiManager;
-    ScorePanelControll scorePanelControll;
-    CellGrid cellGrid;
-    EnemyScorePanel enemyScorePanel;
-   private  AudioManager audioManager;
+   [HideInInspector] private UiManager uiManager;
+   [HideInInspector] private ScorePanelControll scorePanelControll;
+   [HideInInspector] private CellGrid cellGrid;
+   [HideInInspector] private EnemyScorePanel enemyScorePanel;
+   [HideInInspector] private AudioManager audioManager;
     public bool isSelected = false;
 
     int playerNumber;

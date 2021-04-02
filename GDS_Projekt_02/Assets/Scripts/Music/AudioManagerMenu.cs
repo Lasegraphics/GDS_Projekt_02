@@ -4,35 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class AudioManagerMenu : MonoBehaviour
 {
-
-	AudioSource audio;
-
-	public static AudioManagerMenu Instance = null;
-    private void OnLevelWasLoaded(int level)
-    {
-
+	[HideInInspector] private AudioSource audioMusic;
+	private void OnLevelWasLoaded(int level)
+	{
 		if (SceneManager.GetActiveScene().name == "MainGame")
 		{
 			Destroy(gameObject);
 		}
 	}
-    private void Awake()
+	private void Awake()
 	{
 		DontDestroyOnLoad(gameObject);
-
-
 	}
-    private void Start()
-    {
-		 audio = GetComponent<AudioSource>();
+	private void Start()
+	{
+		audioMusic = GetComponent<AudioSource>();
 		PlayMenuMusic();
-
 	}
-    public void PlayMenuMusic()
-    {
-		audio.Play();
-
+	public void PlayMenuMusic()
+	{
+		audioMusic.Play();
 	}
-
 }
 
