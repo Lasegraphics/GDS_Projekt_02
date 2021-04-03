@@ -14,8 +14,6 @@ namespace GridPack.Cells
         //To rozróznienie jest wymagane do własciwego przekonwertowania koordynatów cuba na przesunięcie i odwrotnie
         [HideInInspector]
         public HexGridType HexGridType;
-
-
         //Konwertuje przesunięte wspołrzędne na współrzędne cuba 
         // System ten uławtia obliczenia współrzędnych na siatkach heksadecymalnych 
         protected Vector3 CubeCoord
@@ -26,43 +24,41 @@ namespace GridPack.Cells
                 switch (HexGridType)
                 {
                     case HexGridType.odd_q:
-                        {
-                            ret.x = OffsetCoord.x;
-                            ret.z = OffsetCoord.y - (OffsetCoord.x + (Mathf.Abs(OffsetCoord.x) % 2)) / 2;
-                            ret.y = -ret.x - ret.z;
-                            break;
-                        }
+                    {
+                        ret.x = OffsetCoord.x;
+                        ret.z = OffsetCoord.y - (OffsetCoord.x + (Mathf.Abs(OffsetCoord.x) % 2)) / 2;
+                        ret.y = -ret.x - ret.z;
+                        break;
+                    }
                     case HexGridType.even_q:
-                        {
-                            ret.x = OffsetCoord.x;
-                            ret.z = OffsetCoord.y - (OffsetCoord.x - (Mathf.Abs(OffsetCoord.x) % 2)) / 2;
-                            ret.y = -ret.x - ret.z;
-                            break;
-                        }
+                    {
+                        ret.x = OffsetCoord.x;
+                        ret.z = OffsetCoord.y - (OffsetCoord.x - (Mathf.Abs(OffsetCoord.x) % 2)) / 2;
+                        ret.y = -ret.x - ret.z;
+                        break;
+                    }
                 }
                 return ret;
             }
         }
-
         //Konwertuje spowrotem do 2D 
         protected Vector2 CubeToOffsetCoords(Vector3 cubeCoords)
         {
             Vector2 ret = new Vector2();
-
             switch (HexGridType)
             {
                 case HexGridType.odd_q:
-                    {
-                        ret.x = cubeCoords.x;
-                        ret.y = cubeCoords.z + (cubeCoords.x + (Mathf.Abs(cubeCoords.x) % 2)) / 2;
-                        break;
-                    }
+                {
+                    ret.x = cubeCoords.x;
+                    ret.y = cubeCoords.z + (cubeCoords.x + (Mathf.Abs(cubeCoords.x) % 2)) / 2;
+                    break;
+                }
                 case HexGridType.even_q:
-                    {
-                        ret.x = cubeCoords.x;
-                        ret.y = cubeCoords.z + (cubeCoords.x - (Mathf.Abs(cubeCoords.x) % 2)) / 2;
-                        break;
-                    }
+                {
+                    ret.x = cubeCoords.x;
+                    ret.y = cubeCoords.z + (cubeCoords.x - (Mathf.Abs(cubeCoords.x) % 2)) / 2;
+                    break;
+                }
             }
             return ret;
         }
@@ -92,15 +88,13 @@ namespace GridPack.Cells
                 }
             }
             return neighbours;
-
         }// Kazda komórka heksagonalna ma szesciu sąsiadów, których pozycje na siatce względem komórki są przechowywane w stałej _directions. 
 
         public override void CopyFields(Cell newCell)
         {
             newCell.OffsetCoord = OffsetCoord;
             (newCell as Hexagon).HexGridType = HexGridType;
-        }
-        
+        }   
     }
 
     public enum HexGridType
