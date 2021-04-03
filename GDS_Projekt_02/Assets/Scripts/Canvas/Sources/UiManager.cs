@@ -28,6 +28,10 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Sprite groundRuins;
     [SerializeField] private Sprite groundLava;
 
+    [Header("Desinger button - Add")]
+    [SerializeField] private Sprite templeNormal;
+    [SerializeField] private Sprite ruinsNormal;
+
     [Header("Static")]
     [SerializeField] public int currentPlayer = 0;
     [SerializeField] public bool isDesing;
@@ -93,9 +97,49 @@ public class UiManager : MonoBehaviour
     {
         orangePanel.SetBool("Out", true);
     }
+    public void UpdateToTample(GameObject item)
+    {
+        item.GetComponent<Cell>().startSprite = templeNormal;
+        item.transform.tag = "G-Temple";
+        if (!isDesing)
+        {       
+            var mainSprite = item.GetComponent<SpriteRenderer>();
+            mainSprite.sprite = groundTemple;         
+            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+            childImage.sprite = groundTemple;           
+            isDesing = true;
+        }
+        else
+        {       
+            var mainSprite = item.GetComponent<SpriteRenderer>();
+            mainSprite.sprite = templeNormal;
+            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+            childImage.sprite = templeNormal;
+        }
+    }
+    public void UpdateToRuins(GameObject item)
+    {
+        item.GetComponent<Cell>().startSprite = ruinsNormal;
+        item.transform.tag = "G-ruin";
+        if (!isDesing)
+        {
+            var mainSprite = item.GetComponent<SpriteRenderer>();
+            mainSprite.sprite = groundRuins;
+            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+            childImage.sprite = groundRuins;
+            isDesing = true;
+        }
+        else
+        {
+            var mainSprite = item.GetComponent<SpriteRenderer>();
+            mainSprite.sprite = ruinsNormal;
+            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+            childImage.sprite = ruinsNormal;
+        }
+    }
     public void DesingerButton()
     {
-        if (isDesing ==false)
+        if (!isDesing)
         {
             foreach (var item in FindObjectsOfType<Unit>())   
             {

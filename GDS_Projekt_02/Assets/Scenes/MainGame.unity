@@ -5710,6 +5710,10 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018637359869, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018640230378, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
       value: 
