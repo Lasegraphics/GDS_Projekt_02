@@ -120,17 +120,17 @@ MonoBehaviour:
   AttackFactor: 10
   ArmorPoints: 0
   ignorArmor: 0
+  TotalArmorPoints: 0
   colorUnit: {r: 1, g: 0.9685757, b: 0, a: 1}
   actionPoints: 1
   RandomHitPercentUnit: 0
   HitSpikeParameterUnit: 20
   HealTempleParameterUnit: 20
   movementPoints: 5
-  nameUnit: ROUGE
+  nameUnit: ROGUE
   MovementAnimationSpeed: 20
   PlayerNumber: 0
   StartSprite: {fileID: 4300654558263623679, guid: 4325863465aa84ae7a11d9cf6b69e0b8, type: 3}
-  TotalArmorPoints: 0
   isBlinking: 0
 --- !u!114 &3194660028762322009
 MonoBehaviour:

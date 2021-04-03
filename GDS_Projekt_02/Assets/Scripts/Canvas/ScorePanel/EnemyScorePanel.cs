@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using GridPack.SceneScripts;
 using TMPro;
 public class EnemyScorePanel : MonoBehaviour
 {
@@ -16,7 +17,12 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] private Slider sliderHp;
     [SerializeField] private Text hp;
     [SerializeField] private Slider sliderArmor;
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private GameObject hideArmor;
+>>>>>>> Stashed changes
     [SerializeField] private int speed=20;
+
 
     [Header("Events")]
     [SerializeField] private Text events;
@@ -33,12 +39,19 @@ public class EnemyScorePanel : MonoBehaviour
 
     public void UpgradeParameters(GameObject enemy)
     {
-
+        if (enemy.GetComponent<ArmoredEntity>() !=null)
+        {
+            hideArmor.SetActive(false);
+        }
+        else
+        {
+            hideArmor.SetActive(true);
+        }
         unitInfo = enemy.GetComponent<Unit>();
         nameEnemy.text = unitInfo.nameUnit;
 
         sliderHp.maxValue = unitInfo.TotalHitPoints;
-        sliderArmor.maxValue = unitInfo.TotalArmorPoints;
+        sliderArmor.maxValue = 1;
 
         movmentText.text = ("MOVEMENT:  " + unitInfo.MovementPoints);
         rangeText.text = ("RANGE:  "+unitInfo.AttackRange);
@@ -56,7 +69,10 @@ public class EnemyScorePanel : MonoBehaviour
             hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage;
 
             sliderArmor.value = unitInfo.ArmorPoints;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         }
         else
         {
@@ -68,7 +84,11 @@ public class EnemyScorePanel : MonoBehaviour
 
             sliderHp.value = unitInfo.HitPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
+<<<<<<< Updated upstream
             hp.text = unitInfo.HitPoints.ToString();
+=======
+            hp.text = unitInfo.HitPoints.ToString();         
+>>>>>>> Stashed changes
         }
     }
     public void Blinking()

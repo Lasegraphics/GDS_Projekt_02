@@ -826,7 +826,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1874079891}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Yes
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4153,16 +4153,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1874079891}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: No
-        m_Mode: 1
+      - m_Target: {fileID: 933085837}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1144396558}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UiClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1422474724
@@ -9636,10 +9648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ea307457ece4cfb8eb0e4cc20fc9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 278789161}
-  QuitMenu: {fileID: 933085837}
-  SettingsObject: {fileID: 1430046461}
-  MusicMenu: {fileID: 0}
 --- !u!95 &1897422817 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1104704137228533196, guid: ebdf9b3cc24fc754aaf619372e241d8c, type: 3}

@@ -7,7 +7,7 @@ using GridPack.Cells;
 
 namespace GridPack.SceneScripts
 {
-    public class Wizard : ArmoredEntity
+    public class Wizard : Entity
     {   
         protected override void AttackActionPerformed(float actionCost)
         {

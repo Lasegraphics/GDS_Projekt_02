@@ -68,11 +68,13 @@ namespace GridPack.Units
         }
         [Header("DO EDYCJI")]
         public int HitPoints;
+        [HideInInspector]public int totalHitPoints;
         public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
         public int ArmorPoints;
         public bool ignorArmor;
+        [HideInInspector] public int TotalArmorPoints;
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
         public  int RandomHitPercentUnit;
@@ -89,7 +91,7 @@ namespace GridPack.Units
         public int PlayerNumber;
         public Sprite StartSprite;
 
-        [HideInInspector] public int TotalArmorPoints;
+        
         [HideInInspector] public bool isBlinking;
         UiManager uiManager;
         ScoreController scoreController;
@@ -98,6 +100,7 @@ namespace GridPack.Units
 
         private void Start()
         {
+            totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
         }
 
@@ -199,22 +202,10 @@ namespace GridPack.Units
                 audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
-                if(HitPoints > 75 && gameObject.GetComponent<Rogue>() != null)
+                if(HitPoints > totalHitPoints)
                 {
-                    HitPoints = 75; 
-                }
-                if(HitPoints > 50 && gameObject.GetComponent<DistanceEntity>() != null || HitPoints > 50 && gameObject.GetComponent<Wizard>() != null)
-                {
-                    HitPoints = 50; 
-                }
-                if(HitPoints > 90 && gameObject.GetComponent<ArmoredEntity>() != null)
-                {
-                    HitPoints = 90; 
-                }
-                if(HitPoints > 120 && gameObject.GetComponent<Entity>() != null)
-                {
-                    HitPoints = 120; 
-                }
+                    HitPoints = totalHitPoints; 
+                }              
                 Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
                 Cell.Temple = false; 
                 Cell.Ruins = true; 

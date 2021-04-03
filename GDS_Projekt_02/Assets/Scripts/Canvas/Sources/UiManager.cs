@@ -107,12 +107,9 @@ public class UiManager : MonoBehaviour
             mainSprite.sprite = templeNormal;
             var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
             childImage.sprite = templeNormal;
-
         }
         else
-        {       
-          
-
+        {               
             var mainSprite = item.GetComponent<SpriteRenderer>();
             mainSprite.sprite = groundTemple;
             var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
@@ -129,7 +126,6 @@ public class UiManager : MonoBehaviour
             mainSprite.sprite = ruinsNormal;
             var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
             childImage.sprite = ruinsNormal;
-
         }
         else
         {
@@ -138,7 +134,6 @@ public class UiManager : MonoBehaviour
             mainSprite.sprite = groundRuins;
             var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
             childImage.sprite = groundRuins;
-
         }
     }
     public void DesingerButton()
