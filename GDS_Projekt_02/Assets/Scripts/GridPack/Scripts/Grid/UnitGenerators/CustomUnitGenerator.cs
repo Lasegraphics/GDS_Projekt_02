@@ -12,7 +12,7 @@ namespace GridPack.Grid.UnitGenerators
         public Transform UnitsParent;
         public Transform CellsParent;
 
-        //Zwraca jednostki które są obecnie dziećmi obietku nadrzędnego. 
+        //Zwraca jednostki które są obecnie dziećmi obiektu nadrzędnego. 
         public List<Unit> SpawnUnits(List<Cell> cells)
         {
             List<Unit> ret = new List<Unit>();
