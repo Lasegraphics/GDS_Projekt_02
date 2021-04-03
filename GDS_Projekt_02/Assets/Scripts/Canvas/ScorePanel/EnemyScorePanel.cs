@@ -16,7 +16,6 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] private Slider sliderHp;
     [SerializeField] private Text hp;
     [SerializeField] private Slider sliderArmor;
-    [SerializeField] private Text armor;
     [SerializeField] private int speed=20;
 
     [Header("Events")]
@@ -57,7 +56,7 @@ public class EnemyScorePanel : MonoBehaviour
             hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage;
 
             sliderArmor.value = unitInfo.ArmorPoints;
-            armor.text = unitInfo.ArmorPoints.ToString();
+
         }
         else
         {
@@ -70,15 +69,6 @@ public class EnemyScorePanel : MonoBehaviour
             sliderHp.value = unitInfo.HitPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
             hp.text = unitInfo.HitPoints.ToString();
-            if (unitInfo.ArmorPoints <= 0)
-            {
-                armor.text = "0";
-            }
-            else
-            {
-                armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
-            }
-
         }
     }
     public void Blinking()
@@ -130,7 +120,6 @@ public class EnemyScorePanel : MonoBehaviour
         if (sliderArmor.value != unit.ArmorPoints)
         {
             sliderArmor.value = Mathf.MoveTowards(sliderArmor.value, unit.ArmorPoints, speed * Time.deltaTime);
-            armor.text = unit.ArmorPoints.ToString();
         }
     }
    
