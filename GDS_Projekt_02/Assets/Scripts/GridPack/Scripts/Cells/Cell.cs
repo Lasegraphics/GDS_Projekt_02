@@ -9,7 +9,7 @@ namespace GridPack.Cells
     public abstract class Cell : MonoBehaviour, IGraphNode, IEquatable<Cell>
     {
         //Klasa zawiera reprezentacje pojedyńczej komórki 
-       [HideInInspector]
+        [HideInInspector]
         [SerializeField]
         private Vector2 _offsetCoord; 
         //Pozycja komórki w scenie
@@ -34,22 +34,19 @@ namespace GridPack.Cells
         public event EventHandler CellDehighlighted;
 
         //Metody on mouse dla poszczególnych zdarzeń 
-       public MoveToMousePosCanvas panel;
+        public MoveToMousePosCanvas panel;
         public Sprite startSprite;
         bool frezePanel= false;
         float delayTime;
         private void Awake()
         {
-           
             startSprite = GetComponent<SpriteRenderer>().sprite;
         }
         private void OnMouseOver()
         {
-           
             delayTime += Time.deltaTime;
             if (delayTime >= 1.5f)
             {
-
                 panel.gameObject.SetActive(true);
 
                 if (frezePanel == false)
@@ -108,7 +105,6 @@ namespace GridPack.Cells
 
         protected virtual void OnMouseExit()
         {
-
             delayTime = 0;
             panel.gameObject.SetActive(false);
             frezePanel = false;
@@ -159,19 +155,14 @@ namespace GridPack.Cells
             return Equals(other as Cell); 
         }
         //Indywidualny kod Hash dla pojedyńczej komórki 
-        
         public override int GetHashCode()
         {
-            
             int hash = 23; 
             hash = (hash * 37) + (int)OffsetCoord.x;
             hash = (hash * 37) + (int)OffsetCoord.y;
-            return hash; 
-            
+            return hash;    
         }
-        
         //Metoda klonowania wratości do nowych pól 
-
         public abstract void CopyFields(Cell newCell);
     }
 }

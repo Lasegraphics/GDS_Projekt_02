@@ -28,14 +28,10 @@ namespace GridPack.Grid
         //TurnEnded zdarzenie jest wywoływane w momencie zakończenia tury. 
         public event EventHandler TurnEnded; 
         //Zdarzenie jest wywoływane za kazdym razem kiedy metoda AddUnit jest wywoływana. 
-
         public event EventHandler<UnitCreatedEventArgs> UnitAdded; 
-
         //Siatka przekazuje część swoich zachowań do obiektu _cellGridState.
         private CellGridState _cellGridState;
-
         [SerializeField] UiManager uiManager;
-
 
         public CellGridState CellGridState
         {
@@ -63,26 +59,20 @@ namespace GridPack.Grid
         }
         public int CurrentPlayerNumber {get; private set;}
         //Transform przechowuje informacje na temat graczy. 
-
         public Transform PlayersParent; 
-
         public bool GameFinished {get; private set;}
         public List<Player> Players{get; private set;}
         public List<Cell> Cells {get; private set;}
         public List<Unit> Units {get; private set;} 
         public bool IsSwitched {get; private set;} 
         
-
         private void Start()
         {
             if(LevelLoading != null)
                LevelLoading.Invoke(this, new EventArgs());
 
-            //Initialize();
-
             if(LevelLoadingDone != null)
                LevelLoadingDone.Invoke(this, new EventArgs());
-            //StartGame();
         }
 
         public void Initialize()
@@ -90,7 +80,7 @@ namespace GridPack.Grid
             audioManager.Play("StartGame");
             GameFinished = false; 
             Players = new List<Player>();
-            
+
             for (int i = 0; i < PlayersParent.childCount; i++)
             {
                 var player = PlayersParent.GetChild(i).GetComponent<Player>();
@@ -108,8 +98,8 @@ namespace GridPack.Grid
                var cell = transform.GetChild(i).gameObject.GetComponent<Cell>(); 
                if(cell != null)
                 Cells.Add(cell);
-                else 
-                Debug.LogError("Invalid object in cells patern game object");
+               else 
+               Debug.LogError("Invalid object in cells patern game object");
             }
 
             foreach (var cell in Cells)
@@ -186,7 +176,6 @@ namespace GridPack.Grid
 
         public void EndTurn()
         {
-           
             //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
@@ -202,7 +191,6 @@ namespace GridPack.Grid
             while(Units.FindAll(u =>u.PlayerNumber.Equals(CurrentPlayerNumber)).Count == 0)
             {
                 CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
-                
             }
 
             if(TurnEnded != null)
@@ -224,14 +212,12 @@ namespace GridPack.Grid
                         highlighter.color = new Color(1, 1, 1, 0);
                     }
                 }
-
             }
 
             foreach (var cell in Cells)
             {
                 if(cell.Ruins == true)
                 {
-                   
                    cellTypeRuins.Add(cell);
                 }
                 if(cell.Temple == true)
@@ -267,7 +253,6 @@ namespace GridPack.Grid
         {
             IsSwitched = false; 
         }
- 
     }
 }
 
