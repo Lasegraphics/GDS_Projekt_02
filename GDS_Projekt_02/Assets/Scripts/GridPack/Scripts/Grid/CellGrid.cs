@@ -190,7 +190,7 @@ namespace GridPack.Grid
             {
                 if (item.TotalArmorPoints >0)
                 {
-                    item.ArmorPoints = item.totalHitPoints;
+                    item.ArmorPoints = item.TotalArmorPoints;
                 }
             }
             //CellGridState = new CellGridState(this);
