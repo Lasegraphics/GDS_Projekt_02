@@ -209,21 +209,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68b73fce7aea4b328dfee2b65abd6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameUnit: ARCHER
+  colorUnit: {r: 0.6792453, g: 0.24670699, b: 0.6193848, a: 1}
   HitPoints: 50
+  ignorArmor: 0
+  actionPoints: 1
+  movementPoints: 4
+  totalHitPoints: 50
   MinAttackRange: 1
   AttackRange: 6
   AttackFactor: 15
   ArmorPoints: 0
-  ignorArmor: 0
-  colorUnit: {r: 0.6792453, g: 0.24670699, b: 0.6193848, a: 1}
-  actionPoints: 1
-  RandomHitPercentUnit: 0
-  HitSpikeParameterUnit: 20
+  ignorArmorPercent: 0
+  TotalArmorPoints: 0
+  DodgeHitPercentUnit: 0
+  DamageSpikeParameterUnit: 0
   HealTempleParameterUnit: 20
-  movementPoints: 4
-  nameUnit: ARCHER
   MovementAnimationSpeed: 20
   PlayerNumber: 1
+  onDef: 0
   StartSprite: {fileID: -3484401552186409162, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
-  TotalArmorPoints: 0
   isBlinking: 0

@@ -76,7 +76,7 @@ public class UiManager : MonoBehaviour
     IEnumerator CloseEndText()
     {
         yield return new WaitForSeconds(3);
-        endRoundText.SetBool("Out", true);
+       // endRoundText.SetBool("Out", true);
 
     }
     public void ActiveEnemyScorePanel()

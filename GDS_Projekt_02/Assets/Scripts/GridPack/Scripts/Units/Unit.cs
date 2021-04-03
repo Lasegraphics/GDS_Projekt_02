@@ -66,29 +66,35 @@ namespace GridPack.Units
                 cell = value; 
             }
         }
-        [Header("DO EDYCJI")]
+        [Header("Dane jednostki")]
+        public string nameUnit;
+        public Color colorUnit;
         public int HitPoints;
+        public bool ignorArmor;
+        public float actionPoints = 1;
+        [SerializeField] private float movementPoints;
         [HideInInspector]public int totalHitPoints;
+
+        [Header("Atak")]
         public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
+
+        [Header("Tylko Tank")]
         public int ArmorPoints;
-        public bool ignorArmor;
+        [SerializeField] private float ignorArmorPercent;       
         [HideInInspector] public int TotalArmorPoints;
-        public Color colorUnit;
-        public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
-        public  int RandomHitPercentUnit;
-        public  int HitSpikeParameterUnit;
+        
+        [Header("Dane do terenu")]
+        public  int DodgeHitPercentUnit;
+        public  int DamageSpikeParameterUnit;
         public  int HealTempleParameterUnit;
-        [SerializeField] private float movementPoints; //Determinuje jak daleko po siatce jednostka moze sie przemieszczac. 
 
 
         [Header("nie potrzebne")]
-
-        //Determinuje szybkość przemieszczania jednostki. 
-        public string nameUnit;
         public float MovementAnimationSpeed;
         public int PlayerNumber;
+        [SerializeField] private bool onDef;
         [HideInInspector] public Sprite StartSprite;
 
         
@@ -180,13 +186,14 @@ namespace GridPack.Units
         //Metoda jest wywoływana na początku kazdej tury. 
          public virtual void OnTurnStart()
         {
+            
             MovementPoints = TotalMovementPoints;
             ActionPoints = TotalActionPoints; 
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= HitSpikeParameterUnit;
-                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + HitSpikeParameterUnit);
+                HitPoints -= DamageSpikeParameterUnit;
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + DamageSpikeParameterUnit);
                 if (HitPoints <=0)
                 {
                     OnDestroyed();
@@ -383,94 +390,100 @@ namespace GridPack.Units
                
             }
         }
-
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Debug.Log(1);
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.GetComponent<Unit>().PlayerNumber == PlayerNumber)
+            {
+                ignorArmorPercent = collision.GetComponent<Unit>().ignorArmorPercent;
+                onDef = true;
+            }    
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.GetComponent<Unit>().PlayerNumber == PlayerNumber)
+            {
+                onDef = false;
+            }
+        }
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
-            
-           Random rand = new Random();
-            int randInt = rand.Next(0,100);
-            if(Cell != null && Cell.Forest == true)
+            MarkAsDefending(aggressor);
+            if (Cell.Forest)
             {
-                Debug.Log(randInt);
-                if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
-                {             
-                    MarkAsDefending(aggressor);
-                    int damageTaken = aggressor.AttackFactor;
-                    if(randInt >= RandomHitPercentUnit)
+                Random rand = new Random();
+                int randInt = rand.Next(0, 100);
+                if (ArmorPoints > 0 && !aggressor.ignorArmor)
+                {
+                    if (randInt >= DodgeHitPercentUnit)
                     {
-                        ArmorPoints -= damageTaken;
-                        DefenceActionPerformed();
-                        if (ArmorPoints <=0)
-                        {
-                            audioManager.Play("ArmorDestroy");
-                        }
-                        Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                        ArmorPoints -= aggressor.AttackFactor;
+                        UnitWithArmor(aggressor);
                     }
-                    else 
+                    else
                     {
                         audioManager.Play("Miss");
                         Debug.Log("Defence");
-                    }             
+                    }
                 }
                 else
                 {
-                    if (ArmorPoints >= 0 || aggressor.ignorArmor == true)
+                    if (randInt >= DodgeHitPercentUnit)
                     {
-                        MarkAsDefending(aggressor);
-                        int damageTaken = aggressor.AttackFactor;
-                        if(randInt >= RandomHitPercentUnit)
-                        {       
+                        if (onDef)
+                        {
+                            UnitWithArmor(aggressor);
+                        }
+                        else
+                        {
+                            int damageTaken = aggressor.AttackFactor;
                             HitPoints -= damageTaken;
-                            DefenceActionPerformed();
                             Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
-                        }
-                        else 
-                        {
-                            audioManager.Play("Miss");
-                            Debug.Log("Defence");
-                        }                       
-                        if (HitPoints <= 0)
-                        {
-                            if (UnitDestroyed != null)
+                            if (HitPoints <= 0)
                             {
-                                UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
+                                if (UnitDestroyed != null)
+                                {
+                                    UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
+                                }
+                                OnDestroyed();
                             }
-                            OnDestroyed();
-                        }                  
+                        }
+                      
+                    }
+                    else
+                    {
+                        audioManager.Play("Miss");
+                        Debug.Log("Defence");
                     }
                 }
             }
-            if(Cell != null && Cell.Forest == false)
+            else
             {
-                if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
+                if (ArmorPoints > 0 && !aggressor.ignorArmor)
                 {
-                    MarkAsDefending(aggressor);
-                    int damageTaken = aggressor.AttackFactor;
-                    ArmorPoints -= damageTaken;
-                    DefenceActionPerformed();
-                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);                    
+                    ArmorPoints -= aggressor.AttackFactor;
+                    UnitWithArmor(aggressor);
                 }
                 else
                 {
-                    if (ArmorPoints <= 0 || aggressor.ignorArmor == true)
+                    int damageTaken = aggressor.AttackFactor;
+                    HitPoints -= damageTaken;
+                    if (HitPoints <= 0)
                     {
-                        MarkAsDefending(aggressor);
-                        int damageTaken = aggressor.AttackFactor;
-                        HitPoints -= damageTaken;
-                        DefenceActionPerformed();
-                        if (HitPoints <= 0)
+                        if (UnitDestroyed != null)
                         {
-                            if (UnitDestroyed != null)
-                            {
-                                UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
-                            }
-                            OnDestroyed();
+                            UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
                         }
-                        Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
+                        OnDestroyed();
                     }
+                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                 }
             }
+            DefenceActionPerformed();
             if (UnitAttacked != null)
             {
                 UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage));
@@ -478,9 +491,16 @@ namespace GridPack.Units
             scoreController = FindObjectOfType<ScoreController>();
             scoreController.UpgradeScore();
         }
-        
 
-       
+        private void UnitWithArmor(Unit aggressor)
+        {           
+            var localArmor = 100 - ignorArmorPercent;
+            localArmor *= 0.01f;
+            var dmgWithArmor = ((float)aggressor.AttackFactor * localArmor);
+            HitPoints -= ((int)dmgWithArmor);
+            audioManager.Play("ArmorDestroy");
+            Debug.Log("Armor zabrany");
+        }
 
         protected virtual void DefenceActionPerformed(){}
 
@@ -515,8 +535,8 @@ namespace GridPack.Units
             {
                 audioManager.Play("Lava");
                 Debug.Log("Zadano Obrazenia");
-                HitPoints -= HitSpikeParameterUnit;
-                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + HitSpikeParameterUnit);
+                HitPoints -= DamageSpikeParameterUnit;
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + DamageSpikeParameterUnit);
             }
 
             if(destinationCell.Swamp == true)

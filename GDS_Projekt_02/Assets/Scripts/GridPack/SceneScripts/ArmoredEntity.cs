@@ -13,6 +13,7 @@ namespace GridPack.SceneScripts
         public override event EventHandler<AttackEventArgs> UnitAttacked;
         public override event EventHandler<AttackEventArgs> UnitDestroyed;
         protected static bool IsIgnored;
+
         public override void Initialize()
         {
             base.Initialize();
