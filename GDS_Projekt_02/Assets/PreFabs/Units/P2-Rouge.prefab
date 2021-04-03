@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 75
+  totalHitPoints: 0
   MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 10
@@ -136,7 +137,7 @@ MonoBehaviour:
   TotalArmorPoints: 0
   colorUnit: {r: 0.6415094, g: 0.63182336, b: 0.25720897, a: 1}
   actionPoints: 1
-  RandomHitPercentUnit: 0
+  RandomHitPercentUnit: 20
   HitSpikeParameterUnit: 20
   HealTempleParameterUnit: 20
   movementPoints: 5

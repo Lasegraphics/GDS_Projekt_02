@@ -17,10 +17,8 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] private Slider sliderHp;
     [SerializeField] private Text hp;
     [SerializeField] private Slider sliderArmor;
-<<<<<<< Updated upstream
-=======
     [SerializeField] private GameObject hideArmor;
->>>>>>> Stashed changes
+
     [SerializeField] private int speed=20;
 
 
@@ -69,10 +67,6 @@ public class EnemyScorePanel : MonoBehaviour
             hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage;
 
             sliderArmor.value = unitInfo.ArmorPoints;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         }
         else
         {
@@ -84,11 +78,6 @@ public class EnemyScorePanel : MonoBehaviour
 
             sliderHp.value = unitInfo.HitPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
-<<<<<<< Updated upstream
-            hp.text = unitInfo.HitPoints.ToString();
-=======
-            hp.text = unitInfo.HitPoints.ToString();         
->>>>>>> Stashed changes
         }
     }
     public void Blinking()
