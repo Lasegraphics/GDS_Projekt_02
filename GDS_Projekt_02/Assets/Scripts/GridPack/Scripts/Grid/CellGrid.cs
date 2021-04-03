@@ -186,7 +186,13 @@ namespace GridPack.Grid
 
         public void EndTurn()
         {
-           
+            foreach (var item in Units)
+            {
+                if (item.TotalArmorPoints >0)
+                {
+                    item.ArmorPoints = item.totalHitPoints;
+                }
+            }
             //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
@@ -206,8 +212,7 @@ namespace GridPack.Grid
             }
 
             if(TurnEnded != null)
-                TurnEnded.Invoke(this, new EventArgs());
-            uiManager = FindObjectOfType<UiManager>();
+                TurnEnded.Invoke(this, new EventArgs());     
             uiManager.ChangeTurnUi(CurrentPlayerNumber);
             uiManager.CloseScorePanel();
             uiManager.CloseEnemyScorePanel();
@@ -226,12 +231,10 @@ namespace GridPack.Grid
                 }
 
             }
-
             foreach (var cell in Cells)
             {
                 if(cell.Ruins == true)
-                {
-                   
+                {                  
                     cellTypeRuins.Add(cell);
                 }
                 if(cell.Temple == true)

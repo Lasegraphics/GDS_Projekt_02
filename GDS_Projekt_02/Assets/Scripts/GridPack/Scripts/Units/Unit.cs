@@ -68,11 +68,13 @@ namespace GridPack.Units
         }
         [Header("DO EDYCJI")]
         public int HitPoints;
+        [HideInInspector]public int totalHitPoints;
         public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
         public int ArmorPoints;
         public bool ignorArmor;
+        [HideInInspector] public int TotalArmorPoints;
         public Color colorUnit;
         public float actionPoints = 1; //Determinuje Jak duzo ataków moze wykonać jednostka. 
         public  int RandomHitPercentUnit;
@@ -87,9 +89,9 @@ namespace GridPack.Units
         public string nameUnit;
         public float MovementAnimationSpeed;
         public int PlayerNumber;
-        public Sprite StartSprite;
+        [HideInInspector] public Sprite StartSprite;
 
-        [HideInInspector] public int TotalArmorPoints;
+        
         [HideInInspector] public bool isBlinking;
         UiManager uiManager;
         ScoreController scoreController;
@@ -98,6 +100,7 @@ namespace GridPack.Units
 
         private void Start()
         {
+            totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
         }
 
@@ -178,10 +181,7 @@ namespace GridPack.Units
          public virtual void OnTurnStart()
         {
             MovementPoints = TotalMovementPoints;
-            ActionPoints = TotalActionPoints;
-            HitSpikeParameterUnit = 30; 
-            RandomHitPercentUnit = 2; 
-            HealTempleParameterUnit = 20; 
+            ActionPoints = TotalActionPoints; 
             if(Cell != null && Cell.Spikes == true)
             {
                 Debug.Log("Zadano Obrazenia");
@@ -199,22 +199,10 @@ namespace GridPack.Units
                 audioManager.Play("Temple");
                 Debug.Log("Uzdrowiono");
                 HitPoints += HealTempleParameterUnit;
-                if(HitPoints > 75 && gameObject.GetComponent<Rogue>() != null)
+                if(HitPoints > totalHitPoints)
                 {
-                    HitPoints = 75; 
-                }
-                if(HitPoints > 50 && gameObject.GetComponent<DistanceEntity>() != null || HitPoints > 50 && gameObject.GetComponent<Wizard>() != null)
-                {
-                    HitPoints = 50; 
-                }
-                if(HitPoints > 90 && gameObject.GetComponent<ArmoredEntity>() != null)
-                {
-                    HitPoints = 90; 
-                }
-                if(HitPoints > 120 && gameObject.GetComponent<Entity>() != null)
-                {
-                    HitPoints = 120; 
-                }
+                    HitPoints = totalHitPoints; 
+                }              
                 Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
                 Cell.Temple = false; 
                 Cell.Ruins = true; 
@@ -404,15 +392,13 @@ namespace GridPack.Units
             int randInt = rand.Next(0,100);
             if(Cell != null && Cell.Forest == true)
             {
-
+                Debug.Log(randInt);
                 if (ArmorPoints > 0 && aggressor.GetComponent<Wizard>() == null)
-                {
+                {             
                     MarkAsDefending(aggressor);
                     int damageTaken = aggressor.AttackFactor;
-                    if(randInt <= RandomHitPercentUnit)
+                    if(randInt >= RandomHitPercentUnit)
                     {
-                        audioManager.Play("Miss");
-
                         ArmorPoints -= damageTaken;
                         DefenceActionPerformed();
                         if (ArmorPoints <=0)
@@ -423,30 +409,27 @@ namespace GridPack.Units
                     }
                     else 
                     {
+                        audioManager.Play("Miss");
                         Debug.Log("Defence");
-                    }
-                    
-                    
+                    }             
                 }
                 else
                 {
-                    if (ArmorPoints <= 0 || aggressor.ignorArmor == true)
+                    if (ArmorPoints >= 0 || aggressor.ignorArmor == true)
                     {
                         MarkAsDefending(aggressor);
                         int damageTaken = aggressor.AttackFactor;
-                        if(randInt <= RandomHitPercentUnit)
-                        {
-                            audioManager.Play("Miss");
-
+                        if(randInt >= RandomHitPercentUnit)
+                        {       
                             HitPoints -= damageTaken;
                             DefenceActionPerformed();
                             Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
                         }
                         else 
                         {
+                            audioManager.Play("Miss");
                             Debug.Log("Defence");
-                        }
-                        
+                        }                       
                         if (HitPoints <= 0)
                         {
                             if (UnitDestroyed != null)
@@ -454,8 +437,7 @@ namespace GridPack.Units
                                 UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
                             }
                             OnDestroyed();
-                        }
-                        
+                        }                  
                     }
                 }
             }
@@ -467,8 +449,7 @@ namespace GridPack.Units
                     int damageTaken = aggressor.AttackFactor;
                     ArmorPoints -= damageTaken;
                     DefenceActionPerformed();
-                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);
-                    
+                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + damageTaken);                    
                 }
                 else
                 {

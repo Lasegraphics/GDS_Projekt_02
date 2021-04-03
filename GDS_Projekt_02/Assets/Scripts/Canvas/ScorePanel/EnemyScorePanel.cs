@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;
+using GridPack.SceneScripts;
 using TMPro;
 public class EnemyScorePanel : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] private Slider sliderHp;
     [SerializeField] private Text hp;
     [SerializeField] private Slider sliderArmor;
-    [SerializeField] private Text armor;
+    [SerializeField] private GameObject hideArmor;
+
     [SerializeField] private int speed=20;
+
 
     [Header("Events")]
     [SerializeField] private Text events;
@@ -34,12 +37,19 @@ public class EnemyScorePanel : MonoBehaviour
 
     public void UpgradeParameters(GameObject enemy)
     {
-
+        if (enemy.GetComponent<ArmoredEntity>() !=null)
+        {
+            hideArmor.SetActive(false);
+        }
+        else
+        {
+            hideArmor.SetActive(true);
+        }
         unitInfo = enemy.GetComponent<Unit>();
         nameEnemy.text = unitInfo.nameUnit;
 
         sliderHp.maxValue = unitInfo.TotalHitPoints;
-        sliderArmor.maxValue = unitInfo.TotalArmorPoints;
+        sliderArmor.maxValue = 1;
 
         movmentText.text = ("MOVEMENT:  " + unitInfo.MovementPoints);
         rangeText.text = ("RANGE:  "+unitInfo.AttackRange);
@@ -57,7 +67,6 @@ public class EnemyScorePanel : MonoBehaviour
             hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage;
 
             sliderArmor.value = unitInfo.ArmorPoints;
-            armor.text = unitInfo.ArmorPoints.ToString();
         }
         else
         {
@@ -69,16 +78,6 @@ public class EnemyScorePanel : MonoBehaviour
 
             sliderHp.value = unitInfo.HitPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
-            hp.text = unitInfo.HitPoints.ToString();
-            if (unitInfo.ArmorPoints <= 0)
-            {
-                armor.text = "0";
-            }
-            else
-            {
-                armor.text = unitInfo.ArmorPoints.ToString() + " - " + scorePanelControll.damage;
-            }
-
         }
     }
     public void Blinking()
@@ -130,7 +129,6 @@ public class EnemyScorePanel : MonoBehaviour
         if (sliderArmor.value != unit.ArmorPoints)
         {
             sliderArmor.value = Mathf.MoveTowards(sliderArmor.value, unit.ArmorPoints, speed * Time.deltaTime);
-            armor.text = unit.ArmorPoints.ToString();
         }
     }
    
