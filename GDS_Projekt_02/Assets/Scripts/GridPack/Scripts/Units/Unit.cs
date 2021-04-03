@@ -89,7 +89,7 @@ namespace GridPack.Units
         public string nameUnit;
         public float MovementAnimationSpeed;
         public int PlayerNumber;
-        public Sprite StartSprite;
+        [HideInInspector] public Sprite StartSprite;
 
         
         [HideInInspector] public bool isBlinking;
@@ -390,7 +390,6 @@ namespace GridPack.Units
             
            Random rand = new Random();
             int randInt = rand.Next(0,100);
-            Debug.Log(randInt);
             if(Cell != null && Cell.Forest == true)
             {
                 Debug.Log(randInt);
