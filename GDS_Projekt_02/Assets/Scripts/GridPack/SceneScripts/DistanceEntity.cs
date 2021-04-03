@@ -5,10 +5,7 @@ using UnityEngine;
 
 namespace GridPack.SceneScripts
 {
-
     public class DistanceEntity : Entity 
     {
-
-    }
-            
+    }           
 }  

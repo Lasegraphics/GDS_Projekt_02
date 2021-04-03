@@ -20,8 +20,7 @@ namespace GridPack.SceneScripts
         {
             base.Initialize();
             transform.localPosition += new Vector3(0, 0, -1);
-            turnChanger = GameObject.Find("GameController").GetComponent<TurnChanger>();
-            
+            turnChanger = GameObject.Find("GameController").GetComponent<TurnChanger>();  
         }
 
         public override bool IsCellMovableTo(Cell cell)
@@ -91,12 +90,9 @@ namespace GridPack.SceneScripts
                 var currentTime = Time.time;
                 if (startTime + cooloutTime < currentTime)
                     break;
-
                // _renderer.color = Color.Lerp(Color.white, color, (startTime + cooloutTime) - currentTime);
                 yield return 0;
             }
-
-           
         }
         private IEnumerator Pulse(float breakTime, float delay, float scaleFactor)
         {
@@ -109,14 +105,12 @@ namespace GridPack.SceneScripts
                     transform.localScale = Vector3.Lerp(baseScale * scaleFactor, baseScale, (time1 + delay) - Time.time);
                     yield return 0;
                 }
-
                 float time2 = Time.time;
                 while (time2 + delay > Time.time)
                 {
                     transform.localScale = Vector3.Lerp(baseScale, baseScale * scaleFactor, (time2 + delay) - Time.time);
                     yield return 0;
                 }
-
                 yield return new WaitForSeconds(breakTime);
             }
         }
@@ -136,9 +130,7 @@ namespace GridPack.SceneScripts
         }
         public override void MarkAsFinished()
         {
-
             SetHighlighterColor(new Color(0.75f, 0.75f, 0.75f, 0.5f));  
-           // turnChanger.ChangeTurn();
         }
         public override void UnMark()
         {
