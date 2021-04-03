@@ -102,19 +102,21 @@ public class UiManager : MonoBehaviour
         item.GetComponent<Cell>().startSprite = templeNormal;
         item.transform.tag = "G-Temple";
         if (!isDesing)
-        {       
-            var mainSprite = item.GetComponent<SpriteRenderer>();
-            mainSprite.sprite = groundTemple;         
-            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
-            childImage.sprite = groundTemple;           
-            isDesing = true;
-        }
-        else
-        {       
+        {
             var mainSprite = item.GetComponent<SpriteRenderer>();
             mainSprite.sprite = templeNormal;
             var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
             childImage.sprite = templeNormal;
+
+        }
+        else
+        {       
+          
+
+            var mainSprite = item.GetComponent<SpriteRenderer>();
+            mainSprite.sprite = groundTemple;
+            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+            childImage.sprite = groundTemple;
         }
     }
     public void UpdateToRuins(GameObject item)
@@ -124,17 +126,19 @@ public class UiManager : MonoBehaviour
         if (!isDesing)
         {
             var mainSprite = item.GetComponent<SpriteRenderer>();
-            mainSprite.sprite = groundRuins;
-            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
-            childImage.sprite = groundRuins;
-            isDesing = true;
-        }
-        else
-        {
-            var mainSprite = item.GetComponent<SpriteRenderer>();
             mainSprite.sprite = ruinsNormal;
             var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
             childImage.sprite = ruinsNormal;
+
+        }
+        else
+        {
+
+            var mainSprite = item.GetComponent<SpriteRenderer>();
+            mainSprite.sprite = groundRuins;
+            var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+            childImage.sprite = groundRuins;
+
         }
     }
     public void DesingerButton()

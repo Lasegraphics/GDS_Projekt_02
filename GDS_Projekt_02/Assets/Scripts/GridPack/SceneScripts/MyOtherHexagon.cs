@@ -8,11 +8,6 @@ namespace GridPack.SceneScripts
        
         public GroundType GroundType;
         public bool IsSkyTaken;//Wskazuje czy jednostka latająca zajmuje hexagon 
-        public Sprite Ruin; 
-        public Sprite TempleSpr; 
-        public Sprite RuinDesign; 
-        public Sprite TempleSprDesign; 
-        public UiManager checker; 
 
 
         private Vector3 dimensions = new Vector3(5.3f, 4.6f, 0f);
@@ -24,27 +19,7 @@ namespace GridPack.SceneScripts
             //checker = gameObject.GetComponent<UiManager>();
             
         }
-        public void Update()
-        {
-            if(Ruins == true)
-            {
-               this.gameObject.GetComponent<SpriteRenderer>().sprite = Ruin;
-               if(checker.isDesing == true)
-               {
-                   Debug.Log("Design");
-                   this.gameObject.GetComponent<SpriteRenderer>().sprite = RuinDesign;
-               }
-            }
-            if(Temple == true)
-            {
-               this.gameObject.GetComponent<SpriteRenderer>().sprite = TempleSpr;
-               if(checker.isDesing == true)
-               {
-                   Debug.Log("Design");
-                   this.gameObject.GetComponent<SpriteRenderer>().sprite = TempleSprDesign;
-               }
-            }
-        }
+      
         
         
         public override void MarkAsPlayerEntity()

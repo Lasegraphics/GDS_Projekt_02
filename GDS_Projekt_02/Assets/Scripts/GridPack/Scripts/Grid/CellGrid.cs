@@ -232,11 +232,12 @@ namespace GridPack.Grid
                 if(cell.Ruins == true)
                 {
                    
-                   cellTypeRuins.Add(cell);
+                    cellTypeRuins.Add(cell);
                 }
                 if(cell.Temple == true)
                 {
-                    cell.Temple = false; 
+                    cell.Temple = false;
+                    uiManager.UpdateToRuins(cell.gameObject);
                     cell.Ruins = true; 
                 }
             }
@@ -250,10 +251,12 @@ namespace GridPack.Grid
 
             if(cellTypeRuins[randomizedCell].Ruins == false)
             {
+                uiManager.UpdateToRuins(cellTypeRuins[randomizedCell].gameObject);
                 Debug.Log("Ruiny");
             }
             if(cellTypeRuins[randomizedCell].Temple == true)
             {
+                uiManager.UpdateToTample(cellTypeRuins[randomizedCell].gameObject);
                 Debug.Log("Temple");
             }
         }
