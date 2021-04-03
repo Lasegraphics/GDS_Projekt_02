@@ -39,7 +39,6 @@ namespace GridPack.Grid.GridStates
                 _cellGrid.CellGridState = new CellGridStateWaitingForInput(_cellGrid);
                 return;
             }
-
             var path = _unit.FindPath(_cellGrid.Cells, cell);
             _unit.Move(cell, path);
             _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);
@@ -51,7 +50,6 @@ namespace GridPack.Grid.GridStates
            _unit.UnMark();
            _unit.OnUnitDeselected();
            _cellGrid.CellGridState = new CellGridStateWaitingForInput(_cellGrid);
-           
             if (unit.Equals(_unit) || _unit.IsMoving)
             {
                 return;
@@ -63,16 +61,13 @@ namespace GridPack.Grid.GridStates
                 if (!_cellGrid.GameFinished)
                 {
                     _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, _unit);    /// KURWA DZIAŁA
-
                 }
-
             }
 
             if (unit.PlayerNumber.Equals(_unit.PlayerNumber))
             {
                 _cellGrid.CellGridState = new CellGridStateUnitSelected(_cellGrid, unit);
             }
-            
         }
 
         public override void OnCellDeselected(Cell cell)
@@ -121,27 +116,21 @@ namespace GridPack.Grid.GridStates
                 {       
                     _unitCell = currentUnit.Cell;
                     _unitCell.MarkAsEnemyEntity();
-                 // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
-                     
                 }
                 if (_unit.UnitIsntAttackable(currentUnit, cell))
                 {
                     _unitCell = currentUnit.Cell;
                     _unitCell.UnMark();
-                    // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
                     _unitsMarkedInRange.Add(currentUnit);
                 }
-                
-                 anotherUnitCell.MarkAsPlayerEntity();
+                anotherUnitCell.MarkAsPlayerEntity();
             }
-        
         }
 
         public override void OnStateEnter()
         {
             base.OnStateEnter();
-
             _unit.OnUnitSelected();
             _unitCell = _unit.Cell;
             _pathsInRange = _unit.GetAvailableDestinations(_cellGrid.Cells);
@@ -165,7 +154,6 @@ namespace GridPack.Grid.GridStates
                 {
                     _unitCell = currentUnit.Cell;
                     _unitCell.MarkAsEnemyEntity();
-                   // currentUnit.SetState(new UnitStateMarkedAsReachableEnemy(currentUnit));
 
                     if(_cellGrid.IsSwitched == true)
                     {
@@ -173,10 +161,8 @@ namespace GridPack.Grid.GridStates
                         currentUnit.HitPoints -= 1; 
                         Debug.Log("Zdrowie:" + currentUnit.HitPoints); 
                     }
-
                     _unitsInRange.Add(currentUnit);
                 }
-                
             }
             if (_unitCell.GetNeighbours(_cellGrid.Cells).FindAll(c => c.MovementCost <= _unit.MovementPoints).Count == 0
                 && _unitsInRange.Count == 0)
@@ -197,6 +183,5 @@ namespace GridPack.Grid.GridStates
             }
             _unitCell.MarkAsPlayerEntity();
         }
-
     }
 }
