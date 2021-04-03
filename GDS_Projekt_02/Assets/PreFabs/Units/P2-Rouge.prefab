@@ -128,22 +128,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 75
+  totalHitPoints: 0
   MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 10
   ArmorPoints: 0
   ignorArmor: 0
+  TotalArmorPoints: 0
   colorUnit: {r: 0.6415094, g: 0.63182336, b: 0.25720897, a: 1}
   actionPoints: 1
-  RandomHitPercentUnit: 0
+  RandomHitPercentUnit: 20
   HitSpikeParameterUnit: 20
   HealTempleParameterUnit: 20
   movementPoints: 5
-  nameUnit: ROUGE
+  nameUnit: ROGUE
   MovementAnimationSpeed: 20
   PlayerNumber: 1
   StartSprite: {fileID: -4446029609787535626, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
-  TotalArmorPoints: 0
   isBlinking: 0
 --- !u!1 &2737745491245196769
 GameObject:

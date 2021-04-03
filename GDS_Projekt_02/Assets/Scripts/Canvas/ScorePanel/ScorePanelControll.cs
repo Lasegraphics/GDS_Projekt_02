@@ -15,7 +15,7 @@ public class ScorePanelControll : MonoBehaviour
     [SerializeField] private Slider sliderHp;
     [SerializeField] private Text HP;
     [SerializeField] private Slider sliderArmor;
-    [SerializeField] private Text armor;
+    [SerializeField] private GameObject hideArmor;
 
     [Header("Events")]
     [SerializeField] private Text events;
@@ -32,6 +32,15 @@ public class ScorePanelControll : MonoBehaviour
 
     public void TakeUnit(GameObject unit)
     {
+        if (unit.GetComponent<ArmoredEntity>() != null)
+        {
+            hideArmor.SetActive(false);
+        }
+        else
+        {
+            hideArmor.SetActive(true);
+        }
+
         movmentText.text = ("MOVEMENT:  " + unit.GetComponent<Unit>().MovementPoints);
         rangeText.text = ("RANGE:  " + unit.GetComponent<Unit>().AttackRange);
         DamageText.text = ("DAMAGE:  " + unit.GetComponent<Unit>().AttackFactor);
@@ -42,9 +51,7 @@ public class ScorePanelControll : MonoBehaviour
             {
                 isMage = true;
             }
-            var unitInfo = unit.GetComponent<Unit>();
-
-           
+            var unitInfo = unit.GetComponent<Unit>();         
 
             nameUnit.text = unitInfo.nameUnit;
             damage = unitInfo.AttackFactor;
@@ -53,11 +60,8 @@ public class ScorePanelControll : MonoBehaviour
             sliderHp.value = unitInfo.HitPoints;
             HP.text = unitInfo.HitPoints.ToString();
 
-            sliderArmor.maxValue = unitInfo.TotalArmorPoints;
-            sliderArmor.value = unitInfo.ArmorPoints;
-            armor.text = unitInfo.ArmorPoints.ToString();
-           
-          
+            sliderArmor.maxValue = 1;
+            sliderArmor.value = unitInfo.ArmorPoints;        
         }      
     }
    public void UpgradeMovment(Unit unit)
