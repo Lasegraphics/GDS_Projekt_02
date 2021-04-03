@@ -12,13 +12,12 @@ namespace GridPack.SceneScripts
         public Entity entity; 
         private bool isFinished;
         private int unitDiscard;
-       public void StartGame()
+        public void StartGame()
         {
            EndTrn.LevelLoading += onLevelLoading;
            EndTrn.LevelLoadingDone += onLevelLoadingDone;
            isFinished = false; 
            unitDiscard = 0;
-            
         }
 
         private void onLevelLoading(object sender, EventArgs e)
@@ -40,15 +39,14 @@ namespace GridPack.SceneScripts
                 isFinished = true; 
                 unitDiscard = 0; 
             }
-
         }
      
         void Update()
         {
           if(isFinished == true)
           {
-              EndTrn.EndTurn();
-              isFinished = false; 
+            EndTrn.EndTurn();
+            isFinished = false; 
           }
             
         }

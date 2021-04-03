@@ -36,7 +36,6 @@ namespace GridPack.Grid
 
         [SerializeField] UiManager uiManager;
 
-
         public CellGridState CellGridState
         {
             get
@@ -72,7 +71,6 @@ namespace GridPack.Grid
         public List<Unit> Units {get; private set;} 
         public bool IsSwitched {get; private set;} 
         
-
         private void Start()
         {
             if(LevelLoading != null)
@@ -172,7 +170,6 @@ namespace GridPack.Grid
 
             if(UnitAdded != null)
                 UnitAdded.Invoke(this, new UnitCreatedEventArgs(unit));
-            
         }
 
         public void StartGame()
@@ -186,8 +183,6 @@ namespace GridPack.Grid
 
         public void EndTurn()
         {
-           
-            //CellGridState = new CellGridState(this);
             CellGridState = new CellGridStateBlockInput(this);
             _cellGridState.OnStateEnter();
             List<Cell> cellTypeRuins = new List<Cell>(); 
@@ -202,7 +197,6 @@ namespace GridPack.Grid
             while(Units.FindAll(u =>u.PlayerNumber.Equals(CurrentPlayerNumber)).Count == 0)
             {
                 CurrentPlayerNumber = (CurrentPlayerNumber + 1) % NumberOfPlayers;
-                
             }
 
             if(TurnEnded != null)
@@ -224,7 +218,6 @@ namespace GridPack.Grid
                         highlighter.color = new Color(1, 1, 1, 0);
                     }
                 }
-
             }
 
             foreach (var cell in Cells)
@@ -246,8 +239,6 @@ namespace GridPack.Grid
             Debug.Log(cellTypeRuins[randomizedCell]);
             cellTypeRuins[randomizedCell].Ruins = false;
             cellTypeRuins[randomizedCell].Temple = true;
-            //randomizedCell.Add(cell);
-            //randomizedCell.Ruins = true; 
 
             if(cellTypeRuins[randomizedCell].Ruins == false)
             {
@@ -270,7 +261,6 @@ namespace GridPack.Grid
         {
             IsSwitched = false; 
         }
- 
     }
 }
 

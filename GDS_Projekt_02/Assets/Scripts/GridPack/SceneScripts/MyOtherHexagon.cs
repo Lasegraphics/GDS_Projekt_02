@@ -5,23 +5,15 @@ namespace GridPack.SceneScripts
 {
     public class MyOtherHexagon : Hexagon
     {
-       
         public GroundType GroundType;
         public bool IsSkyTaken;//Wskazuje czy jednostka latająca zajmuje hexagon 
-
-
         private Vector3 dimensions = new Vector3(5.3f, 4.6f, 0f);
-
 
         public void Start()
         {
             SetColor(new Color(1, 1, 1, 0));
-            //checker = gameObject.GetComponent<UiManager>();
-            
         }
       
-        
-        
         public override void MarkAsPlayerEntity()
         {
             SetColor(new Color(0, 1, 0, 1));
@@ -32,8 +24,7 @@ namespace GridPack.SceneScripts
             if (CurrentUnit !=null)
             {
                 CurrentUnit.isBlinking = true;
-            }
-            
+            } 
             SetColor(new Color(1, 0, 0, 0.5f));
         }
 
@@ -54,8 +45,7 @@ namespace GridPack.SceneScripts
             if (CurrentUnit != null)
             {
                 CurrentUnit.isBlinking = false;
-            }
-            
+            }    
             SetColor(new Color(1, 1, 1, 0));
         }
         private void SetColor(Color color)

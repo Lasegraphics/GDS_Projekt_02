@@ -9,5 +9,4 @@ namespace GridPack.Grid
         void Activate();
         void Deactivate();
     }
-
 }
