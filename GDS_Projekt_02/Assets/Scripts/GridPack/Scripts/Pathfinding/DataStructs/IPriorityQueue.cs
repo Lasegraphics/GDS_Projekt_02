@@ -8,7 +8,6 @@ namespace GridPack.Pathfinding.DataStructs
          int Count {get;}
         //Metoda dodaje przedmioty do kolejki 
         void Enqueue(T item, float priority);
-
         //Metoda zwraca przedmiot z najnizszym piorytetem w kolejce 
         T Dequeue();
     }
