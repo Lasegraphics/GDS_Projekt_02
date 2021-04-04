@@ -11,29 +11,18 @@ namespace GridPack.SceneScripts
     {   
         protected override void AttackActionPerformed(float actionCost)
         {
-            
             ActionPoints -= actionCost; 
-            //IsIgnored = true; 
 
-            
             if(ActionPoints == 0)
             {
                 MovementPoints = 0; 
                 SetState(new UnitStateMarkedAsFinished(this));
                 Debug.Log("ActionPoints = 0 You cannot attack");   
             }
-
-           /* if (MovementPoints == 0)
-            {
-                SetState(new UnitStateMarkedAsFinished(this));
-            }
-            */
-
         }
 
-         public override bool IsUnitAttackable(Unit other, Cell sourceCell)
+        public override bool IsUnitAttackable(Unit other, Cell sourceCell)
         {
-        
             if(AttackRange == 1)
             {
                 return sourceCell.GetDistance(other.Cell) == AttackRange
@@ -48,8 +37,6 @@ namespace GridPack.SceneScripts
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1; 
             }
-            
-         
         }
 
         public override bool UnitIsntAttackable(Unit other, Cell sourceCell)
@@ -59,8 +46,6 @@ namespace GridPack.SceneScripts
             && other.PlayerNumber != PlayerNumber
             && ActionPoints <= 1; 
         }
-           
-
     }
 }
 

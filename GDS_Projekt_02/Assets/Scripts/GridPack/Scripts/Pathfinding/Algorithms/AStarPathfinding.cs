@@ -19,8 +19,8 @@ namespace GridPack.Pathfinding.Algorithms
             {
                 var current = frontier.Dequeue();
                 if (current.Equals(destinationNode)) break;
-
                 var neighbours = GetNeigbours(edges, current);
+                
                 foreach (var neighbour in neighbours)
                 {
                     var newCost = costSoFar[current] + edges[current][neighbour];
@@ -45,10 +45,8 @@ namespace GridPack.Pathfinding.Algorithms
             {
                 var currentPathElement = cameFrom[temp];
                 path.Add(currentPathElement);
-
                 temp = currentPathElement;
             }
-
             return path;
         }
         private int Heuristic<T>(T a, T b) where T : IGraphNode

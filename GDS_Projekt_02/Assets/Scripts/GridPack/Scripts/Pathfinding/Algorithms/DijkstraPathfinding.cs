@@ -10,7 +10,6 @@ namespace GridPack.Pathfinding.Algorithms
         {
             IPriorityQueue<Cell> frontier = new HeapPriorityQueue<Cell>();
             frontier.Enqueue(originNode, 0);
-
             Dictionary<Cell, Cell> cameFrom = new Dictionary<Cell, Cell>();
             cameFrom.Add(originNode, default(Cell));
             Dictionary<Cell, float> costSoFar = new Dictionary<Cell, float>();
@@ -50,7 +49,6 @@ namespace GridPack.Pathfinding.Algorithms
         {
             IPriorityQueue<T> frontier = new HeapPriorityQueue<T>();
             frontier.Enqueue(originNode, 0);
-
             Dictionary<T, T> cameFrom = new Dictionary<T, T>();
             cameFrom.Add(originNode, default(T));
             Dictionary<T, float> costSoFar = new Dictionary<T, float>();
@@ -83,10 +81,8 @@ namespace GridPack.Pathfinding.Algorithms
             {
                 var currentPathElement = cameFrom[temp];
                 path.Add(currentPathElement);
-
                 temp = currentPathElement;
             }
-
             return path;
         }
     }
