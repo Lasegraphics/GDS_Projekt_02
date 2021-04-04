@@ -44,6 +44,10 @@ public class ScorePanelControll : MonoBehaviour
         movmentText.text = ("MOVEMENT:  " + unit.GetComponent<Unit>().MovementPoints);
         rangeText.text = ("RANGE:  " + unit.GetComponent<Unit>().AttackRange);
         DamageText.text = ("DAMAGE:  " + unit.GetComponent<Unit>().AttackFactor);
+        if (unit.GetComponent<Wizard>()!=null && unit.GetComponent<Unit>().TotalMovementPoints == unit.GetComponent<Unit>().MovementPoints)
+        {
+            DamageText.text =("DAMAGE:  "+unit.GetComponent<Unit>().AttackFactor*2);
+        }
         if (FindObjectOfType<UiManager>().isStart == false)
         {
             isMage = false;
@@ -67,6 +71,12 @@ public class ScorePanelControll : MonoBehaviour
    public void UpgradeMovment(Unit unit)
     {
         movmentText.text = ("MOVEMENT:  " + unit.MovementPoints);
+        DamageText.text =("DAMAGE:  "+unit.AttackFactor);
+        if (unit.GetComponent<Wizard>()!=null && unit.TotalMovementPoints == unit.MovementPoints)
+        {
+            DamageText.text =("DAMAGE:  "+unit.AttackFactor*2);
+        }
+
     }
 
     public void UpgadeParameters(Unit unit)

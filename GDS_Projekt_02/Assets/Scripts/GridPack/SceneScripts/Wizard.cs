@@ -20,7 +20,6 @@ namespace GridPack.SceneScripts
             {
                 MovementPoints = 0; 
                 SetState(new UnitStateMarkedAsFinished(this));
-               // EndTrn.EndTurn();
                 Debug.Log("ActionPoints = 0 You cannot attack");   
             }
 

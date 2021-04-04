@@ -11,6 +11,8 @@ public class MoveToMousePosCanvas : MonoBehaviour
    [SerializeField] private TextMeshProUGUI text;
    [SerializeField] private int dodge = 0;
 
+  
+
    public void UpdatePos(int area )
     {
         switch (area)
@@ -39,8 +41,8 @@ public class MoveToMousePosCanvas : MonoBehaviour
             default:
                 break;
         }
-        Vector2 pos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out var pos);
         transform.position = myCanvas.transform.TransformPoint(pos.x+ changeX, pos.y, 0);
     }
 }

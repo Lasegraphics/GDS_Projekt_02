@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using characters;
 using UnityEngine;
 using UnityEngine.UI;
 using GridPack.Units;

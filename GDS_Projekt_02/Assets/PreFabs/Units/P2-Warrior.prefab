@@ -122,7 +122,7 @@ MonoBehaviour:
   movementPoints: 4
   totalHitPoints: 120
   MinAttackRange: 1
-  AttackRange: 1
+  AttackRange: 3
   AttackFactor: 15
   ArmorPoints: 0
   ignorArmorPercent: 0

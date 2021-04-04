@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using characters;
 using GridPack.Cells;
 using GridPack.Grid.GridStates;
 using GridPack.Grid.UnitGenerators;

@@ -74,6 +74,7 @@ namespace GridPack.Units
         public float actionPoints = 1;
         [SerializeField] private float movementPoints;
         [HideInInspector]public int totalHitPoints;
+        [HideInInspector] private float totalMovmentPoints;
 
         [Header("Atak")]
         public int MinAttackRange=1;
@@ -106,6 +107,7 @@ namespace GridPack.Units
 
         private void Start()
         {
+            totalMovmentPoints = movementPoints;
             totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
         }
@@ -222,6 +224,7 @@ namespace GridPack.Units
         //Metoda jest wywoływana na końcu kazdej tury. 
         public virtual void OnTurnEnd()
         {
+           
             catchedPaths = null; 
             Buffs.FindAll(b =>  b.Duration == 0).ForEach(b => {b.Undo(this);});
             Buffs.RemoveAll(b => b.Duration ==0);
@@ -242,8 +245,10 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie zaznaczenia jednostki
         public virtual void OnUnitSelected()
         {
+           
             uiManager = FindObjectOfType<UiManager>();
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
+            
             SetState(new UnitStateMarkedAsSelected(this));
             if(UnitSelected != null)
             {
@@ -311,12 +316,7 @@ namespace GridPack.Units
                 if (unitToAttack.gameObject.transform.position.x > gameObject.transform.position.x)
                 {
                     gameObject.transform.rotation = Quaternion.Euler(0,0,0);
-                    MainAttack(unitToAttack);
                     StartCoroutine(SwapUnit());
-                }
-                else
-                {
-                    MainAttack(unitToAttack);
                 }
             }
             else
@@ -324,14 +324,10 @@ namespace GridPack.Units
                 if (unitToAttack.gameObject.transform.position.x < gameObject.transform.position.x)
                 {
                     gameObject.transform.rotation = Quaternion.Euler(0, -180, 0);
-                    MainAttack(unitToAttack);
                     StartCoroutine(SwapUnit());
                 }
-                else
-                {
-                    MainAttack(unitToAttack);
-                }
-            }        
+            }  
+            MainAttack(unitToAttack);
         }
         IEnumerator SwapUnit()
         {
@@ -354,6 +350,10 @@ namespace GridPack.Units
             }
             if (gameObject.GetComponent<Wizard>() != null)
             {
+                if (totalMovmentPoints== movementPoints)
+                {
+                    AttackFactor *= 2;
+                }
                 audioManager.Play("MagicAtack");
             }
             if (AttackRange<=1)
@@ -365,12 +365,15 @@ namespace GridPack.Units
                 audioManager.Play("BowAtack");
                 
             }
-           
-           
+            
             AttackAction attackAction = DealDamage(unitToAttack);
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
             AttackActionPerformed(attackAction.ActionCost);
+            if (gameObject.GetComponent<Wizard>() != null)
+            {
+                AttackFactor /= 2; ;
+            }
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
@@ -388,25 +391,6 @@ namespace GridPack.Units
                 SetState(new UnitStateMarkedAsFinished(this));
                 // EndTrn.EndTurn();
                
-            }
-        }
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log(1);
-        }
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.GetComponent<Unit>().PlayerNumber == PlayerNumber)
-            {
-                ignorArmorPercent = collision.GetComponent<Unit>().ignorArmorPercent;
-                onDef = true;
-            }    
-        }
-        private void OnTriggerExit2D(Collider2D collision)
-        {
-            if (collision.GetComponent<Unit>().PlayerNumber == PlayerNumber)
-            {
-                onDef = false;
             }
         }
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
@@ -513,25 +497,29 @@ namespace GridPack.Units
             scorePanelControll.UpgradeMovment(this);
             Cell.IsBlocked = false;
             Cell.CurrentUnit = null;
-            Cell = destinationCell; 
-            destinationCell.IsBlocked = true; 
-            destinationCell.CurrentUnit = this; 
+            Cell = destinationCell;
+            destinationCell.IsBlocked = true;
+            destinationCell.CurrentUnit = this;
 
-            if(MovementAnimationSpeed > 0)
+
+
+
+
+            if (MovementAnimationSpeed > 0)
             {
                 StartCoroutine(MovementAnimation(path));
             }
-            else 
+            else
             {
-                transform.position = Cell.transform.position; 
+                transform.position = Cell.transform.position;
             }
 
-            if(UnitMoved != null)
+            if (UnitMoved != null)
             {
                 UnitMoved.Invoke(this, new MovementEventArgs(Cell, destinationCell, path));
             }
 
-            if(destinationCell.Spikes == true)
+            if (destinationCell.Spikes == true)
             {
                 audioManager.Play("Lava");
                 Debug.Log("Zadano Obrazenia");
@@ -539,14 +527,15 @@ namespace GridPack.Units
                 Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + DamageSpikeParameterUnit);
             }
 
-            if(destinationCell.Swamp == true)
+            if (destinationCell.Swamp == true)
             {
                 audioManager.Play("Marsh");
                 Debug.Log("Bagno");
-                MovementPoints = 0; 
+                MovementPoints = 0;
             }
-        
+
         }
+
 
         //Metoda obsługuje animacje poruszania jednostki. 
         protected virtual IEnumerator MovementAnimation(List<Cell> path)

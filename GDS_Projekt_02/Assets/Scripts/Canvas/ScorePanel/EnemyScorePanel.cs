@@ -65,7 +65,6 @@ public class EnemyScorePanel : MonoBehaviour
 
             sliderHp.value = unitInfo.HitPoints;
             hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage;
-
             sliderArmor.value = unitInfo.ArmorPoints;
         }
         else
@@ -79,6 +78,11 @@ public class EnemyScorePanel : MonoBehaviour
             sliderHp.value = unitInfo.HitPoints;
             sliderArmor.value = unitInfo.ArmorPoints;
         }
+    }
+
+    public void UpgradeDmgMagic(Unit unit)
+    {
+        hp.text = unitInfo.HitPoints.ToString() + " - " + scorePanelControll.damage*2;
     }
     public void Blinking()
     {

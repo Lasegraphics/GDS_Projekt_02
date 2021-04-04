@@ -1,79 +1,80 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnUnits : MonoBehaviour
-{   
-    [SerializeField] public int player;
-    [SerializeField] private GameObject parentUnits;
-    [SerializeField] private UnitsButton[] unitsButtons;
-    [SerializeField] private StartGameController startGameController;
+namespace characters
+{
+    public class SpawnUnits : MonoBehaviour
+    {   
+        [SerializeField] public int player;
+        [SerializeField] private GameObject parentUnits;
+        [SerializeField] private UnitsButton[] unitsButtons;
+        [SerializeField] private StartGameController startGameController;
 
-    [HideInInspector] public GameObject unit;   
-    private void OnMouseDown()
-    {
-        if (gameObject.tag !="Unit")
+        [HideInInspector] public GameObject unit;   
+        private void OnMouseDown()
         {
-            if (startGameController.currentPlayer == player)
+            if (gameObject.tag !="Unit")
             {
-                if (unit != null)
+                if (startGameController.currentPlayer == player)
                 {
-                    SpawnUnit();
-                    foreach (var item in unitsButtons)
+                    if (unit != null)
                     {
-                        item.ChangeColorImage();
+                        SpawnUnit();
+                        foreach (var item in unitsButtons)
+                        {
+                            item.ChangeColorImage();
+                        }
+                        foreach (var item in FindObjectsOfType<SpawnUnits>())
+                        {
+                            item.unit = null;
+                        }
                     }
-                    foreach (var item in FindObjectsOfType<SpawnUnits>())
+                }
+            }             
+        }
+        public void SetSelectedUnit(GameObject UnitToSlecet)
+        {
+            unit = UnitToSlecet;
+        }
+        void SpawnUnit()
+        {
+            if (player==0)
+            {
+                var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), transform.rotation);
+                foreach (var item in FindObjectsOfType<UnitsButton>())
+                {
+                    if (newUnit.tag == item.tag)
                     {
-                        item.unit = null;
+                        item.gameObject.SetActive(false);
+                        unit = null;
                     }
                 }
-            }
-        }             
-    }
-    public void SetSelectedUnit(GameObject UnitToSlecet)
-    {
-        unit = UnitToSlecet;
-    }
-    void SpawnUnit()
-    {
-        if (player==0)
-        {
-            var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), transform.rotation);
-            foreach (var item in FindObjectsOfType<UnitsButton>())
-            {
-                if (newUnit.tag == item.tag)
+                if (FindObjectsOfType<NumberUnit>().Length == 10)
                 {
-                    item.gameObject.SetActive(false);
-                    unit = null;
+                    startGameController.buttonStartGame.SetActive(true);
                 }
+                startGameController.ChangeTurn();
+                newUnit.transform.parent = parentUnits.transform;
             }
-            if (FindObjectsOfType<NumberUnit>().Length == 10)
+            else
             {
-                startGameController.buttonStartGame.SetActive(true);
-            }
-            startGameController.ChangeTurn();
-            newUnit.transform.parent = parentUnits.transform;
-        }
-        else
-        {
-            var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), Quaternion.Euler(0, 180, 0));
-            foreach (var item in FindObjectsOfType<UnitsButton>())
-            {
-                if (newUnit.tag == item.tag)
+                var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), Quaternion.Euler(0, 180, 0));
+                foreach (var item in FindObjectsOfType<UnitsButton>())
                 {
-                    item.gameObject.SetActive(false);
-                    unit = null;
+                    if (newUnit.tag == item.tag)
+                    {
+                        item.gameObject.SetActive(false);
+                        unit = null;
+                    }
                 }
+                if (FindObjectsOfType<NumberUnit>().Length == 10)
+                {
+                    startGameController.buttonStartGame.SetActive(true);
+                }
+                startGameController.ChangeTurn();
+                newUnit.transform.parent = parentUnits.transform;
             }
-            if (FindObjectsOfType<NumberUnit>().Length == 10)
-            {
-                startGameController.buttonStartGame.SetActive(true);
-            }
-            startGameController.ChangeTurn();
-            newUnit.transform.parent = parentUnits.transform;
-        }
        
        
+        }
     }
 }

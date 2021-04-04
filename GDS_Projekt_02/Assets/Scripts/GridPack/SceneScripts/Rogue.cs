@@ -6,22 +6,12 @@ using GridPack.Units.UnitStates;
 namespace GridPack.SceneScripts
 {
      public class Rogue : Entity
-    {
-      /*
-        public override void OnTurnEnd()
-        {
-            if(HitPoints > 75)
-            {
-              HitPoints = 75;
-            }
-            catchedPaths = null; 
-            Buffs.FindAll(b =>  b.Duration == 0).ForEach(b => {b.Undo(this);});
-            Buffs.RemoveAll(b => b.Duration ==0);
-            Buffs.ForEach(b => { b.Duration--; });
+     {
 
-            SetState(new UnitStateNormal(this)); 
-        }
-        */
+         [Header("Dla Rogue")] 
+         [SerializeField]
+         private int movmentPointsAfterAttack;
+
         protected override void AttackActionPerformed(float actionCost)
         {
             ActionPoints -= actionCost; 
@@ -43,7 +33,7 @@ namespace GridPack.SceneScripts
             // Tu jest ta zmienna dla mnie i Micha�a do robienia movementu Rogue'a. ~Wojtek
             if(ActionPoints == 0) //&& MovementPoints == 0)
             {
-                MovementPoints = 3;//+= 1;
+                MovementPoints = movmentPointsAfterAttack;//+= 1;
 
               //  this.UnMark();
             }
