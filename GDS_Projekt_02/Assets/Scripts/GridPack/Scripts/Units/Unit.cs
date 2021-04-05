@@ -80,7 +80,7 @@ namespace GridPack.Units
         public int MinAttackRange=1;
         public int AttackRange;
         public int AttackFactor;
-
+        [HideInInspector] public bool slowByUnit;
         [Header("Tylko Tank")]
         public int ArmorPoints;
         [SerializeField] private float ignorArmorPercent;       
@@ -155,7 +155,7 @@ namespace GridPack.Units
             Buffs = new List<Buff>();
             UnitState = new UnitStateNormal(this);
             EndTrn = new CellGrid();
-            TotalHitPoints = HitPoints; 
+            TotalHitPoints = HitPoints;
             TotalMovementPoints = MovementPoints;
             TotalActionPoints = ActionPoints; 
            // Debug.Log("obecne zdrowie: " + HitPoints);
@@ -191,6 +191,11 @@ namespace GridPack.Units
         {
             
             MovementPoints = TotalMovementPoints;
+            if (slowByUnit)
+            {
+                MovementPoints = totalMovmentPoints;
+                slowByUnit = false;
+            }
             ActionPoints = TotalActionPoints; 
             if(Cell != null && Cell.Spikes == true)
             {
@@ -362,10 +367,11 @@ namespace GridPack.Units
             {
                 audioManager.Play("MeleAtack");
             }
-            if(AttackRange>1 && gameObject.GetComponent<Wizard>() == null)
+            if(gameObject.GetComponent<DistanceEntity>() != null)
             {
                 audioManager.Play("BowAtack");
-                
+                unitToAttack.slowByUnit = true;
+                unitToAttack.totalMovmentPoints -= movementPoints;
             }
             
             AttackAction attackAction = DealDamage(unitToAttack);
