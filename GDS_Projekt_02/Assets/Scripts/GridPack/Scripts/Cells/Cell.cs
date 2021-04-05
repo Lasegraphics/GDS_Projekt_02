@@ -24,6 +24,10 @@ namespace GridPack.Cells
         public bool Ruins; 
         //Koszt ruchu jednoski 
         public float MovementCost  = 1;
+        [Header("Koordynaty dodatkowe")]
+        public int x;
+        public int y; 
+        public int z; 
 
         public Unit CurrentUnit {get; set;}
         //Wykrywa klik na komórkę 
@@ -32,7 +36,7 @@ namespace GridPack.Cells
         public event EventHandler CellHighlighted; 
         //Zdarzenie jest wywoływane gdy kursor opuści komórkę
         public event EventHandler CellDehighlighted;
-
+        [Header("Reszta")]
         //Metody on mouse dla poszczególnych zdarzeń 
         public MoveToMousePosCanvas panel;
         public Sprite startSprite;
