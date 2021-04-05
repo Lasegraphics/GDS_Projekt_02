@@ -19,7 +19,6 @@ namespace GridPack.Units
     public abstract class Unit : MonoBehaviour
     {
         protected Dictionary<Cell, List<Cell>> catchedPaths = null;  
-
         //UnitClicked jest wywoływane w momencie naciśnięcia na jednostkę. 
         public event EventHandler UnitClicked; 
         //UnitSelected jest wywoływane w momencie kiedy gracz nacisnął na jednostkę nalezącą do niego. 
@@ -324,11 +323,8 @@ namespace GridPack.Units
                 || sourceCell.GetDistance(other.Cell) < AttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
-                && sourceCell.z == other.Cell.z; 
+                && sourceCell.z == other.Cell.z;
             } 
-            
-            
-           
         }
 
         public virtual bool UnitIsntAttackable(Unit other, Cell sourceCell)
@@ -580,6 +576,7 @@ namespace GridPack.Units
                     transform.localPosition = Vector3.MoveTowards(transform.localPosition, destination_pos, Time.deltaTime * MovementAnimationSpeed);
                     yield return 0; 
                 }
+               // Debug.Log(cell);
             }
 
             IsMoving = false;
@@ -731,12 +728,28 @@ namespace GridPack.Units
         public Cell OriginCell;
         public Cell DestinationCell;
         public List<Cell> Path; 
+        public bool blockChecker; 
 
         public MovementEventArgs(Cell sourceCell, Cell destinationCell, List<Cell> path)
         {
             OriginCell = sourceCell;
             DestinationCell = destinationCell;
             Path = path; 
+        }
+
+        public void DoLoop()
+        {
+            foreach (var cell in Path)
+            {
+                if(cell.IsBlocked == true)
+                {
+                    blockChecker = true; 
+                }
+                else
+                {
+                     blockChecker = false; 
+                }
+            }
         }
     }
 
@@ -753,6 +766,7 @@ namespace GridPack.Units
             Defender = defender; 
             Damage = damage; 
         }
+
     }
 
     public class UnitCreatedEventArgs : EventArgs

@@ -16,7 +16,7 @@ namespace GridPack.Grid.GridStates
         private Cell _unitCell;
         private Cell anotherUnitCell; 
         private List<Cell> _currentPath;
-
+    
         public CellGridStateUnitSelected(CellGrid cellGrid, Unit unit) : base(cellGrid)
         {
             _unit = unit;
@@ -24,6 +24,7 @@ namespace GridPack.Grid.GridStates
             _currentPath = new List<Cell>();
             _unitsInRange = new List<Unit>(0);
             _unitsMarkedInRange = new List<Unit>();
+            
         }
 
         public override void OnCellClicked(Cell cell)
@@ -106,6 +107,7 @@ namespace GridPack.Grid.GridStates
             {
                 _cell.MarkAsPath();
             }
+
             foreach (var unit in _unitsInRange)
             {
                 unit.UnMark();
