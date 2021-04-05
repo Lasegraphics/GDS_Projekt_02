@@ -4517,6 +4517,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688017840693602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017840693602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017840693602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017840693602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -4580,6 +4592,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+    - target: {fileID: 7183688017898623026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017898623026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017898623026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688017898623026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -4656,6 +4680,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4876611217784732203, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+    - target: {fileID: 7183688017986900419, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017986900419, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688017986900419, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688017986900419, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -4889,6 +4925,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018170505391, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018170505391, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018170505391, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018170505391, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5017,6 +5065,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018197521663, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018197521663, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018197521663, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018197521663, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5044,6 +5104,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018223544629, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018223544629, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018223544629, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018223544629, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -5109,6 +5181,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018244542515, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018244542515, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018244542515, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018244542515, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5173,6 +5257,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018261149459, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018261149459, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018261149459, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018261149459, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5196,6 +5292,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018281145683, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018281145683, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018281145683, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018281145683, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -5393,6 +5501,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4658977349556611861, guid: 3e6ebe9ff87c448f5804a45d464571e7, type: 3}
     - target: {fileID: 7183688018370029805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018370029805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018370029805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018370029805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5452,6 +5572,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+    - target: {fileID: 7183688018409389931, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018409389931, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018409389931, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018409389931, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -5653,6 +5785,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018469677988, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018469677988, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018469677988, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018469677988, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5676,6 +5820,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018480500486, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018480500486, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018480500486, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018480500486, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -5745,6 +5901,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018502444871, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018502444871, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018502444871, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018502444871, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5768,6 +5936,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018506969516, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018506969516, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018506969516, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018506969516, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -5929,6 +6109,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018532393428, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018532393428, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018532393428, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018532393428, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5957,6 +6149,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018534101896, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018534101896, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018534101896, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018534101896, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -5981,6 +6185,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018536602766, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018536602766, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018536602766, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018536602766, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6004,6 +6220,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018552187021, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018552187021, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018552187021, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018552187021, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -6037,6 +6265,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688018562537047, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018562537047, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018562537047, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018562537047, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6060,6 +6300,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018582817730, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018582817730, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018582817730, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018582817730, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -6125,6 +6377,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018632598272, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018632598272, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018632598272, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018632598272, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6151,6 +6415,18 @@ PrefabInstance:
     - target: {fileID: 7183688018637359744, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
       value: G-ruin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018637359868, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018637359868, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018637359868, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018637359868, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
@@ -6297,6 +6573,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018685275884, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018685275884, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018685275884, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018685275884, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6357,6 +6645,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018727680792, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018727680792, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018727680792, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018727680792, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6381,6 +6681,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018731272267, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018731272267, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018731272267, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018731272267, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6405,6 +6717,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018735181046, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018735181046, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018735181046, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018735181046, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6428,6 +6752,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018737639660, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018737639660, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018737639660, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018737639660, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -6533,6 +6869,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018765861469, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018765861469, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018765861469, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018765861469, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6629,6 +6977,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018840622918, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018840622918, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018840622918, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018840622918, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6652,6 +7012,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018862538610, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018862538610, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018862538610, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -9
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018862538610, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -6713,6 +7085,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018888705480, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018888705480, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018888705480, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018888705480, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6736,6 +7120,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018919003822, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018919003822, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018919003822, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018919003822, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -6869,6 +7265,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688018950424537, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018950424537, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018950424537, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018950424537, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6893,6 +7301,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688018964887973, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018964887973, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018964887973, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018964887973, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -6916,6 +7336,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688018967254700, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018967254700, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688018967254700, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688018967254700, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -6988,6 +7420,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7074282728529041461, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+    - target: {fileID: 7183688019008197806, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019008197806, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019008197806, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019008197806, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -7161,6 +7605,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688019045894719, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019045894719, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019045894719, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019045894719, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7189,6 +7645,18 @@ PrefabInstance:
       value: G-normal
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019049434641, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019049434641, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019049434641, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019049434641, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7215,6 +7683,18 @@ PrefabInstance:
     - target: {fileID: 7183688019049434645, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
       value: G-Mountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019058850061, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019058850061, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019058850061, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019058850061, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
@@ -7393,6 +7873,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019162825960, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019162825960, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019162825960, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019162825960, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7481,6 +7973,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019191622709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019191622709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019191622709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019191622709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7536,6 +8040,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019213809384, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019213809384, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019213809384, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019213809384, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -7597,6 +8113,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019260197344, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019260197344, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019260197344, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019260197344, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7624,6 +8152,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
+    - target: {fileID: 7183688019275726674, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019275726674, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019275726674, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019275726674, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -7689,6 +8229,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019323184570, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019323184570, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019323184570, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019323184570, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7753,6 +8305,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019334209436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019334209436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019334209436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019334209436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7776,6 +8340,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -7841,6 +8417,18 @@ PrefabInstance:
       value: G-Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019340173487, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019340173487, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019340173487, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019340173487, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7865,6 +8453,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019341324496, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019341324496, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019341324496, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019341324496, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -7888,6 +8488,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019345934005, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019345934005, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019345934005, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019345934005, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -7948,6 +8560,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019359007287, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019359007287, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019359007287, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019359007287, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8085,6 +8709,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2660181627135066965, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688019386634229, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019386634229, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019386634229, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019386634229, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8145,6 +8781,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019409485602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019409485602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019409485602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019409485602, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8169,6 +8817,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019423888810, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019423888810, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019423888810, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019423888810, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8193,6 +8853,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019428018012, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019428018012, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019428018012, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019428018012, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8216,6 +8888,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019433439319, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019433439319, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019433439319, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019433439319, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8381,6 +9065,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019520767526, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019520767526, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019520767526, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019520767526, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8404,6 +9100,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019523279062, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019523279062, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019523279062, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019523279062, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8465,6 +9173,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019561309675, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019561309675, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019561309675, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019561309675, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8492,6 +9212,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019576926709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019576926709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019576926709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019576926709, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8552,6 +9284,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019592205706, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019592205706, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019592205706, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019592205706, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8661,6 +9405,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7183688019655442094, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019655442094, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019655442094, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019655442094, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8688,6 +9444,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+    - target: {fileID: 7183688019672902230, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019672902230, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019672902230, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019672902230, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8753,6 +9521,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019704909294, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019704909294, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019704909294, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019704909294, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8776,6 +9556,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019713084083, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019713084083, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019713084083, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019713084083, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8905,6 +9697,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
     - target: {fileID: 7183688019797819113, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019797819113, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019797819113, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019797819113, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -8928,6 +9732,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019817341340, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019817341340, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019817341340, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019817341340, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -8956,6 +9772,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4225839393328359659, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
+    - target: {fileID: 7183688019826565436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019826565436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019826565436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019826565436, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -9020,6 +9848,18 @@ PrefabInstance:
       propertyPath: TempleSprDesign
       value: 
       objectReference: {fileID: 3089218637257056130, guid: 5a17e80049732584bacce6728f95b870, type: 3}
+    - target: {fileID: 7183688019883977840, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019883977840, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019883977840, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019883977840, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
@@ -9153,6 +9993,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -839032764520138868, guid: b6a52ac8e1ebf4a2885845af2aa6abb0, type: 3}
     - target: {fileID: 7183688019952421026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019952421026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019952421026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019952421026, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
@@ -9180,6 +10032,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5057045720263117116, guid: 48cde564a9980465aa5e0229b6643b79, type: 3}
+    - target: {fileID: 7183688019971876711, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019971876711, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019971876711, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: z
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019971876711, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: Ruin
       value: 
