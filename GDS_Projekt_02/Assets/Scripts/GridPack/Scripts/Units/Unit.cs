@@ -300,14 +300,34 @@ namespace GridPack.Units
             {
                 return sourceCell.GetDistance(other.Cell) == AttackRange
                 && other.PlayerNumber != PlayerNumber
-                && ActionPoints >= 1; 
+                && ActionPoints >= 1
+                && sourceCell.x == other.Cell.x
+                || sourceCell.GetDistance(other.Cell) == AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.y == other.Cell.y
+                || sourceCell.GetDistance(other.Cell) == AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.z == other.Cell.z;
             }
             else
             {
                 return sourceCell.GetDistance(other.Cell) < AttackRange
                 && other.PlayerNumber != PlayerNumber
-                && ActionPoints >= 1; 
-            }
+                && ActionPoints >= 1
+                && sourceCell.x == other.Cell.x
+                || sourceCell.GetDistance(other.Cell) < AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.y == other.Cell.y
+                || sourceCell.GetDistance(other.Cell) < AttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.z == other.Cell.z; 
+            } 
+            
+            
            
         }
 
