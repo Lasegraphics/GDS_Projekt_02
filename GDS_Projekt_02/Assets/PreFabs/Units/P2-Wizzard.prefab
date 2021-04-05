@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3577414334648311178}
   - component: {fileID: 3577414334648311180}
   - component: {fileID: 2346824396795473352}
+  - component: {fileID: 3275438809874981888}
   m_Layer: 0
   m_Name: P2-Wizzard
   m_TagString: P2-Wizzard
@@ -219,6 +220,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 5
   AttackFactor: 20
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -230,3 +232,22 @@ MonoBehaviour:
   onDef: 0
   StartSprite: {fileID: 4325666681957049452, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   isBlinking: 0
+--- !u!95 &3275438809874981888
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577414334648311175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a154616fad4a774ba9c1db3d5a4d6b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

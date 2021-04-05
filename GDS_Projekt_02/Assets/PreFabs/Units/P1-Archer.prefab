@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5955414324406064381}
   - component: {fileID: 5955414324406064380}
   - component: {fileID: 5955414324406064378}
+  - component: {fileID: 4127808669817775349}
   m_Layer: 0
   m_Name: P1-Archer
   m_TagString: P1-Archer
@@ -206,6 +207,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 6
   AttackFactor: 15
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -230,3 +232,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
+--- !u!95 &4127808669817775349
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955414324406064383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5553457f5c3527c468e945985f9eb359, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

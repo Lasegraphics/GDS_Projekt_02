@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3194660028762322010}
   - component: {fileID: 3194660028762322011}
   - component: {fileID: 3194660028762322009}
+  - component: {fileID: 640914103526130788}
   m_Layer: 0
   m_Name: P1-Rouge
   m_TagString: P1-Rouge
@@ -124,6 +125,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 10
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -149,6 +151,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
+--- !u!95 &640914103526130788
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194660028762322012}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94c10bbbb29be894b9a4b0b371ae70f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3194660028824744562
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5000199994626828384}
   - component: {fileID: 5000199994626828391}
   - component: {fileID: 5000199994626828389}
+  - component: {fileID: 1356133743369636266}
   m_Layer: 0
   m_Name: P2-Warrior
   m_TagString: P2-Warrior
@@ -124,6 +125,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 3
   AttackFactor: 15
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -148,6 +150,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
+--- !u!95 &1356133743369636266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000199994626828386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d91e369ca39f0b48b3e9d5be33f3c0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5000199995629182391
 GameObject:
   m_ObjectHideFlags: 0

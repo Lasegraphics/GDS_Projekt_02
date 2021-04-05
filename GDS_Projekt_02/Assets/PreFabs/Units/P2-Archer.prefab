@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1585833226774951693}
   - component: {fileID: 1585833226774951691}
   - component: {fileID: 2055394718436320431}
+  - component: {fileID: 84888563048362701}
   m_Layer: 0
   m_Name: P2-Archer
   m_TagString: P2-Archer
@@ -219,6 +220,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 6
   AttackFactor: 15
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -230,3 +232,22 @@ MonoBehaviour:
   onDef: 0
   StartSprite: {fileID: -3484401552186409162, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   isBlinking: 0
+--- !u!95 &84888563048362701
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585833226774951694}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e261466496793cc42960550d741ed61c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

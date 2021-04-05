@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7801343158370318064}
   - component: {fileID: 7801343158370318065}
   - component: {fileID: 7801343158370318071}
+  - component: {fileID: 6210417827957866582}
   m_Layer: 0
   m_Name: P2-Tank
   m_TagString: P2-Tank
@@ -206,6 +207,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 20
+  slowByUnit: 0
   ArmorPoints: 1
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -230,3 +232,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
+--- !u!95 &6210417827957866582
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7801343158370318066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4fe8251215db0e840a83ae1c62b78571, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

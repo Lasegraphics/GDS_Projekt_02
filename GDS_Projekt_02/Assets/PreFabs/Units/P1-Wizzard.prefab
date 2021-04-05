@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6198400621601585272}
   - component: {fileID: 6198400621601585273}
   - component: {fileID: 6198400621601585274}
+  - component: {fileID: 7315174662714533190}
   m_Layer: 0
   m_Name: P1-Wizzard
   m_TagString: P1-Wizzard
@@ -206,6 +207,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 5
   AttackFactor: 20
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -230,3 +232,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
+--- !u!95 &7315174662714533190
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6198400621601585223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffbe3332557f4804c93eef0e949ec695, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

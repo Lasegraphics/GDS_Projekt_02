@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2737745491035125003}
   - component: {fileID: 2737745491035125001}
   - component: {fileID: 5145697726111618191}
+  - component: {fileID: 5194732667533259085}
   m_Layer: 0
   m_Name: P2-Rouge
   m_TagString: P2-Rouge
@@ -137,6 +138,7 @@ MonoBehaviour:
   MinAttackRange: 1
   AttackRange: 1
   AttackFactor: 10
+  slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
@@ -148,6 +150,26 @@ MonoBehaviour:
   onDef: 0
   StartSprite: {fileID: -4446029609787535626, guid: 0d4cfe6f84f774bbb8f3a9f3e688bf32, type: 3}
   isBlinking: 0
+  movmentPointsAfterAttack: 0
+--- !u!95 &5194732667533259085
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2737745491035125004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 028f7fbd76d269d43a283628b128d496, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2737745491245196769
 GameObject:
   m_ObjectHideFlags: 0
