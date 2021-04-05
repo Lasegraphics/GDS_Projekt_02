@@ -44,9 +44,13 @@ public class ScorePanelControll : MonoBehaviour
         movmentText.text = ("MOVEMENT:  " + unit.GetComponent<Unit>().MovementPoints);
         rangeText.text = ("RANGE:  " + unit.GetComponent<Unit>().AttackRange);
         DamageText.text = ("DAMAGE:  " + unit.GetComponent<Unit>().AttackFactor);
+        if (unit.GetComponent<Wizard>()!=null)
+        {
+            DamageText.text =("DAMAGE:  "+unit.GetComponent<Unit>().AttackFactor/2);
+        }
         if (unit.GetComponent<Wizard>()!=null && unit.GetComponent<Unit>().TotalMovementPoints == unit.GetComponent<Unit>().MovementPoints)
         {
-            DamageText.text =("DAMAGE:  "+unit.GetComponent<Unit>().AttackFactor*2);
+            DamageText.text =("DAMAGE:  "+unit.GetComponent<Unit>().AttackFactor);
         }
         if (FindObjectOfType<UiManager>().isStart == false)
         {

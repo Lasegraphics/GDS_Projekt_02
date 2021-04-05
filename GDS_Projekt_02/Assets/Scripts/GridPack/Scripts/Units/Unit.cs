@@ -107,6 +107,7 @@ namespace GridPack.Units
 
         private void Start()
         {
+
             totalMovmentPoints = movementPoints;
             totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
@@ -245,7 +246,10 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie zaznaczenia jednostki
         public virtual void OnUnitSelected()
         {
-           
+            if (GetComponent<Wizard>()!=null && totalMovmentPoints == movementPoints)
+            {
+                AttackFactor *= 2;
+            }
             uiManager = FindObjectOfType<UiManager>();
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
             
@@ -265,6 +269,7 @@ namespace GridPack.Units
 
             }
             uiManager.ActiveScorePanel();
+            scorePanelControll.UpgradeMovment(this);
         }
 
         //Metoda jest wywoływana w momencie odznaczenia jednostki
@@ -350,10 +355,7 @@ namespace GridPack.Units
             }
             if (gameObject.GetComponent<Wizard>() != null)
             {
-                if (totalMovmentPoints== movementPoints)
-                {
-                    AttackFactor *= 2;
-                }
+               
                 audioManager.Play("MagicAtack");
             }
             if (AttackRange<=1)
@@ -370,10 +372,7 @@ namespace GridPack.Units
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
             AttackActionPerformed(attackAction.ActionCost);
-            if (gameObject.GetComponent<Wizard>() != null)
-            {
-                AttackFactor /= 2; ;
-            }
+          
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)
@@ -491,6 +490,10 @@ namespace GridPack.Units
         //Metoda obsługi poruszania jednostki. 
         public virtual void Move(Cell destinationCell, List<Cell> path)
         {
+            if (GetComponent<Wizard>()!=null&& totalMovmentPoints == movementPoints)
+            {
+                AttackFactor /= 2;
+            }
             var totalMovementCost = path.Sum(h => h.MovementCost);
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
             MovementPoints -= totalMovementCost;
@@ -503,7 +506,7 @@ namespace GridPack.Units
 
 
 
-
+            
 
             if (MovementAnimationSpeed > 0)
             {
