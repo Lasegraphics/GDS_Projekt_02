@@ -221,7 +221,7 @@ MonoBehaviour:
   totalHitPoints: 50
   MinAttackRange: 1
   AttackRange: 6
-  AttackFactor: 300
+  AttackFactor: 15
   slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
