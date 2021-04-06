@@ -445,7 +445,7 @@ namespace GridPack.Units
                     if (randInt >= DodgeHitPercentUnit)
                     {
                         ArmorPoints -= aggressor.AttackFactor;
-                        UnitWithArmor(aggressor);
+                        UnitWithArmor(aggressor, damage);
                     }
                     else
                     {
@@ -459,7 +459,7 @@ namespace GridPack.Units
                     {
                         if (onDef)
                         {
-                            UnitWithArmor(aggressor);
+                            UnitWithArmor(aggressor,damage);
                         }
                         else
                         {
@@ -489,7 +489,7 @@ namespace GridPack.Units
                 if (ArmorPoints > 0 && !aggressor.ignorArmor)
                 {
                     ArmorPoints -= aggressor.AttackFactor;
-                    UnitWithArmor(aggressor);
+                    UnitWithArmor(aggressor, damage);
                 }
                 else
                 {
@@ -515,12 +515,20 @@ namespace GridPack.Units
             scoreController.UpgradeScore();
         }
 
-        private void UnitWithArmor(Unit aggressor)
+        private void UnitWithArmor(Unit aggressor, int damage)
         {           
             var localArmor = 100 - ignorArmorPercent;
             localArmor *= 0.01f;
             var dmgWithArmor = ((float)aggressor.AttackFactor * localArmor);
             HitPoints -= ((int)dmgWithArmor);
+            if (HitPoints <= 0)
+            {
+                if (UnitDestroyed != null)
+                {
+                    UnitDestroyed.Invoke(this, new AttackEventArgs(aggressor, this, damage));
+                }
+                OnDestroyed();
+            }
             audioManager.Play("ArmorDestroy");
             Debug.Log("Armor zabrany");
         }

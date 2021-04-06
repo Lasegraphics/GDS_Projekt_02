@@ -216,12 +216,12 @@ MonoBehaviour:
   colorUnit: {fileID: -3176082337004397662, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 50
   ignorArmor: 0
-  actionPoints: 1
+  actionPoints: 4
   movementPoints: 4
   totalHitPoints: 50
   MinAttackRange: 1
   AttackRange: 6
-  AttackFactor: 15
+  AttackFactor: 300
   slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0

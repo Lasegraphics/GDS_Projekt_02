@@ -88,10 +88,14 @@ public class ScoreController : MonoBehaviour
             }
             if (blueSlider.value != scoreBlueTeam)
             {
-                blueText.text = scoreBlueTeam.ToString();
                 blueSlider.value = Mathf.MoveTowards(blueSlider.value, scoreBlueTeam, speed * Time.deltaTime);
+                blueText.text = scoreBlueTeam.ToString();
+               
                 if (blueSlider.value==0)
                 {
+                    StartCoroutine(Start1Buttons());
+                    StartCoroutine(Star2Buttons());
+                    StartCoroutine(Star3Buttons());
                     orangeWin.SetBool("In", true);
                     Destroy(FindObjectOfType<ScrollCamera>());
                     foreach (var item in canvasToOff)
@@ -102,7 +106,12 @@ public class ScoreController : MonoBehaviour
                     {
                        
                         Destroy(item.GetComponent<Unit>());
-                       
+                        Destroy(item);
+
+                    }
+                    foreach (var item in FindObjectsOfType<MyOtherHexagon>())
+                    {
+                        Destroy(item);
                     }
                 }
             }
