@@ -197,8 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c235ac17a8f09440ab18b799701ccbcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockChecker: 0
+  NumberOfPathCells: 0
   nameUnit: TANK
-  colorUnit: {r: 0.6886792, g: 0.23713954, b: 0.23713954, a: 1}
+  colorUnit: {fileID: 1926458012136897523, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 90
   ignorArmor: 0
   actionPoints: 1

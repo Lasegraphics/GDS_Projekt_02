@@ -197,8 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68b73fce7aea4b328dfee2b65abd6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockChecker: 0
+  NumberOfPathCells: 0
   nameUnit: ARCHER
-  colorUnit: {r: 1, g: 0, b: 0.8595643, a: 1}
+  colorUnit: {fileID: 8881875229855063771, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 50
   ignorArmor: 0
   actionPoints: 1

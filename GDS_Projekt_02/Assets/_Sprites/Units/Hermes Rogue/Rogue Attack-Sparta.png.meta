@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 0e84a247cf6eb44b09457b495d8a567e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6489811202940515814
+    second: Rogue Attack-Sparta_0
+  - first:
+      213: -7128706966616818156
+    second: Rogue Attack-Sparta_2
+  - first:
+      213: -1057119449682480525
+    second: Rogue Attack-Sparta_3
+  - first:
+      213: 5701193847583540599
+    second: Rogue Attack-Sparta_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +137,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Rogue Attack-Sparta_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a416d681f8fe5a0800000000000000
+      internalID: -6489811202940515814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Attack-Sparta_2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41eb3fa88ceb11d90800000000000000
+      internalID: -7128706966616818156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Attack-Sparta_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372f48c167b5451f0800000000000000
+      internalID: -1057119449682480525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Attack-Sparta_4
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7750cd02995be1f40800000000000000
+      internalID: 5701193847583540599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

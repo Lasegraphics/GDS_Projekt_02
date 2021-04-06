@@ -115,8 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d143a605dec4bc49812693d747aa80b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockChecker: 0
+  NumberOfPathCells: 0
   nameUnit: WARRIOR
-  colorUnit: {r: 0, g: 1, b: 0, a: 1}
+  colorUnit: {fileID: -3523772705299630345, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 120
   ignorArmor: 0
   actionPoints: 1

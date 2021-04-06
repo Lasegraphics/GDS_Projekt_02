@@ -128,8 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feab2a7bd00a14c10829cf6d47e821df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockChecker: 0
+  NumberOfPathCells: 0
   nameUnit: ROGUE
-  colorUnit: {r: 0.6415094, g: 0.63182336, b: 0.25720897, a: 1}
+  colorUnit: {fileID: 1425007471701502121, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 75
   ignorArmor: 0
   actionPoints: 1

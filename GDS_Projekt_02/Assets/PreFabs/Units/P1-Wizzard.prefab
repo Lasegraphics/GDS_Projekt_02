@@ -197,8 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918da5933ed14468eb68ef5825f0f14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockChecker: 0
+  NumberOfPathCells: 0
   nameUnit: WIZARD
-  colorUnit: {r: 0, g: 0.17416215, b: 1, a: 1}
+  colorUnit: {fileID: -5748722381502903718, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 50
   ignorArmor: 1
   actionPoints: 1

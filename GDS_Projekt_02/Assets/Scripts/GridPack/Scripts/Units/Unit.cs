@@ -69,7 +69,7 @@ namespace GridPack.Units
         }
         [Header("Dane jednostki")]
         public string nameUnit;
-        public Color colorUnit;
+        public Sprite colorUnit;
         public int HitPoints;
         public bool ignorArmor;
         public float actionPoints = 1;
@@ -82,6 +82,8 @@ namespace GridPack.Units
         public int AttackRange;
         public int AttackFactor;
         [HideInInspector] public bool slowByUnit;
+        private int magicAtttack;
+        
         [Header("Tylko Tank")]
         public int ArmorPoints;
         [SerializeField] private float ignorArmorPercent;       
@@ -95,6 +97,8 @@ namespace GridPack.Units
 
         [Header("nie potrzebne")]
         public float MovementAnimationSpeed;
+
+        private Animator animator;
         public int PlayerNumber;
         [SerializeField] private bool onDef;
         [HideInInspector] public Sprite StartSprite;
@@ -108,7 +112,7 @@ namespace GridPack.Units
 
         private void Start()
         {
-
+            animator = GetComponent<Animator>();
             totalMovmentPoints = movementPoints;
             totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
@@ -149,10 +153,12 @@ namespace GridPack.Units
         //Implementacja algorytmów
         private static DijkstraPathfinding _pathfinder = new DijkstraPathfinding(); 
         private static IPathfinding _fallbackPathfinder = new AStarPathfinding();
+        private static readonly int Attack = Animator.StringToHash("Attack");
 
         //Metoda wywoływana w momencie utworzenia obiektu w celu zainicjowania pól. 
         public virtual void Initialize()
         {
+            magicAtttack = AttackFactor;
             Buffs = new List<Buff>();
             UnitState = new UnitStateNormal(this);
             EndTrn = new CellGrid();
@@ -254,7 +260,7 @@ namespace GridPack.Units
         {
             if (GetComponent<Wizard>()!=null && totalMovmentPoints == movementPoints)
             {
-                AttackFactor *= 2;
+                AttackFactor = magicAtttack;
             }
             uiManager = FindObjectOfType<UiManager>();
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
@@ -375,10 +381,12 @@ namespace GridPack.Units
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
+            animator.SetBool(Attack,false);
         }
 
         private void MainAttack(Unit unitToAttack)
         {
+            animator.SetBool(Attack,true);
             if (!IsUnitAttackable(unitToAttack, Cell))
             {
                 return;
@@ -403,7 +411,8 @@ namespace GridPack.Units
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
             AttackActionPerformed(attackAction.ActionCost);
-          
+            StartCoroutine(SwapUnit());
+
         }
 
         protected virtual AttackAction DealDamage(Unit unitToAttack)

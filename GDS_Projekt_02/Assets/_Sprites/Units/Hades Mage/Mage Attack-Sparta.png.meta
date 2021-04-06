@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 27aeccb9139984e869a35f12ffc51880
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1739293244403368510
+    second: Mage Attack-Sparta_0
+  - first:
+      213: -5862320706942455951
+    second: Mage Attack-Sparta_1
+  - first:
+      213: 8815116900065346809
+    second: Mage Attack-Sparta_2
+  - first:
+      213: 2915505841298748284
+    second: Mage Attack-Sparta_4
+  - first:
+      213: 4495446117021510622
+    second: Mage Attack-Sparta_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +140,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mage Attack-Sparta_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 158
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdb917620accd7e0800000000000000
+      internalID: -1739293244403368510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Attack-Sparta_1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2
+        width: 158
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f274f706ad4aea0800000000000000
+      internalID: -5862320706942455951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Attack-Sparta_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 2
+        width: 158
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f400f9bd16955a70800000000000000
+      internalID: 8815116900065346809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Attack-Sparta_4
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2
+        width: 158
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73303b9d15f57820800000000000000
+      internalID: 2915505841298748284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Attack-Sparta_5
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 2
+        width: 158
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbe9ffec68036e30800000000000000
+      internalID: 4495446117021510622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

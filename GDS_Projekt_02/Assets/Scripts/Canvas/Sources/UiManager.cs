@@ -142,9 +142,10 @@ public class UiManager : MonoBehaviour
         {
             foreach (var item in FindObjectsOfType<Unit>())   
             {
+                Debug.Log(1);
+                item.GetComponent<Animator>().enabled = false;
                 var Sprite = item.GetComponent<SpriteRenderer>();
-                Sprite.color = item.colorUnit;
-                Sprite.sprite = unit;
+                Sprite.sprite = item.colorUnit;
             }
             foreach (var item in GameObject.FindGameObjectsWithTag("G-normal"))  
             {
@@ -201,8 +202,8 @@ public class UiManager : MonoBehaviour
         {
             foreach (var item in FindObjectsOfType<Unit>())
             {
+                item.GetComponent<Animator>().enabled = true;
                 var Sprite = item.GetComponent<SpriteRenderer>();
-                Sprite.color = new Color(1, 1, 1);
                 Sprite.sprite = item.StartSprite;
             }
             foreach (var item in GameObject.FindGameObjectsWithTag("G-normal")) { 

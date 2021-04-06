@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 7ddbf9c9b4c74486fbbae0dbd429c6f4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1953909001859622408
+    second: Archer Attack-Sparta_0
+  - first:
+      213: 3484251245157553650
+    second: Archer Attack-Sparta_2
+  - first:
+      213: -1378818801554330280
+    second: Archer Attack-Sparta_3
+  - first:
+      213: -6740243490706538500
+    second: Archer Attack-Sparta_4
+  - first:
+      213: -1486360988392678811
+    second: Archer Attack-Sparta_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +56,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +140,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Archer Attack-Sparta_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806e74b82edad1b10800000000000000
+      internalID: 1953909001859622408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer Attack-Sparta_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 2
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f514df0c0c8a5030800000000000000
+      internalID: 3484251245157553650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer Attack-Sparta_3
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d69b3fa937ddce0800000000000000
+      internalID: -1378818801554330280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer Attack-Sparta_4
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 2
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff3ccca148d572a0800000000000000
+      internalID: -6740243490706538500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer Attack-Sparta_5
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 2
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a1bde5e826f5be0800000000000000
+      internalID: -1486360988392678811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

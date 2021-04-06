@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: e145411fd66ec47ef92fc74cde9592d8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6618055449499078370
+    second: Rogue Attack-Athens_0
+  - first:
+      213: -2227441264904612350
+    second: Rogue Attack-Athens_2
+  - first:
+      213: -2210725398857517490
+    second: Rogue Attack-Athens_3
+  - first:
+      213: 2874817509838917538
+    second: Rogue Attack-Athens_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +137,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Rogue Attack-Athens_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11f4c4f1a1f724a0800000000000000
+      internalID: -6618055449499078370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Attack-Athens_2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206505798f98611e0800000000000000
+      internalID: -2227441264904612350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Attack-Athens_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46f92176fce151e0800000000000000
+      internalID: -2210725398857517490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Attack-Athens_5
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 2
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af85043b4765e720800000000000000
+      internalID: 2874817509838917538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
