@@ -8369,6 +8369,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 27bf311e0292f497b9114ce874ed18ef, type: 3}
     - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019335524805, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: RuinDesign
       value: 
       objectReference: {fileID: 3966698296556355794, guid: 5a17e80049732584bacce6728f95b870, type: 3}

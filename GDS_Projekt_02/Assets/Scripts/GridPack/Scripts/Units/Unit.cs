@@ -19,6 +19,8 @@ namespace GridPack.Units
     public abstract class Unit : MonoBehaviour
     {
         protected Dictionary<Cell, List<Cell>> catchedPaths = null;  
+        public bool blockChecker;
+        public int NumberOfPathCells;
         //UnitClicked jest wywoływane w momencie naciśnięcia na jednostkę. 
         public event EventHandler UnitClicked; 
         //UnitSelected jest wywoływane w momencie kiedy gracz nacisnął na jednostkę nalezącą do niego. 
@@ -301,14 +303,18 @@ namespace GridPack.Units
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
                 && sourceCell.x == other.Cell.x
+                && other.blockChecker == false 
                 || sourceCell.GetDistance(other.Cell) == AttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
                 && sourceCell.y == other.Cell.y
+                && other.blockChecker == false
                 || sourceCell.GetDistance(other.Cell) == AttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
-                && sourceCell.z == other.Cell.z;
+                && sourceCell.z == other.Cell.z
+                && other.blockChecker == false;
+             
             }
             else
             {
@@ -316,14 +322,17 @@ namespace GridPack.Units
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
                 && sourceCell.x == other.Cell.x
+                && other.blockChecker == false
                 || sourceCell.GetDistance(other.Cell) < AttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
                 && sourceCell.y == other.Cell.y
+                && other.blockChecker == false
                 || sourceCell.GetDistance(other.Cell) < AttackRange
                 && other.PlayerNumber != PlayerNumber
                 && ActionPoints >= 1
-                && sourceCell.z == other.Cell.z;
+                && sourceCell.z == other.Cell.z
+                && other.blockChecker == false;
             } 
         }
 
@@ -728,28 +737,12 @@ namespace GridPack.Units
         public Cell OriginCell;
         public Cell DestinationCell;
         public List<Cell> Path; 
-        public bool blockChecker; 
 
         public MovementEventArgs(Cell sourceCell, Cell destinationCell, List<Cell> path)
         {
             OriginCell = sourceCell;
             DestinationCell = destinationCell;
             Path = path; 
-        }
-
-        public void DoLoop()
-        {
-            foreach (var cell in Path)
-            {
-                if(cell.IsBlocked == true)
-                {
-                    blockChecker = true; 
-                }
-                else
-                {
-                     blockChecker = false; 
-                }
-            }
         }
     }
 

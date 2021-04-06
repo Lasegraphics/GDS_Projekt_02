@@ -16,6 +16,8 @@ namespace GridPack.Grid.GridStates
         private Cell _unitCell;
         private Cell anotherUnitCell; 
         private List<Cell> _currentPath;
+        int FirstEnemycoordx;
+        
     
         public CellGridStateUnitSelected(CellGrid cellGrid, Unit unit) : base(cellGrid)
         {
@@ -75,6 +77,7 @@ namespace GridPack.Grid.GridStates
         {
             base.OnCellDeselected(cell);
             anotherUnitCell = _unit.Cell;
+            
             foreach (var _cell in _currentPath)
             {
                 if (_pathsInRange.Contains(_cell))
@@ -90,9 +93,36 @@ namespace GridPack.Grid.GridStates
             _unitsMarkedInRange.Clear();
             foreach (var unit in _unitsInRange)
             {
-                _unitCell = unit.Cell;
-              //  unit.MarkAsReachableEnemy();
-               _unitCell.MarkAsEnemyEntity();
+
+                _unitCell = unit.Cell; 
+            /*
+                unit.blockChecker = true;
+                _unitsInRange.First().blockChecker = false;
+                 Debug.Log(_unitCell);
+                
+                if(_unit.Cell.x != _unitCell.x)
+                {
+                    Debug.Log(_unitCell);
+                    //unit.blockChecker = false; 
+                }
+                 
+               /* if(FirstEnemycoordx == 0)
+                {
+                  unit.blockChecker = false;
+                  FirstEnemycoordx = _unitCell.x; 
+                  Debug.Log(FirstEnemycoordx);
+                }
+                */
+                /*
+                if(_unitCell.x == FirstEnemycoordx)
+                {
+                    unit.blockChecker = true;
+                }
+                */
+                                 
+                
+                _unitCell.MarkAsEnemyEntity();
+                //unit.MarkAsReachableEnemy();    
             }
             anotherUnitCell.MarkAsPlayerEntity();
         }
@@ -110,6 +140,7 @@ namespace GridPack.Grid.GridStates
 
             foreach (var unit in _unitsInRange)
             {
+                //_unit.blockChecker = true;
                 unit.UnMark();
             }
             foreach (var currentUnit in _cellGrid.Units)
@@ -137,7 +168,6 @@ namespace GridPack.Grid.GridStates
             _unitCell = _unit.Cell;
             _pathsInRange = _unit.GetAvailableDestinations(_cellGrid.Cells);
             var cellsNotInRange = _cellGrid.Cells.Except(_pathsInRange);
-
             foreach (var cell in cellsNotInRange)
             {
                 cell.UnMark();
@@ -174,6 +204,7 @@ namespace GridPack.Grid.GridStates
         {
             _unitCell = _unit.Cell;
             _unit.OnUnitDeselected();
+            FirstEnemycoordx = 0;
             foreach (var unit in _unitsInRange)
             {
                 if (unit == null) continue;
