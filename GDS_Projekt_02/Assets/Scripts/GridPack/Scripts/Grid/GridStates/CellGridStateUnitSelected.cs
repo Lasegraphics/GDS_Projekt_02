@@ -16,9 +16,6 @@ namespace GridPack.Grid.GridStates
         private Cell _unitCell;
         private Cell anotherUnitCell; 
         private List<Cell> _currentPath;
-        private List<Unit> unitsInX; 
-        private List<Unit> unitsInY; 
-        private List<Unit> unitsInZ; 
 
         int FirstEnemycoordx;
         
@@ -33,8 +30,6 @@ namespace GridPack.Grid.GridStates
            // unitsInX = new List<Unit>();
            // unitsInY = new List<Unit>();
            // unitsInZ = new List<Unit>();
-             
-            
         }
 
         public override void OnCellClicked(Cell cell)
@@ -178,7 +173,6 @@ namespace GridPack.Grid.GridStates
 
             foreach (var unit in _unitsInRange)
             {
-                //_unit.blockChecker = true;
                 unit.UnMark();
             }
             foreach (var currentUnit in _cellGrid.Units)

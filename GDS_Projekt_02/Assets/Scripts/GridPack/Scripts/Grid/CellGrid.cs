@@ -190,7 +190,6 @@ namespace GridPack.Grid
                 {
                     item.ArmorPoints = item.TotalArmorPoints;
                 }
-
                 item.blockChecker = false;
             }
             //CellGridState = new CellGridState(this);

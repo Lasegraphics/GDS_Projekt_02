@@ -47,6 +47,10 @@ namespace GridPack.Units
 
         //Lista Buffów które są zaaplikowane do jednostki 
         public List<Buff> Buffs {get; set;}
+        private List<Unit> unitsinRange;
+        private Cell unitCell;
+
+        private Unit enemyUnit; 
 
         public int TotalHitPoints {get; private set;}
         public float TotalMovementPoints{get; private set;}
@@ -559,9 +563,68 @@ namespace GridPack.Units
             Cell = destinationCell;
             destinationCell.IsBlocked = true;
             destinationCell.CurrentUnit = this;
-
-
-
+            unitsinRange = new List<Unit>();
+            List<Unit> unitsInX = new List<Unit>();
+            List<Unit> unitsInY = new List<Unit>();
+            List<Unit> unitsInZ = new List<Unit>();
+           /* 
+            foreach(var unit in unitsinRange)
+            {
+                unit.blockChecker = false;
+                unitCell = unit.Cell; 
+            
+                if(Cell.x == unitCell.x)
+                {
+                    unitsInX.Add(unit);
+                    Debug.Log(unitsInX);
+                    unitsInX.Count(); 
+                    Debug.Log(unitsInX.Count() + "X");
+                    //unit.blockChecker = false; 
+                }
+                
+                if(Cell.y == unitCell.y)
+                {
+                    unitsInY.Add(unit);
+                    Debug.Log(unitsInY);
+                    unitsInY.Count(); 
+                    Debug.Log(unitsInY.Count() + "Y");
+                    //unit.blockChecker = false; 
+                }
+                if(Cell.z == unitCell.z)
+                {
+                    unitsInZ.Add(unit);
+                    Debug.Log(unitsInZ);
+                    unitsInZ.Count(); 
+                    Debug.Log(unitsInZ.Count() + "Z");
+                    //unit.blockChecker = false; 
+                }
+                foreach (var unitX in unitsInX)
+                {
+                    unitX.blockChecker = true;
+                    unitsInX.First().blockChecker = false;
+                    unitX.Cell.MarkAsEnemyEntity();  
+                    
+                }
+                foreach (var unitY in unitsInY)
+                {
+                    unitY.blockChecker = true;
+                    unitsInY.First().blockChecker = false;
+                    unitY.Cell.MarkAsEnemyEntity();  
+                    
+                }    
+                foreach (var unitZ in unitsInZ)
+                {
+                    unitZ.blockChecker = true;
+                   // unitZ.blockChecker = true;
+                    unitsInZ.First().blockChecker = false;
+                    unitZ.Cell.MarkAsEnemyEntity();  
+                    
+                }                 
+                
+                //_unitCell.MarkAsEnemyEntity();
+                //unit.MarkAsReachableEnemy();    
+            }
+            */
             
 
             if (MovementAnimationSpeed > 0)
