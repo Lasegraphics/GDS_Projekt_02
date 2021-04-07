@@ -567,6 +567,7 @@ namespace GridPack.Units
             List<Unit> unitsInX = new List<Unit>();
             List<Unit> unitsInY = new List<Unit>();
             List<Unit> unitsInZ = new List<Unit>();
+            
            /* 
             foreach(var unit in unitsinRange)
             {
