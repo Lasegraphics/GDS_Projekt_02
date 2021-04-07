@@ -16,6 +16,10 @@ namespace GridPack.Grid.GridStates
         private Cell _unitCell;
         private Cell anotherUnitCell; 
         private List<Cell> _currentPath;
+        private List<Unit> unitsInX; 
+        private List<Unit> unitsInY; 
+        private List<Unit> unitsInZ; 
+
         int FirstEnemycoordx;
         
     
@@ -26,6 +30,10 @@ namespace GridPack.Grid.GridStates
             _currentPath = new List<Cell>();
             _unitsInRange = new List<Unit>(0);
             _unitsMarkedInRange = new List<Unit>();
+           // unitsInX = new List<Unit>();
+           // unitsInY = new List<Unit>();
+           // unitsInZ = new List<Unit>();
+             
             
         }
 
@@ -77,7 +85,9 @@ namespace GridPack.Grid.GridStates
         {
             base.OnCellDeselected(cell);
             anotherUnitCell = _unit.Cell;
-            
+            List<Unit> unitsInX = new List<Unit>();
+            List<Unit> unitsInY = new List<Unit>();
+            List<Unit> unitsInZ = new List<Unit>();
             foreach (var _cell in _currentPath)
             {
                 if (_pathsInRange.Contains(_cell))
@@ -93,37 +103,65 @@ namespace GridPack.Grid.GridStates
             _unitsMarkedInRange.Clear();
             foreach (var unit in _unitsInRange)
             {
-
                 _unitCell = unit.Cell; 
-            /*
-                unit.blockChecker = true;
-                _unitsInRange.First().blockChecker = false;
-                 Debug.Log(_unitCell);
-                
-                if(_unit.Cell.x != _unitCell.x)
+            
+                if(_unit.Cell.x == _unitCell.x)
                 {
-                    Debug.Log(_unitCell);
+                    unitsInX.Add(unit);
+                    Debug.Log(unitsInX);
+                    unitsInX.Count(); 
+                    Debug.Log(unitsInX.Count() + "X");
                     //unit.blockChecker = false; 
                 }
-                 
-               /* if(FirstEnemycoordx == 0)
-                {
-                  unit.blockChecker = false;
-                  FirstEnemycoordx = _unitCell.x; 
-                  Debug.Log(FirstEnemycoordx);
-                }
-                */
-                /*
-                if(_unitCell.x == FirstEnemycoordx)
-                {
-                    unit.blockChecker = true;
-                }
-                */
-                                 
                 
-                _unitCell.MarkAsEnemyEntity();
+                if(_unit.Cell.y == _unitCell.y)
+                {
+                    unitsInY.Add(unit);
+                    Debug.Log(unitsInY);
+                    unitsInY.Count(); 
+                    Debug.Log(unitsInY.Count() + "Y");
+                    //unit.blockChecker = false; 
+                }
+                if(_unit.Cell.z == _unitCell.z)
+                {
+                    unitsInZ.Add(unit);
+                    Debug.Log(unitsInZ);
+                    unitsInZ.Count(); 
+                    Debug.Log(unitsInZ.Count() + "Z");
+                    //unit.blockChecker = false; 
+                }
+                foreach (var unitX in unitsInX)
+                {
+                    unitX.blockChecker = true;
+                    unitsInX.First().blockChecker = false;
+                    unitX.Cell.MarkAsEnemyEntity();  
+                    
+                }
+                foreach (var unitY in unitsInY)
+                {
+                    unitY.blockChecker = true;
+                    unitsInY.First().blockChecker = false;
+                    unitY.Cell.MarkAsEnemyEntity();  
+                    
+                }    
+                foreach (var unitZ in unitsInZ)
+                {
+                    unitZ.blockChecker = true;
+                   // unitZ.blockChecker = true;
+                    unitsInZ.First().blockChecker = false;
+                    unitZ.Cell.MarkAsEnemyEntity();  
+                    
+                }                 
+                
+                //_unitCell.MarkAsEnemyEntity();
                 //unit.MarkAsReachableEnemy();    
             }
+            unitsInX.Clear();
+            unitsInY.Clear();
+            unitsInZ.Clear();
+            
+            
+
             anotherUnitCell.MarkAsPlayerEntity();
         }
 
@@ -215,6 +253,7 @@ namespace GridPack.Grid.GridStates
                 cell.UnMark();
             }
             _unitCell.MarkAsPlayerEntity();
+           
         }
     }
 }
