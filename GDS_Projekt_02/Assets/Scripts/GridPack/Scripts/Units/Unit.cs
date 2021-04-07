@@ -154,6 +154,7 @@ namespace GridPack.Units
         private static DijkstraPathfinding _pathfinder = new DijkstraPathfinding(); 
         private static IPathfinding _fallbackPathfinder = new AStarPathfinding();
         private static readonly int Attack = Animator.StringToHash("Attack");
+        private static readonly int Hit = Animator.StringToHash("Hit");
 
         //Metoda wywoływana w momencie utworzenia obiektu w celu zainicjowania pól. 
         public virtual void Initialize()
@@ -513,8 +514,15 @@ namespace GridPack.Units
             }
             scoreController = FindObjectOfType<ScoreController>();
             scoreController.UpgradeScore();
+            StartCoroutine(AttackAnimation());
         }
 
+        IEnumerator AttackAnimation()
+        {
+            animator.SetBool(Hit ,true);
+            yield return new WaitForSeconds(.3f);
+            animator.SetBool(Hit,false);
+        }
         private void UnitWithArmor(Unit aggressor, int damage)
         {           
             var localArmor = 100 - ignorArmorPercent;
