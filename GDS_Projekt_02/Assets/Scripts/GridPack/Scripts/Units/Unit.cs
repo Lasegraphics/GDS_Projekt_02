@@ -210,17 +210,7 @@ namespace GridPack.Units
                 slowByUnit = false;
             }
             ActionPoints = TotalActionPoints; 
-            if(Cell != null && Cell.Spikes == true)
-            {
-                Debug.Log("Zadano Obrazenia");
-                HitPoints -= DamageSpikeParameterUnit;
-                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + DamageSpikeParameterUnit);
-                if (HitPoints <=0)
-                {
-                    OnDestroyed();
-                }
-            }
-
+        
             if(Cell != null && Cell.Temple == true)
             {
                 Debug.Log("Obecne Zdrowie: " + HitPoints);
@@ -288,6 +278,18 @@ namespace GridPack.Units
             }
             uiManager.ActiveScorePanel();
             scorePanelControll.UpgradeMovment(this);
+
+            if(Cell != null && Cell.Spikes == true)
+            {
+                audioManager.Play("Lava");
+                Debug.Log("Zadano Obrazenia");
+                HitPoints -= DamageSpikeParameterUnit;
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + DamageSpikeParameterUnit);
+                if (HitPoints <=0)
+                {
+                    OnDestroyed();
+                }
+            }
         }
 
         //Metoda jest wywoływana w momencie odznaczenia jednostki
@@ -657,6 +659,13 @@ namespace GridPack.Units
                     NewDestination = TransformTo.First();
                     //destinationCell = NewDestination; 
                     
+                }
+                if(cell.Spikes == true)
+                {
+                    audioManager.Play("Lava");
+                    Debug.Log("Zadano Obrazenia");
+                    HitPoints -= DamageSpikeParameterUnit;
+                    Debug.Log("Obecne Zdrowie: " + HitPoints + " Zadane Obrazenia: " + DamageSpikeParameterUnit);
                 }
                 
 
