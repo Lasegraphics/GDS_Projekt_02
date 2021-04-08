@@ -102,7 +102,7 @@ namespace GridPack.Units
         [Header("nie potrzebne")]
         public float MovementAnimationSpeed;
 
-        private Animator animator;
+        public Animator animator;
         public int PlayerNumber;
         [SerializeField] private bool onDef;
         [HideInInspector] public Sprite StartSprite;
@@ -113,10 +113,10 @@ namespace GridPack.Units
         ScoreController scoreController;
         ScorePanelControll scorePanelControll;
         AudioManager audioManager;
+        public Animator speelsAnimator;
 
         private void Start()
         {
-            animator = GetComponent<Animator>();
             totalMovmentPoints = movementPoints;
             totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
@@ -163,7 +163,7 @@ namespace GridPack.Units
         //Metoda wywoływana w momencie utworzenia obiektu w celu zainicjowania pól. 
         public virtual void Initialize()
         {
-            magicAtttack = AttackFactor;
+            magicAtttack =2* AttackFactor;
             Buffs = new List<Buff>();
             UnitState = new UnitStateNormal(this);
             EndTrn = new CellGrid();
@@ -387,11 +387,13 @@ namespace GridPack.Units
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             animator.SetBool(Attack,false);
+            
         }
 
         private void MainAttack(Unit unitToAttack)
         {
             animator.SetBool(Attack,true);
+            StartCoroutine(SwapUnit());
             if (!IsUnitAttackable(unitToAttack, Cell))
             {
                 return;
@@ -416,7 +418,7 @@ namespace GridPack.Units
             MarkAsAttacking(unitToAttack);
             unitToAttack.DefendHandler(this, attackAction.Damage);
             AttackActionPerformed(attackAction.ActionCost);
-            StartCoroutine(SwapUnit());
+           
 
         }
 
@@ -440,6 +442,20 @@ namespace GridPack.Units
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
         {
+            if (aggressor.GetComponent<Wizard>() != null)
+            {
+               speelsAnimator.SetBool("MagicShoot",true);
+               StartCoroutine(SpeelsAnimatio());
+            }
+            if(aggressor.GetComponent<DistanceEntity>() != null)
+            {
+                speelsAnimator.SetBool("Arrow",true);
+                StartCoroutine(SpeelsAnimatio());
+            }
+
+            scoreController = FindObjectOfType<ScoreController>();
+            scoreController.UpgradeScore();
+            StartCoroutine(AttackAnimation());
             MarkAsDefending(aggressor);
             if (Cell.Forest)
             {
@@ -516,11 +532,15 @@ namespace GridPack.Units
             {
                 UnitAttacked.Invoke(this, new AttackEventArgs(aggressor, this, damage));
             }
-            scoreController = FindObjectOfType<ScoreController>();
-            scoreController.UpgradeScore();
-            StartCoroutine(AttackAnimation());
+            
         }
 
+        IEnumerator SpeelsAnimatio()
+        {
+            yield return new WaitForSeconds(0.3f);
+            speelsAnimator.SetBool("MagicShoot",false);
+            speelsAnimator.SetBool("Arrow",false);
+        }
         IEnumerator AttackAnimation()
         {
             animator.SetBool(Hit ,true);
@@ -552,7 +572,7 @@ namespace GridPack.Units
         {
             if (GetComponent<Wizard>()!=null&& totalMovmentPoints == movementPoints)
             {
-                AttackFactor /= 2;
+                AttackFactor =magicAtttack/2;
             }
             var totalMovementCost = path.Sum(h => h.MovementCost);
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
