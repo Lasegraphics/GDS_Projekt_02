@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 public class AudioManagerMenu : MonoBehaviour
 {
 	[HideInInspector] private AudioSource audioMusic;
-	
+	public GameObject state;
 	private void OnLevelWasLoaded(int level)
 	{
 		if (SceneManager.GetActiveScene().name == "MainGame")
+		{
+			Destroy(gameObject);
+		}
+
+		if (FindObjectsOfType<AudioManagerMenu>().Length>1)
 		{
 			Destroy(gameObject);
 		}

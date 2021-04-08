@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 6bab93f246b544bacaff5797f7eb2928
+guid: 7c45ce25eb3acf14787a1ab23b990624
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -446700042918131454
-    second: Entangle-Sheet-Outline_0
+      213: -8900322174668339548
+    second: Arrow_Fire-Sheet-Outline2_0
   - first:
-      213: 618873940681533303
-    second: Entangle-Sheet-Outline_1
+      213: -4127530400239893679
+    second: Arrow_Fire-Sheet-Outline2_1
   - first:
-      213: -476264112685983665
-    second: Entangle-Sheet-Outline_2
+      213: -3514688943588963571
+    second: Arrow_Fire-Sheet-Outline2_2
   - first:
-      213: -5259252920095342331
-    second: Entangle-Sheet-Outline_3
-  - first:
-      213: -1916348377654341196
-    second: Entangle-Sheet-Outline_4
+      213: -6764908257894655093
+    second: Arrow_Fire-Sheet-Outline2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Entangle-Sheet-Outline_0
+      name: Arrow_Fire-Sheet-Outline2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20986bc7da00dc9f0800000000000000
-      internalID: -446700042918131454
+      spriteID: 4a68c585324bb7480800000000000000
+      internalID: -8900322174668339548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Entangle-Sheet-Outline_1
+      name: Arrow_Fire-Sheet-Outline2_1
       rect:
         serializedVersion: 2
         x: 130
@@ -177,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 777a113f19ea69800800000000000000
-      internalID: 618873940681533303
+      spriteID: 153431638f018b6c0800000000000000
+      internalID: -4127530400239893679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Entangle-Sheet-Outline_2
+      name: Arrow_Fire-Sheet-Outline2_2
       rect:
         serializedVersion: 2
         x: 260
@@ -198,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48d5181058f369f0800000000000000
-      internalID: -476264112685983665
+      spriteID: d0b03650701593fc0800000000000000
+      internalID: -3514688943588963571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Entangle-Sheet-Outline_3
+      name: Arrow_Fire-Sheet-Outline2_3
       rect:
         serializedVersion: 2
         x: 390
@@ -219,29 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50108c975516307b0800000000000000
-      internalID: -5259252920095342331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Entangle-Sheet-Outline_4
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 0
-        width: 130
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b15404cd43c765e0800000000000000
-      internalID: -1916348377654341196
+      spriteID: b8b151e08c73e12a0800000000000000
+      internalID: -6764908257894655093
       vertices: []
       indices: 
       edges: []
