@@ -83,8 +83,9 @@ namespace GridPack.Grid.GridStates
             List<Unit> unitsInX = new List<Unit>();
             List<Unit> unitsInY = new List<Unit>();
             List<Unit> unitsInZ = new List<Unit>();
+
             foreach (var _cell in _currentPath)
-            {
+            {    
                 if (_pathsInRange.Contains(_cell))
                     _cell.MarkAsReachable();
                 else

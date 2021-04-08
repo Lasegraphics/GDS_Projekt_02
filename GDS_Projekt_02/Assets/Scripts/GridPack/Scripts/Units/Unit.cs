@@ -159,6 +159,7 @@ namespace GridPack.Units
         private static IPathfinding _fallbackPathfinder = new AStarPathfinding();
         private static readonly int Attack = Animator.StringToHash("Attack");
         private static readonly int Hit = Animator.StringToHash("Hit");
+        private Cell NewDestination;
 
         //Metoda wywoływana w momencie utworzenia obiektu w celu zainicjowania pól. 
         public virtual void Initialize()
@@ -584,9 +585,8 @@ namespace GridPack.Units
             destinationCell.IsBlocked = true;
             destinationCell.CurrentUnit = this;
             unitsinRange = new List<Unit>();
-            List<Unit> unitsInX = new List<Unit>();
-            List<Unit> unitsInY = new List<Unit>();
-            List<Unit> unitsInZ = new List<Unit>();
+            List<Cell> TransformTo = new List<Cell>();
+            NewDestination = Cell; 
             
            /* 
             foreach(var unit in unitsinRange)
@@ -646,8 +646,32 @@ namespace GridPack.Units
                 //unit.MarkAsReachableEnemy();    
             }
             */
-            
 
+            foreach (var cell in path)
+            {
+                if(cell.Swamp == true)
+                {
+                    MovementPoints = 0;
+                    TransformTo.Add(cell);
+                    Debug.Log(TransformTo + "Destynacja");
+                    NewDestination = TransformTo.First();
+                    //destinationCell = NewDestination; 
+                    
+                }
+                
+
+            }
+            /*
+            
+            path.RemoveAt(0);
+            path.Insert(0, NewDestination);
+            */
+           /* foreach(var newcell in TransformTo) 
+            {
+              path.Add(newcell);
+            */
+
+         
             if (MovementAnimationSpeed > 0)
             {
                 StartCoroutine(MovementAnimation(path));
@@ -659,7 +683,11 @@ namespace GridPack.Units
 
             if (UnitMoved != null)
             {
+               
+               
                 UnitMoved.Invoke(this, new MovementEventArgs(Cell, destinationCell, path));
+                
+                
             }
 
             if (destinationCell.Spikes == true)
@@ -686,6 +714,7 @@ namespace GridPack.Units
             IsMoving = true;
             audioManager.Play("MoveUnit");
             path.Reverse();
+            
             foreach (var cell in path)
             {
                 Vector3 destination_pos = new Vector3(cell.transform.localPosition.x, cell.transform.localPosition.y, transform.localPosition.z);
@@ -693,7 +722,9 @@ namespace GridPack.Units
                 {
                     transform.localPosition = Vector3.MoveTowards(transform.localPosition, destination_pos, Time.deltaTime * MovementAnimationSpeed);
                     yield return 0; 
+
                 }
+                
                // Debug.Log(cell);
             }
 
