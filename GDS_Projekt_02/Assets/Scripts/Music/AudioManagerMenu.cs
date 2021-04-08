@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class AudioManagerMenu : MonoBehaviour
 {
 	[HideInInspector] private AudioSource audioMusic;
+	
 	private void OnLevelWasLoaded(int level)
 	{
 		if (SceneManager.GetActiveScene().name == "MainGame")
