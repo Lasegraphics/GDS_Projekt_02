@@ -49,7 +49,7 @@ namespace GridPack.Cells
         private void OnMouseOver()
         {
             delayTime += Time.deltaTime;
-            if (delayTime >= 1.5f)
+            if (delayTime >= 1)
             {
                 panel.gameObject.SetActive(true);
 

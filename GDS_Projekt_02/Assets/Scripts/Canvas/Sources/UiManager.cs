@@ -31,7 +31,8 @@ public class UiManager : MonoBehaviour
     [Header("Desinger button - Add")]
     [SerializeField] private Sprite templeNormal;
     [SerializeField] private Sprite ruinsNormal;
-
+    [SerializeField] private ScorePanelControll playerPanel;
+    [SerializeField] private EnemyScorePanel enemyPane;
     [Header("Static")]
     [SerializeField] public int currentPlayer = 0;
     [SerializeField] public bool isDesing;
@@ -81,20 +82,24 @@ public class UiManager : MonoBehaviour
     }
     public void ActiveEnemyScorePanel()
     {
+        enemyPane.hide.SetActive(false);
         bluePanel.SetBool("Out", false);
     }
     public void CloseEnemyScorePanel()
     {
+        enemyPane.hide.SetActive(true);
         bluePanel.SetBool("BlinkArmor", false);
         bluePanel.SetBool("BlinkHp", false);
         bluePanel.SetBool("Out", true);       
     }
     public void ActiveScorePanel()
     {
+        playerPanel.hide.SetActive(false);
         orangePanel.SetBool("Out", false);
     }
     public void CloseScorePanel()
     {
+        playerPanel.hide.SetActive(true);
         orangePanel.SetBool("Out", true);
     }
     public void UpdateToTample(GameObject item)

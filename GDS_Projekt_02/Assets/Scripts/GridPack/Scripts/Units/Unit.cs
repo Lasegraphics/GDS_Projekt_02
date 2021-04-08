@@ -406,7 +406,7 @@ namespace GridPack.Units
                
                 audioManager.Play("MagicAtack");
             }
-            if (AttackRange<=1)
+            if (AttackRange<=2)
             {
                 audioManager.Play("MeleAtack");
             }

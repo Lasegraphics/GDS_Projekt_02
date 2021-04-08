@@ -31,6 +31,7 @@ public class EnemyScorePanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI movmentText;
     [SerializeField] private TextMeshProUGUI rangeText;
     [SerializeField] private TextMeshProUGUI DamageText;
+    [SerializeField] public GameObject hide;
 
     [HideInInspector] public bool isBlinging;
     [HideInInspector] public Unit unitInfo;

@@ -26,7 +26,7 @@ public class ScorePanelControll : MonoBehaviour
     [SerializeField] private TextMeshProUGUI movmentText;
     [SerializeField] private TextMeshProUGUI rangeText;
     [SerializeField] private TextMeshProUGUI DamageText;
-
+    [SerializeField] public GameObject hide;
     [HideInInspector] public int damage;
     [HideInInspector] public bool isMage;
 
@@ -74,6 +74,7 @@ public class ScorePanelControll : MonoBehaviour
     }
    public void UpgradeMovment(Unit unit)
     {
+
         movmentText.text = ("MOVEMENT:  " + unit.MovementPoints);
         DamageText.text =("DAMAGE:  "+unit.AttackFactor);
         if (unit.GetComponent<Wizard>()!=null && unit.TotalMovementPoints == unit.MovementPoints)
