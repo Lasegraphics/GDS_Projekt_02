@@ -86,7 +86,7 @@ namespace GridPack.Units
         public int AttackRange;
         public int AttackFactor;
         [HideInInspector] public bool slowByUnit;
-        private int magicAtttack;
+        private int magicAtttack=2;
         
         [Header("Tylko Tank")]
         public int ArmorPoints;
@@ -166,7 +166,6 @@ namespace GridPack.Units
         //Metoda wywoływana w momencie utworzenia obiektu w celu zainicjowania pól. 
         public virtual void Initialize()
         {
-            magicAtttack =2* AttackFactor;
             Buffs = new List<Buff>();
             UnitState = new UnitStateNormal(this);
             EndTrn = new CellGrid();
@@ -242,7 +241,7 @@ namespace GridPack.Units
         {
             if (GetComponent<Wizard>()!=null && totalMovmentPoints == movementPoints)
             {
-                AttackFactor = magicAtttack;
+                actionPoints = magicAtttack;
             }
             uiManager = FindObjectOfType<UiManager>();
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
@@ -573,9 +572,9 @@ namespace GridPack.Units
         //Metoda obsługi poruszania jednostki. 
         public virtual void Move(Cell destinationCell, List<Cell> path)
         {
-            if (GetComponent<Wizard>()!=null&& totalMovmentPoints == movementPoints)
+            if (GetComponent<Wizard>()!=null && this.actionPoints == magicAtttack)
             {
-                AttackFactor =magicAtttack/2;
+                actionPoints=1;
             }
             var totalMovementCost = path.Sum(h => h.MovementCost);
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
