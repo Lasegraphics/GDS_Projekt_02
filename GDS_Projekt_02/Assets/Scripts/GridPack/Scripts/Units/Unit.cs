@@ -211,23 +211,7 @@ namespace GridPack.Units
                 MovementPoints = totalMovmentPoints;
                 slowByUnit = false;
             }
-            ActionPoints = TotalActionPoints; 
-        
-            if(Cell != null && Cell.Temple == true)
-            {
-                Debug.Log("Obecne Zdrowie: " + HitPoints);
-                audioManager.Play("Temple");
-                Debug.Log("Uzdrowiono");
-                HitPoints += HealTempleParameterUnit;
-                if(HitPoints > totalHitPoints)
-                {
-                    HitPoints = totalHitPoints; 
-                }              
-                Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
-                Cell.Temple = false; 
-                Cell.Ruins = true; 
-            }
-
+            ActionPoints = TotalActionPoints;
 
             SetState(new UnitStateMarkedAsFriendly(this)); 
         }
@@ -291,6 +275,20 @@ namespace GridPack.Units
                 {
                     OnDestroyed();
                 }
+            }
+            if(Cell != null && Cell.Temple == true)
+            {
+                Debug.Log("Obecne Zdrowie: " + HitPoints);
+                audioManager.Play("Temple");
+                Debug.Log("Uzdrowiono");
+                HitPoints += HealTempleParameterUnit;
+                if(HitPoints > totalHitPoints)
+                {
+                    HitPoints = totalHitPoints; 
+                }              
+                Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
+                Cell.Temple = false; 
+                Cell.Ruins = true; 
             }
         }
 
