@@ -38,6 +38,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] public bool isDesing;
 
     [HideInInspector] public bool isStart = true;
+    
+    
     private void Start()
     {
         endRoundText.SetBool("Out", true);
@@ -50,6 +52,8 @@ public class UiManager : MonoBehaviour
         {
             DesingerButton();
         }
+
+      
     }
     public void ChangeTurnUi(int player)
     {
@@ -71,7 +75,7 @@ public class UiManager : MonoBehaviour
             orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
         }
         endRoundText.SetBool("Out", false);
-        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player;
+        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player+1;
         StartCoroutine(CloseEndText());
     }
     IEnumerator CloseEndText()
@@ -263,4 +267,6 @@ public class UiManager : MonoBehaviour
         }
         
     }
+
+   
 }
