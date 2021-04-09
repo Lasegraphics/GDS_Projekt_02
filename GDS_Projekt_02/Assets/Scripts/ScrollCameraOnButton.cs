@@ -22,7 +22,6 @@ public class ScrollCameraOnButton : MonoBehaviour
         {
             if (camer.transform.position.y < topMaxPos)
             {
-                Debug.Log(0);
                 var newPos = Vector3.up * speedCamera * Time.deltaTime;
                 camer.transform.Translate(newPos, Space.World);
             }
@@ -45,7 +44,7 @@ public class ScrollCameraOnButton : MonoBehaviour
 
     public void ScrollDownScreen()
     {
-        downMouseDown = false;
+        downMouseDown = true;
         StartCoroutine(StopScroll());
     }
 

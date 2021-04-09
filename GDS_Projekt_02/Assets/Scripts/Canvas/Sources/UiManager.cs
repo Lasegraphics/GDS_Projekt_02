@@ -17,6 +17,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Animator orangePanel;
     [SerializeField] private Animator bluePanel;
     [SerializeField] private Animator endRoundText;
+    [SerializeField] private AudioManager audioManager;
 
     [Header("Desinger button")]
     [SerializeField] private Sprite unit;
@@ -76,6 +77,7 @@ public class UiManager : MonoBehaviour
         }
         endRoundText.SetBool("Out", false);
         endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player+1;
+        audioManager.Play("TurnEnd");
         StartCoroutine(CloseEndText());
     }
     IEnumerator CloseEndText()
