@@ -16,6 +16,9 @@ namespace GridPack.Grid.GridStates
         private Cell _unitCell;
         private Cell anotherUnitCell; 
         private List<Cell> _currentPath;
+        private List<Unit> unitsInX;
+        private List<Unit> unitsInY;
+        private List<Unit> unitsInZ;
 
         int FirstEnemycoordx;
         
@@ -27,9 +30,9 @@ namespace GridPack.Grid.GridStates
             _currentPath = new List<Cell>();
             _unitsInRange = new List<Unit>(0);
             _unitsMarkedInRange = new List<Unit>();
-           // unitsInX = new List<Unit>();
-           // unitsInY = new List<Unit>();
-           // unitsInZ = new List<Unit>();
+             unitsInX = new List<Unit>();
+             unitsInY = new List<Unit>();
+             unitsInZ = new List<Unit>();
         }
 
         public override void OnCellClicked(Cell cell)
@@ -80,9 +83,7 @@ namespace GridPack.Grid.GridStates
         {
             base.OnCellDeselected(cell);
             anotherUnitCell = _unit.Cell;
-            List<Unit> unitsInX = new List<Unit>();
-            List<Unit> unitsInY = new List<Unit>();
-            List<Unit> unitsInZ = new List<Unit>();
+            
 
             foreach (var _cell in _currentPath)
             {    
@@ -145,8 +146,7 @@ namespace GridPack.Grid.GridStates
                     unitZ.blockChecker = true;
                    // unitZ.blockChecker = true;
                     unitsInZ.First().blockChecker = false;
-                    unitZ.Cell.MarkAsEnemyEntity();  
-                    
+                    unitZ.Cell.MarkAsEnemyEntity();   
                 }                 
                 
                 //_unitCell.MarkAsEnemyEntity();
@@ -174,7 +174,7 @@ namespace GridPack.Grid.GridStates
 
             foreach (var unit in _unitsInRange)
             {
-                unit.UnMark();
+                unit.UnMark();      
             }
             foreach (var currentUnit in _cellGrid.Units)
             {

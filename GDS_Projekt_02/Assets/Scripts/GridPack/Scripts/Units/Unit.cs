@@ -114,12 +114,14 @@ namespace GridPack.Units
         ScorePanelControll scorePanelControll;
         AudioManager audioManager;
         public Animator speelsAnimator;
+        private CellGridStateUnitSelected Taker{get; set;}
 
         private void Start()
         {
             totalMovmentPoints = movementPoints;
             totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
+            
         }
 
         public virtual float MovementPoints
@@ -588,67 +590,14 @@ namespace GridPack.Units
             destinationCell.CurrentUnit = this;
             unitsinRange = new List<Unit>();
             List<Cell> TransformTo = new List<Cell>();
-            NewDestination = Cell; 
+            NewDestination = Cell;
+            List<Unit> unitsInX = new List<Unit>();        
+            List<Unit> unitsInY = new List<Unit>();   
+            List<Unit> unitsInZ = new List<Unit>();        
             
-           /* 
-            foreach(var unit in unitsinRange)
-            {
-                unit.blockChecker = false;
-                unitCell = unit.Cell; 
+           
             
-                if(Cell.x == unitCell.x)
-                {
-                    unitsInX.Add(unit);
-                    Debug.Log(unitsInX);
-                    unitsInX.Count(); 
-                    Debug.Log(unitsInX.Count() + "X");
-                    //unit.blockChecker = false; 
-                }
-                
-                if(Cell.y == unitCell.y)
-                {
-                    unitsInY.Add(unit);
-                    Debug.Log(unitsInY);
-                    unitsInY.Count(); 
-                    Debug.Log(unitsInY.Count() + "Y");
-                    //unit.blockChecker = false; 
-                }
-                if(Cell.z == unitCell.z)
-                {
-                    unitsInZ.Add(unit);
-                    Debug.Log(unitsInZ);
-                    unitsInZ.Count(); 
-                    Debug.Log(unitsInZ.Count() + "Z");
-                    //unit.blockChecker = false; 
-                }
-                foreach (var unitX in unitsInX)
-                {
-                    unitX.blockChecker = true;
-                    unitsInX.First().blockChecker = false;
-                    unitX.Cell.MarkAsEnemyEntity();  
-                    
-                }
-                foreach (var unitY in unitsInY)
-                {
-                    unitY.blockChecker = true;
-                    unitsInY.First().blockChecker = false;
-                    unitY.Cell.MarkAsEnemyEntity();  
-                    
-                }    
-                foreach (var unitZ in unitsInZ)
-                {
-                    unitZ.blockChecker = true;
-                   // unitZ.blockChecker = true;
-                    unitsInZ.First().blockChecker = false;
-                    unitZ.Cell.MarkAsEnemyEntity();  
-                    
-                }                 
-                
-                //_unitCell.MarkAsEnemyEntity();
-                //unit.MarkAsReachableEnemy();    
-            }
-            */
-
+            
             foreach (var cell in path)
             {
                 if(cell.Swamp == true)
@@ -670,6 +619,7 @@ namespace GridPack.Units
                 
 
             }
+                          
             /*
             
             path.RemoveAt(0);
@@ -679,7 +629,7 @@ namespace GridPack.Units
             {
               path.Add(newcell);
             */
-
+            //Taker.OnCellDeselected(Cell);
          
             if (MovementAnimationSpeed > 0)
             {

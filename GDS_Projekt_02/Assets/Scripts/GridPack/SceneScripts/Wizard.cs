@@ -28,14 +28,42 @@ namespace GridPack.SceneScripts
                 return sourceCell.GetDistance(other.Cell) == AttackRange
                 && sourceCell.GetDistance(other.Cell) > MinAttackRange
                 && other.PlayerNumber != PlayerNumber
-                && ActionPoints >= 1; 
+                && ActionPoints >= 1
+                && sourceCell.x == other.Cell.x
+                && other.blockChecker == false 
+                || sourceCell.GetDistance(other.Cell) == AttackRange
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.y == other.Cell.y
+                && other.blockChecker == false 
+                || sourceCell.GetDistance(other.Cell) == AttackRange
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.z == other.Cell.z
+                && other.blockChecker == false ;
             }
             else
             {
                 return sourceCell.GetDistance(other.Cell) < AttackRange
                 && sourceCell.GetDistance(other.Cell) > MinAttackRange
                 && other.PlayerNumber != PlayerNumber
-                && ActionPoints >= 1; 
+                && ActionPoints >= 1
+                && sourceCell.x == other.Cell.x
+                && other.blockChecker == false 
+                || sourceCell.GetDistance(other.Cell) < AttackRange
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.y == other.Cell.y
+                && other.blockChecker == false 
+                || sourceCell.GetDistance(other.Cell) < AttackRange
+                && sourceCell.GetDistance(other.Cell) > MinAttackRange
+                && other.PlayerNumber != PlayerNumber
+                && ActionPoints >= 1
+                && sourceCell.z == other.Cell.z
+                && other.blockChecker == false; 
             }
         }
 
