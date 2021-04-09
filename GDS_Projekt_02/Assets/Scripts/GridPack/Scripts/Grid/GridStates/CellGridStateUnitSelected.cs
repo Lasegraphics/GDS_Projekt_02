@@ -105,26 +105,26 @@ namespace GridPack.Grid.GridStates
                 if(_unit.Cell.x == _unitCell.x)
                 {
                     unitsInX.Add(unit);
-                    Debug.Log(unitsInX);
+                   // Debug.Log(unitsInX);
                     unitsInX.Count(); 
-                    Debug.Log(unitsInX.Count() + "X");
+                  //  Debug.Log(unitsInX.Count() + "X");
                     //unit.blockChecker = false; 
                 }
                 
                 if(_unit.Cell.y == _unitCell.y)
                 {
                     unitsInY.Add(unit);
-                    Debug.Log(unitsInY);
+                   // Debug.Log(unitsInY);
                     unitsInY.Count(); 
-                    Debug.Log(unitsInY.Count() + "Y");
+                    //Debug.Log(unitsInY.Count() + "Y");
                     //unit.blockChecker = false; 
                 }
                 if(_unit.Cell.z == _unitCell.z)
                 {
                     unitsInZ.Add(unit);
-                    Debug.Log(unitsInZ);
+                   // Debug.Log(unitsInZ);
                     unitsInZ.Count(); 
-                    Debug.Log(unitsInZ.Count() + "Z");
+                  //  Debug.Log(unitsInZ.Count() + "Z");
                     //unit.blockChecker = false; 
                 }
                 foreach (var unitX in unitsInX)
