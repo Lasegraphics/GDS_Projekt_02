@@ -36,7 +36,7 @@ namespace GridPack.Grid
         private CellGridState _cellGridState;
 
         [SerializeField] UiManager uiManager;
-
+        [SerializeField] private GameObject flage;
         public CellGridState CellGridState
         {
             get
@@ -182,8 +182,20 @@ namespace GridPack.Grid
             Debug.Log("Game Started");
         }
 
+        public void Chagne()
+        {
+            if (uiManager.currentPlayer == 0)
+            {
+                flage.SetActive(true);
+            }
+            else
+            {
+                flage.SetActive(false);
+            }
+        }
         public void EndTurn()
         {
+           
             foreach (var item in Units)
             {
                 if (item.TotalArmorPoints >0)

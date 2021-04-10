@@ -169,7 +169,6 @@ public class UiManager : MonoBehaviour
         {
             foreach (var item in FindObjectsOfType<Unit>())   
             {
-                Debug.Log(1);
                 item.GetComponent<Animator>().enabled = false;
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.colorUnit;
