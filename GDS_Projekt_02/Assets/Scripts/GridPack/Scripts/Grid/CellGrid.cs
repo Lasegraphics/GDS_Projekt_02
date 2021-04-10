@@ -232,31 +232,40 @@ namespace GridPack.Grid
             {
                 if(cell.Ruins == true)
                 {                  
+                    
                     cellTypeRuins.Add(cell);
+                    Debug.Log(cellTypeRuins);
                 }
-                if(cell.Temple == true)
+                /*if(cell.Temple == true)
                 {
                     cell.Temple = false;
                     uiManager.UpdateToRuins(cell.gameObject);
                     cell.Ruins = true; 
                 }
+                */
+                
             }
-            Random random = new Random();
-            var randomizedCell = random.Next(cellTypeRuins.Count);
-            Debug.Log(cellTypeRuins[randomizedCell]);
-            cellTypeRuins[randomizedCell].Ruins = false;
-            cellTypeRuins[randomizedCell].Temple = true;
+            if(cellTypeRuins.Count() == 4)
+            {
+                Random random = new Random();
+                var randomizedCell = random.Next(cellTypeRuins.Count);
+                Debug.Log(cellTypeRuins[randomizedCell]);
+                cellTypeRuins[randomizedCell].Ruins = false;
+                cellTypeRuins[randomizedCell].Temple = true;
 
-            if(cellTypeRuins[randomizedCell].Ruins == false)
-            {
-                uiManager.UpdateToRuins(cellTypeRuins[randomizedCell].gameObject);
-                Debug.Log("Ruiny");
+                if(cellTypeRuins[randomizedCell].Ruins == false)
+                {
+                   uiManager.UpdateToRuins(cellTypeRuins[randomizedCell].gameObject);
+                   Debug.Log("Ruiny");
+                }
+                if(cellTypeRuins[randomizedCell].Temple == true)
+                {
+                   uiManager.UpdateToTample(cellTypeRuins[randomizedCell].gameObject);
+                   Debug.Log("Temple");
+                }
             }
-            if(cellTypeRuins[randomizedCell].Temple == true)
-            {
-                uiManager.UpdateToTample(cellTypeRuins[randomizedCell].gameObject);
-                Debug.Log("Temple");
-            }
+            
+            
         }
 
         public void Activate()
