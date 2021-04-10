@@ -8612,7 +8612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018640230376, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_TagString
-      value: G-Mountain
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7183688018640230378, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite

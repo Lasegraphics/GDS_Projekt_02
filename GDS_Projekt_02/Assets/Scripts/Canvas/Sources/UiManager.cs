@@ -192,8 +192,12 @@ public class UiManager : MonoBehaviour
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = groundMountains;
-                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
-                childImage.sprite = groundMountains;
+                if (item.transform.Find("Highlighter")!=null)
+                {
+                    var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                    childImage.sprite = groundMountains;
+                }
+               
             }
             foreach (var item in GameObject.FindGameObjectsWithTag("G-Water"))
             {
@@ -250,8 +254,12 @@ public class UiManager : MonoBehaviour
             {
                 var Sprite = item.GetComponent<SpriteRenderer>();
                 Sprite.sprite = item.GetComponent<Cell>().startSprite;
-                var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
-                childImage.sprite = item.GetComponent<Cell>().startSprite;
+                if (item.transform.Find("Highlighter") !=null)
+                {
+                    var childImage = item.transform.Find("Highlighter").GetComponent<SpriteRenderer>();
+                    childImage.sprite = item.GetComponent<Cell>().startSprite;
+                }
+                
             }
             foreach (var item in GameObject.FindGameObjectsWithTag("G-Water")) 
             {
