@@ -76,7 +76,7 @@ public class UiManager : MonoBehaviour
             orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
         }
         endRoundText.SetBool("Out", false);
-        roundToEnd.text = "END OF TURN PLAYER " + player+1;
+        roundToEnd.text = "END OF TURN PLAYER " + (player+1);
         audioManager.Play("TurnEnd");
         StartCoroutine(CloseEndText());
     }

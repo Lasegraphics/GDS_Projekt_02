@@ -211,7 +211,10 @@ namespace GridPack.Units
                 slowByUnit = false;
             }
             ActionPoints = TotalActionPoints;
-
+            if (GetComponent<Wizard>()!=null)
+            {
+                actionPoints = magicAtttack;
+            }
             SetState(new UnitStateMarkedAsFriendly(this)); 
         }
 
@@ -239,10 +242,7 @@ namespace GridPack.Units
         //Metoda jest wywoływana w momencie zaznaczenia jednostki
         public virtual void OnUnitSelected()
         {
-            if (GetComponent<Wizard>()!=null && totalMovmentPoints == movementPoints)
-            {
-                actionPoints = magicAtttack;
-            }
+            
             uiManager = FindObjectOfType<UiManager>();
             scorePanelControll = FindObjectOfType<ScorePanelControll>();
             

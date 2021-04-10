@@ -17,6 +17,7 @@ public class ScoreController : MonoBehaviour
     [SerializeField] private Slider redSlider;
     [SerializeField] private Text redText;
     [SerializeField] private int scoreRedTeam;
+    
 
     [Header("Parameters")]
     [SerializeField] private int speed;
@@ -29,6 +30,8 @@ public class ScoreController : MonoBehaviour
     [SerializeField] private GameObject button2;
     [SerializeField] private GameObject button3;
     [SerializeField] private Canvas[] canvasToOff;
+    private int blueUnits;
+    private int redUnits;
 
    
     public void StartGame()
@@ -58,11 +61,25 @@ public class ScoreController : MonoBehaviour
     {
         if (uiManager.isStart==false)
         {
-            if (redSlider.value != scoreRedTeam)
+            foreach (var VARIABLE in FindObjectsOfType<Unit>())
+            {
+                if (VARIABLE.PlayerNumber==0)
+                {
+                    blueUnits++;
+                }
+
+                if (VARIABLE.PlayerNumber==0)
+                {
+                    redUnits++;
+                }
+            }
+
+            if (redSlider.value != scoreRedTeam || redUnits == 0) 
             {
                 redSlider.value = Mathf.MoveTowards(redSlider.value, scoreRedTeam, speed * Time.deltaTime);
                 redText.text = scoreRedTeam.ToString();
-                if (redSlider.value==0)
+                
+                if (redSlider.value<=0|| redUnits == 0)
                 {
                     StartCoroutine(Start1Buttons());
                     StartCoroutine(Star2Buttons());
@@ -86,12 +103,12 @@ public class ScoreController : MonoBehaviour
                     }
                 }
             }
-            if (blueSlider.value != scoreBlueTeam)
+            if (blueSlider.value !=scoreBlueTeam|| blueUnits==0)
             {
                 blueSlider.value = Mathf.MoveTowards(blueSlider.value, scoreBlueTeam, speed * Time.deltaTime);
                 blueText.text = scoreBlueTeam.ToString();
                
-                if (blueSlider.value==0)
+                if ( blueSlider.value<=0|| blueUnits==0)
                 {
                     StartCoroutine(Start1Buttons());
                     StartCoroutine(Star2Buttons());
@@ -114,6 +131,7 @@ public class ScoreController : MonoBehaviour
                         Destroy(item);
                     }
                 }
+              
             }
         }
        
