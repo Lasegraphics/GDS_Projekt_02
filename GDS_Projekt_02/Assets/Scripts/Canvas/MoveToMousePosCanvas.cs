@@ -41,7 +41,7 @@ public class MoveToMousePosCanvas : MonoBehaviour
                     text.text = "ANY UNIT THAT CROSSES THIS TILE OR STARTS ITS TURN ON IT TAKES 20 DAMAGE";
                     break;
                 case 2:
-                    text.text = ("20% CHANCE TO DODGE INCOMING ATTACK.");
+                    text.text = ("5% CHANCE TO DODGE INCOMING ATTACK.");
                     break;
                 case 3:
                     text.text = "ANY UNIT THAT CROSSES THIS TILE IS FORCED TO END ITS TURN.";
