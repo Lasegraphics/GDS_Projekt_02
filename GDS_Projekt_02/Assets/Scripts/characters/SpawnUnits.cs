@@ -57,7 +57,7 @@ namespace characters
             }
             else
             {
-                var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y, -2), Quaternion.Euler(0, 180, 0));
+                var newUnit = Instantiate(unit, new Vector3(transform.position.x, transform.position.y-0.5f, -2), Quaternion.Euler(0, 180, 0));
                 foreach (var item in FindObjectsOfType<UnitsButton>())
                 {
                     if (newUnit.tag == item.tag)
