@@ -29,6 +29,11 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Sprite groundRuins;
     [SerializeField] private Sprite groundLava;
 
+    //UIowe elementy od Wojtka
+    [SerializeField] private GameObject FlagOrange;
+    [SerializeField] private GameObject FlagBlue;
+    [SerializeField] private GameObject ButtonBlocker;
+
     [Header("Desinger button - Add")]
     [SerializeField] private Sprite templeNormal;
     [SerializeField] private Sprite ruinsNormal;
@@ -61,6 +66,10 @@ public class UiManager : MonoBehaviour
         currentPlayer = player;
         if (player == 0)
         {
+            FlagBlue.SetActive(true);
+            FlagOrange.SetActive(false);
+            ButtonBlocker.SetActive(true);
+            roundToEnd.text = "BLUE PLAYER'S TURN";
             var oldBluePanelPos = bluePanel.GetComponent<RectTransform>().anchoredPosition;
             var oldOrangePanel = orangePanel.GetComponent<RectTransform>().anchoredPosition;
 
@@ -69,6 +78,10 @@ public class UiManager : MonoBehaviour
         }
         else
         {
+            FlagOrange.SetActive(true);
+            FlagBlue.SetActive(false);
+            ButtonBlocker.SetActive(true);
+            roundToEnd.text = "ORANGE PLAYER'S TURN";
             var oldBluePanelPos = bluePanel.GetComponent<RectTransform>().anchoredPosition;
             var oldOrangePanel = orangePanel.GetComponent<RectTransform>().anchoredPosition;
 
@@ -76,7 +89,6 @@ public class UiManager : MonoBehaviour
             orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
         }
         endRoundText.SetBool("Out", false);
-        roundToEnd.text = "END OF TURN PLAYER " + (player+1);
         audioManager.Play("TurnEnd");
         StartCoroutine(CloseEndText());
     }
@@ -84,6 +96,10 @@ public class UiManager : MonoBehaviour
     {
        yield return new WaitForSeconds(1.5f);
        endRoundText.SetBool("Out", true);
+        ButtonBlocker.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+        FlagBlue.SetActive(false);
+        FlagOrange.SetActive(false);
 
     }
     public void ActiveEnemyScorePanel()

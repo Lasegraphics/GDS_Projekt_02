@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 522427974}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.45631376
+  m_Size: 0.4398854
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1731,7 +1731,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<align=\"center\"><size=40>TUTORIAL</size>\n______________________________________________\n\nThe
-    goal of the game is to kill every single one of your oponnent's units. You both
+    goal of the game is to kill every single one of your opponents units. You both
     have squads of the same 5 units, each one with a specific purpose on the battlefield.\n______________________________________________\n</align>\n      
     <size=20>Archer</size> - When attacking reduces movement points of hit opponents
     by the amount of movement points he had left.\n\n       <size=20>Rogue</size>
