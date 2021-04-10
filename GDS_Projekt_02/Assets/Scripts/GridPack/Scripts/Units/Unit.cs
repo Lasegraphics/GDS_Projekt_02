@@ -391,7 +391,7 @@ namespace GridPack.Units
                
                 audioManager.Play("MagicAtack");
             }
-            if (AttackRange<=2)
+            if (AttackRange<=2|| gameObject.GetComponent<Entity>() != null)
             {
                 audioManager.Play("MeleAtack");
             }
@@ -400,6 +400,10 @@ namespace GridPack.Units
                 audioManager.Play("BowAtack");
                 unitToAttack.slowByUnit = true;
                 unitToAttack.totalMovmentPoints -= movementPoints;
+                if (unitToAttack.totalMovmentPoints <=0)
+                {
+                    unitToAttack.totalMovmentPoints = 0;
+                }
             }
             
             AttackAction attackAction = DealDamage(unitToAttack);

@@ -37,7 +37,6 @@ public class ScrollCamera : MonoBehaviour
         {
             if (transform.position.y < maximumYValue)
             {
-                Debug.Log(1);
                 var newPos = Vector3.up * movmentSpeed * Time.deltaTime;
                 transform.Translate(newPos, Space.World);
             }
