@@ -216,6 +216,11 @@ namespace GridPack.Units
                 actionPoints = magicAtttack;
             }
             SetState(new UnitStateMarkedAsFriendly(this)); 
+
+            if(Cell != null && Cell.Ruins == true)
+            {
+                uiManager.UpdateToRuins(cell.gameObject);
+            }
         }
 
         //Metoda jest wywoływana na końcu kazdej tury. 
@@ -228,6 +233,7 @@ namespace GridPack.Units
             Buffs.ForEach(b => { b.Duration--; });
 
             SetState(new UnitStateNormal(this)); 
+
         }
 
         //Metoda jest wywoływana kiedy spadnie HP ponizej 1
@@ -615,6 +621,9 @@ namespace GridPack.Units
                 Debug.Log("Obecne Zdrowie: " + HitPoints + " Dodano: " + HealTempleParameterUnit);
                 Cell.Temple = false; 
                 Cell.Ruins = true; 
+
+                
+                
             }
                           
             /*

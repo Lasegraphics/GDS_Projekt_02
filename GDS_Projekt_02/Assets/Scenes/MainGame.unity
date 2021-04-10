@@ -10885,7 +10885,7 @@ PrefabInstance:
     - target: {fileID: 7183688019260761240, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 080d03d51b9577541850ab2ed892af7d, type: 3}
+      objectReference: {fileID: 21300000, guid: 28da1ff740d2a2a48b4cc47869b8013c, type: 3}
     - target: {fileID: 7183688019260761240, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -13071,9 +13071,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6d26af1ea73cf459b8971892320a3a8c, type: 3}
     - target: {fileID: 7183688019874083130, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Ruins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183688019874083130, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 115364003}
+    - target: {fileID: 7183688019874083130, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
+      propertyPath: Temple
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7183688019874083130, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: checker
       value: 
@@ -13093,7 +13101,7 @@ PrefabInstance:
     - target: {fileID: 7183688019874083131, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 080d03d51b9577541850ab2ed892af7d, type: 3}
+      objectReference: {fileID: 21300000, guid: 28da1ff740d2a2a48b4cc47869b8013c, type: 3}
     - target: {fileID: 7183688019874083131, guid: efb66924a88ac5d4988eed85b03c4bd1, type: 3}
       propertyPath: m_SortingOrder
       value: 3

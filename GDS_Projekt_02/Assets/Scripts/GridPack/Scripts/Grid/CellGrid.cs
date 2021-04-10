@@ -235,6 +235,7 @@ namespace GridPack.Grid
                     
                     cellTypeRuins.Add(cell);
                     Debug.Log(cellTypeRuins);
+                   // uiManager.UpdateToRuins(cell.gameObject);
                 }
                 /*if(cell.Temple == true)
                 {
@@ -264,6 +265,8 @@ namespace GridPack.Grid
                    Debug.Log("Temple");
                 }
             }
+
+            
             
             
         }
