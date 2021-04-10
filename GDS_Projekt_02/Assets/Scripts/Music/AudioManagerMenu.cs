@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class AudioManagerMenu : MonoBehaviour
 {
+    public static AudioManagerMenu Instance;
 	[HideInInspector] private AudioSource audioMusic;
 	public GameObject state;
 	private void OnLevelWasLoaded(int level)
@@ -12,16 +13,17 @@ public class AudioManagerMenu : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
-
-		if (FindObjectsOfType<AudioManagerMenu>().Length>1)
-		{
-			Destroy(gameObject);
-		}
 	}
 	private void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
-	}
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
+    }
 	private void Start()
 	{
 		audioMusic = GetComponent<AudioSource>();

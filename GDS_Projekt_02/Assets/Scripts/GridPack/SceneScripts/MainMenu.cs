@@ -38,4 +38,9 @@ public class MainMenu : MonoBehaviour
     {
         Screen.fullScreen = IsSet; 
     }
+
+    public void GoToTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }

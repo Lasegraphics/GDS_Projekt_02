@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ScrollBackqround : MonoBehaviour
 {
+    public static ScrollBackqround Instance;
     [SerializeField] private float speed = 5f;
     [HideInInspector] private Material myMaterial;
     [HideInInspector] private Vector2 offSet;
@@ -16,7 +17,13 @@ public class ScrollBackqround : MonoBehaviour
     }
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
     }
     void Start()
     {

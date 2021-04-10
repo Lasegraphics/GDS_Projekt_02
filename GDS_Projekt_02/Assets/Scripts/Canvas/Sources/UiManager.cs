@@ -76,14 +76,14 @@ public class UiManager : MonoBehaviour
             orangePanel.GetComponent<RectTransform>().anchoredPosition = oldBluePanelPos;
         }
         endRoundText.SetBool("Out", false);
-        endRoundText.GetComponent<Text>().text = "KONIEC TURY GRACZA :" + player+1;
+        roundToEnd.text = "END OF TURN PLAYER " + player+1;
         audioManager.Play("TurnEnd");
         StartCoroutine(CloseEndText());
     }
     IEnumerator CloseEndText()
     {
-        yield return new WaitForSeconds(3);
-       // endRoundText.SetBool("Out", true);
+       yield return new WaitForSeconds(1.5f);
+       endRoundText.SetBool("Out", true);
 
     }
     public void ActiveEnemyScorePanel()
