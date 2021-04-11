@@ -121,7 +121,8 @@ namespace GridPack.Units
             totalMovmentPoints = movementPoints;
             totalHitPoints = HitPoints;
             audioManager = FindObjectOfType<AudioManager>();
-            
+            scoreController = FindObjectOfType<ScoreController>();
+
         }
 
         public virtual float MovementPoints
@@ -242,6 +243,15 @@ namespace GridPack.Units
             Cell.IsBlocked = false;
             audioManager.Play("Death");
             MarkAsDestroyed();
+            if (PlayerNumber == 0)
+            {
+               
+                scoreController.blueUnits--;
+            }
+            else
+            {
+                scoreController.redUnits--;
+            }
             gameObject.SetActive(false);
         }
 

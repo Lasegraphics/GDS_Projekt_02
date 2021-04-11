@@ -30,12 +30,13 @@ public class ScoreController : MonoBehaviour
     [SerializeField] private GameObject button2;
     [SerializeField] private GameObject button3;
     [SerializeField] private Canvas[] canvasToOff;
-    private int blueUnits;
-    private int redUnits;
+    public int blueUnits;
+    public int redUnits;
 
    
     public void StartGame()
     {
+       
         foreach (var item in FindObjectsOfType<Unit>())
         {
             if (item.PlayerNumber ==0)
@@ -44,6 +45,7 @@ public class ScoreController : MonoBehaviour
                 blueSlider.maxValue = scoreBlueTeam;
                 blueSlider.value = scoreBlueTeam;
                 blueText.text = scoreBlueTeam.ToString();
+                blueUnits++;
 
             }
             else
@@ -52,6 +54,7 @@ public class ScoreController : MonoBehaviour
                 redSlider.maxValue = scoreRedTeam;
                 redSlider.value = scoreRedTeam;
                 redText.text = scoreRedTeam.ToString();
+                redUnits++;
 
             }
         }
@@ -61,18 +64,7 @@ public class ScoreController : MonoBehaviour
     {
         if (uiManager.isStart==false)
         {
-            foreach (var VARIABLE in FindObjectsOfType<Unit>())
-            {
-                if (VARIABLE.PlayerNumber==0)
-                {
-                    blueUnits++;
-                }
-
-                if (VARIABLE.PlayerNumber==0)
-                {
-                    redUnits++;
-                }
-            }
+           
 
             if (redSlider.value != scoreRedTeam || redUnits == 0) 
             {
