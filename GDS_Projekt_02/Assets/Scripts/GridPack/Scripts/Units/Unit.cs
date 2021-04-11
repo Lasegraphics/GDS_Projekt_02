@@ -394,7 +394,7 @@ namespace GridPack.Units
             }
             if (gameObject.GetComponent<Wizard>() != null)
             {
-               
+                MovementPoints = 0; 
                 audioManager.Play("MagicAtack");
             }
             if (AttackRange<=2|| gameObject.GetComponent<Entity>() != null)
@@ -429,6 +429,7 @@ namespace GridPack.Units
         protected virtual void AttackActionPerformed(float actionCost)
         {
             ActionPoints -= actionCost; 
+           
             if(ActionPoints == 0)
             {
                 MovementPoints = 0; 
@@ -436,14 +437,7 @@ namespace GridPack.Units
                 // EndTrn.EndTurn();
             }
 
-            if (GetComponent<Rogue>() != null)
-            {
-                return;
-            }
-            else 
-            {
-                MovementPoints = 0;  
-            }
+           
         }
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
         public virtual void DefendHandler(Unit aggressor, int damage)
