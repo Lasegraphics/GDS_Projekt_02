@@ -434,7 +434,15 @@ namespace GridPack.Units
                 MovementPoints = 0; 
                 SetState(new UnitStateMarkedAsFinished(this));
                 // EndTrn.EndTurn();
-               
+            }
+
+            if (GetComponent<Rogue>() != null)
+            {
+                return;
+            }
+            else 
+            {
+                MovementPoints = 0;  
             }
         }
         //Metoda obsługi obrony przed atakiem. Do rozkminienia 
