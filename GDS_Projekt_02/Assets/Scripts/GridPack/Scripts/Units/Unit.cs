@@ -213,7 +213,7 @@ namespace GridPack.Units
             ActionPoints = TotalActionPoints;
             if (GetComponent<Wizard>()!=null)
             {
-                actionPoints = magicAtttack;
+                ActionPoints = magicAtttack;
             }
             SetState(new UnitStateMarkedAsFriendly(this)); 
 
@@ -568,7 +568,7 @@ namespace GridPack.Units
         //Metoda obsługi poruszania jednostki. 
         public virtual void Move(Cell destinationCell, List<Cell> path)
         {
-            if (GetComponent<Wizard>()!=null && this.actionPoints == magicAtttack)
+            if (GetComponent<Wizard>()!=null && this.ActionPoints == magicAtttack)
             {
                 actionPoints=1;
             }
