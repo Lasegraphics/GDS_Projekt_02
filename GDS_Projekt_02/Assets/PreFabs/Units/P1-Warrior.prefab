@@ -222,7 +222,7 @@ MonoBehaviour:
   NumberOfPathCells: 0
   nameUnit: WARRIOR
   colorUnit: {fileID: -3523772705299630345, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
-  HitPoints: 120
+  HitPoints: 100
   ignorArmor: 0
   actionPoints: 1
   movementPoints: 4
@@ -234,8 +234,8 @@ MonoBehaviour:
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
-  DodgeHitPercentUnit: 0
-  DamageSpikeParameterUnit: 0
+  DodgeHitPercentUnit: 15
+  DamageSpikeParameterUnit: 15
   HealTempleParameterUnit: 20
   MovementAnimationSpeed: 20
   animator: {fileID: 2760863641064138345}

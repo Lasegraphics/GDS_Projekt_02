@@ -217,18 +217,18 @@ MonoBehaviour:
   colorUnit: {fileID: -3176082337004397662, guid: f9bf42dd763d733459b8b4c2fedbcb36, type: 3}
   HitPoints: 50
   ignorArmor: 0
-  actionPoints: 4
-  movementPoints: 4
+  actionPoints: 1
+  movementPoints: 3
   totalHitPoints: 50
-  MinAttackRange: 1
-  AttackRange: 6
+  MinAttackRange: 2
+  AttackRange: 4
   AttackFactor: 15
   slowByUnit: 0
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
-  DodgeHitPercentUnit: 0
-  DamageSpikeParameterUnit: 0
+  DodgeHitPercentUnit: 15
+  DamageSpikeParameterUnit: 15
   HealTempleParameterUnit: 20
   MovementAnimationSpeed: 20
   animator: {fileID: 84888563048362701}

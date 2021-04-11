@@ -234,8 +234,8 @@ MonoBehaviour:
   ArmorPoints: 0
   ignorArmorPercent: 0
   TotalArmorPoints: 0
-  DodgeHitPercentUnit: 0
-  DamageSpikeParameterUnit: 0
+  DodgeHitPercentUnit: 15
+  DamageSpikeParameterUnit: 15
   HealTempleParameterUnit: 20
   MovementAnimationSpeed: 20
   animator: {fileID: 640914103526130788}
